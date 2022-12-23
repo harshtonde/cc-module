@@ -413,7 +413,7 @@ class _ConvertToEMIWidgetState extends State<ConvertToEMIWidget> {
                                                                                     child: custom_widgets.CustomDropDown(
                                                                                       width: 250,
                                                                                       height: 50,
-                                                                                      image: 'https://1000logos.net/wp-content/uploads/2021/11/VISA-logo.png',
+                                                                                      image: 'https://firebasestorage.googleapis.com/v0/b/testff-66a80.appspot.com/o/VISA-logo.png?alt=media&token=848edf9f-13d6-40fd-a258-eafbec887bd2',
                                                                                       imageFirst: false,
                                                                                       items: FFAppState().cardNumbers.toList(),
                                                                                     ),
