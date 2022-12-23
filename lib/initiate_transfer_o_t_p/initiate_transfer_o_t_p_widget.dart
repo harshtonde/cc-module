@@ -803,7 +803,7 @@ class _InitiateTransferOTPWidgetState extends State<InitiateTransferOTPWidget> {
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'thahx714' /* ₹ 24,000 */,
+                                                                  'thahx714' /* ₹ 4,610 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -860,7 +860,7 @@ class _InitiateTransferOTPWidgetState extends State<InitiateTransferOTPWidget> {
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  '2vzcqtmo' /* ₹ 99,99,32,873 */,
+                                                                  '2vzcqtmo' /* ₹ 99,99,32,875 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
