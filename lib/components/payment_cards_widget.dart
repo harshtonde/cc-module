@@ -515,6 +515,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget> {
                             ),
                             borderRadius: BorderRadius.circular(50),
                           ),
+                          showLoadingIndicator: false,
                         ),
                         onEnter: ((event) async {
                           setState(() => mouseRegionHovered4 = true);
