@@ -1707,7 +1707,6 @@ For 2 years... */
                     phone: false,
                     tablet: false,
                     tabletLandscape: false,
-                    desktop: false,
                   ))
                     SideBarUpdateWidget(),
                 ],
