@@ -472,17 +472,11 @@ class _DisableAutopayBottomSheetWidgetState
                                     children: [
                                       InkWell(
                                         onTap: () async {
-                                          setState(() {
-                                            FFAppState().totalAmountDue = true;
-                                            FFAppState().minimumAmountDue =
-                                                false;
-                                          });
-                                          setState(() {
-                                            FFAppState().currentOutstanding =
-                                                false;
-                                            FFAppState().payCustomAmount =
-                                                false;
-                                          });
+                                          FFAppState().totalAmountDue = true;
+                                          FFAppState().minimumAmountDue = false;
+                                          FFAppState().currentOutstanding =
+                                              false;
+                                          FFAppState().payCustomAmount = false;
                                         },
                                         child: Container(
                                           width: 200,
@@ -584,17 +578,11 @@ class _DisableAutopayBottomSheetWidgetState
                                       ),
                                       InkWell(
                                         onTap: () async {
-                                          setState(() {
-                                            FFAppState().totalAmountDue = false;
-                                            FFAppState().minimumAmountDue =
-                                                true;
-                                          });
-                                          setState(() {
-                                            FFAppState().currentOutstanding =
-                                                false;
-                                            FFAppState().payCustomAmount =
-                                                false;
-                                          });
+                                          FFAppState().totalAmountDue = false;
+                                          FFAppState().minimumAmountDue = true;
+                                          FFAppState().currentOutstanding =
+                                              false;
+                                          FFAppState().payCustomAmount = false;
                                         },
                                         child: Container(
                                           width: 200,

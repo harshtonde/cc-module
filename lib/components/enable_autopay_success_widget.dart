@@ -471,9 +471,7 @@ class _EnableAutopaySuccessWidgetState extends State<EnableAutopaySuccessWidget>
                                     FFButtonWidget(
                                       onPressed: () async {
                                         Navigator.pop(context);
-                                        setState(() {
-                                          FFAppState().autopay = true;
-                                        });
+                                        FFAppState().autopay = true;
                                       },
                                       text: FFLocalizations.of(context).getText(
                                         'ibgxauiv' /* VIEW MY CREDIT CARDS */,

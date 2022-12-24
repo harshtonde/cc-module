@@ -1,3 +1,4 @@
+import '../components/notifications_widget.dart';
 import '../components/theme_swtich_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -254,45 +255,60 @@ VIDEOS */
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
-                  child: Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).tertiaryColor,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
-                      child: Badge(
-                        badgeContent: Text(
-                          FFLocalizations.of(context).getText(
-                            'a3an9u8b' /* 7 */,
+                  child: InkWell(
+                    onTap: () async {
+                      await showModalBottomSheet(
+                        isScrollControlled: true,
+                        backgroundColor: Colors.transparent,
+                        context: context,
+                        builder: (context) {
+                          return Padding(
+                            padding: MediaQuery.of(context).viewInsets,
+                            child: NotificationsWidget(),
+                          );
+                        },
+                      ).then((value) => setState(() {}));
+                    },
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).tertiaryColor,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
+                        child: Badge(
+                          badgeContent: Text(
+                            FFLocalizations.of(context).getText(
+                              'a3an9u8b' /* 7 */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyText1Family,
+                                  color: Colors.white,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyText1Family),
+                                ),
                           ),
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText1
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText1Family,
-                                color: Colors.white,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyText1Family),
-                              ),
-                        ),
-                        showBadge: true,
-                        shape: BadgeShape.circle,
-                        badgeColor: FlutterFlowTheme.of(context).primaryColor,
-                        elevation: 0,
-                        padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
-                        position: BadgePosition.topEnd(),
-                        animationType: BadgeAnimationType.scale,
-                        toAnimate: true,
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
-                          child: Icon(
-                            Icons.notifications_rounded,
-                            color: Color(0xFFF3A867),
-                            size: 24,
+                          showBadge: true,
+                          shape: BadgeShape.circle,
+                          badgeColor: FlutterFlowTheme.of(context).primaryColor,
+                          elevation: 0,
+                          padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                          position: BadgePosition.topEnd(),
+                          animationType: BadgeAnimationType.scale,
+                          toAnimate: true,
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
+                            child: Icon(
+                              Icons.notifications_rounded,
+                              color: Color(0xFFF3A867),
+                              size: 24,
+                            ),
                           ),
                         ),
                       ),

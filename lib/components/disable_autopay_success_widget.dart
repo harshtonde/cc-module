@@ -324,9 +324,7 @@ class _DisableAutopaySuccessWidgetState
                                     FFButtonWidget(
                                       onPressed: () async {
                                         Navigator.pop(context);
-                                        setState(() {
-                                          FFAppState().autopay = false;
-                                        });
+                                        FFAppState().autopay = false;
                                       },
                                       text: FFLocalizations.of(context).getText(
                                         'q9x0qxim' /* VIEW MY CREDIT CARDS */,

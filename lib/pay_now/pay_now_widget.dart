@@ -4,12 +4,15 @@ import '../components/side_bar_update_widget.dart';
 import '../components/top_header_mobile_widget.dart';
 import '../components/top_header_widget.dart';
 import '../flutter_flow/flutter_flow_drop_down.dart';
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_toggle_icon.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 
 class PayNowWidget extends StatefulWidget {
@@ -20,14 +23,25 @@ class PayNowWidget extends StatefulWidget {
 }
 
 class _PayNowWidgetState extends State<PayNowWidget> {
+  DateTime? datePicked;
   String? dropDownValue;
+  TextEditingController? textController;
+  final textFieldMask = MaskTextInputFormatter(mask: '######');
+  final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-
+    textController = TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    textController?.dispose();
+    super.dispose();
   }
 
   @override
@@ -38,7 +52,7 @@ class _PayNowWidgetState extends State<PayNowWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
       body: GestureDetector(
-        onTap: () => FocusScope.of(context).unfocus(),
+        onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -577,22 +591,18 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                         children: [
                                                           InkWell(
                                                             onTap: () async {
-                                                              setState(() {
-                                                                FFAppState()
-                                                                        .totalAmountDue =
-                                                                    true;
-                                                                FFAppState()
-                                                                        .minimumAmountDue =
-                                                                    false;
-                                                              });
-                                                              setState(() {
-                                                                FFAppState()
-                                                                        .currentOutstanding =
-                                                                    false;
-                                                                FFAppState()
-                                                                        .payCustomAmount =
-                                                                    false;
-                                                              });
+                                                              FFAppState()
+                                                                      .totalAmountDue =
+                                                                  true;
+                                                              FFAppState()
+                                                                      .minimumAmountDue =
+                                                                  false;
+                                                              FFAppState()
+                                                                      .currentOutstanding =
+                                                                  false;
+                                                              FFAppState()
+                                                                      .payCustomAmount =
+                                                                  false;
                                                             },
                                                             child: Container(
                                                               width: 220,
@@ -719,22 +729,18 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              setState(() {
-                                                                FFAppState()
-                                                                        .totalAmountDue =
-                                                                    false;
-                                                                FFAppState()
-                                                                        .minimumAmountDue =
-                                                                    true;
-                                                              });
-                                                              setState(() {
-                                                                FFAppState()
-                                                                        .currentOutstanding =
-                                                                    false;
-                                                                FFAppState()
-                                                                        .payCustomAmount =
-                                                                    false;
-                                                              });
+                                                              FFAppState()
+                                                                      .totalAmountDue =
+                                                                  false;
+                                                              FFAppState()
+                                                                      .minimumAmountDue =
+                                                                  true;
+                                                              FFAppState()
+                                                                      .currentOutstanding =
+                                                                  false;
+                                                              FFAppState()
+                                                                      .payCustomAmount =
+                                                                  false;
                                                             },
                                                             child: Container(
                                                               width: 220,
@@ -861,22 +867,18 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              setState(() {
-                                                                FFAppState()
-                                                                        .totalAmountDue =
-                                                                    false;
-                                                                FFAppState()
-                                                                        .minimumAmountDue =
-                                                                    false;
-                                                              });
-                                                              setState(() {
-                                                                FFAppState()
-                                                                        .currentOutstanding =
-                                                                    true;
-                                                                FFAppState()
-                                                                        .payCustomAmount =
-                                                                    false;
-                                                              });
+                                                              FFAppState()
+                                                                      .totalAmountDue =
+                                                                  false;
+                                                              FFAppState()
+                                                                      .minimumAmountDue =
+                                                                  false;
+                                                              FFAppState()
+                                                                      .currentOutstanding =
+                                                                  true;
+                                                              FFAppState()
+                                                                      .payCustomAmount =
+                                                                  false;
                                                             },
                                                             child: Container(
                                                               width: 220,
@@ -1003,22 +1005,18 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              setState(() {
-                                                                FFAppState()
-                                                                        .totalAmountDue =
-                                                                    false;
-                                                                FFAppState()
-                                                                        .minimumAmountDue =
-                                                                    false;
-                                                              });
-                                                              setState(() {
-                                                                FFAppState()
-                                                                        .currentOutstanding =
-                                                                    false;
-                                                                FFAppState()
-                                                                        .payCustomAmount =
-                                                                    true;
-                                                              });
+                                                              FFAppState()
+                                                                      .totalAmountDue =
+                                                                  false;
+                                                              FFAppState()
+                                                                      .minimumAmountDue =
+                                                                  false;
+                                                              FFAppState()
+                                                                      .currentOutstanding =
+                                                                  false;
+                                                              FFAppState()
+                                                                      .payCustomAmount =
+                                                                  true;
                                                             },
                                                             child: Container(
                                                               width: 220,
@@ -1170,11 +1168,204 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                         ],
                                                       ),
                                                     ),
+                                                    if (FFAppState()
+                                                        .payCustomAmount)
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(0, 24,
+                                                                    0, 0),
+                                                        child: Container(
+                                                          height: 50,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: Color(
+                                                                0xFFEBEDF6),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        50),
+                                                            border: Border.all(
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .lineColor,
+                                                            ),
+                                                          ),
+                                                          child: Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        12,
+                                                                        0,
+                                                                        0,
+                                                                        0),
+                                                            child: Row(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .min,
+                                                              children: [
+                                                                Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'yhoas5kg' /* ₹ */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            FlutterFlowTheme.of(context).bodyText1Family,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        fontSize:
+                                                                            16,
+                                                                        useGoogleFonts:
+                                                                            GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
+                                                                      ),
+                                                                ),
+                                                                Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0,
+                                                                          2,
+                                                                          0,
+                                                                          0),
+                                                                  child:
+                                                                      Container(
+                                                                    width: 240,
+                                                                    child:
+                                                                        TextFormField(
+                                                                      controller:
+                                                                          textController,
+                                                                      autofocus:
+                                                                          true,
+                                                                      obscureText:
+                                                                          false,
+                                                                      decoration:
+                                                                          InputDecoration(
+                                                                        hintText:
+                                                                            FFLocalizations.of(context).getText(
+                                                                          'mwxe6tde' /* Enter Amount */,
+                                                                        ),
+                                                                        enabledBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              BorderSide(
+                                                                            color:
+                                                                                Color(0x00000000),
+                                                                            width:
+                                                                                1,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.only(
+                                                                            bottomLeft:
+                                                                                Radius.circular(0),
+                                                                            bottomRight:
+                                                                                Radius.circular(50),
+                                                                            topLeft:
+                                                                                Radius.circular(0),
+                                                                            topRight:
+                                                                                Radius.circular(50),
+                                                                          ),
+                                                                        ),
+                                                                        focusedBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              BorderSide(
+                                                                            color:
+                                                                                Color(0x00000000),
+                                                                            width:
+                                                                                1,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.only(
+                                                                            bottomLeft:
+                                                                                Radius.circular(0),
+                                                                            bottomRight:
+                                                                                Radius.circular(50),
+                                                                            topLeft:
+                                                                                Radius.circular(0),
+                                                                            topRight:
+                                                                                Radius.circular(50),
+                                                                          ),
+                                                                        ),
+                                                                        errorBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              BorderSide(
+                                                                            color:
+                                                                                Color(0xFFE47187),
+                                                                            width:
+                                                                                1,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.only(
+                                                                            bottomLeft:
+                                                                                Radius.circular(0),
+                                                                            bottomRight:
+                                                                                Radius.circular(50),
+                                                                            topLeft:
+                                                                                Radius.circular(0),
+                                                                            topRight:
+                                                                                Radius.circular(50),
+                                                                          ),
+                                                                        ),
+                                                                        focusedErrorBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              BorderSide(
+                                                                            color:
+                                                                                Color(0xFFE47187),
+                                                                            width:
+                                                                                1,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.only(
+                                                                            bottomLeft:
+                                                                                Radius.circular(0),
+                                                                            bottomRight:
+                                                                                Radius.circular(50),
+                                                                            topLeft:
+                                                                                Radius.circular(0),
+                                                                            topRight:
+                                                                                Radius.circular(50),
+                                                                          ),
+                                                                        ),
+                                                                        filled:
+                                                                            true,
+                                                                        fillColor:
+                                                                            Color(0xFFEBEDF6),
+                                                                      ),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyText1
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                FlutterFlowTheme.of(context).bodyText1Family,
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).secondaryText,
+                                                                            fontSize:
+                                                                                14,
+                                                                            useGoogleFonts:
+                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
+                                                                          ),
+                                                                      inputFormatters: [
+                                                                        textFieldMask
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
                                                     Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
-                                                                  12, 24, 0, 0),
+                                                                  12, 12, 0, 0),
                                                       child: Text(
                                                         FFLocalizations.of(
                                                                 context)
@@ -1474,14 +1665,11 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                         children: [
                                                           InkWell(
                                                             onTap: () async {
-                                                              setState(() {
-                                                                FFAppState()
-                                                                        .today =
-                                                                    true;
-                                                                FFAppState()
-                                                                        .later =
-                                                                    false;
-                                                              });
+                                                              FFAppState()
+                                                                  .today = true;
+                                                              FFAppState()
+                                                                      .later =
+                                                                  false;
                                                             },
                                                             child: Container(
                                                               width: 220,
@@ -1635,14 +1823,11 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              setState(() {
-                                                                FFAppState()
-                                                                        .today =
-                                                                    false;
-                                                                FFAppState()
-                                                                        .later =
-                                                                    true;
-                                                              });
+                                                              FFAppState()
+                                                                      .today =
+                                                                  false;
+                                                              FFAppState()
+                                                                  .later = true;
                                                             },
                                                             child: Container(
                                                               width: 220,
@@ -1797,6 +1982,129 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                         ],
                                                       ),
                                                     ),
+                                                    if (FFAppState().later)
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(0, 24,
+                                                                    0, 0),
+                                                        child: Container(
+                                                          width: 260,
+                                                          height: 50,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: Color(
+                                                                0xFFEBEDF6),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        50),
+                                                            border: Border.all(
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .lineColor,
+                                                            ),
+                                                          ),
+                                                          child: Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        12,
+                                                                        0,
+                                                                        8,
+                                                                        0),
+                                                            child: Row(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .min,
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .spaceBetween,
+                                                              children: [
+                                                                Text(
+                                                                  valueOrDefault<
+                                                                      String>(
+                                                                    dateTimeFormat(
+                                                                      'd/M/y',
+                                                                      datePicked,
+                                                                      locale: FFLocalizations.of(
+                                                                              context)
+                                                                          .languageCode,
+                                                                    ),
+                                                                    'DD/MM/YYYY',
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            FlutterFlowTheme.of(context).bodyText1Family,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        fontSize:
+                                                                            14,
+                                                                        fontWeight:
+                                                                            FontWeight.normal,
+                                                                        useGoogleFonts:
+                                                                            GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
+                                                                      ),
+                                                                ),
+                                                                FlutterFlowIconButton(
+                                                                  borderColor:
+                                                                      Colors
+                                                                          .transparent,
+                                                                  borderRadius:
+                                                                      50,
+                                                                  borderWidth:
+                                                                      1,
+                                                                  buttonSize:
+                                                                      40,
+                                                                  fillColor: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryColor,
+                                                                  icon: Icon(
+                                                                    Icons
+                                                                        .date_range,
+                                                                    color: Colors
+                                                                        .white,
+                                                                    size: 18,
+                                                                  ),
+                                                                  onPressed:
+                                                                      () async {
+                                                                    final _datePickedDate =
+                                                                        await showDatePicker(
+                                                                      context:
+                                                                          context,
+                                                                      initialDate:
+                                                                          getCurrentTimestamp,
+                                                                      firstDate:
+                                                                          getCurrentTimestamp,
+                                                                      lastDate:
+                                                                          DateTime(
+                                                                              2050),
+                                                                    );
+
+                                                                    if (_datePickedDate !=
+                                                                        null) {
+                                                                      setState(
+                                                                        () => datePicked =
+                                                                            DateTime(
+                                                                          _datePickedDate
+                                                                              .year,
+                                                                          _datePickedDate
+                                                                              .month,
+                                                                          _datePickedDate
+                                                                              .day,
+                                                                        ),
+                                                                      );
+                                                                    }
+                                                                  },
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
                                                     Row(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -2072,6 +2380,7 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                           phone: false,
                           tablet: false,
                           tabletLandscape: false,
+                          desktop: false,
                         ))
                           SideBarUpdateWidget(),
                       ],
