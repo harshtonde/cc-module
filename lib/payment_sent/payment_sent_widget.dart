@@ -53,6 +53,7 @@ class _PaymentSentWidgetState extends State<PaymentSentWidget>
       ],
     ),
   };
+  final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -63,6 +64,12 @@ class _PaymentSentWidgetState extends State<PaymentSentWidget>
   }
 
   @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
 
@@ -70,7 +77,7 @@ class _PaymentSentWidgetState extends State<PaymentSentWidget>
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
       body: GestureDetector(
-        onTap: () => FocusScope.of(context).unfocus(),
+        onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -1278,11 +1285,8 @@ class _PaymentSentWidgetState extends State<PaymentSentWidget>
                                                                           FFButtonWidget(
                                                                         onPressed:
                                                                             () async {
-                                                                          setState(
-                                                                              () {
-                                                                            FFAppState().convertToEmiInitiated =
-                                                                                false;
-                                                                          });
+                                                                          FFAppState().convertToEmiInitiated =
+                                                                              false;
 
                                                                           context
                                                                               .pushNamed('dashboard');

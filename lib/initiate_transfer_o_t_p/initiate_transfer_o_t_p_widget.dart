@@ -37,8 +37,9 @@ class _InitiateTransferOTPWidgetState extends State<InitiateTransferOTPWidget> {
   TextEditingController? textController;
   late bool passwordVisibility;
   final textFieldMask = MaskTextInputFormatter(mask: '######');
-  final formKey = GlobalKey<FormState>();
+  final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -55,6 +56,7 @@ class _InitiateTransferOTPWidgetState extends State<InitiateTransferOTPWidget> {
 
   @override
   void dispose() {
+    _unfocusNode.dispose();
     textController?.dispose();
     timerController.dispose();
     super.dispose();
@@ -68,7 +70,7 @@ class _InitiateTransferOTPWidgetState extends State<InitiateTransferOTPWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
       body: GestureDetector(
-        onTap: () => FocusScope.of(context).unfocus(),
+        onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -249,7 +251,7 @@ class _InitiateTransferOTPWidgetState extends State<InitiateTransferOTPWidget> {
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'un0ruzje' /* Processing fee of ₹ 13,480 wil... */,
+                                                                      'un0ruzje' /* Processing fee of ₹ 1,480 will... */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -803,7 +805,7 @@ class _InitiateTransferOTPWidgetState extends State<InitiateTransferOTPWidget> {
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'thahx714' /* ₹ 4,610 */,
+                                                                  'thahx714' /* ₹ 24,000 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)

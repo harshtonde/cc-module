@@ -91,6 +91,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
   bool mouseRegionHovered2 = false;
   bool card3Hovered = false;
   bool mouseRegionHovered1 = false;
+  final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -107,6 +108,12 @@ class _DashboardWidgetState extends State<DashboardWidget>
   }
 
   @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
 
@@ -114,7 +121,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
       body: GestureDetector(
-        onTap: () => FocusScope.of(context).unfocus(),
+        onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -462,9 +469,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                   children: [
                                                                                     FFButtonWidget(
                                                                                       onPressed: () async {
-                                                                                        setState(() {
-                                                                                          FFAppState().convertToEmiInitiated = false;
-                                                                                        });
+                                                                                        FFAppState().convertToEmiInitiated = false;
 
                                                                                         context.pushNamed('payNow');
                                                                                       },
@@ -1903,9 +1908,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               ),
                                                                               FFButtonWidget(
                                                                                 onPressed: () async {
-                                                                                  setState(() {
-                                                                                    FFAppState().convertToEmiInitiated = true;
-                                                                                  });
+                                                                                  FFAppState().convertToEmiInitiated = true;
 
                                                                                   context.pushNamed('convertToEMI');
                                                                                 },

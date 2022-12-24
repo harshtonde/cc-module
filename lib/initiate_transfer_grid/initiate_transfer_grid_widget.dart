@@ -28,8 +28,9 @@ class _InitiateTransferGridWidgetState
   final textFieldMask2 = MaskTextInputFormatter(mask: '##');
   TextEditingController? textController3;
   final textFieldMask3 = MaskTextInputFormatter(mask: '##');
-  final formKey = GlobalKey<FormState>();
+  final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -42,6 +43,7 @@ class _InitiateTransferGridWidgetState
 
   @override
   void dispose() {
+    _unfocusNode.dispose();
     textController1?.dispose();
     textController2?.dispose();
     textController3?.dispose();
@@ -56,7 +58,7 @@ class _InitiateTransferGridWidgetState
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
       body: GestureDetector(
-        onTap: () => FocusScope.of(context).unfocus(),
+        onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -927,9 +929,7 @@ class _InitiateTransferGridWidgetState
                                                                                     return;
                                                                                   }
 
-                                                                                  setState(() {
-                                                                                    FFAppState().gridValidated = true;
-                                                                                  });
+                                                                                  FFAppState().gridValidated = true;
                                                                                 },
                                                                               ),
                                                                               autofocus: true,
