@@ -29,18 +29,19 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
     return Row(
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(0),
           child: BackdropFilter(
             filter: ImageFilter.blur(
-              sigmaX: 2,
-              sigmaY: 2,
+              sigmaX: 4,
+              sigmaY: 4,
             ),
             child: Container(
               width: 400,
               decoration: BoxDecoration(
-                color: Color(0x84FFFFFF),
+                color: Color(0xC7FFFFFF),
                 borderRadius: BorderRadius.circular(12),
                 shape: BoxShape.rectangle,
               ),
@@ -94,7 +95,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         alignment: AlignmentDirectional(0, 0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'nqcvi88l' /* 7 */,
+                                            'rj3pbv2b' /* 7 */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
@@ -144,8 +145,8 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                               borderRadius: BorderRadius.circular(0),
                               child: BackdropFilter(
                                 filter: ImageFilter.blur(
-                                  sigmaX: 2,
-                                  sigmaY: 2,
+                                  sigmaX: 3,
+                                  sigmaY: 3,
                                 ),
                                 child: Container(
                                   width: 370,
@@ -330,7 +331,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'hhnlxtlj' /* An hour ago */,
+                                                      '4d8khm11' /* An hour ago */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -361,7 +362,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                          'p4jnrqsv' /* ENROLL NOW  */,
+                                                          'lph13lzk' /* ENROLL NOW  */,
                                                         ),
                                                         style:
                                                             FlutterFlowTheme.of(
@@ -413,8 +414,8 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                               borderRadius: BorderRadius.circular(0),
                               child: BackdropFilter(
                                 filter: ImageFilter.blur(
-                                  sigmaX: 2,
-                                  sigmaY: 2,
+                                  sigmaX: 3,
+                                  sigmaY: 3,
                                 ),
                                 child: Container(
                                   width: 370,
@@ -599,7 +600,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'g6t790m2' /* An hour ago */,
+                                                      '7kiet5r1' /* An hour ago */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -630,7 +631,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                          't6g7nu9j' /* ENROLL NOW  */,
+                                                          'qei3om9y' /* ENROLL NOW  */,
                                                         ),
                                                         style:
                                                             FlutterFlowTheme.of(
@@ -724,7 +725,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         alignment: AlignmentDirectional(0, 0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'jlvq8e1l' /* 1 */,
+                                            'u10vrm0f' /* 1 */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
@@ -758,8 +759,8 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                               borderRadius: BorderRadius.circular(0),
                               child: BackdropFilter(
                                 filter: ImageFilter.blur(
-                                  sigmaX: 2,
-                                  sigmaY: 2,
+                                  sigmaX: 3,
+                                  sigmaY: 3,
                                 ),
                                 child: Container(
                                   width: 370,
@@ -929,7 +930,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'cc3yvt4q' /* An hour ago */,
+                                                      '47ay5yuj' /* An hour ago */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -960,7 +961,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                          'e9algyr5' /* ENROLL NOW  */,
+                                                          'jxck50ko' /* ENROLL NOW  */,
                                                         ),
                                                         style:
                                                             FlutterFlowTheme.of(

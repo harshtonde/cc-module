@@ -164,6 +164,14 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
+                                                borderRadius: BorderRadius.only(
+                                                  bottomLeft:
+                                                      Radius.circular(0),
+                                                  bottomRight:
+                                                      Radius.circular(0),
+                                                  topLeft: Radius.circular(12),
+                                                  topRight: Radius.circular(12),
+                                                ),
                                               ),
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
@@ -1208,7 +1216,7 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'yhoas5kg' /* ₹ */,
+                                                                    '6p9gsqlx' /* ₹ */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
