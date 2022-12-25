@@ -12,6 +12,7 @@ import '../components/top_header_widget.dart';
 import '../components/u_i_tag_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_choice_chips.dart';
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -86,15 +87,16 @@ class _DashboardWidgetState extends State<DashboardWidget>
   String? tabsStatementsValue6;
   String? tabsStatementsValue7;
   String? tabsStatementsValue8;
-  bool mouseRegionHovered4 = false;
+  bool mouseRegionHovered5 = false;
   String? tabsStatementsValue1;
   String? tabsStatementsValue2;
-  bool mouseRegionHovered2 = false;
+  bool mouseRegionHovered3 = false;
   String? tabsStatementsValue3;
   String? tabsStatementsValue4;
-  bool mouseRegionHovered3 = false;
+  bool mouseRegionHovered4 = false;
   bool card3Hovered = false;
   bool mouseRegionHovered1 = false;
+  bool mouseRegionHovered2 = false;
   final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -473,33 +475,43 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   crossAxisAlignment: CrossAxisAlignment.center,
                                                                                   children: [
-                                                                                    FFButtonWidget(
-                                                                                      onPressed: () async {
-                                                                                        FFAppState().convertToEmiInitiated = false;
+                                                                                    MouseRegion(
+                                                                                      opaque: false,
+                                                                                      cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                      child: FFButtonWidget(
+                                                                                        onPressed: () async {
+                                                                                          FFAppState().convertToEmiInitiated = false;
 
-                                                                                        context.pushNamed('payNow');
-                                                                                      },
-                                                                                      text: FFLocalizations.of(context).getText(
-                                                                                        'ltnnjln3' /* PAY NOW */,
-                                                                                      ),
-                                                                                      options: FFButtonOptions(
-                                                                                        width: 140,
-                                                                                        height: 40,
-                                                                                        color: FlutterFlowTheme.of(context).primaryColor,
-                                                                                        textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                                                                                              fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
-                                                                                              color: Colors.white,
-                                                                                              fontSize: 16,
-                                                                                              letterSpacing: 1,
-                                                                                              fontWeight: FontWeight.bold,
-                                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).subtitle2Family),
-                                                                                            ),
-                                                                                        borderSide: BorderSide(
-                                                                                          color: Colors.transparent,
-                                                                                          width: 1,
+                                                                                          context.pushNamed('payNow');
+                                                                                        },
+                                                                                        text: FFLocalizations.of(context).getText(
+                                                                                          'ltnnjln3' /* PAY NOW */,
                                                                                         ),
-                                                                                        borderRadius: BorderRadius.circular(40),
+                                                                                        options: FFButtonOptions(
+                                                                                          width: 140,
+                                                                                          height: 40,
+                                                                                          color: mouseRegionHovered1! ? Colors.white : FlutterFlowTheme.of(context).primaryColor,
+                                                                                          textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                                                                                                fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
+                                                                                                color: mouseRegionHovered1! ? FlutterFlowTheme.of(context).primaryColor : Colors.white,
+                                                                                                fontSize: 16,
+                                                                                                letterSpacing: 1,
+                                                                                                fontWeight: FontWeight.bold,
+                                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).subtitle2Family),
+                                                                                              ),
+                                                                                          borderSide: BorderSide(
+                                                                                            color: Colors.transparent,
+                                                                                            width: 1,
+                                                                                          ),
+                                                                                          borderRadius: BorderRadius.circular(40),
+                                                                                        ),
                                                                                       ),
+                                                                                      onEnter: ((event) async {
+                                                                                        setState(() => mouseRegionHovered1 = true);
+                                                                                      }),
+                                                                                      onExit: ((event) async {
+                                                                                        setState(() => mouseRegionHovered1 = false);
+                                                                                      }),
                                                                                     ),
                                                                                     Padding(
                                                                                       padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
@@ -677,27 +689,27 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                     options: FFButtonOptions(
                                                                                       width: 200,
                                                                                       height: 40,
-                                                                                      color: mouseRegionHovered1! ? FlutterFlowTheme.of(context).primaryColor : Color(0xFFFEEEE5),
+                                                                                      color: mouseRegionHovered2! ? FlutterFlowTheme.of(context).primaryColor : Color(0xFFFEEEE5),
                                                                                       textStyle: FlutterFlowTheme.of(context).bodyText2.override(
                                                                                             fontFamily: FlutterFlowTheme.of(context).bodyText2Family,
-                                                                                            color: mouseRegionHovered1! ? Colors.white : FlutterFlowTheme.of(context).secondaryColor,
+                                                                                            color: mouseRegionHovered2! ? Colors.white : FlutterFlowTheme.of(context).secondaryColor,
                                                                                             fontSize: 12,
                                                                                             letterSpacing: 1,
                                                                                             fontWeight: FontWeight.bold,
                                                                                             useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText2Family),
                                                                                           ),
                                                                                       borderSide: BorderSide(
-                                                                                        color: mouseRegionHovered1! ? Color(0x00FFFFFF) : Color(0xFFFEE3D4),
+                                                                                        color: mouseRegionHovered2! ? Color(0x00FFFFFF) : Color(0xFFFEE3D4),
                                                                                         width: 1,
                                                                                       ),
                                                                                       borderRadius: BorderRadius.circular(50),
                                                                                     ),
                                                                                   ),
                                                                                   onEnter: ((event) async {
-                                                                                    setState(() => mouseRegionHovered1 = true);
+                                                                                    setState(() => mouseRegionHovered2 = true);
                                                                                   }),
                                                                                   onExit: ((event) async {
-                                                                                    setState(() => mouseRegionHovered1 = false);
+                                                                                    setState(() => mouseRegionHovered2 = false);
                                                                                   }),
                                                                                 ),
                                                                               ],
@@ -1921,10 +1933,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                       options: FFButtonOptions(
                                                                                         height: 32,
                                                                                         padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
-                                                                                        color: mouseRegionHovered2! ? FlutterFlowTheme.of(context).primaryColor : Color(0xFFFEEEE5),
+                                                                                        color: mouseRegionHovered3! ? FlutterFlowTheme.of(context).primaryColor : Color(0xFFFEEEE5),
                                                                                         textStyle: FlutterFlowTheme.of(context).bodyText2.override(
                                                                                               fontFamily: FlutterFlowTheme.of(context).bodyText2Family,
-                                                                                              color: mouseRegionHovered2! ? Colors.white : FlutterFlowTheme.of(context).secondaryColor,
+                                                                                              color: mouseRegionHovered3! ? Colors.white : FlutterFlowTheme.of(context).secondaryColor,
                                                                                               fontWeight: FontWeight.bold,
                                                                                               useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText2Family),
                                                                                             ),
@@ -1936,10 +1948,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                       ),
                                                                                     ),
                                                                                     onEnter: ((event) async {
-                                                                                      setState(() => mouseRegionHovered2 = true);
+                                                                                      setState(() => mouseRegionHovered3 = true);
                                                                                     }),
                                                                                     onExit: ((event) async {
-                                                                                      setState(() => mouseRegionHovered2 = false);
+                                                                                      setState(() => mouseRegionHovered3 = false);
                                                                                     }),
                                                                                   ),
                                                                                 ],
@@ -4181,7 +4193,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                             width: MediaQuery.of(context).size.width,
                                                                                             height: 60,
                                                                                             decoration: BoxDecoration(
-                                                                                              color: mouseRegionHovered3! ? FlutterFlowTheme.of(context).primaryBackground : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                              color: mouseRegionHovered4! ? FlutterFlowTheme.of(context).primaryBackground : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                               borderRadius: BorderRadius.circular(0),
                                                                                             ),
                                                                                             child: Padding(
@@ -4300,7 +4312,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                                       animationsMap['columnOnActionTriggerAnimation1']!,
                                                                                                     ),
                                                                                                   ),
-                                                                                                  if (mouseRegionHovered3 == true)
+                                                                                                  if (mouseRegionHovered4 == true)
                                                                                                     Padding(
                                                                                                       padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
                                                                                                       child: FFButtonWidget(
@@ -4335,13 +4347,13 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       onEnter: ((event) async {
-                                                                                        setState(() => mouseRegionHovered3 = true);
+                                                                                        setState(() => mouseRegionHovered4 = true);
                                                                                         if (animationsMap['columnOnActionTriggerAnimation1'] != null) {
                                                                                           await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0);
                                                                                         }
                                                                                       }),
                                                                                       onExit: ((event) async {
-                                                                                        setState(() => mouseRegionHovered3 = false);
+                                                                                        setState(() => mouseRegionHovered4 = false);
                                                                                         if (animationsMap['columnOnActionTriggerAnimation1'] != null) {
                                                                                           await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0).whenComplete(animationsMap['columnOnActionTriggerAnimation1']!.controller.reverse);
                                                                                         }
@@ -10091,7 +10103,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               width: MediaQuery.of(context).size.width,
                                                                               height: 60,
                                                                               decoration: BoxDecoration(
-                                                                                color: mouseRegionHovered4! ? FlutterFlowTheme.of(context).primaryBackground : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                color: mouseRegionHovered5! ? FlutterFlowTheme.of(context).primaryBackground : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                 borderRadius: BorderRadius.circular(0),
                                                                               ),
                                                                               child: Padding(
@@ -10219,7 +10231,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                         onEnter:
                                                                             ((event) async {
                                                                           setState(() =>
-                                                                              mouseRegionHovered4 = true);
+                                                                              mouseRegionHovered5 = true);
                                                                           if (animationsMap['columnOnActionTriggerAnimation1'] !=
                                                                               null) {
                                                                             await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0);
@@ -10228,7 +10240,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                         onExit:
                                                                             ((event) async {
                                                                           setState(() =>
-                                                                              mouseRegionHovered4 = false);
+                                                                              mouseRegionHovered5 = false);
                                                                           if (animationsMap['columnOnActionTriggerAnimation1'] !=
                                                                               null) {
                                                                             await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0).whenComplete(animationsMap['columnOnActionTriggerAnimation1']!.controller.reverse);
@@ -11596,6 +11608,56 @@ class _DashboardWidgetState extends State<DashboardWidget>
                     tabletLandscape: false,
                   ))
                     SideBarUpdateWidget(),
+                  Align(
+                    alignment: AlignmentDirectional(0.98, 0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 200),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          FlutterFlowIconButton(
+                            borderColor: Colors.transparent,
+                            borderRadius: 30,
+                            borderWidth: 1,
+                            buttonSize: 40,
+                            fillColor:
+                                FlutterFlowTheme.of(context).primaryColor,
+                            icon: Icon(
+                              Icons.support_agent_rounded,
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              size: 18,
+                            ),
+                            onPressed: () {
+                              print('IconButton pressed ...');
+                            },
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
+                            child: FlutterFlowIconButton(
+                              borderColor: Colors.transparent,
+                              borderRadius: 30,
+                              borderWidth: 1,
+                              buttonSize: 40,
+                              fillColor:
+                                  FlutterFlowTheme.of(context).primaryColor,
+                              icon: Icon(
+                                Icons.screen_share_rounded,
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                size: 18,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

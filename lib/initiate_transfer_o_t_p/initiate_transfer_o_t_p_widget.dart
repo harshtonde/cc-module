@@ -3,6 +3,7 @@ import '../components/card_p_l_widget.dart';
 import '../components/side_bar_update_widget.dart';
 import '../components/top_header_mobile_widget.dart';
 import '../components/top_header_widget.dart';
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_timer.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -2073,6 +2074,57 @@ Ple... */
                           tabletLandscape: false,
                         ))
                           SideBarUpdateWidget(),
+                        Align(
+                          alignment: AlignmentDirectional(0.98, 0),
+                          child: Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 200),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                FlutterFlowIconButton(
+                                  borderColor: Colors.transparent,
+                                  borderRadius: 30,
+                                  borderWidth: 1,
+                                  buttonSize: 40,
+                                  fillColor:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  icon: Icon(
+                                    Icons.support_agent_rounded,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    size: 18,
+                                  ),
+                                  onPressed: () {
+                                    print('IconButton pressed ...');
+                                  },
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 12, 0, 0),
+                                  child: FlutterFlowIconButton(
+                                    borderColor: Colors.transparent,
+                                    borderRadius: 30,
+                                    borderWidth: 1,
+                                    buttonSize: 40,
+                                    fillColor: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    icon: Icon(
+                                      Icons.screen_share_rounded,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      size: 18,
+                                    ),
+                                    onPressed: () {
+                                      print('IconButton pressed ...');
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
