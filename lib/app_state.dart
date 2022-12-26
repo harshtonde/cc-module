@@ -19,19 +19,9 @@ class FFAppState extends ChangeNotifier {
     _blurCardInfo = prefs.getBool('ff_blurCardInfo') ?? _blurCardInfo;
   }
 
-  static bool _shouldNotify = true;
-  void _maybeNotifyListeners() {
-    if (_shouldNotify) notifyListeners();
-  }
-
-  // Update FFAppState without notifying and rebuilding all widgets.
-  static void updateSilently(VoidCallback callback) {
-    try {
-      _shouldNotify = false;
-      callback();
-    } finally {
-      _shouldNotify = true;
-    }
+  void update(VoidCallback callback) {
+    callback();
+    notifyListeners();
   }
 
   late SharedPreferences prefs;
@@ -39,7 +29,6 @@ class FFAppState extends ChangeNotifier {
   bool _blurCardInfo = true;
   bool get blurCardInfo => _blurCardInfo;
   set blurCardInfo(bool _value) {
-    _maybeNotifyListeners();
     _blurCardInfo = _value;
     prefs.setBool('ff_blurCardInfo', _value);
   }
@@ -55,17 +44,14 @@ class FFAppState extends ChangeNotifier {
   ];
   List<String> get companies => _companies;
   set companies(List<String> _value) {
-    _maybeNotifyListeners();
     _companies = _value;
   }
 
   void addToCompanies(String _value) {
-    _maybeNotifyListeners();
     _companies.add(_value);
   }
 
   void removeFromCompanies(String _value) {
-    _maybeNotifyListeners();
     _companies.remove(_value);
   }
 
@@ -73,7 +59,6 @@ class FFAppState extends ChangeNotifier {
       '{\"card_number\":\"1234567890123456\",\"cvv\":\"056\",\"expiry\":\"04/26\",\"expiry_month\":\"4\",\"expiry_year\":\"2026\",\"image_path\":\"https://firebasestorage.googleapis.com/vO/b/ff-custom-widgets-by-ms.appspot.com/o/credit-cards-samples%2F001-icici-amazon-pay.png?alt=media&token=9360f52f-de15-4473-b70a-71cb3a541027\",\"order\":\"10\"}');
   dynamic get paymentCards => _paymentCards;
   set paymentCards(dynamic _value) {
-    _maybeNotifyListeners();
     _paymentCards = _value;
   }
 
@@ -86,115 +71,98 @@ class FFAppState extends ChangeNotifier {
   ];
   List<String> get creditCardImages => _creditCardImages;
   set creditCardImages(List<String> _value) {
-    _maybeNotifyListeners();
     _creditCardImages = _value;
   }
 
   void addToCreditCardImages(String _value) {
-    _maybeNotifyListeners();
     _creditCardImages.add(_value);
   }
 
   void removeFromCreditCardImages(String _value) {
-    _maybeNotifyListeners();
     _creditCardImages.remove(_value);
   }
 
   int _dropDownValueIndex = 0;
   int get dropDownValueIndex => _dropDownValueIndex;
   set dropDownValueIndex(int _value) {
-    _maybeNotifyListeners();
     _dropDownValueIndex = _value;
   }
 
   bool _current = false;
   bool get current => _current;
   set current(bool _value) {
-    _maybeNotifyListeners();
     _current = _value;
   }
 
   bool _past = false;
   bool get past => _past;
   set past(bool _value) {
-    _maybeNotifyListeners();
     _past = _value;
   }
 
   bool _EMIStatus = false;
   bool get EMIStatus => _EMIStatus;
   set EMIStatus(bool _value) {
-    _maybeNotifyListeners();
     _EMIStatus = _value;
   }
 
   bool _termsAndConditions = false;
   bool get termsAndConditions => _termsAndConditions;
   set termsAndConditions(bool _value) {
-    _maybeNotifyListeners();
     _termsAndConditions = _value;
   }
 
   bool _paymentType = false;
   bool get paymentType => _paymentType;
   set paymentType(bool _value) {
-    _maybeNotifyListeners();
     _paymentType = _value;
   }
 
   bool _autopay = false;
   bool get autopay => _autopay;
   set autopay(bool _value) {
-    _maybeNotifyListeners();
     _autopay = _value;
   }
 
   bool _totalAmountDue = false;
   bool get totalAmountDue => _totalAmountDue;
   set totalAmountDue(bool _value) {
-    _maybeNotifyListeners();
     _totalAmountDue = _value;
   }
 
   bool _minimumAmountDue = false;
   bool get minimumAmountDue => _minimumAmountDue;
   set minimumAmountDue(bool _value) {
-    _maybeNotifyListeners();
     _minimumAmountDue = _value;
   }
 
   bool _currentOutstanding = false;
   bool get currentOutstanding => _currentOutstanding;
   set currentOutstanding(bool _value) {
-    _maybeNotifyListeners();
     _currentOutstanding = _value;
   }
 
   bool _payCustomAmount = false;
   bool get payCustomAmount => _payCustomAmount;
   set payCustomAmount(bool _value) {
-    _maybeNotifyListeners();
     _payCustomAmount = _value;
   }
 
   bool _today = false;
   bool get today => _today;
   set today(bool _value) {
-    _maybeNotifyListeners();
     _today = _value;
   }
 
   bool _later = false;
   bool get later => _later;
   set later(bool _value) {
-    _maybeNotifyListeners();
     _later = _value;
   }
 
   bool _gridValidated = false;
   bool get gridValidated => _gridValidated;
   set gridValidated(bool _value) {
-    _maybeNotifyListeners();
     _gridValidated = _value;
   }
 
@@ -202,7 +170,6 @@ class FFAppState extends ChangeNotifier {
       '{\"results\":[{\"date\":\"15\",\"month\":\"NOV\",\"year\":\"2022\",\"image\":\"https://firebasestorage.googleapis.com/v0/b/testff-66a80.appspot.com/o/default.png?alt=media&token=e6394325-b51a-4a1b-999a-cbd4e5723bbf\",\"remark\":\"Laskshmi Mart\",\"txnAmount\":\"4,000\",\"emiAmount\":\"165\"},{\"date\":\"14\",\"month\":\"NOV\",\"year\":\"2022\",\"image\":\"https://firebasestorage.googleapis.com/v0/b/testff-66a80.appspot.com/o/BSES.png?alt=media&token=00d9f839-a2d5-490e-a86f-00844861c85f\",\"remark\":\"BSES\",\"txnAmount\":\"14,000\",\"emiAmount\":\"600\"},{\"date\":\"10\",\"month\":\"NOV\",\"year\":\"2022\",\"image\":\"https://firebasestorage.googleapis.com/v0/b/testff-66a80.appspot.com/o/Flipkart.png?alt=media&token=abb3aa6c-905a-4e0e-a2e2-164f88c8feaf\",\"remark\":\"Flipkart\",\"txnAmount\":\"30,000\",\"emiAmount\":\"1,275\"},{\"date\":\"09\",\"month\":\"NOV\",\"year\":\"2022\",\"image\":\"https://firebasestorage.googleapis.com/v0/b/testff-66a80.appspot.com/o/Apple.png?alt=media&token=6914b699-ad81-4b7b-8ab1-6839bbd928e0\",\"remark\":\"Apple\",\"txnAmount\":\"60,000\",\"emiAmount\":\"2,400\"},{\"date\":\"05\",\"month\":\"NOV\",\"year\":\"2022\",\"image\":\"https://firebasestorage.googleapis.com/v0/b/testff-66a80.appspot.com/o/VODAFONE.png?alt=media&token=df39c310-b6ee-49e2-aceb-757069975bc5\",\"remark\":\"Vodafone Post...\",\"txnAmount\":\"4,000\",\"emiAmount\":\"170\"},{\"date\":\"01\",\"month\":\"NOV\",\"year\":\"2022\",\"image\":\"https://firebasestorage.googleapis.com/v0/b/testff-66a80.appspot.com/o/Big%20Basket.png?alt=media&token=0a40b557-38ed-41c1-9868-3e0e43f0ad07\",\"remark\":\"Big Basket\",\"txnAmount\":\"7,000\",\"emiAmount\":\"200\"},{\"date\":\"30\",\"month\":\"OCT\",\"year\":\"2022\",\"image\":\"https://firebasestorage.googleapis.com/v0/b/testff-66a80.appspot.com/o/Amazon.png?alt=media&token=b69b7423-242e-4d77-8d5f-50074b004d26\",\"remark\":\"Amazon\",\"txnAmount\":\"7,000\",\"emiAmount\":\"295\"},{\"date\":\"28\",\"month\":\"OCT\",\"year\":\"2022\",\"image\":\"https://firebasestorage.googleapis.com/v0/b/testff-66a80.appspot.com/o/Hewlett%20Packard.png?alt=media&token=e16346b4-d989-44d5-8ef1-cc03f43e0ffe\",\"remark\":\"HP\",\"txnAmount\":\"23,700\",\"emiAmount\":\"895\"},{\"date\":\"22\",\"month\":\"OCT\",\"year\":\"2022\",\"image\":\"https://firebasestorage.googleapis.com/v0/b/testff-66a80.appspot.com/o/Croma.png?alt=media&token=df553741-fe82-4feb-b8ab-def67479f6ef\",\"remark\":\"Croma\",\"txnAmount\":\"8,000\",\"emiAmount\":\"340\"},{\"date\":\"17\",\"month\":\"OCT\",\"year\":\"2022\",\"image\":\"https://firebasestorage.googleapis.com/v0/b/testff-66a80.appspot.com/o/Indigo.png?alt=media&token=da1946d6-5415-4028-b566-9627a550c7b9\",\"remark\":\"Indigo\",\"txnAmount\":\"34,000\",\"emiAmount\":\"2,055\"}]}');
   dynamic get emiList => _emiList;
   set emiList(dynamic _value) {
-    _maybeNotifyListeners();
     _emiList = _value;
   }
 
@@ -214,31 +181,26 @@ class FFAppState extends ChangeNotifier {
   ];
   List<dynamic> get emiItems => _emiItems;
   set emiItems(List<dynamic> _value) {
-    _maybeNotifyListeners();
     _emiItems = _value;
   }
 
   void addToEmiItems(dynamic _value) {
-    _maybeNotifyListeners();
     _emiItems.add(_value);
   }
 
   void removeFromEmiItems(dynamic _value) {
-    _maybeNotifyListeners();
     _emiItems.remove(_value);
   }
 
   bool _initialValueCheck = false;
   bool get initialValueCheck => _initialValueCheck;
   set initialValueCheck(bool _value) {
-    _maybeNotifyListeners();
     _initialValueCheck = _value;
   }
 
   bool _convertToEmiInitiated = false;
   bool get convertToEmiInitiated => _convertToEmiInitiated;
   set convertToEmiInitiated(bool _value) {
-    _maybeNotifyListeners();
     _convertToEmiInitiated = _value;
   }
 
@@ -251,34 +213,28 @@ class FFAppState extends ChangeNotifier {
   ];
   List<String> get cardNumbers => _cardNumbers;
   set cardNumbers(List<String> _value) {
-    _maybeNotifyListeners();
     _cardNumbers = _value;
   }
 
   void addToCardNumbers(String _value) {
-    _maybeNotifyListeners();
     _cardNumbers.add(_value);
   }
 
   void removeFromCardNumbers(String _value) {
-    _maybeNotifyListeners();
     _cardNumbers.remove(_value);
   }
 
   List<String> _emiTenures = ['3 months', '6 months', '9 months'];
   List<String> get emiTenures => _emiTenures;
   set emiTenures(List<String> _value) {
-    _maybeNotifyListeners();
     _emiTenures = _value;
   }
 
   void addToEmiTenures(String _value) {
-    _maybeNotifyListeners();
     _emiTenures.add(_value);
   }
 
   void removeFromEmiTenures(String _value) {
-    _maybeNotifyListeners();
     _emiTenures.remove(_value);
   }
 }

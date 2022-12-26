@@ -60,6 +60,7 @@ class _PaymentSentWidgetState extends State<PaymentSentWidget>
   void initState() {
     super.initState();
 
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'paymentSent'});
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -1278,6 +1279,11 @@ class _PaymentSentWidgetState extends State<PaymentSentWidget>
                                                                     FFButtonWidget(
                                                                       onPressed:
                                                                           () async {
+                                                                        logFirebaseEvent(
+                                                                            'PAYMENT_SENT_RETRY_CONVERTING_FAILED_TRA');
+                                                                        logFirebaseEvent(
+                                                                            'Button_navigate_to');
+
                                                                         context.pushNamed(
                                                                             'convertToEMI');
                                                                       },
@@ -1329,8 +1335,17 @@ class _PaymentSentWidgetState extends State<PaymentSentWidget>
                                                                           FFButtonWidget(
                                                                         onPressed:
                                                                             () async {
-                                                                          FFAppState().convertToEmiInitiated =
-                                                                              false;
+                                                                          logFirebaseEvent(
+                                                                              'PAYMENT_SENT_CONTINUE_BROWSING_CREDIT_CA');
+                                                                          logFirebaseEvent(
+                                                                              'Button_update_local_state');
+                                                                          FFAppState()
+                                                                              .update(() {
+                                                                            FFAppState().convertToEmiInitiated =
+                                                                                false;
+                                                                          });
+                                                                          logFirebaseEvent(
+                                                                              'Button_navigate_to');
 
                                                                           context
                                                                               .pushNamed('dashboard');
@@ -2045,6 +2060,11 @@ class _PaymentSentWidgetState extends State<PaymentSentWidget>
                                                           child: FFButtonWidget(
                                                             onPressed:
                                                                 () async {
+                                                              logFirebaseEvent(
+                                                                  'PAYMENT_SENT_CONTINUE_BROWSING_BTN_ON_TA');
+                                                              logFirebaseEvent(
+                                                                  'Button_navigate_to');
+
                                                               context.pushNamed(
                                                                   'dashboard');
                                                             },

@@ -27,7 +27,8 @@ class _ConvertToEMIWidgetState extends State<ConvertToEMIWidget> {
   @override
   void initState() {
     super.initState();
-
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'convertToEMI'});
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -218,6 +219,8 @@ class _ConvertToEMIWidgetState extends State<ConvertToEMIWidget> {
                                                                               children: [
                                                                                 InkWell(
                                                                                   onTap: () async {
+                                                                                    logFirebaseEvent('CONVERT_TO_E_M_I_Container_z7wxc67c_ON_T');
+                                                                                    logFirebaseEvent('Container_navigate_back');
                                                                                     context.pop();
                                                                                   },
                                                                                   child: Container(
@@ -1371,6 +1374,9 @@ For 2 years... */
                                                                                   children: [
                                                                                     FFButtonWidget(
                                                                                       onPressed: () async {
+                                                                                        logFirebaseEvent('CONVERT_TO_E_M_I_PAY_₹1,480_&_CONVERT_TO');
+                                                                                        logFirebaseEvent('Button_navigate_to');
+
                                                                                         context.pushNamed('initiateTransferOTP');
                                                                                       },
                                                                                       text: FFLocalizations.of(context).getText(
@@ -1396,7 +1402,12 @@ For 2 years... */
                                                                                     ),
                                                                                     FFButtonWidget(
                                                                                       onPressed: () async {
-                                                                                        FFAppState().convertToEmiInitiated = false;
+                                                                                        logFirebaseEvent('CONVERT_TO_E_M_I_PAGE_CANCEL_BTN_ON_TAP');
+                                                                                        logFirebaseEvent('Button_update_local_state');
+                                                                                        FFAppState().update(() {
+                                                                                          FFAppState().convertToEmiInitiated = false;
+                                                                                        });
+                                                                                        logFirebaseEvent('Button_navigate_back');
                                                                                         context.pop();
                                                                                       },
                                                                                       text: FFLocalizations.of(context).getText(
