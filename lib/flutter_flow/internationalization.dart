@@ -4865,7 +4865,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'பின்னை உருவாக்கவும்',
     },
   },
-  // PaymentCards
+  // PaymentCardsTest
   {
     'u0jy5ubf': {
       'en': 'YOUR CREDIT CARDS',

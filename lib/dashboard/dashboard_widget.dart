@@ -4,7 +4,6 @@ import '../components/emi_component_widget.dart';
 import '../components/enable_autopay_bottom_sheet_widget.dart';
 import '../components/loan_on_c_c_component_widget.dart';
 import '../components/manage_credit_cards_widget.dart';
-import '../components/payment_cards_widget.dart';
 import '../components/reward_points_widget.dart';
 import '../components/side_bar_update_widget.dart';
 import '../components/top_header_mobile_widget.dart';
@@ -278,8 +277,19 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   .circular(0),
                                                             ),
                                                           ),
-                                                          child:
-                                                              PaymentCardsWidget(),
+                                                          child: Container(
+                                                            width:
+                                                                double.infinity,
+                                                            height:
+                                                                double.infinity,
+                                                            child: custom_widgets
+                                                                .PaymentCardsWidget(
+                                                              width: double
+                                                                  .infinity,
+                                                              height: double
+                                                                  .infinity,
+                                                            ),
+                                                          ),
                                                         ),
                                                       ),
                                                       Expanded(
