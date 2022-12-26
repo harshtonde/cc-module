@@ -8,14 +8,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class PaymentCardsWidget extends StatefulWidget {
-  const PaymentCardsWidget({Key? key}) : super(key: key);
+class PaymentCardsTestWidget extends StatefulWidget {
+  const PaymentCardsTestWidget({Key? key}) : super(key: key);
 
   @override
-  _PaymentCardsWidgetState createState() => _PaymentCardsWidgetState();
+  _PaymentCardsTestWidgetState createState() => _PaymentCardsTestWidgetState();
 }
 
-class _PaymentCardsWidgetState extends State<PaymentCardsWidget> {
+class _PaymentCardsTestWidgetState extends State<PaymentCardsTestWidget> {
   String? dropDownValue;
   bool mouseRegionHovered1 = false;
   bool mouseRegionHovered2 = false;
@@ -222,13 +222,9 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget> {
                 Container(
                   width: double.infinity,
                   height: 270,
-                  child: custom_widgets.PaymentCardsZoomingCarousel(
+                  child: custom_widgets.PaymentCardsWidget(
                     width: double.infinity,
                     height: 270,
-                    cardWidth: 420,
-                    cardMaxPadding: 20,
-                    images: FFAppState().creditCardImages.toList(),
-                    onCardChanged: () async {},
                   ),
                 ),
                 Container(
@@ -463,7 +459,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget> {
                         child: FFButtonWidget(
                           onPressed: () async {
                             logFirebaseEvent(
-                                'PAYMENT_CARDS_UPGRADE_CARD_BTN_ON_TAP');
+                                'PAYMENT_CARDS_TEST_UPGRADE_CARD_BTN_ON_T');
                             logFirebaseEvent('Button_alert_dialog');
                             await showDialog(
                               context: context,
