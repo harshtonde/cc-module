@@ -462,6 +462,9 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget> {
                         cursor: MouseCursor.defer ?? MouseCursor.defer,
                         child: FFButtonWidget(
                           onPressed: () async {
+                            logFirebaseEvent(
+                                'PAYMENT_CARDS_UPGRADE_CARD_BTN_ON_TAP');
+                            logFirebaseEvent('Button_alert_dialog');
                             await showDialog(
                               context: context,
                               builder: (alertDialogContext) {

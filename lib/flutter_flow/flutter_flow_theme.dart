@@ -125,7 +125,7 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color customColor2 = Color(0xFF30CC7A);
   late Color white70 = Color(0xB3FFFFFF);
   late Color primary600 = Color(0xFF5E27A5);
-  late Color negative = Color(0xFFF45458);
+  late Color negative = Color(0xFFAC3E3E);
   late Color positive = Color(0xFF19DB8A);
   late Color overlay = Color(0xB3FFFFFF);
   late Color overlay0 = Color(0x00FFFFFF);

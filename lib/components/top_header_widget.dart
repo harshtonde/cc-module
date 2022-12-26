@@ -91,9 +91,15 @@ class _TopHeaderWidgetState extends State<TopHeaderWidget> {
                   children: [
                     InkWell(
                       onTap: () async {
+                        logFirebaseEvent(
+                            'TOP_HEADER_Container_p5qvn89w_ON_TAP');
                         if (Theme.of(context).brightness == Brightness.dark) {
+                          logFirebaseEvent(
+                              'themeSwtich_set_dark_mode_settings');
                           setDarkModeSetting(context, ThemeMode.light);
                         } else {
+                          logFirebaseEvent(
+                              'themeSwtich_set_dark_mode_settings');
                           setDarkModeSetting(context, ThemeMode.dark);
                         }
                       },
@@ -257,6 +263,8 @@ VIDEOS */
                   padding: EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
                   child: InkWell(
                     onTap: () async {
+                      logFirebaseEvent('TOP_HEADER_Container_aiatzdvn_ON_TAP');
+                      logFirebaseEvent('Container_bottom_sheet');
                       await showModalBottomSheet(
                         isScrollControlled: true,
                         backgroundColor: Colors.transparent,

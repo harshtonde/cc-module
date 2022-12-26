@@ -276,6 +276,9 @@ class _UserListWidgetState extends State<UserListWidget>
                             size: 24,
                           ),
                           onPressed: () async {
+                            logFirebaseEvent(
+                                'USER_LIST_COMP_close_rounded_ICN_ON_TAP');
+                            logFirebaseEvent('IconButton_bottom_sheet');
                             Navigator.pop(context);
                           },
                         ),
@@ -394,6 +397,10 @@ class _UserListWidgetState extends State<UserListWidget>
                                             0, 0, 16, 0),
                                         child: FFButtonWidget(
                                           onPressed: () async {
+                                            logFirebaseEvent(
+                                                'USER_LIST_COMP_SEARCH_BTN_ON_TAP');
+                                            logFirebaseEvent(
+                                                'Button_show_snack_bar');
                                             ScaffoldMessenger.of(context)
                                                 .showSnackBar(
                                               SnackBar(
@@ -426,6 +433,8 @@ class _UserListWidgetState extends State<UserListWidget>
                                                         .alternate,
                                               ),
                                             );
+                                            logFirebaseEvent(
+                                                'Button_bottom_sheet');
                                             Navigator.pop(context);
                                           },
                                           text: FFLocalizations.of(context)

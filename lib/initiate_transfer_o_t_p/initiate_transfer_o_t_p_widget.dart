@@ -47,9 +47,13 @@ class _InitiateTransferOTPWidgetState extends State<InitiateTransferOTPWidget> {
     super.initState();
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
+      logFirebaseEvent('INITIATE_TRANSFER_O_T_P_initiateTransfer');
+      logFirebaseEvent('initiateTransferOTP_timer');
       timerController.onExecute.add(StopWatchExecute.start);
     });
 
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'initiateTransferOTP'});
     textController = TextEditingController();
     passwordVisibility = false;
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
@@ -1775,11 +1779,17 @@ Ple... */
                                                               child: InkWell(
                                                                 onTap:
                                                                     () async {
+                                                                  logFirebaseEvent(
+                                                                      'INITIATE_TRANSFER_O_T_P_Text_n5f93cmm_ON');
+                                                                  logFirebaseEvent(
+                                                                      'Text_timer');
                                                                   timerController
                                                                       .onExecute
                                                                       .add(StopWatchExecute
                                                                           .reset);
 
+                                                                  logFirebaseEvent(
+                                                                      'Text_navigate_to');
                                                                   if (Navigator.of(
                                                                           context)
                                                                       .canPop()) {
@@ -1837,6 +1847,10 @@ Ple... */
                                                                   InkWell(
                                                                     onTap:
                                                                         () async {
+                                                                      logFirebaseEvent(
+                                                                          'INITIATE_TRANSFER_O_T_P_Text_n3h84ukn_ON');
+                                                                      logFirebaseEvent(
+                                                                          'Text_alert_dialog');
                                                                       await showDialog(
                                                                         context:
                                                                             context,
@@ -1896,6 +1910,10 @@ Ple... */
                                                           FFButtonWidget(
                                                             onPressed:
                                                                 () async {
+                                                              logFirebaseEvent(
+                                                                  'INITIATE_TRANSFER_O_T_P_VERIFY_OTP_BTN_O');
+                                                              logFirebaseEvent(
+                                                                  'Button_validate_form');
                                                               if (formKey.currentState ==
                                                                       null ||
                                                                   !formKey
@@ -1906,9 +1924,15 @@ Ple... */
 
                                                               if (FFAppState()
                                                                   .convertToEmiInitiated) {
+                                                                logFirebaseEvent(
+                                                                    'Button_navigate_to');
+
                                                                 context.pushNamed(
                                                                     'paymentSent');
                                                               } else {
+                                                                logFirebaseEvent(
+                                                                    'Button_navigate_to');
+
                                                                 context.pushNamed(
                                                                     'initiateTransferGrid');
                                                               }
@@ -1970,6 +1994,10 @@ Ple... */
                                                                 FFButtonWidget(
                                                               onPressed:
                                                                   () async {
+                                                                logFirebaseEvent(
+                                                                    'INITIATE_TRANSFER_O_T_P_CANCEL_BTN_ON_TA');
+                                                                logFirebaseEvent(
+                                                                    'Button_navigate_back');
                                                                 context.pop();
                                                               },
                                                               text: FFLocalizations

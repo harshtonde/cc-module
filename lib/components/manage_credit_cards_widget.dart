@@ -74,6 +74,9 @@ class _ManageCreditCardsWidgetState extends State<ManageCreditCardsWidget> {
                     ),
                     FFButtonWidget(
                       onPressed: () async {
+                        logFirebaseEvent(
+                            'MANAGE_CREDIT_CARDS_VIEW_ALL_BTN_ON_TAP');
+                        logFirebaseEvent('Button_alert_dialog');
                         await showDialog(
                           context: context,
                           builder: (alertDialogContext) {
