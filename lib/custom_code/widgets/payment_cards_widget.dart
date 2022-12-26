@@ -513,6 +513,8 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget> {
                               inactiveText: "OFF",
                               width: 60,
                               height: 24,
+                              activeTextFontWeight: FontWeight.w500,
+                              inactiveTextFontWeight: FontWeight.w500,
                               valueFontSize: 12.0,
                               toggleSize: 20,
                               value: show,
