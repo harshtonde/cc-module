@@ -108,7 +108,7 @@ class _LoanOnCCComponentWidgetState extends State<LoanOnCCComponentWidget> {
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .bodyText1Family,
                                     color: !mouseRegionHovered!
-                                        ? Color(0xFF7E5EFC)
+                                        ? Color(0xFF0D2923)
                                         : Color(0xFFDEDEF9),
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: GoogleFonts.asMap()
