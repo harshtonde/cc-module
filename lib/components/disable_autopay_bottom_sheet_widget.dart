@@ -1,10 +1,10 @@
 import '../components/disable_autopay_success_widget.dart';
-import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '../custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -19,8 +19,6 @@ class DisableAutopayBottomSheetWidget extends StatefulWidget {
 
 class _DisableAutopayBottomSheetWidgetState
     extends State<DisableAutopayBottomSheetWidget> {
-  String? dropDownValue;
-
   @override
   void initState() {
     super.initState();
@@ -732,111 +730,16 @@ class _DisableAutopayBottomSheetWidgetState
                                   children: [
                                     Container(
                                       width: 200,
-                                      child: Stack(
-                                        alignment: AlignmentDirectional(-1, -1),
-                                        children: [
-                                          Align(
-                                            alignment:
-                                                AlignmentDirectional(-1, 0),
-                                            child: FlutterFlowDropDown<String>(
-                                              initialOption: dropDownValue ??=
-                                                  '4545',
-                                              options: ['Option 1', '4545'],
-                                              optionLabels: [
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '6dyvdwfb' /* Option 1 */,
-                                                ),
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'c4eafdca' /* 4545 */,
-                                                )
-                                              ],
-                                              onChanged: (val) => setState(
-                                                  () => dropDownValue = val),
-                                              width: 200,
-                                              height: 40,
-                                              textStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyText1Family,
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
-                                                        useGoogleFonts: GoogleFonts
-                                                                .asMap()
-                                                            .containsKey(
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyText1Family),
-                                                      ),
-                                              icon: Icon(
-                                                Icons
-                                                    .keyboard_arrow_down_rounded,
-                                                size: 15,
-                                              ),
-                                              fillColor: Color(0xFFEBEDF6),
-                                              elevation: 2,
-                                              borderColor: Colors.transparent,
-                                              borderWidth: 0,
-                                              borderRadius: 1000,
-                                              margin: EdgeInsetsDirectional
-                                                  .fromSTEB(12, 4, 12, 4),
-                                              hidesUnderline: true,
-                                            ),
-                                          ),
-                                          Align(
-                                            alignment:
-                                                AlignmentDirectional(-1, 0),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(10, 3, 0, 0),
-                                              child: Container(
-                                                height: 35,
-                                                decoration: BoxDecoration(
-                                                  color: Color(0xFFEBEDF6),
-                                                ),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.min,
-                                                  children: [
-                                                    Image.asset(
-                                                      'assets/images/logo_Bank_aloneBG@1x.png',
-                                                      width: 20,
-                                                      fit: BoxFit.cover,
-                                                    ),
-                                                    Align(
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              -1, 0),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(10, 0,
-                                                                    0, 0),
-                                                        child: Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            '0daq6zwl' /* 0010020030042 */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText1,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
+                                      height: 40,
+                                      child: custom_widgets.CustomDropDown(
+                                        width: 200,
+                                        height: 40,
+                                        image:
+                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/complex-bank-vz7qqz/assets/08w20fv9kalu/logo_Bank_aloneBG@1x.png',
+                                        imageFirst: true,
+                                        items: FFAppState()
+                                            .accountNumbers
+                                            .toList(),
                                       ),
                                     ),
                                     Padding(
