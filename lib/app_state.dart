@@ -237,6 +237,26 @@ class FFAppState extends ChangeNotifier {
   void removeFromEmiTenures(String _value) {
     _emiTenures.remove(_value);
   }
+
+  List<String> _accountNumbers = [
+    '0010020030042',
+    '00112318234902',
+    '00762331637193',
+    '00121231823441',
+    '00612318231238'
+  ];
+  List<String> get accountNumbers => _accountNumbers;
+  set accountNumbers(List<String> _value) {
+    _accountNumbers = _value;
+  }
+
+  void addToAccountNumbers(String _value) {
+    _accountNumbers.add(_value);
+  }
+
+  void removeFromAccountNumbers(String _value) {
+    _accountNumbers.remove(_value);
+  }
 }
 
 LatLng? _latLngFromString(String? val) {
