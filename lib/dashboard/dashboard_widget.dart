@@ -1402,7 +1402,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                                       size: 20,
                                                                                                     ),
                                                                                                     bgColor: !card3Hovered! ? FlutterFlowTheme.of(context).secondaryBackground : Color(0xFF51A9A4),
-                                                                                                    textColor: card3Hovered! ? Color(0x00000000) : Colors.white,
+                                                                                                    textColor: !card3Hovered! ? Color(0xFF51A9A4) : Colors.white,
                                                                                                   ),
                                                                                                 ),
                                                                                               ],
