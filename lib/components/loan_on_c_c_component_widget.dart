@@ -13,6 +13,8 @@ class LoanOnCCComponentWidget extends StatefulWidget {
 }
 
 class _LoanOnCCComponentWidgetState extends State<LoanOnCCComponentWidget> {
+  bool mouseRegionHovered = false;
+
   @override
   void initState() {
     super.initState();
@@ -72,40 +74,63 @@ class _LoanOnCCComponentWidgetState extends State<LoanOnCCComponentWidget> {
                           ),
                     ),
                   ),
-                  Container(
-                    width: 320,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFDEDEF9),
-                      borderRadius: BorderRadius.circular(24),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'tz925ngq' /* APPLY FOR LOAN ON CREDIT CARD */,
-                          ),
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText1
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText1Family,
-                                color: Color(0xFF0D2923),
-                                fontWeight: FontWeight.bold,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyText1Family),
+                  MouseRegion(
+                    opaque: false,
+                    cursor: MouseCursor.defer ?? MouseCursor.defer,
+                    child: InkWell(
+                      onTap: () async {
+                        logFirebaseEvent(
+                            'LOAN_ON_C_C_COMPONENT_Container_90oafai0');
+                        logFirebaseEvent('Container_launch_u_r_l');
+                        await launchURL(
+                            'https://icici-ucj-pl-test.flutterflow.app');
+                      },
+                      child: Container(
+                        width: 320,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: mouseRegionHovered!
+                              ? Color(0xFF7E5EFC)
+                              : Color(0xFFDEDEF9),
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              FFLocalizations.of(context).getText(
+                                'tz925ngq' /* APPLY FOR LOAN ON CREDIT CARD */,
                               ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyText1Family,
+                                    color: !mouseRegionHovered!
+                                        ? Color(0xFF7E5EFC)
+                                        : Color(0xFFDEDEF9),
+                                    fontWeight: FontWeight.bold,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyText1Family),
+                                  ),
+                            ),
+                            Icon(
+                              Icons.chevron_right,
+                              size: 18,
+                            ),
+                          ],
                         ),
-                        Icon(
-                          Icons.chevron_right,
-                          color: Color(0xFF0D2923),
-                          size: 18,
-                        ),
-                      ],
+                      ),
                     ),
+                    onEnter: ((event) async {
+                      setState(() => mouseRegionHovered = true);
+                    }),
+                    onExit: ((event) async {
+                      setState(() => mouseRegionHovered = false);
+                    }),
                   ),
                 ],
               ),

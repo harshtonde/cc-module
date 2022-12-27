@@ -2237,9 +2237,13 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                         0),
                                                             child:
                                                                 FFButtonWidget(
-                                                              onPressed: () {
-                                                                print(
-                                                                    'Button pressed ...');
+                                                              onPressed:
+                                                                  () async {
+                                                                logFirebaseEvent(
+                                                                    'PAY_NOW_PAGE_CANCEL_BTN_ON_TAP');
+                                                                logFirebaseEvent(
+                                                                    'Button_navigate_back');
+                                                                context.pop();
                                                               },
                                                               text: FFLocalizations
                                                                       .of(context)

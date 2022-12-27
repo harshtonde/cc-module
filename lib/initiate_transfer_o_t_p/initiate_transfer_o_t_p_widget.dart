@@ -1060,7 +1060,7 @@ class _InitiateTransferOTPWidgetState extends State<InitiateTransferOTPWidget> {
                                                                               children: [
                                                                                 Text(
                                                                                   FFLocalizations.of(context).getText(
-                                                                                    'pt81oe4i' /* ICICI Bank Make My Trip Platfi... */,
+                                                                                    'pt81oe4i' /* ICICI Bank Make My Trip Platin... */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                         fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
