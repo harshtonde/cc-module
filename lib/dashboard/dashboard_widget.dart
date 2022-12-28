@@ -6185,7 +6185,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                   padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                                                                                   child: Text(
                                                                                     FFLocalizations.of(context).getText(
-                                                                                      'gwd21dk5' /* ₹ 17250 */,
+                                                                                      'gwd21dk5' /* ₹ 17,250 */,
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).title3.override(
                                                                                           fontFamily: FlutterFlowTheme.of(context).title3Family,
