@@ -2345,6 +2345,7 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                           phone: false,
                           tablet: false,
                           tabletLandscape: false,
+                          desktop: false,
                         ))
                           SideBarUpdateWidget(),
                         Align(
