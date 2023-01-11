@@ -31,7 +31,7 @@ class _CardCreditcardWidgetState extends State<CardCreditcardWidget> {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(24, 24, 24, 24),
+        padding: EdgeInsetsDirectional.fromSTEB(24, 12, 24, 12),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -82,26 +82,32 @@ class _CardCreditcardWidgetState extends State<CardCreditcardWidget> {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'kvk7agxa' /* APPLY FOR CREDIT CARD */,
+                        Expanded(
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'kvk7agxa' /* APPLY FOR CREDIT CARD  */,
+                            ),
+                            textAlign: TextAlign.center,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyText1Family,
+                                  color: Color(0xFF8D3C33),
+                                  fontWeight: FontWeight.w800,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyText1Family),
+                                ),
                           ),
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText1
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText1Family,
-                                color: Color(0xFF8D3C33),
-                                fontWeight: FontWeight.w800,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyText1Family),
-                              ),
                         ),
-                        Icon(
-                          Icons.chevron_right,
-                          color: Color(0xFF8D3C33),
-                          size: 18,
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
+                          child: Icon(
+                            Icons.chevron_right,
+                            color: Color(0xFF8D3C33),
+                            size: 18,
+                          ),
                         ),
                       ],
                     ),

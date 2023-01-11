@@ -1,5 +1,6 @@
 import '../components/notifications_widget.dart';
 import '../components/theme_swtich_widget.dart';
+import '../flutter_flow/flutter_flow_language_selector.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -89,6 +90,30 @@ class _TopHeaderWidgetState extends State<TopHeaderWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 24, 0),
+                      child: FlutterFlowLanguageSelector(
+                        width: 200,
+                        height: 48,
+                        backgroundColor:
+                            FlutterFlowTheme.of(context).primaryBackground,
+                        borderColor: FlutterFlowTheme.of(context).lineColor,
+                        dropdownIconColor: Color(0xFF14181B),
+                        borderRadius: 8,
+                        textStyle: TextStyle(
+                          color: FlutterFlowTheme.of(context).primaryText,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 13,
+                        ),
+                        hideFlags: false,
+                        flagSize: 24,
+                        flagTextGap: 8,
+                        currentLanguage:
+                            FFLocalizations.of(context).languageCode,
+                        languages: FFLocalizations.languages(),
+                        onChanged: (lang) => setAppLanguage(context, lang),
+                      ),
+                    ),
                     InkWell(
                       onTap: () async {
                         logFirebaseEvent(

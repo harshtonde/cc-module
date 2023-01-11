@@ -177,6 +177,9 @@ class _PaymentCardsTestWidgetState extends State<PaymentCardsTestWidget> {
                     ),
                     icon: Icon(
                       Icons.add,
+                      color: mouseRegionHovered1!
+                          ? Colors.white
+                          : FlutterFlowTheme.of(context).primaryColor,
                       size: 20,
                     ),
                     options: FFButtonOptions(
@@ -483,6 +486,9 @@ class _PaymentCardsTestWidgetState extends State<PaymentCardsTestWidget> {
                           ),
                           icon: Icon(
                             Icons.credit_card_outlined,
+                            color: mouseRegionHovered4!
+                                ? FlutterFlowTheme.of(context).primaryColor
+                                : Colors.white,
                             size: 20,
                           ),
                           options: FFButtonOptions(

@@ -35,6 +35,7 @@ class _UITagWidgetState extends State<UITagWidget> {
     context.watch<FFAppState>();
 
     return Container(
+      width: 200,
       height: 28,
       decoration: BoxDecoration(
         color: widget.bgColor,
@@ -44,7 +45,7 @@ class _UITagWidgetState extends State<UITagWidget> {
       child: Padding(
         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
         child: Row(
-          mainAxisSize: MainAxisSize.max,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(12, 0, 4, 0),

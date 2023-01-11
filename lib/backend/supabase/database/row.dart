@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 
 import 'database.dart';
 
@@ -23,6 +24,18 @@ abstract class SupabaseDataRow {
   String toString() => '''
 Table: $tableName
 Row Data: {${data.isNotEmpty ? '\n' : ''}${data.entries.map((e) => '  (${e.value.runtimeType}) "${e.key}": ${e.value},\n').join('')}}''';
+
+  @override
+  int get hashCode => Object.hash(
+        tableName,
+        Object.hashAllUnordered(
+          data.entries.map((e) => Object.hash(e.key, e.value)),
+        ),
+      );
+
+  @override
+  bool operator ==(Object other) =>
+      other is SupabaseDataRow && mapEquals(other.data, data);
 }
 
 dynamic supaSerialize<T>(T? value) {
