@@ -12,7 +12,7 @@ class FFLocalizations {
   static FFLocalizations of(BuildContext context) =>
       Localizations.of<FFLocalizations>(context, FFLocalizations)!;
 
-  static List<String> languages() => ['en', 'hi', 'bn', 'mr', 'ta', 'or'];
+  static List<String> languages() => ['en', 'hi', 'bn', 'mr', 'ta', 'or', 'de'];
 
   static late SharedPreferences _prefs;
   static Future initialize() async =>
@@ -39,8 +39,10 @@ class FFLocalizations {
     String? mrText = '',
     String? taText = '',
     String? orText = '',
+    String? deText = '',
   }) =>
-      [enText, hiText, bnText, mrText, taText, orText][languageIndex] ?? '';
+      [enText, hiText, bnText, mrText, taText, orText, deText][languageIndex] ??
+      '';
 }
 
 class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
@@ -77,6 +79,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'b5u6dnzc': {
       'en': 'MAKE MY TRIP PLATINUM',
       'bn': 'আমার ট্রিপ প্লাটিনাম করুন',
+      'de': 'MACHEN SIE MEINE REISE MIT PLATIN',
       'hi': 'मेरी यात्रा प्लेटिनम बनाओ',
       'mr': 'माझी ट्रिप प्लॅटिनम बनवा',
       'or': 'ମୋର ଟ୍ରିପ୍ ପ୍ଲାଟିନମ୍ ପ୍ରସ୍ତୁତ କରନ୍ତୁ |',
@@ -85,6 +88,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'qr9xaf5h': {
       'en': 'Total amount due',
       'bn': 'সর্বমোট বাকির পরিমাণ',
+      'de': 'Gesamtbetrag fällig',
       'hi': 'कुल शेष राशि',
       'mr': 'एकूण देय रक्कम',
       'or': 'ସମୁଦାୟ ରାଶି',
@@ -93,6 +97,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ly7vhb55': {
       'en': '₹ 17250',
       'bn': '₹ 17250',
+      'de': '€ 17250',
       'hi': '₹ 17250',
       'mr': '₹ १७२५०',
       'or': '₹ 17250',
@@ -101,6 +106,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '0psuuols': {
       'en': 'Min due ₹ 15,826',
       'bn': 'ন্যূনতম বকেয়া ₹ 15,826',
+      'de': 'Min. fällig ₹ 15.826',
       'hi': 'न्यूनतम देय ₹ 15,826',
       'mr': 'किमान देय ₹ 15,826',
       'or': 'ସର୍ବନିମ୍ନ ଦେୟ ₹ 15,826 |',
@@ -109,6 +115,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'usypyk0k': {
       'en': 'Due in',
       'bn': 'এ কারণে',
+      'de': 'Fällig ein',
       'hi': 'में होने के कारण',
       'mr': 'योग्य',
       'or': 'ଦେୟ',
@@ -117,6 +124,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '0iiq98mb': {
       'en': '6 days',
       'bn': '6 দিন',
+      'de': '6 Tage',
       'hi': '6 दिन',
       'mr': '6 दिवस',
       'or': '6 ଦିନ |',
@@ -125,14 +133,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4j38qj3p': {
       'en': '15 Apr, 2021',
       'bn': '15 এপ্রিল, 2021',
+      'de': '15. April 2021',
       'hi': '15 अप्रैल, 2021',
       'mr': '१५ एप्रिल २०२१',
       'or': '15 ଏପ୍ରିଲ, 2021',
-      'ta': '15 ஏப்ரல், 2021',
+      'ta': '15 ஏப், 2021',
     },
     'ltnnjln3': {
       'en': 'PAY NOW',
       'bn': 'এখন পরিশোধ করুন',
+      'de': 'ZAHLEN SIE JETZT',
       'hi': 'अब भुगतान करें',
       'mr': 'आता द्या',
       'or': 'ବର୍ତ୍ତମାନ ଦେୟ |',
@@ -141,6 +151,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '26zaymy0': {
       'en': 'Auto Pay',
       'bn': 'অটো পে',
+      'de': 'Automatische Bezahlung',
       'hi': 'ऑटो भुगतान',
       'mr': 'ऑटो पे',
       'or': 'ଅଟୋ ପେ |',
@@ -149,6 +160,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8zm3fdxv': {
       'en': 'Total Credit Limit',
       'bn': 'মোট ক্রেডিট সীমা',
+      'de': 'Gesamtkreditlimit',
       'hi': 'कुल क्रेडिट सीमा',
       'mr': 'एकूण क्रेडिट मर्यादा',
       'or': 'ମୋଟ କ୍ରେଡିଟ୍ ସୀମା |',
@@ -157,6 +169,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5tjwarsg': {
       'en': '₹ 70000',
       'bn': '₹70000',
+      'de': '70000 €',
       'hi': '₹ 70000',
       'mr': '₹70000',
       'or': '₹ 70000',
@@ -165,6 +178,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'io0ye2e4': {
       'en': 'MANAGE CREDIT LIMIT',
       'bn': 'ক্রেডিট সীমা পরিচালনা করুন',
+      'de': 'KREDITLIMIT VERWALTEN',
       'hi': 'क्रेडिट सीमा प्रबंधित करें',
       'mr': 'क्रेडिट मर्यादा व्यवस्थापित करा',
       'or': 'ପରିଚାଳନା କ୍ରେଡିଟ୍ ସୀମା ପରିଚାଳନା କରନ୍ତୁ |',
@@ -173,6 +187,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4favwzrl': {
       'en': 'Last billed amount 18%',
       'bn': 'শেষ বিল করা পরিমাণ 18%',
+      'de': 'Letzter Rechnungsbetrag 18 %',
       'hi': 'अंतिम बिल की राशि 18%',
       'mr': 'अंतिम बिल केलेली रक्कम 18%',
       'or': 'ଶେଷ ବିଲ୍ ପରିମାଣ 18% |',
@@ -181,6 +196,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kdeirueb': {
       'en': '₹ 17250',
       'bn': '₹ 17250',
+      'de': '€ 17250',
       'hi': '₹ 17250',
       'mr': '₹ १७२५०',
       'or': '₹ 17250',
@@ -189,6 +205,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9t0uwyx5': {
       'en': 'Total Spent 60%',
       'bn': 'মোট খরচ 60%',
+      'de': 'Gesamtausgaben 60 %',
       'hi': 'कुल खर्च 60%',
       'mr': 'एकूण खर्च 60%',
       'or': 'ମୋଟ ଖର୍ଚ୍ଚ 60% |',
@@ -197,6 +214,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4gyj1vqz': {
       'en': '(Current outstanding)',
       'bn': '(বর্তমান বকেয়া)',
+      'de': '(Aktuelles herausragendes)',
       'hi': '(वर्तमान बकाया)',
       'mr': '(सध्याची थकबाकी)',
       'or': '(ସାମ୍ପ୍ରତିକ ଉଲ୍ଲେଖନୀୟ)',
@@ -205,6 +223,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9a87lyx3': {
       'en': '₹ 42,000.00',
       'bn': '₹ 42,000.00',
+      'de': '₹ 42.000,00',
       'hi': '₹ 42,000.00',
       'mr': '₹ ४२,०००.००',
       'or': '₹ 42,000.00',
@@ -213,6 +232,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'a4p9iwds': {
       'en': 'Total Available Credit',
       'bn': 'মোট উপলব্ধ ক্রেডিট',
+      'de': 'Insgesamt verfügbares Guthaben',
       'hi': 'कुल उपलब्ध क्रेडिट',
       'mr': 'एकूण उपलब्ध क्रेडिट',
       'or': 'ସମୁଦାୟ ଉପଲବ୍ଧ କ୍ରେଡିଟ୍ |',
@@ -221,6 +241,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5lq8vjmh': {
       'en': '₹ 20,000.00',
       'bn': '₹ 20,000.00',
+      'de': '₹ 20.000,00',
       'hi': '₹ 20,000.00',
       'mr': '₹ 20,000.00',
       'or': '₹ 20,000.00',
@@ -229,6 +250,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zsg03q5k': {
       'en': 'Spend ₹ 2000 by 15 June to waive off ₹ 3500 joining fee',
       'bn': '₹ 3500 যোগদানের ফি মওকুফ করতে 15 জুনের মধ্যে ₹ 2000 খরচ করুন',
+      'de':
+          'Geben Sie bis zum 15. Juni 2.000 ₹ aus, um auf die Beitrittsgebühr von 3.500 ₹ zu verzichten',
       'hi': '₹3500 की जॉइनिंग फीस माफ करने के लिए 15 जून तक ₹2000 खर्च करें',
       'mr': '₹ 3500 जॉइनिंग फी माफ करण्यासाठी 15 जूनपर्यंत ₹ 2000 खर्च करा',
       'or':
@@ -239,6 +262,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xrdfbafg': {
       'en': 'Offers',
       'bn': 'অফার',
+      'de': 'Bietet an',
       'hi': 'ऑफर',
       'mr': 'ऑफर',
       'or': 'ଅଫର୍ |',
@@ -248,6 +272,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Save on your meals now using ICICI Bank Credit and Debit Card',
       'bn':
           'আইসিআইসিআই ব্যাঙ্কের ক্রেডিট এবং ডেবিট কার্ড ব্যবহার করে এখনই আপনার খাবার বাঁচান',
+      'de':
+          'Sparen Sie jetzt bei Ihren Mahlzeiten mit der Kredit- und Debitkarte der ICICI Bank',
       'hi':
           'आईसीआईसीआई बैंक क्रेडिट और डेबिट कार्ड का उपयोग करके अभी अपने भोजन पर बचत करें',
       'mr':
@@ -260,6 +286,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ahfr91bz': {
       'en': 'Get Instant discount of ₹100',
       'bn': '₹100 এর তাত্ক্ষণিক ছাড় পান',
+      'de': 'Erhalten Sie einen Sofortrabatt von 100 ₹',
       'hi': '₹100 की तत्काल छूट प्राप्त करें',
       'mr': '₹100 ची झटपट सूट मिळवा',
       'or': 'Instant 100 ର ତତକ୍ଷଣାତ୍ ରିହାତି ପ୍ରାପ୍ତ କରନ୍ତୁ |',
@@ -268,6 +295,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fk9vilqa': {
       'en': 'Buy an iPhone 13, using ICICI Bank Credit Card',
       'bn': 'ICICI ব্যাঙ্ক ক্রেডিট কার্ড ব্যবহার করে একটি iPhone 13 কিনুন',
+      'de': 'Kaufen Sie ein iPhone 13 mit der Kreditkarte der ICICI Bank',
       'hi': 'आईसीआईसीआई बैंक क्रेडिट कार्ड का उपयोग करके आईफोन 13 खरीदें',
       'mr': 'ICICI बँक क्रेडिट कार्ड वापरून iPhone 13 खरेदी करा',
       'or': 'ICICI ବ୍ୟାଙ୍କ କ୍ରେଡିଟ୍ କାର୍ଡ ବ୍ୟବହାର କରି ଏକ ଆଇଫୋନ୍ 13 କିଣ |',
@@ -276,6 +304,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'eta0hhrp': {
       'en': 'Starting at ₹2,184 per month on EMI',
       'bn': 'EMI-এ প্রতি মাসে ₹2,184 থেকে শুরু',
+      'de': 'Ab 2.184 ₹ pro Monat bei EMI',
       'hi': 'ईएमआई पर ₹2,184 प्रति माह से शुरू',
       'mr': 'EMI वर प्रति महिना ₹२,१८४ पासून सुरू',
       'or': 'EMI ରେ ମାସକୁ ₹ 2,184 ରୁ ଆରମ୍ଭ |',
@@ -285,6 +314,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Save on your meals now using ICICI Bank Credit and Debit Card',
       'bn':
           'আইসিআইসিআই ব্যাঙ্কের ক্রেডিট এবং ডেবিট কার্ড ব্যবহার করে এখনই আপনার খাবার বাঁচান',
+      'de':
+          'Sparen Sie jetzt bei Ihren Mahlzeiten mit der Kredit- und Debitkarte der ICICI Bank',
       'hi':
           'आईसीआईसीआई बैंक क्रेडिट और डेबिट कार्ड का उपयोग करके अभी अपने भोजन पर बचत करें',
       'mr':
@@ -297,6 +328,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '803sb6hq': {
       'en': 'Get Instant discount of ₹100',
       'bn': '₹100 এর তাত্ক্ষণিক ছাড় পান',
+      'de': 'Erhalten Sie einen Sofortrabatt von 100 ₹',
       'hi': '₹100 की तत्काल छूट प्राप्त करें',
       'mr': '₹100 ची झटपट सूट मिळवा',
       'or': 'Instant 100 ର ତତକ୍ଷଣାତ୍ ରିହାତି ପ୍ରାପ୍ତ କରନ୍ତୁ |',
@@ -305,7 +337,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'dxj6hl0y': {
       'en': 'SHOP NOW',
       'bn': 'এখনই কিনুন',
-      'hi': 'अभी खरीदो',
+      'de': 'JETZT EINKAUFEN',
+      'hi': 'अभी खरीदें',
       'mr': 'आत्ताच खरेदी करा',
       'or': 'ବର୍ତ୍ତମାନ ଦୋକାନ କରନ୍ତୁ |',
       'ta': 'இப்பொழுது வாங்கு',
@@ -314,6 +347,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Purchase any Samsung products using ICICI Bank Credit Card.',
       'bn':
           'ICICI ব্যাঙ্কের ক্রেডিট কার্ড ব্যবহার করে যে কোনও Samsung পণ্য কিনুন৷',
+      'de': 'Kaufen Sie Samsung-Produkte mit der ICICI Bank-Kreditkarte.',
       'hi':
           'आईसीआईसीआई बैंक क्रेडिट कार्ड का उपयोग करके कोई भी सैमसंग उत्पाद खरीदें।',
       'mr':
@@ -326,6 +360,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9h0wf7ok': {
       'en': 'Get upto 22.5% Cashback',
       'bn': '22.5% পর্যন্ত ক্যাশব্যাক পান',
+      'de': 'Erhalten Sie bis zu 22,5 % Cashback',
       'hi': '22.5% तक कैशबैक प्राप्त करें',
       'mr': '22.5% पर्यंत कॅशबॅक मिळवा',
       'or': '22.5% କ୍ୟାଶବ୍ୟାକ୍ ପର୍ଯ୍ୟନ୍ତ ପାଆନ୍ତୁ |',
@@ -334,6 +369,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mvg1a5sh': {
       'en': 'VIEW ALL OFFERS',
       'bn': 'সব অফার দেখুন',
+      'de': 'ALLE ANGEBOTE ANZEIGEN',
       'hi': 'सभी ऑफ़र देखें',
       'mr': 'सर्व ऑफर पहा',
       'or': 'ସମସ୍ତ ଅଫର୍ ଦେଖନ୍ତୁ |',
@@ -342,6 +378,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ypsucknr': {
       'en': 'VIEW STATEMENTS',
       'bn': 'বিবৃতি দেখুন',
+      'de': 'AUSSAGEN ANSEHEN',
       'hi': 'विवरण देखें',
       'mr': 'विधाने पहा',
       'or': 'ଷ୍ଟେଟମେଣ୍ଟଗୁଡିକ ଦେଖନ୍ତୁ |',
@@ -350,6 +387,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jx3xwtx6': {
       'en': 'CURRENT',
       'bn': 'বর্তমান',
+      'de': 'STROM',
       'hi': 'वर्तमान',
       'mr': 'चालू',
       'or': 'ବର୍ତ୍ତମାନ',
@@ -358,6 +396,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pmihb1hq': {
       'en': 'PAST',
       'bn': 'অতীত',
+      'de': 'VERGANGENHEIT',
       'hi': 'भूतकाल',
       'mr': 'भूतकाळ',
       'or': 'ପାସ୍',
@@ -366,6 +405,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ipx41ble': {
       'en': 'EMI STATUS',
       'bn': 'ইএমআই স্ট্যাটাস',
+      'de': 'EMI-STATUS',
       'hi': 'ईएमआई स्थिति',
       'mr': 'EMI स्थिती',
       'or': 'EMI ସ୍ଥିତି',
@@ -374,6 +414,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rxxtuind': {
       'en': 'CURRENT',
       'bn': 'বর্তমান',
+      'de': 'STROM',
       'hi': 'वर्तमान',
       'mr': 'चालू',
       'or': 'ବର୍ତ୍ତମାନ',
@@ -382,6 +423,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'e1lgje2c': {
       'en': 'Have a dispute?',
       'bn': 'একটি বিরোধ আছে?',
+      'de': 'Haben Sie einen Streit?',
       'hi': 'कोई विवाद है?',
       'mr': 'वाद आहे का?',
       'or': 'ବିବାଦ ଅଛି କି?',
@@ -390,6 +432,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hmj1t6qw': {
       'en': 'BILLING CYCLE',
       'bn': 'বিলিং চক্র',
+      'de': 'RECHNUNGSKREISLAUF',
       'hi': 'बिलिंग चक्र',
       'mr': 'बिलिंग सायकल',
       'or': 'ବିଲିଂ ସାଇକେଲ୍ |',
@@ -398,6 +441,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fxgpg1nb': {
       'en': '(15 SEP - 14 AUG)',
       'bn': '(15 SEP - 14 AUG)',
+      'de': '(15. SEPTEMBER - 14. AUGUST)',
       'hi': '(15 सितंबर - 14 अगस्त)',
       'mr': '(15 SEP - 14 AUG)',
       'or': '(15 SEP - 14 AUG)',
@@ -406,6 +450,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7fhr1oj5': {
       'en': 'Show only credits received',
       'bn': 'শুধুমাত্র প্রাপ্ত ক্রেডিট দেখান',
+      'de': 'Nur erhaltene Credits anzeigen',
       'hi': 'केवल प्राप्त क्रेडिट दिखाएं',
       'mr': 'फक्त मिळालेले क्रेडिट दाखवा',
       'or': 'ପ୍ରାପ୍ତ କ୍ରେଡିଟ୍ ଦେଖାନ୍ତୁ |',
@@ -414,6 +459,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'cd8oomqh': {
       'en': 'OFF',
       'bn': 'বন্ধ',
+      'de': 'AUS',
       'hi': 'बंद',
       'mr': 'बंद',
       'or': 'ବନ୍ଦ',
@@ -422,6 +468,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ldirogvh': {
       'en': 'CONVERT TO EMI',
       'bn': 'EMI তে কনভার্ট করুন',
+      'de': 'AUF EMI KONVERTIEREN',
       'hi': 'ईएमआई में बदलें',
       'mr': 'EMI मध्ये रूपांतरित करा',
       'or': 'EMI କୁ କନଭର୍ଟ କରନ୍ତୁ |',
@@ -430,6 +477,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wwcqqoln': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -438,6 +486,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'k67cacs8': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -446,6 +495,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'waaqpp4m': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -454,6 +504,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vlgvu0b9': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -462,6 +513,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'avnzead9': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -470,6 +522,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2j8w3haf': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -478,6 +531,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kul347wt': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -486,6 +540,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '76e4kprq': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -494,6 +549,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hubvc9j6': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -502,6 +558,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sykk4had': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -510,6 +567,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9dd0a63u': {
       'en': '- ₹ 1,000.00',
       'bn': '- ₹ 1,000.00',
+      'de': '- ₹ 1.000,00',
       'hi': '- ₹ 1,000.00',
       'mr': '- ₹ 1,000.00',
       'or': '- ₹ 1,000.00',
@@ -518,6 +576,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'dc26nz4f': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -526,6 +585,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'djnynr6v': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -534,6 +594,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'e3ipw1wx': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -542,6 +603,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'dm616smm': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -550,6 +612,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rxo7evrs': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -558,6 +621,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'anpht4un': {
       'en': '- ₹ 1,000.00',
       'bn': '- ₹ 1,000.00',
+      'de': '- ₹ 1.000,00',
       'hi': '- ₹ 1,000.00',
       'mr': '- ₹ 1,000.00',
       'or': '- ₹ 1,000.00',
@@ -566,6 +630,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '690phvax': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -574,6 +639,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9x010ub3': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -582,6 +648,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jp1pr7zr': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -590,6 +657,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pkesk0du': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -598,6 +666,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'v1o573vi': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -606,6 +675,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bffc5z78': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -614,6 +684,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'c1zktd71': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -622,6 +693,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rb23pb2d': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -630,6 +702,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bqknt2ro': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -638,6 +711,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'k6x43oi6': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -646,6 +720,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'cy6kbvjp': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -654,6 +729,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xf64iqck': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -662,6 +738,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '936jyg80': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -670,6 +747,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ave3dq4m': {
       'en': 'PDF',
       'bn': 'পিডিএফ',
+      'de': 'Pdf',
       'hi': 'पीडीएफ',
       'mr': 'PDF',
       'or': 'PDF',
@@ -678,6 +756,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'i9czkn6b': {
       'en': 'XLS',
       'bn': 'এক্সএলএস',
+      'de': 'XLS',
       'hi': 'एक्सएलएस',
       'mr': 'XLS',
       'or': 'XLS',
@@ -685,7 +764,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'cphckjby': {
       'en': 'PDF',
-      'bn': 'পিডিএফ',
+      'bn': 'PDF',
+      'de': 'Pdf',
       'hi': 'पीडीएफ',
       'mr': 'PDF',
       'or': 'PDF',
@@ -694,7 +774,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1fvjwwjn': {
       'en': 'DOWNLOAD',
       'bn': 'ডাউনলোড করুন',
-      'hi': 'डाउनलोड',
+      'de': 'HERUNTERLADEN',
+      'hi': 'डाउनलोड करें',
       'mr': 'डाउनलोड करा',
       'or': 'ଡାଉନଲୋଡ୍ କରନ୍ତୁ |',
       'ta': 'பதிவிறக்க TAMIL',
@@ -702,6 +783,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sb8s7qhl': {
       'en': 'Page 1 of 30',
       'bn': '30-এর মধ্যে পৃষ্ঠা 1',
+      'de': 'Seite 1 von 30',
       'hi': '30 का पेज 1',
       'mr': 'पृष्ठ 30 पैकी 1',
       'or': '30 ର ପୃଷ୍ଠା 1 |',
@@ -710,6 +792,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sl7e543y': {
       'en': 'BILLING CYCLE',
       'bn': 'বিলিং চক্র',
+      'de': 'RECHNUNGSKREISLAUF',
       'hi': 'बिलिंग चक्र',
       'mr': 'बिलिंग सायकल',
       'or': 'ବିଲିଂ ସାଇକେଲ୍ |',
@@ -718,6 +801,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9r7ddutx': {
       'en': '(15 SEP - 14 AUG)',
       'bn': '(15 SEP - 14 AUG)',
+      'de': '(15. SEPTEMBER - 14. AUGUST)',
       'hi': '(15 सितंबर - 14 अगस्त)',
       'mr': '(15 SEP - 14 AUG)',
       'or': '(15 SEP - 14 AUG)',
@@ -726,6 +810,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pwsfe5oh': {
       'en': 'DOWNLOAD PREVIOUS STATEMENTS',
       'bn': 'পূর্ববর্তী বিবৃতি ডাউনলোড করুন',
+      'de': 'VORHERIGE ERKLÄRUNGEN HERUNTERLADEN',
       'hi': 'पिछले बयानों को डाउनलोड करें',
       'mr': 'मागील विधाने डाउनलोड करा',
       'or': 'ପୂର୍ବାବଲୋକନ ଷ୍ଟେଟମେଣ୍ଟଗୁଡ଼ିକୁ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |',
@@ -734,6 +819,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'e21ip9sb': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -742,6 +828,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'z4eglq6p': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -750,6 +837,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '99a6lmyl': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -758,6 +846,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'utz5t7i1': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -766,6 +855,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1hkx32t3': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -774,6 +864,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9npgsige': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -782,6 +873,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7xl41vdx': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -790,6 +882,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'a0gcirpz': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -798,6 +891,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'cnzx4pyu': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -806,6 +900,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'r4fxe3fn': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -814,6 +909,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'uyb7godw': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -822,6 +918,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'augs1fjf': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -830,6 +927,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'z2gc70ih': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -838,6 +936,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jw4ejnqn': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -846,6 +945,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hkln4hbg': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -854,6 +954,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'itawg3uv': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -862,6 +963,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4ghvbzzq': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -870,6 +972,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vi5qbwxe': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -878,6 +981,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'k0279y4z': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -886,6 +990,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '17yevn82': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -894,6 +999,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9hb73m56': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -902,6 +1008,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'moeky9yo': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -910,6 +1017,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '80706evm': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -918,6 +1026,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9m5b8au0': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -926,6 +1035,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2vk7w6eb': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -934,6 +1044,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'nsxwszec': {
       'en': '- ₹ 1,000.00',
       'bn': '- ₹ 1,000.00',
+      'de': '- ₹ 1.000,00',
       'hi': '- ₹ 1,000.00',
       'mr': '- ₹ 1,000.00',
       'or': '- ₹ 1,000.00',
@@ -942,6 +1053,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ua6z8y8b': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -950,6 +1062,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ztoei89h': {
       'en': 'BSES',
       'bn': 'বিএসইএস',
+      'de': 'BSES',
       'hi': 'बीएसईएस',
       'mr': 'BSES',
       'or': 'BSES',
@@ -958,6 +1071,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9czpr0kn': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -966,6 +1080,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'eq5ew1q6': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -974,6 +1089,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'u4l44m02': {
       'en': 'AMAZON',
       'bn': 'আমাজন',
+      'de': 'AMAZONAS',
       'hi': 'अमेज़न',
       'mr': 'AMAZON',
       'or': 'AMAZON',
@@ -982,6 +1098,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'a2bpdv89': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -990,6 +1107,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5c7zpqg8': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -998,6 +1116,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '689us5uk': {
       'en': 'PDF',
       'bn': 'পিডিএফ',
+      'de': 'Pdf',
       'hi': 'पीडीएफ',
       'mr': 'PDF',
       'or': 'PDF',
@@ -1006,6 +1125,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sclcb48m': {
       'en': 'XLS',
       'bn': 'এক্সএলএস',
+      'de': 'XLS',
       'hi': 'एक्सएलएस',
       'mr': 'XLS',
       'or': 'XLS',
@@ -1014,6 +1134,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rfnew3iu': {
       'en': 'PDF',
       'bn': 'পিডিএফ',
+      'de': 'Pdf',
       'hi': 'पीडीएफ',
       'mr': 'PDF',
       'or': 'PDF',
@@ -1022,7 +1143,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pv0lax6g': {
       'en': 'DOWNLOAD',
       'bn': 'ডাউনলোড করুন',
-      'hi': 'डाउनलोड',
+      'de': 'HERUNTERLADEN',
+      'hi': 'डाउनलोड करें',
       'mr': 'डाउनलोड करा',
       'or': 'ଡାଉନଲୋଡ୍ କରନ୍ତୁ |',
       'ta': 'பதிவிறக்க TAMIL',
@@ -1030,6 +1152,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'z9z0k84y': {
       'en': 'Page 1 of 30',
       'bn': '30-এর মধ্যে পৃষ্ঠা 1',
+      'de': 'Seite 1 von 30',
       'hi': '30 का पेज 1',
       'mr': 'पृष्ठ 30 पैकी 1',
       'or': '30 ର ପୃଷ୍ଠା 1 |',
@@ -1038,6 +1161,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'x4w9jigy': {
       'en': 'EMI SUMMARY',
       'bn': 'ইএমআই সারাংশ',
+      'de': 'EMI-ZUSAMMENFASSUNG',
       'hi': 'ईएमआई सारांश',
       'mr': 'EMI सारांश',
       'or': 'EMI ସାରାଂଶ',
@@ -1046,7 +1170,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9an1i43j': {
       'en': 'ONGOING',
       'bn': 'চলমান',
-      'hi': 'चल रहे',
+      'de': 'LAUFEND',
+      'hi': 'चल रही है',
       'mr': 'चालू आहे',
       'or': 'ONGOING',
       'ta': 'நடந்து கொண்டிருக்கிறது',
@@ -1054,6 +1179,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'tdub2mx3': {
       'en': 'PAID',
       'bn': 'পেড',
+      'de': 'BEZAHLT',
       'hi': 'भुगतान किया है',
       'mr': 'पेड',
       'or': 'PAID',
@@ -1062,7 +1188,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'o8q63jmu': {
       'en': 'ONGOING',
       'bn': 'চলমান',
-      'hi': 'चल रहे',
+      'de': 'LAUFEND',
+      'hi': 'चल रही है',
       'mr': 'चालू आहे',
       'or': 'ONGOING',
       'ta': 'நடந்து கொண்டிருக்கிறது',
@@ -1070,6 +1197,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'knhq93lv': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -1078,6 +1206,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'dlsfqkzc': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -1086,6 +1215,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '39a8ympk': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -1094,6 +1224,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '0p273atr': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -1102,6 +1233,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ts25qxln': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -1110,6 +1242,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8ekr5gk1': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1118,6 +1251,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '3do0gq76': {
       'en': 'View EMI Details',
       'bn': 'EMI বিবরণ দেখুন',
+      'de': 'EMI-Details anzeigen',
       'hi': 'ईएमआई विवरण देखें',
       'mr': 'EMI तपशील पहा',
       'or': 'EMI ବିବରଣୀ ଦେଖନ୍ତୁ |',
@@ -1126,6 +1260,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'obt5v5a5': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -1134,6 +1269,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'f9ubdd1e': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -1142,6 +1278,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5ac5o60f': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -1150,6 +1287,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'iwt8behq': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -1158,6 +1296,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '74y2jzyz': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -1166,6 +1305,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7piv8jyv': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1174,6 +1314,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7z6fcb3n': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -1182,6 +1323,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bjdb2dlx': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -1190,6 +1332,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     't4ab1xqw': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -1198,6 +1341,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xmo7b675': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -1206,6 +1350,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'u29w0bsw': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -1214,6 +1359,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pij8fs0a': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1222,6 +1368,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '21wbaev6': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -1230,6 +1377,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pfmnp5at': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -1238,6 +1386,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'u28rmnw5': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -1246,6 +1395,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vjb2f0s6': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -1254,6 +1404,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     's7vr5nu0': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -1262,6 +1413,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'j3bknjd9': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1270,6 +1422,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ghqoa7t3': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -1278,6 +1431,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'y4lpb9t9': {
       'en': '- ₹ 1,000.00',
       'bn': '- ₹ 1,000.00',
+      'de': '- ₹ 1.000,00',
       'hi': '- ₹ 1,000.00',
       'mr': '- ₹ 1,000.00',
       'or': '- ₹ 1,000.00',
@@ -1286,6 +1440,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1jb77z8r': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1294,6 +1449,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'or4cs45t': {
       'en': 'Google Gmail',
       'bn': 'গুগল জিমেইল',
+      'de': 'Google Gmail',
       'hi': 'गूगल जीमेल',
       'mr': 'Google Gmail',
       'or': 'ଗୁଗୁଲ୍ Gmail |',
@@ -1302,6 +1458,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'cm6eapxf': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -1310,6 +1467,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ampykq16': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1318,6 +1476,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rlozzbop': {
       'en': 'APPLE',
       'bn': 'আপেল',
+      'de': 'APFEL',
       'hi': 'सेब',
       'mr': 'सफरचंद',
       'or': 'ପ୍ରୟୋଗ',
@@ -1326,6 +1485,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4p5zeaot': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -1334,6 +1494,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'd9kz7rww': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1342,6 +1503,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8h06cqgx': {
       'en': 'APPLE',
       'bn': 'আপেল',
+      'de': 'APFEL',
       'hi': 'सेब',
       'mr': 'सफरचंद',
       'or': 'ପ୍ରୟୋଗ',
@@ -1350,6 +1512,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '41mrovba': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -1358,6 +1521,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'chwfgbr4': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1366,6 +1530,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1m2ff9py': {
       'en': 'AMAZON',
       'bn': 'আমাজন',
+      'de': 'AMAZONAS',
       'hi': 'अमेज़न',
       'mr': 'AMAZON',
       'or': 'AMAZON',
@@ -1374,6 +1539,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '3074tibg': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -1382,6 +1548,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '10hb6fmx': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1390,6 +1557,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2kyhzx52': {
       'en': 'META MESSENGER',
       'bn': 'মেটা মেসেঞ্জার',
+      'de': 'META-Messenger',
       'hi': 'मेटा मेसेंजर',
       'mr': 'मेटा मेसेंजर',
       'or': 'ମେଟା ମେସେଞ୍ଜର |',
@@ -1398,6 +1566,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ddp25in8': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -1406,6 +1575,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5gypxeas': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1414,6 +1584,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'cu239k82': {
       'en': 'Page 1 of 30',
       'bn': '30-এর মধ্যে পৃষ্ঠা 1',
+      'de': 'Seite 1 von 30',
       'hi': '30 का पेज 1',
       'mr': 'पृष्ठ 30 पैकी 1',
       'or': '30 ର ପୃଷ୍ଠା 1 |',
@@ -1422,6 +1593,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'disv2tlr': {
       'en': 'MAKE MY TRIP PLATINUM',
       'bn': 'আমার ট্রিপ প্লাটিনাম করুন',
+      'de': 'MACHEN SIE MEINE REISE MIT PLATIN',
       'hi': 'मेरी यात्रा प्लेटिनम बनाओ',
       'mr': 'माझी ट्रिप प्लॅटिनम बनवा',
       'or': 'ମୋର ଟ୍ରିପ୍ ପ୍ଲାଟିନମ୍ ପ୍ରସ୍ତୁତ କରନ୍ତୁ |',
@@ -1430,6 +1602,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fqqwsx4t': {
       'en': 'Total Amount Due',
       'bn': 'সর্বমোট বাকির পরিমাণ',
+      'de': 'Fälliger Gesamtbetrag',
       'hi': 'कुल शेष राशि',
       'mr': 'एकूण देय रक्कम',
       'or': 'ସମୁଦାୟ ରାଶି',
@@ -1438,6 +1611,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2pc6ijeu': {
       'en': '₹ 17250',
       'bn': '₹ 17250',
+      'de': '€ 17250',
       'hi': '₹ 17250',
       'mr': '₹ १७२५०',
       'or': '₹ 17250',
@@ -1446,6 +1620,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zgl9vjsw': {
       'en': 'Min due ₹ 15,826',
       'bn': 'ন্যূনতম বকেয়া ₹ 15,826',
+      'de': 'Min. fällig ₹ 15.826',
       'hi': 'न्यूनतम देय ₹ 15,826',
       'mr': 'किमान देय ₹ 15,826',
       'or': 'ସର୍ବନିମ୍ନ ଦେୟ ₹ 15,826 |',
@@ -1454,6 +1629,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mqnjhb9o': {
       'en': 'Due in',
       'bn': 'এ কারণে',
+      'de': 'Fällig ein',
       'hi': 'में होने के कारण',
       'mr': 'योग्य',
       'or': 'ଦେୟ',
@@ -1462,6 +1638,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '57be8cyi': {
       'en': '6 days',
       'bn': '6 দিন',
+      'de': '6 Tage',
       'hi': '6 दिन',
       'mr': '6 दिवस',
       'or': '6 ଦିନ |',
@@ -1470,6 +1647,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1z1e6m9i': {
       'en': '15 Apr, 2021',
       'bn': '15 এপ্রিল, 2021',
+      'de': '15. April 2021',
       'hi': '15 अप्रैल, 2021',
       'mr': '१५ एप्रिल २०२१',
       'or': '15 ଏପ୍ରିଲ, 2021',
@@ -1478,6 +1656,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'q0g7zihx': {
       'en': 'Pay Now',
       'bn': 'এখন পরিশোধ করুন',
+      'de': 'Zahlen Sie jetzt',
       'hi': 'अब भुगतान करें',
       'mr': 'आता द्या',
       'or': 'ବର୍ତ୍ତମାନ ଦେୟ ଦିଅ |',
@@ -1486,22 +1665,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '3frj6v6c': {
       'en': 'Auto Pay',
       'bn': 'অটো পে',
+      'de': 'Automatische Bezahlung',
       'hi': 'ऑटो भुगतान',
       'mr': 'ऑटो पे',
       'or': 'ଅଟୋ ପେ |',
       'ta': 'தானாக பணம் செலுத்துங்கள்',
     },
-    'zyu25zow': {
-      'en': 'OFF',
-      'bn': 'বন্ধ',
-      'hi': 'बंद',
-      'mr': 'बंद',
-      'or': 'ବନ୍ଦ',
-      'ta': 'ஆஃப்',
-    },
     '6xn0yuge': {
       'en': 'Total Credit Limit',
       'bn': 'মোট ক্রেডিট সীমা',
+      'de': 'Gesamtkreditlimit',
       'hi': 'कुल क्रेडिट सीमा',
       'mr': 'एकूण क्रेडिट मर्यादा',
       'or': 'ମୋଟ କ୍ରେଡିଟ୍ ସୀମା |',
@@ -1509,15 +1682,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'gwd21dk5': {
       'en': '₹ 17,250',
-      'bn': '₹ 17250',
-      'hi': '₹ 17250',
-      'mr': '₹ १७२५०',
-      'or': '₹ 17250',
-      'ta': '₹ 17250',
+      'bn': '₹ 17,250',
+      'de': '₹ 17.250',
+      'hi': '₹ 17,250',
+      'mr': '₹ १७,२५०',
+      'or': '₹ 17,250',
+      'ta': '₹ 17,250',
     },
     '4ywd6bbs': {
       'en': 'MANAGE CREDIT LIMIT',
       'bn': 'ক্রেডিট সীমা পরিচালনা করুন',
+      'de': 'KREDITLIMIT VERWALTEN',
       'hi': 'क्रेडिट सीमा प्रबंधित करें',
       'mr': 'क्रेडिट मर्यादा व्यवस्थापित करा',
       'or': 'ପରିଚାଳନା କ୍ରେଡିଟ୍ ସୀମା ପରିଚାଳନା କରନ୍ତୁ |',
@@ -1526,6 +1701,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '83e758mt': {
       'en': 'Last billed amount 18%',
       'bn': 'শেষ বিল করা পরিমাণ 18%',
+      'de': 'Letzter Rechnungsbetrag 18 %',
       'hi': 'अंतिम बिल की राशि 18%',
       'mr': 'अंतिम बिल केलेली रक्कम 18%',
       'or': 'ଶେଷ ବିଲ୍ ପରିମାଣ 18% |',
@@ -1534,6 +1710,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2b5u981p': {
       'en': '₹ 17250',
       'bn': '₹ 17250',
+      'de': '€ 17250',
       'hi': '₹ 17250',
       'mr': '₹ १७२५०',
       'or': '₹ 17250',
@@ -1542,6 +1719,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vgbsp2le': {
       'en': 'Total Spent 60%',
       'bn': 'মোট খরচ 60%',
+      'de': 'Gesamtausgaben 60 %',
       'hi': 'कुल खर्च 60%',
       'mr': 'एकूण खर्च 60%',
       'or': 'ମୋଟ ଖର୍ଚ୍ଚ 60% |',
@@ -1550,6 +1728,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '90w5p4o6': {
       'en': '(Outstanding balance)',
       'bn': '(বকেয়া ব্যালেন্স)',
+      'de': '(Offener Betrag)',
       'hi': '(बकाया राशि)',
       'mr': '(थकबाकी)',
       'or': '(ଉଲ୍ଲେଖନୀୟ ସନ୍ତୁଳନ)',
@@ -1558,6 +1737,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'few0qfb8': {
       'en': '₹ 42,000.00',
       'bn': '₹ 42,000.00',
+      'de': '₹ 42.000,00',
       'hi': '₹ 42,000.00',
       'mr': '₹ ४२,०००.००',
       'or': '₹ 42,000.00',
@@ -1566,6 +1746,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jefq0vie': {
       'en': 'Total Available Credit',
       'bn': 'মোট উপলব্ধ ক্রেডিট',
+      'de': 'Insgesamt verfügbares Guthaben',
       'hi': 'कुल उपलब्ध क्रेडिट',
       'mr': 'एकूण उपलब्ध क्रेडिट',
       'or': 'ସମୁଦାୟ ଉପଲବ୍ଧ କ୍ରେଡିଟ୍ |',
@@ -1574,6 +1755,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'h8nux5q4': {
       'en': '₹ 20,000.00',
       'bn': '₹ 20,000.00',
+      'de': '₹ 20.000,00',
       'hi': '₹ 20,000.00',
       'mr': '₹ 20,000.00',
       'or': '₹ 20,000.00',
@@ -1582,6 +1764,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ddy5kk7l': {
       'en': 'Spend ₹2000 by 15 June to waive off ₹3500 joining fee',
       'bn': '₹3500 যোগদানের ফি মওকুফ করতে 15 জুনের মধ্যে ₹2000 খরচ করুন',
+      'de':
+          'Geben Sie bis zum 15. Juni 2.000 ₹ aus, um auf die Beitrittsgebühr von 3.500 ₹ zu verzichten',
       'hi': '₹3500 की ज्वाइनिंग फीस माफ करने के लिए 15 जून तक ₹2000 खर्च करें',
       'mr':
           '₹3500 सामील होण्याचे शुल्क माफ करण्यासाठी १५ जूनपर्यंत ₹2000 खर्च करा',
@@ -1593,6 +1777,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7k41cdlb': {
       'en': 'Offers',
       'bn': 'অফার',
+      'de': 'Bietet an',
       'hi': 'ऑफर',
       'mr': 'ऑफर',
       'or': 'ଅଫର୍ |',
@@ -1602,6 +1787,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Save on your meals now using ICICI Bank Credit and Debit Card',
       'bn':
           'আইসিআইসিআই ব্যাঙ্কের ক্রেডিট এবং ডেবিট কার্ড ব্যবহার করে এখনই আপনার খাবার বাঁচান',
+      'de':
+          'Sparen Sie jetzt bei Ihren Mahlzeiten mit der Kredit- und Debitkarte der ICICI Bank',
       'hi':
           'आईसीआईसीआई बैंक क्रेडिट और डेबिट कार्ड का उपयोग करके अभी अपने भोजन पर बचत करें',
       'mr':
@@ -1614,6 +1801,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'clqva5j2': {
       'en': 'Get Instant discount of ₹100',
       'bn': '₹100 এর তাত্ক্ষণিক ছাড় পান',
+      'de': 'Erhalten Sie einen Sofortrabatt von 100 ₹',
       'hi': '₹100 की तत्काल छूट प्राप्त करें',
       'mr': '₹100 ची झटपट सूट मिळवा',
       'or': 'Instant 100 ର ତତକ୍ଷଣାତ୍ ରିହାତି ପ୍ରାପ୍ତ କରନ୍ତୁ |',
@@ -1622,6 +1810,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vnam1r9q': {
       'en': 'Buy an iPhone 13, using ICICI Bank Credit Card',
       'bn': 'ICICI ব্যাঙ্ক ক্রেডিট কার্ড ব্যবহার করে একটি iPhone 13 কিনুন',
+      'de': 'Kaufen Sie ein iPhone 13 mit der Kreditkarte der ICICI Bank',
       'hi': 'आईसीआईसीआई बैंक क्रेडिट कार्ड का उपयोग करके आईफोन 13 खरीदें',
       'mr': 'ICICI बँक क्रेडिट कार्ड वापरून iPhone 13 खरेदी करा',
       'or': 'ICICI ବ୍ୟାଙ୍କ କ୍ରେଡିଟ୍ କାର୍ଡ ବ୍ୟବହାର କରି ଏକ ଆଇଫୋନ୍ 13 କିଣ |',
@@ -1630,6 +1819,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fui93ytx': {
       'en': 'Starting at ₹2,184 per month on EMI',
       'bn': 'EMI-এ প্রতি মাসে ₹2,184 থেকে শুরু',
+      'de': 'Ab 2.184 ₹ pro Monat bei EMI',
       'hi': 'ईएमआई पर ₹2,184 प्रति माह से शुरू',
       'mr': 'EMI वर प्रति महिना ₹२,१८४ पासून सुरू',
       'or': 'EMI ରେ ମାସକୁ ₹ 2,184 ରୁ ଆରମ୍ଭ |',
@@ -1639,6 +1829,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Save on your meals now using ICICI Bank Credit and Debit Card',
       'bn':
           'আইসিআইসিআই ব্যাঙ্কের ক্রেডিট এবং ডেবিট কার্ড ব্যবহার করে এখনই আপনার খাবার বাঁচান',
+      'de':
+          'Sparen Sie jetzt bei Ihren Mahlzeiten mit der Kredit- und Debitkarte der ICICI Bank',
       'hi':
           'आईसीआईसीआई बैंक क्रेडिट और डेबिट कार्ड का उपयोग करके अभी अपने भोजन पर बचत करें',
       'mr':
@@ -1651,6 +1843,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fi5eav1i': {
       'en': 'Get Instant discount of ₹100',
       'bn': '₹100 এর তাত্ক্ষণিক ছাড় পান',
+      'de': 'Erhalten Sie einen Sofortrabatt von 100 ₹',
       'hi': '₹100 की तत्काल छूट प्राप्त करें',
       'mr': '₹100 ची झटपट सूट मिळवा',
       'or': 'Instant 100 ର ତତକ୍ଷଣାତ୍ ରିହାତି ପ୍ରାପ୍ତ କରନ୍ତୁ |',
@@ -1660,6 +1853,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Purchase any Samsung products using ICICI Bank Credit Card.',
       'bn':
           'ICICI ব্যাঙ্কের ক্রেডিট কার্ড ব্যবহার করে যে কোনও Samsung পণ্য কিনুন৷',
+      'de': 'Kaufen Sie Samsung-Produkte mit der ICICI Bank-Kreditkarte.',
       'hi':
           'आईसीआईसीआई बैंक क्रेडिट कार्ड का उपयोग करके कोई भी सैमसंग उत्पाद खरीदें।',
       'mr':
@@ -1672,6 +1866,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4gpr6bbt': {
       'en': 'Get upto 22.5% Cashback',
       'bn': '22.5% পর্যন্ত ক্যাশব্যাক পান',
+      'de': 'Erhalten Sie bis zu 22,5 % Cashback',
       'hi': '22.5% तक कैशबैक प्राप्त करें',
       'mr': '22.5% पर्यंत कॅशबॅक मिळवा',
       'or': '22.5% କ୍ୟାଶବ୍ୟାକ୍ ପର୍ଯ୍ୟନ୍ତ ପାଆନ୍ତୁ |',
@@ -1680,6 +1875,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '0i1evj9l': {
       'en': 'VIEW ALL OFFERS',
       'bn': 'সব অফার দেখুন',
+      'de': 'ALLE ANGEBOTE ANZEIGEN',
       'hi': 'सभी ऑफ़र देखें',
       'mr': 'सर्व ऑफर पहा',
       'or': 'ସମସ୍ତ ଅଫର୍ ଦେଖନ୍ତୁ |',
@@ -1688,6 +1884,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'e8xv3shw': {
       'en': 'VIEW STATEMENTS',
       'bn': 'বিবৃতি দেখুন',
+      'de': 'AUSSAGEN ANSEHEN',
       'hi': 'विवरण देखें',
       'mr': 'विधाने पहा',
       'or': 'ଷ୍ଟେଟମେଣ୍ଟଗୁଡିକ ଦେଖନ୍ତୁ |',
@@ -1696,6 +1893,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'b73cwlxs': {
       'en': 'Have a dispute?',
       'bn': 'একটি বিরোধ আছে?',
+      'de': 'Haben Sie einen Streit?',
       'hi': 'कोई विवाद है?',
       'mr': 'वाद आहे का?',
       'or': 'ବିବାଦ ଅଛି କି?',
@@ -1704,6 +1902,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pv06l7jb': {
       'en': 'CURRENT',
       'bn': 'বর্তমান',
+      'de': 'STROM',
       'hi': 'वर्तमान',
       'mr': 'चालू',
       'or': 'ବର୍ତ୍ତମାନ',
@@ -1712,6 +1911,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rgnjnopk': {
       'en': 'PAST',
       'bn': 'অতীত',
+      'de': 'VERGANGENHEIT',
       'hi': 'भूतकाल',
       'mr': 'भूतकाळ',
       'or': 'ପାସ୍',
@@ -1720,6 +1920,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'da54fxlf': {
       'en': 'EMI STATUS',
       'bn': 'ইএমআই স্ট্যাটাস',
+      'de': 'EMI-STATUS',
       'hi': 'ईएमआई स्थिति',
       'mr': 'EMI स्थिती',
       'or': 'EMI ସ୍ଥିତି',
@@ -1728,6 +1929,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'yd2l0qvo': {
       'en': 'CURRENT',
       'bn': 'বর্তমান',
+      'de': 'STROM',
       'hi': 'वर्तमान',
       'mr': 'चालू',
       'or': 'ବର୍ତ୍ତମାନ',
@@ -1736,6 +1938,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hap40hia': {
       'en': 'BILLING CYCLE',
       'bn': 'বিলিং চক্র',
+      'de': 'RECHNUNGSKREISLAUF',
       'hi': 'बिलिंग चक्र',
       'mr': 'बिलिंग सायकल',
       'or': 'ବିଲିଂ ସାଇକେଲ୍ |',
@@ -1744,6 +1947,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ljy59ypt': {
       'en': '(15 SEP - 14 AUG)',
       'bn': '(15 SEP - 14 AUG)',
+      'de': '(15. SEPTEMBER - 14. AUGUST)',
       'hi': '(15 सितंबर - 14 अगस्त)',
       'mr': '(15 SEP - 14 AUG)',
       'or': '(15 SEP - 14 AUG)',
@@ -1752,6 +1956,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'njxvcea8': {
       'en': 'Show only credits received',
       'bn': 'শুধুমাত্র প্রাপ্ত ক্রেডিট দেখান',
+      'de': 'Nur erhaltene Credits anzeigen',
       'hi': 'केवल प्राप्त क्रेडिट दिखाएं',
       'mr': 'फक्त मिळालेले क्रेडिट दाखवा',
       'or': 'ପ୍ରାପ୍ତ କ୍ରେଡିଟ୍ ଦେଖାନ୍ତୁ |',
@@ -1760,6 +1965,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'lo6a4fnl': {
       'en': 'OFF',
       'bn': 'বন্ধ',
+      'de': 'AUS',
       'hi': 'बंद',
       'mr': 'बंद',
       'or': 'ବନ୍ଦ',
@@ -1768,6 +1974,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ru6hj9lq': {
       'en': 'CONVERT TO EMI',
       'bn': 'EMI তে কনভার্ট করুন',
+      'de': 'AUF EMI KONVERTIEREN',
       'hi': 'ईएमआई में बदलें',
       'mr': 'EMI मध्ये रूपांतरित करा',
       'or': 'EMI କୁ କନଭର୍ଟ କରନ୍ତୁ |',
@@ -1776,6 +1983,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rthdecib': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -1784,6 +1992,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7g1b8nbj': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -1792,6 +2001,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mf1xiz7c': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -1800,6 +2010,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zl5ozaeh': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -1808,6 +2019,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'psiablmv': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -1816,6 +2028,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'l501qhro': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1824,6 +2037,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'f3l0yk5a': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -1832,6 +2046,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'm7oerceu': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -1840,6 +2055,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'lwkg5k7q': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -1848,6 +2064,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'b21th4fr': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -1856,6 +2073,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'y5cmdcxo': {
       'en': '- ₹ 1,000.00',
       'bn': '- ₹ 1,000.00',
+      'de': '- ₹ 1.000,00',
       'hi': '- ₹ 1,000.00',
       'mr': '- ₹ 1,000.00',
       'or': '- ₹ 1,000.00',
@@ -1864,6 +2082,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '53s9nhid': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1872,6 +2091,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8p0ygr8s': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -1880,6 +2100,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'nlojr8e6': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -1888,6 +2109,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bgz1e4uc': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -1896,6 +2118,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'cisi1q5s': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -1904,6 +2127,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jgg5va7s': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -1912,6 +2136,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'suhgmtz5': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1920,6 +2145,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7vd1cfs8': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -1928,6 +2154,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2jpyiufy': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -1936,6 +2163,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '10ta3z28': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -1944,6 +2172,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'cwqhh8s9': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -1952,6 +2181,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sazhlj1n': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -1960,6 +2190,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'nh2s10ec': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -1968,6 +2199,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wfz4bt1l': {
       'en': 'Page 1 of 30',
       'bn': '30-এর মধ্যে পৃষ্ঠা 1',
+      'de': 'Seite 1 von 30',
       'hi': '30 का पेज 1',
       'mr': 'पृष्ठ 30 पैकी 1',
       'or': '30 ର ପୃଷ୍ଠା 1 |',
@@ -1976,6 +2208,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'gtvfl64f': {
       'en': 'PDF',
       'bn': 'পিডিএফ',
+      'de': 'Pdf',
       'hi': 'पीडीएफ',
       'mr': 'PDF',
       'or': 'PDF',
@@ -1984,6 +2217,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ytrqjud8': {
       'en': 'XLS',
       'bn': 'এক্সএলএস',
+      'de': 'XLS',
       'hi': 'एक्सएलएस',
       'mr': 'XLS',
       'or': 'XLS',
@@ -1992,6 +2226,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9y3b4egy': {
       'en': 'PDF',
       'bn': 'পিডিএফ',
+      'de': 'Pdf',
       'hi': 'पीडीएफ',
       'mr': 'PDF',
       'or': 'PDF',
@@ -2000,7 +2235,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'e91y2btv': {
       'en': 'DOWNLOAD',
       'bn': 'ডাউনলোড করুন',
-      'hi': 'डाउनलोड',
+      'de': 'HERUNTERLADEN',
+      'hi': 'डाउनलोड करें',
       'mr': 'डाउनलोड करा',
       'or': 'ଡାଉନଲୋଡ୍ କରନ୍ତୁ |',
       'ta': 'பதிவிறக்க TAMIL',
@@ -2008,6 +2244,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'csx4pewj': {
       'en': 'BILLING CYCLE',
       'bn': 'বিলিং চক্র',
+      'de': 'RECHNUNGSKREISLAUF',
       'hi': 'बिलिंग चक्र',
       'mr': 'बिलिंग सायकल',
       'or': 'ବିଲିଂ ସାଇକେଲ୍ |',
@@ -2016,6 +2253,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7ummm14i': {
       'en': '(15 SEP - 14 AUG)',
       'bn': '(15 SEP - 14 AUG)',
+      'de': '(15. SEPTEMBER - 14. AUGUST)',
       'hi': '(15 सितंबर - 14 अगस्त)',
       'mr': '(15 SEP - 14 AUG)',
       'or': '(15 SEP - 14 AUG)',
@@ -2024,6 +2262,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'yz4llvh4': {
       'en': 'DOWNLOAD PREVIOUS STATEMENTS',
       'bn': 'পূর্ববর্তী বিবৃতি ডাউনলোড করুন',
+      'de': 'VORHERIGE ERKLÄRUNGEN HERUNTERLADEN',
       'hi': 'पिछले बयानों को डाउनलोड करें',
       'mr': 'मागील विधाने डाउनलोड करा',
       'or': 'ପୂର୍ବାବଲୋକନ ଷ୍ଟେଟମେଣ୍ଟଗୁଡ଼ିକୁ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |',
@@ -2032,6 +2271,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'h0s38lvk': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -2040,6 +2280,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'frvgn2y4': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -2048,6 +2289,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1obonb12': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -2056,6 +2298,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8f0cm2xg': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -2064,6 +2307,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sqhht110': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -2072,6 +2316,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9ijs556c': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2080,6 +2325,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'lahuprqp': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -2088,6 +2334,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'khqq5hiv': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -2096,6 +2343,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9e66q1i9': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -2104,6 +2352,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vxcssb56': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -2112,6 +2361,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ns2jlhhl': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -2120,6 +2370,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'lsh9zmnz': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2128,6 +2379,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'e5ksxk27': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -2136,6 +2388,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9zjta2rd': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -2144,6 +2397,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rr0n688f': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -2152,6 +2406,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ownqrdc7': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -2160,6 +2415,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'q9smv1gz': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -2168,6 +2424,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     's8hsm63r': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2176,6 +2433,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mbkskq5s': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -2184,6 +2442,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'yr8s9w40': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -2192,6 +2451,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pq9t008u': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -2200,6 +2460,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7jbv9tyw': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -2208,6 +2469,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'o8scuijg': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -2216,6 +2478,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'x0vctsa0': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2224,6 +2487,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'g17z2oj3': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -2232,6 +2496,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jqa9mgvy': {
       'en': '- ₹ 1,000.00',
       'bn': '- ₹ 1,000.00',
+      'de': '- ₹ 1.000,00',
       'hi': '- ₹ 1,000.00',
       'mr': '- ₹ 1,000.00',
       'or': '- ₹ 1,000.00',
@@ -2240,6 +2505,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'byfu1w26': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2248,6 +2514,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     't1imh9cf': {
       'en': 'BSES',
       'bn': 'বিএসইএস',
+      'de': 'BSES',
       'hi': 'बीएसईएस',
       'mr': 'BSES',
       'or': 'BSES',
@@ -2256,6 +2523,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '63izsetg': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -2264,6 +2532,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jgij1fil': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2272,6 +2541,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ewrfr14y': {
       'en': 'AMAZON',
       'bn': 'আমাজন',
+      'de': 'AMAZONAS',
       'hi': 'अमेज़न',
       'mr': 'AMAZON',
       'or': 'AMAZON',
@@ -2280,6 +2550,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '17a0dg8i': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -2288,6 +2559,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hbq72kln': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2296,6 +2568,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'we6mtwaw': {
       'en': 'Page 1 of 30',
       'bn': '30-এর মধ্যে পৃষ্ঠা 1',
+      'de': 'Seite 1 von 30',
       'hi': '30 का पेज 1',
       'mr': 'पृष्ठ 30 पैकी 1',
       'or': '30 ର ପୃଷ୍ଠା 1 |',
@@ -2304,6 +2577,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zv7ffqmx': {
       'en': 'PDF',
       'bn': 'পিডিএফ',
+      'de': 'Pdf',
       'hi': 'पीडीएफ',
       'mr': 'PDF',
       'or': 'PDF',
@@ -2312,6 +2586,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     's9dcb8ug': {
       'en': 'XLS',
       'bn': 'এক্সএলএস',
+      'de': 'XLS',
       'hi': 'एक्सएलएस',
       'mr': 'XLS',
       'or': 'XLS',
@@ -2320,6 +2595,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'gbzunyen': {
       'en': 'PDF',
       'bn': 'পিডিএফ',
+      'de': 'Pdf',
       'hi': 'पीडीएफ',
       'mr': 'PDF',
       'or': 'PDF',
@@ -2328,7 +2604,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'eyca1abe': {
       'en': 'DOWNLOAD',
       'bn': 'ডাউনলোড করুন',
-      'hi': 'डाउनलोड',
+      'de': 'HERUNTERLADEN',
+      'hi': 'डाउनलोड करें',
       'mr': 'डाउनलोड करा',
       'or': 'ଡାଉନଲୋଡ୍ କରନ୍ତୁ |',
       'ta': 'பதிவிறக்க TAMIL',
@@ -2336,6 +2613,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fo07hu60': {
       'en': 'EMI SUMMARY',
       'bn': 'ইএমআই সারাংশ',
+      'de': 'EMI-ZUSAMMENFASSUNG',
       'hi': 'ईएमआई सारांश',
       'mr': 'EMI सारांश',
       'or': 'EMI ସାରାଂଶ',
@@ -2344,7 +2622,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'aqez9cl1': {
       'en': 'ONGOING',
       'bn': 'চলমান',
-      'hi': 'चल रहे',
+      'de': 'LAUFEND',
+      'hi': 'चल रही है',
       'mr': 'चालू आहे',
       'or': 'ONGOING',
       'ta': 'நடந்து கொண்டிருக்கிறது',
@@ -2352,6 +2631,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6ybbkqtp': {
       'en': 'PAID',
       'bn': 'পেড',
+      'de': 'BEZAHLT',
       'hi': 'भुगतान किया है',
       'mr': 'पेड',
       'or': 'PAID',
@@ -2360,7 +2640,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1b79t878': {
       'en': 'ONGOING',
       'bn': 'চলমান',
-      'hi': 'चल रहे',
+      'de': 'LAUFEND',
+      'hi': 'चल रही है',
       'mr': 'चालू आहे',
       'or': 'ONGOING',
       'ta': 'நடந்து கொண்டிருக்கிறது',
@@ -2368,6 +2649,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wvjxonzn': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -2376,6 +2658,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'eh2ef9cr': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -2384,6 +2667,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5orxw5kz': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -2392,6 +2676,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '938d68bj': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -2400,6 +2685,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pblm47jf': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -2408,6 +2694,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xs0uea06': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2416,6 +2703,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'qf13t08j': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -2424,6 +2712,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2idty243': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -2432,6 +2721,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ceslhnjg': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -2440,6 +2730,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '55cc9zlu': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -2448,6 +2739,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kw618rq3': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -2456,6 +2748,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'g4st7fye': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2464,6 +2757,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6vk8f7ef': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -2472,6 +2766,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vky7gzdh': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -2480,6 +2775,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fqi6g1o0': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -2488,6 +2784,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hm13csw0': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -2496,6 +2793,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kawo4wsv': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -2504,6 +2802,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'q5mbqeyo': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2512,6 +2811,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6bozkfxl': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -2520,6 +2820,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vkmeqmfu': {
       'en': 'Unbilled',
       'bn': 'বিলবিহীন',
+      'de': 'Nicht abgerechnet',
       'hi': 'बिना बिल किया हुआ',
       'mr': 'बिल न केलेले',
       'or': 'ଅନାବଶ୍ୟକ |',
@@ -2528,6 +2829,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'g91swe2o': {
       'en': ' • ',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -2536,6 +2838,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6g4hk2wq': {
       'en': 'In Process',
       'bn': 'প্রক্রিয়াধীন',
+      'de': 'In Bearbeitung',
       'hi': 'इस प्रक्रिया में',
       'mr': 'प्रक्रियेत',
       'or': 'କାମ ଚାଲିଛି',
@@ -2544,6 +2847,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'f8xznk96': {
       'en': '- ₹ 16,000.00',
       'bn': '- ₹16,000.00',
+      'de': '- ₹ 16.000,00',
       'hi': '- ₹ 16,000.00',
       'mr': '- ₹ 16,000.00',
       'or': '-, 000 16,000.00',
@@ -2552,6 +2856,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'p5d6aa5g': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2560,6 +2865,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7jsev6le': {
       'en': 'Jayanagar telephone Nigam Jayanagar',
       'bn': 'জয়নগর টেলিফোন নিগম জয়নগর',
+      'de': 'Jayanagar telefoniert mit Nigam Jayanagar',
       'hi': 'जयनगर टेलीफोन निगम जयनगर',
       'mr': 'जयनगर टेलिफोन निगम जयनगर',
       'or': 'ଜୟନଗର ଟେଲିଫୋନ୍ ନିଗମ ଜୟନଗର |',
@@ -2568,6 +2874,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9n7cqs0s': {
       'en': '- ₹ 1,000.00',
       'bn': '- ₹ 1,000.00',
+      'de': '- ₹ 1.000,00',
       'hi': '- ₹ 1,000.00',
       'mr': '- ₹ 1,000.00',
       'or': '- ₹ 1,000.00',
@@ -2576,6 +2883,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'n7rszbqy': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2584,6 +2892,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7ypql8e9': {
       'en': 'Google Gmail',
       'bn': 'গুগল জিমেইল',
+      'de': 'Google Gmail',
       'hi': 'गूगल जीमेल',
       'mr': 'Google Gmail',
       'or': 'ଗୁଗୁଲ୍ Gmail |',
@@ -2592,6 +2901,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8e3f05bx': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -2600,6 +2910,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9g95tzvf': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2608,6 +2919,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8yf3oej5': {
       'en': 'APPLE',
       'bn': 'আপেল',
+      'de': 'APFEL',
       'hi': 'सेब',
       'mr': 'सफरचंद',
       'or': 'ପ୍ରୟୋଗ',
@@ -2616,6 +2928,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'uamwdszu': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -2624,6 +2937,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9mt7ea7z': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2632,6 +2946,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4qaggmne': {
       'en': 'APPLE',
       'bn': 'আপেল',
+      'de': 'APFEL',
       'hi': 'सेब',
       'mr': 'सफरचंद',
       'or': 'ପ୍ରୟୋଗ',
@@ -2640,6 +2955,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rjye59wg': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -2648,6 +2964,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'he7pgya4': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2656,6 +2973,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'v5tblm32': {
       'en': 'AMAZON',
       'bn': 'আমাজন',
+      'de': 'AMAZONAS',
       'hi': 'अमेज़न',
       'mr': 'AMAZON',
       'or': 'AMAZON',
@@ -2664,6 +2982,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pten1mxk': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -2672,6 +2991,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'qay13teu': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2680,6 +3000,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'amzloap4': {
       'en': 'META MESSENGER',
       'bn': 'মেটা মেসেঞ্জার',
+      'de': 'META-Messenger',
       'hi': 'मेटा मेसेंजर',
       'mr': 'मेटा मेसेंजर',
       'or': 'ମେଟା ମେସେଞ୍ଜର |',
@@ -2688,6 +3009,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bnwogglb': {
       'en': '- ₹ 500.0',
       'bn': '- ₹ 500.0',
+      'de': '- ₹ 500,0',
       'hi': '- ₹ 500.0',
       'mr': '- ₹ ५००.०',
       'or': '- ₹ 500.0',
@@ -2696,6 +3018,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'oyfta69b': {
       'en': 'Today • 4:30pm',
       'bn': 'আজ • 4:30pm',
+      'de': 'Heute • 16:30 Uhr',
       'hi': 'आज • शाम 4:30 बजे',
       'mr': 'आज • दुपारी 4:30 वा',
       'or': 'ଆଜି • ରାତି 4:30 |',
@@ -2704,6 +3027,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'lq8behs7': {
       'en': 'Page 1 of 30',
       'bn': '30-এর মধ্যে পৃষ্ঠা 1',
+      'de': 'Seite 1 von 30',
       'hi': '30 का पेज 1',
       'mr': 'पृष्ठ 30 पैकी 1',
       'or': '30 ର ପୃଷ୍ଠା 1 |',
@@ -2712,6 +3036,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sj9r50ub': {
       'en': '•',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -2723,6 +3048,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5il1g52i': {
       'en': 'PAY YOUR ICICI BANK CREDIT CARD BILL',
       'bn': 'আপনার ICICI ব্যাঙ্কের ক্রেডিট কার্ডের বিল পেমেন্ট করুন',
+      'de': 'ZAHLEN SIE IHRE ICICI BANK KREDITKARTENRECHNUNG',
       'hi': 'अपने आईसीआईसीआई बैंक क्रेडिट कार्ड बिल का भुगतान करें',
       'mr': 'तुमचे ICICI बँक क्रेडिट कार्ड बिल भरा',
       'or': 'ଆପଣଙ୍କର ଆଇସିଆଇ ବ୍ୟାଙ୍କ୍ କ୍ରେଡିଟ୍ କାର୍ଡ ବିଲ୍ ପ .ଠ କରନ୍ତୁ |',
@@ -2731,6 +3057,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'tszvwxgl': {
       'en': 'Credit Card Number',
       'bn': 'ক্রেডিট কার্ড নম্বর',
+      'de': 'Kreditkartennummer',
       'hi': 'क्रेडिट कार्ड नंबर',
       'mr': 'पत पत्र क्रमांक',
       'or': 'କ୍ରେଡିଟ କାର୍ଡ ସଂଖ୍ୟା',
@@ -2739,6 +3066,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sl9d0du0': {
       'en': 'EDIT',
       'bn': 'সম্পাদনা করুন',
+      'de': 'BEARBEITEN',
       'hi': 'संपादन करना',
       'mr': 'सुधारणे',
       'or': 'ସମ୍ପାଦନ କରନ୍ତୁ |',
@@ -2747,6 +3075,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'nyvhynlf': {
       'en': '1234 5678 1234 1234',
       'bn': '1234 5678 1234 1234',
+      'de': '1234 5678 1234 1234',
       'hi': '1234 5678 1234 1234',
       'mr': '१२३४ ५६७८ १२३४ १२३४',
       'or': '1234 5678 1234 1234',
@@ -2755,6 +3084,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'je156vee': {
       'en': 'Credit Card variant',
       'bn': 'ক্রেডিট কার্ড বৈকল্পিক',
+      'de': 'Kreditkartenvariante',
       'hi': 'क्रेडिट कार्ड संस्करण',
       'mr': 'क्रेडिट कार्ड प्रकार',
       'or': 'କ୍ରେଡିଟ୍ କାର୍ଡ ପ୍ରକାର',
@@ -2763,6 +3093,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'y2kdt15y': {
       'en': 'ICICI Bank MakeMyTrip platinum',
       'bn': 'ICICI ব্যাঙ্ক MakeMyTrip প্ল্যাটিনাম',
+      'de': 'ICICI Bank MakeMyTrip Platin',
       'hi': 'आईसीआईसीआई बैंक मेकमायट्रिप प्लैटिनम',
       'mr': 'ICICI बँक MakeMyTrip प्लॅटिनम',
       'or': 'ଆଇସିଆଇସିଆଇ ବ୍ୟାଙ୍କ ମେକ୍ ମାଇ ଟ୍ରିପ୍ ପ୍ଲାଟିନମ୍ |',
@@ -2770,7 +3101,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'bzkj38p2': {
       'en': 'Name on the card',
-      'bn': 'কারডের নাম',
+      'bn': 'কার্ড নাম',
+      'de': 'Name auf der Karte',
       'hi': 'कार्ड पर नाम',
       'mr': 'कार्डवर नाव',
       'or': 'କାର୍ଡରେ ନାମ ଦିଅ |',
@@ -2779,6 +3111,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zqs2bqlb': {
       'en': 'Rabbi Shergill',
       'bn': 'রাব্বি শেরগিল',
+      'de': 'Rabbi Shergill',
       'hi': 'रब्बी शेरगिल',
       'mr': 'रब्बी शेरगिल',
       'or': 'ରେବୀ ଶେର୍ଗିଲ୍ |',
@@ -2787,6 +3120,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bu7a14kb': {
       'en': 'How much do you want to pay?',
       'bn': 'আপনি কত টাকা দিতে চান?',
+      'de': 'Wie viel möchtest du bezahlen?',
       'hi': 'तुम्हारी कितना भुगतान करने की इच्छा है?',
       'mr': 'तुम्हाला किती पैसे द्यायचे आहेत?',
       'or': 'ଆପଣ କେତେ ଦେବାକୁ ଚାହୁଁଛନ୍ତି?',
@@ -2795,6 +3129,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bqjaz42z': {
       'en': 'TOTAL AMOUNT DUE',
       'bn': 'সর্বমোট বাকির পরিমাণ',
+      'de': 'FÄLLIGER GESAMTBETRAG',
       'hi': 'कुल शेष राशि',
       'mr': 'एकूण देय रक्कम',
       'or': 'ସମୁଦାୟ ଦେୟ |',
@@ -2803,6 +3138,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'b5eqz5yw': {
       'en': '₹ 17,500',
       'bn': '₹ 17,500',
+      'de': '17.500 €',
       'hi': '₹ 17,500',
       'mr': '₹ १७,५००',
       'or': '₹ 17,500',
@@ -2811,6 +3147,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'nwtcy1v3': {
       'en': 'MINIMUM AMOUNT DUE',
       'bn': 'ন্যূনতম রাশি বকেয়া',
+      'de': 'FÄLLIGER MINDESTBETRAG',
       'hi': 'न्यूनतम देय राशि',
       'mr': 'किमान देय रक्कम',
       'or': 'MINIMUM AMOUNT DUE |',
@@ -2819,6 +3156,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'nytk5zxj': {
       'en': '₹ 7,500',
       'bn': '₹7,500',
+      'de': '7.500 €',
       'hi': '₹ 7,500',
       'mr': '₹ ७,५००',
       'or': '₹ 7,500',
@@ -2827,6 +3165,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sd41w00u': {
       'en': 'CURRENT OUTSTANDING',
       'bn': 'বর্তমান অসামান্য',
+      'de': 'AKTUELLES HERAUSRAGENDES',
       'hi': 'वर्तमान बकाया',
       'mr': 'चालू थकबाकी',
       'or': 'ବର୍ତ୍ତମାନର ବାହାଘର |',
@@ -2835,6 +3174,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5uf2u4lq': {
       'en': '₹ 42,000',
       'bn': '₹ 42,000',
+      'de': '42.000 €',
       'hi': '₹ 42,000',
       'mr': '₹ ४२,०००',
       'or': '₹ 42,000',
@@ -2843,6 +3183,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5agq28ja': {
       'en': 'PAY CUSTOM AMOUNT',
       'bn': 'কাস্টম পরিমাণ অর্থ প্রদান করুন',
+      'de': 'BENUTZERDEFINIERTEN BETRAG ZAHLEN',
       'hi': 'कस्टम राशि का भुगतान करें',
       'mr': 'कस्टम रक्कम द्या',
       'or': 'କଷ୍ଟମ ପରିମାଣ ଦେୟ |',
@@ -2851,6 +3192,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'c68v8l3z': {
       'en': 'Choose the amount you want to pay',
       'bn': 'আপনি যে পরিমাণ অর্থ প্রদান করতে চান তা চয়ন করুন',
+      'de': 'Wählen Sie den Betrag, den Sie bezahlen möchten',
       'hi': 'वह राशि चुनें जिसका आप भुगतान करना चाहते हैं',
       'mr': 'तुम्हाला द्यायची असलेली रक्कम निवडा',
       'or': 'ଆପଣ ଦେବାକୁ ଚାହୁଁଥିବା ପରିମାଣ ବାଛନ୍ତୁ |',
@@ -2859,6 +3201,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6p9gsqlx': {
       'en': '₹',
       'bn': '₹',
+      'de': '€',
       'hi': '₹',
       'mr': '₹',
       'or': '₹',
@@ -2867,7 +3210,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mwxe6tde': {
       'en': 'Enter Amount',
       'bn': 'পরিমান লিখুন',
-      'hi': 'राशि डालें',
+      'de': 'Menge eingeben',
+      'hi': 'राशी डालें',
       'mr': 'रक्कम प्रविष्ट करा',
       'or': 'ରାଶି ପ୍ରବେଶ କରନ୍ତୁ |',
       'ta': 'தொகையை உள்ளிடவும்',
@@ -2875,6 +3219,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pjjcs79s': {
       'en': 'Select account to pay',
       'bn': 'অর্থ প্রদানের জন্য অ্যাকাউন্ট নির্বাচন করুন',
+      'de': 'Konto zum Bezahlen auswählen',
       'hi': 'भुगतान करने के लिए खाते का चयन करें',
       'mr': 'पैसे देण्यासाठी खाते निवडा',
       'or': 'ଦେୟ ଦେବାକୁ ଖାତା ଚୟନ କରନ୍ତୁ |',
@@ -2883,6 +3228,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mkp9zdd6': {
       'en': 'AVAILABLE BALANCE',
       'bn': 'পর্যাপ্ত টাকা',
+      'de': 'VERFÜGBARES GUTHABEN',
       'hi': 'उपलब्ध शेष राशि',
       'mr': 'उपलब्ध शिल्लक',
       'or': 'ଉପଲବ୍ଧ ବାଲାନ୍ସ |',
@@ -2891,6 +3237,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'gzonk6p9': {
       'en': '₹90,000',
       'bn': '₹90,000',
+      'de': '90.000 £',
       'hi': '₹90,000',
       'mr': '₹९०,०००',
       'or': '₹ 90,000',
@@ -2899,6 +3246,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'y70uhmrc': {
       'en': 'When would you like to pay your bill?',
       'bn': 'আপনি কখন আপনার বিল পরিশোধ করতে চান?',
+      'de': 'Wann möchten Sie Ihre Rechnung bezahlen?',
       'hi': 'आप अपने बिल का भुगतान कब करना चाहेंगे?',
       'mr': 'तुम्हाला तुमचे बिल कधी भरायचे आहे?',
       'or': 'ତୁମେ କେବେ ବିଲ୍ ପ to ଠ କରିବାକୁ ଚାହୁଁଛ?',
@@ -2907,6 +3255,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4gu3vbew': {
       'en': 'TODAY',
       'bn': 'আজ',
+      'de': 'HEUTE',
       'hi': 'आज',
       'mr': 'आज',
       'or': 'ଆଜି',
@@ -2915,14 +3264,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'dbtjwhrw': {
       'en': 'Send money instantly',
       'bn': 'সঙ্গে সঙ্গে টাকা পাঠান',
+      'de': 'Senden Sie sofort Geld',
       'hi': 'तुरंत पैसे भेजें',
-      'mr': 'त्वरित पैसे पाठवा',
+      'mr': 'झटपट पैसे पाठवा',
       'or': 'ତୁରନ୍ତ ଟଙ୍କା ପଠାନ୍ତୁ |',
       'ta': 'உடனடியாக பணம் அனுப்பவும்',
     },
     'jo4gt7pg': {
       'en': 'LATER',
       'bn': 'পরে',
+      'de': 'SPÄTER',
       'hi': 'बाद में',
       'mr': 'नंतर',
       'or': 'ବିଳମ୍ବ',
@@ -2931,32 +3282,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'v2r9y8sb': {
       'en': 'Send money on a later date',
       'bn': 'পরবর্তী তারিখে টাকা পাঠান',
+      'de': 'Senden Sie Geld zu einem späteren Zeitpunkt',
       'hi': 'बाद की तारीख में पैसा भेजें',
       'mr': 'नंतरच्या तारखेला पैसे पाठवा',
       'or': 'ପରବର୍ତ୍ତୀ ସମୟରେ ଟଙ୍କା ପଠାନ୍ତୁ |',
       'ta': 'பிற்காலத்தில் பணம் அனுப்பவும்',
     },
     'se7nqt67': {
-      'en': 'I have read, understood and agree to be bound by the ',
-      'bn': 'আমি পড়েছি, বুঝেছি এবং আবদ্ধ হতে সম্মত',
-      'hi': 'मैंने पढ़ लिया है, समझ लिया है और इससे बाध्य होने के लिए सहमत हूं',
-      'mr': 'मी वाचले आहे, समजले आहे आणि मी बांधील आहे',
+      'en':
+          'I have read, understood and agree to be bound by the Terms and Conditions.',
+      'bn': 'আমি শর্ত ও শর্তাবলী পড়েছি, বুঝেছি এবং আবদ্ধ হতে সম্মত।',
+      'de':
+          'Ich habe die Allgemeinen Geschäftsbedingungen gelesen, verstanden und bin damit einverstanden.',
+      'hi':
+          'मैंने नियमों और शर्तों को पढ़, समझ लिया है और मैं इससे बाध्य होने के लिए सहमत हूं।',
+      'mr':
+          'मी वाचले आहे, समजले आहे आणि मी अटी व शर्तींना बांधील असण्यास सहमत आहे.',
       'or':
-          'ମୁଁ ପ read ିଛି, ବୁ understood ିଛି ଏବଂ ଏଥିରେ ବନ୍ଧା ହେବାକୁ ରାଜି ଅଛି |',
+          'ମୁଁ ପ read ିଛି, ବୁ understood ିଛି ଏବଂ ଚୁକ୍ତିନାମା ଦ୍ bound ାରା ବନ୍ଧା ହେବାକୁ ରାଜି ହୋଇଛି।',
       'ta':
-          'நான் படித்தேன், புரிந்து கொண்டு கட்டுப்படுவதற்கு ஒப்புக்கொள்கிறேன்',
-    },
-    'dw9iksi5': {
-      'en': 'Terms and Conditions.',
-      'bn': 'শর্তাবলী.',
-      'hi': 'नियम और शर्तें।',
-      'mr': 'नियम आणि अटी.',
-      'or': 'ସର୍ତ୍ତାବଳୀ।',
-      'ta': 'விதிமுறைகள் மற்றும் நிபந்தனைகள்.',
+          'நான் படித்து, புரிந்து கொண்டு, விதிமுறைகள் மற்றும் நிபந்தனைகளுக்கு கட்டுப்படுவதை ஒப்புக்கொள்கிறேன்.',
     },
     'py1y1rbe': {
       'en': 'CONFIRM & PAY',
       'bn': 'নিশ্চিত করুন এবং অর্থ প্রদান করুন',
+      'de': 'BESTÄTIGEN & BEZAHLEN',
       'hi': 'पुष्टि करें और भुगतान करें',
       'mr': 'पुष्टी करा आणि पैसे द्या',
       'or': 'ନିଶ୍ଚିତ ଏବଂ ଦେୟ |',
@@ -2965,6 +3315,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8i7ixslp': {
       'en': 'CANCEL',
       'bn': 'বাতিল করুন',
+      'de': 'ABBRECHEN',
       'hi': 'रद्द करना',
       'mr': 'रद्द करा',
       'or': 'ବାତିଲ୍',
@@ -2973,6 +3324,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sr63sjpm': {
       'en': '•',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -2984,6 +3336,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'h8hn86jk': {
       'en': 'CONVERT TO EMI',
       'bn': 'EMI তে কনভার্ট করুন',
+      'de': 'AUF EMI KONVERTIEREN',
       'hi': 'ईएमआई में बदलें',
       'mr': 'EMI मध्ये रूपांतरित करा',
       'or': 'EMI କୁ କନଭର୍ଟ କରନ୍ତୁ |',
@@ -2992,6 +3345,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '3a2ll3ac': {
       'en': 'Credit Card number',
       'bn': 'ক্রেডিট কার্ড নম্বর',
+      'de': 'Kreditkartennummer',
       'hi': 'क्रेडिट कार्ड नंबर',
       'mr': 'पत पत्र क्रमांक',
       'or': 'କ୍ରେଡିଟ କାର୍ଡ ସଂଖ୍ୟା',
@@ -3000,6 +3354,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jaat9qjj': {
       'en': 'Select EMI tenure',
       'bn': 'EMI মেয়াদ নির্বাচন করুন',
+      'de': 'Wählen Sie EMI-Laufzeit',
       'hi': 'ईएमआई अवधि चुनें',
       'mr': 'EMI कार्यकाळ निवडा',
       'or': 'EMI କାର୍ଯ୍ୟକାଳ ଚୟନ କରନ୍ତୁ |',
@@ -3008,6 +3363,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'lej0m7ea': {
       'en': 'Rate of Interest\n(per transaction)',
       'bn': 'সুদের হার\n(প্রতি লেনদেন)',
+      'de': 'Zinssatz\n(pro Transaktion)',
       'hi': 'ब्याज की दर\n(प्रति लेन-देन)',
       'mr': 'व्याज दर\n(प्रति व्यवहार)',
       'or': 'ଆଗ୍ରହର ହାର\n(ପ୍ରତି କାରବାର)',
@@ -3016,6 +3372,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rfov13j7': {
       'en': '16%  ',
       'bn': '16%',
+      'de': '16%',
       'hi': '16%',
       'mr': '१६%',
       'or': '16%',
@@ -3024,6 +3381,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'tq9rcktz': {
       'en': 'p.a.',
       'bn': 'p.a',
+      'de': 'p.a.',
       'hi': 'पीए',
       'mr': 'p.a',
       'or': 'p.a.',
@@ -3032,6 +3390,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5gtf3x4p': {
       'en': 'EMI Processing fee\n(one time)',
       'bn': 'ইএমআই প্রসেসিং ফি\n(একবার)',
+      'de': 'EMI-Bearbeitungsgebühr\n(einmal)',
       'hi': 'ईएमआई प्रसंस्करण शुल्क\n(वन टाइम)',
       'mr': 'EMI प्रक्रिया शुल्क\n(एकावेळी)',
       'or': 'EMI ପ୍ରକ୍ରିୟାକରଣ ଦେୟ |\n(ଗୋଟିଏ ଥର)',
@@ -3040,6 +3399,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'qihhbogv': {
       'en': '2% ',
       'bn': '2%',
+      'de': '2%',
       'hi': '2%',
       'mr': '२%',
       'or': '2%',
@@ -3048,6 +3408,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'g6flqs4e': {
       'en': 'of total EMI amount',
       'bn': 'মোট ইএমআই পরিমাণ',
+      'de': 'des gesamten EMI-Betrags',
       'hi': 'कुल ईएमआई राशि का',
       'mr': 'एकूण ईएमआय रकमेच्या',
       'or': 'ସମୁଦାୟ EMI ପରିମାଣର |',
@@ -3056,6 +3417,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     're5zm33l': {
       'en': '1st EMI Payment Date\n(Estimated)',
       'bn': '১ম ইএমআই পেমেন্টের তারিখ\n(আনুমানিক)',
+      'de': '1. EMI-Zahlungsdatum\n(Geschätzt)',
       'hi': 'पहली ईएमआई भुगतान तिथि\n(अनुमानित)',
       'mr': 'पहिली EMI पेमेंट तारीख\n(अंदाज)',
       'or': 'ପ୍ରଥମ EMI ଦେୟ ତାରିଖ |\n(ଆନୁମାନିକ)',
@@ -3064,6 +3426,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'tij38yxl': {
       'en': '08 Dec',
       'bn': '08 ডিসেম্বর',
+      'de': '08 Dez',
       'hi': '08 दिसम्बर',
       'mr': '08 डिसें',
       'or': '08 ଡିସେମ୍ବର',
@@ -3072,6 +3435,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5fznmjyr': {
       'en': 'DATE & \nMONTH',
       'bn': 'তারিখ এবং\nমাস',
+      'de': 'DATUM &\nMONAT',
       'hi': 'दिनांक &\nमहीना',
       'mr': 'तारीख आणि\nमहिना',
       'or': 'DATE &\nମାସ',
@@ -3080,7 +3444,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'yve9apmd': {
       'en': 'TRANSACTION\nREMARKS',
       'bn': 'লেনদেন\nমন্তব্য',
-      'hi': 'लेन-देन\nटिप्पणियां',
+      'de': 'TRANSAKTION\nBEMERKUNGEN',
+      'hi': 'लेन-देन\nटिप्पणियों',
       'mr': 'व्यवहार\nटिप्पणी',
       'or': 'ପରିବହନ\nସ୍ମରଣ',
       'ta': 'பரிவர்த்தனை\nகருத்துக்கள்',
@@ -3088,6 +3453,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'nfhg38bz': {
       'en': 'TRANSACTION\nAMOUNT',
       'bn': 'লেনদেন\nAMOUNT',
+      'de': 'TRANSAKTION\nHÖHE',
       'hi': 'लेन-देन\nरकम',
       'mr': 'व्यवहार\nAMOUNT',
       'or': 'ପରିବହନ\nAMOUNT',
@@ -3096,6 +3462,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'i0xs9q6a': {
       'en': 'MONTHLY\nEMI AMOUNT',
       'bn': 'মাসিক\nইএমআই পরিমাণ',
+      'de': 'MONATLICH\nEMI-BETRAG',
       'hi': 'महीने के\nईएमआई राशि',
       'mr': 'मासिक\nEMI रक्कम',
       'or': 'ମାସ ମାସରେ\nEMI AMOUNT',
@@ -3104,6 +3471,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hrtzidjm': {
       'en': 'SELECT\nTRANSACTION',
       'bn': 'নির্বাচন করুন\nলেনদেন',
+      'de': 'WÄHLEN\nTRANSAKTION',
       'hi': 'चुनते हैं\nलेन-देन',
       'mr': 'निवडा\nव्यवहार',
       'or': 'ଚୟନ କରନ୍ତୁ |\nପରିବହନ',
@@ -3112,6 +3480,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sbjry5mr': {
       'en': 'EMI DETAILS',
       'bn': 'ইএমআই বিশদ',
+      'de': 'EMI-DETAILS',
       'hi': 'ईएमआई विवरण',
       'mr': 'EMI तपशील',
       'or': 'EMI DETAILS |',
@@ -3120,6 +3489,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kd68cvam': {
       'en': 'PRO TIPS',
       'bn': 'PRO টিপস',
+      'de': 'PROFI-TIPPS',
       'hi': 'प्रो टिप्स',
       'mr': 'प्रो टिप्स',
       'or': 'PRO ଟିପ୍ସ |',
@@ -3128,6 +3498,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'd4r0kgh1': {
       'en': 'EMI SUMMARY',
       'bn': 'ইএমআই সারাংশ',
+      'de': 'EMI-ZUSAMMENFASSUNG',
       'hi': 'ईएमआई सारांश',
       'mr': 'EMI सारांश',
       'or': 'EMI ସାରାଂଶ',
@@ -3136,6 +3507,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jeethjny': {
       'en': 'Total transaction Amount',
       'bn': 'মোট লেনদেনের পরিমাণ',
+      'de': 'Gesamtbetrag der Transaktion',
       'hi': 'कुल लेनदेन राशि',
       'mr': 'एकूण व्यवहाराची रक्कम',
       'or': 'ମୋଟ କାରବାର ପରିମାଣ',
@@ -3144,6 +3516,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'gc3xc8jb': {
       'en': '₹63,000',
       'bn': '₹63,000',
+      'de': '63.000 £',
       'hi': '₹63,000',
       'mr': '₹६३,०००',
       'or': '₹ 63,000',
@@ -3152,6 +3525,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'cmkispur': {
       'en': 'Total EMI amount',
       'bn': 'মোট EMI পরিমাণ',
+      'de': 'Gesamtbetrag der EMI',
       'hi': 'कुल ईएमआई राशि',
       'mr': 'एकूण EMI रक्कम',
       'or': 'ମୋଟ EMI ପରିମାଣ |',
@@ -3160,6 +3534,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     't3jrqvpv': {
       'en': '₹64,320',
       'bn': '₹64,320',
+      'de': '64.320 £',
       'hi': '₹ 64,320',
       'mr': '₹६४,३२०',
       'or': '₹ 64,320',
@@ -3168,6 +3543,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'niig7dqv': {
       'en': 'Monthly EMI amount\nFor 2 years (24 installments)',
       'bn': 'মাসিক ইএমআই পরিমাণ\n2 বছরের জন্য (24 কিস্তি)',
+      'de': 'Monatlicher EMI-Betrag\nFür 2 Jahre (24 Raten)',
       'hi': 'मासिक ईएमआई राशि\n2 वर्षों के लिए (24 किश्तों में)',
       'mr': 'मासिक EMI रक्कम\n2 वर्षांसाठी (24 हप्ते)',
       'or': 'ମାସିକ EMI ପରିମାଣ |\n2 ବର୍ଷ ପାଇଁ (24 କିସ୍ତି)',
@@ -3176,6 +3552,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'i783osx7': {
       'en': '₹2,680',
       'bn': '₹২,৬৮০',
+      'de': '2.680 £',
       'hi': '₹2,680',
       'mr': '₹२,६८०',
       'or': '₹ 2,680',
@@ -3184,6 +3561,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4q10q8oz': {
       'en': 'EMI processing fee',
       'bn': 'ইএমআই প্রসেসিং ফি',
+      'de': 'EMI-Bearbeitungsgebühr',
       'hi': 'ईएमआई प्रसंस्करण शुल्क',
       'mr': 'EMI प्रक्रिया शुल्क',
       'or': 'EMI ପ୍ରକ୍ରିୟାକରଣ ଦେୟ |',
@@ -3192,6 +3570,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4tphaxdy': {
       'en': '₹1,480',
       'bn': '₹1,480',
+      'de': '1.480 £',
       'hi': '₹1,480',
       'mr': '₹१,४८०',
       'or': '₹ 1,480',
@@ -3201,6 +3580,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'One time EMI processing fee will be added  to your Credit Card bill',
       'bn': 'আপনার ক্রেডিট কার্ড বিলে এককালীন ইএমআই প্রসেসিং ফি যোগ করা হবে',
+      'de':
+          'Eine einmalige EMI-Bearbeitungsgebühr wird Ihrer Kreditkartenabrechnung hinzugefügt',
       'hi':
           'आपके क्रेडिट कार्ड बिल में एकमुश्त ईएमआई प्रोसेसिंग शुल्क जोड़ा जाएगा',
       'mr':
@@ -3212,6 +3593,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'z2uiz73k': {
       'en': 'I have read, understood and agree to be bound by the ',
       'bn': 'আমি পড়েছি, বুঝেছি এবং আবদ্ধ হতে সম্মত',
+      'de': 'Ich habe die gelesen, verstanden und bin damit einverstanden',
       'hi': 'मैंने पढ़ लिया है, समझ लिया है और इससे बाध्य होने के लिए सहमत हूं',
       'mr': 'मी वाचले आहे, समजले आहे आणि मी बांधील आहे',
       'or':
@@ -3222,6 +3604,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '82lxq4oj': {
       'en': 'terms & conditions.',
       'bn': 'শর্তাবলী.',
+      'de': 'Terms & amp; Bedingungen.',
       'hi': 'नियम एवं शर्तें।',
       'mr': 'अटी व शर्ती.',
       'or': 'ସର୍ତ୍ତାବଳୀ',
@@ -3230,6 +3613,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'waztiium': {
       'en': 'PAY ₹1,480 & CONVERT TO EMI',
       'bn': '₹1,480 দিন এবং EMI-এ রূপান্তর করুন',
+      'de': '1.480 £ ZAHLEN & IN EMI UMWANDELN',
       'hi': '₹1,480 का भुगतान करें और ईएमआई में बदलें',
       'mr': '₹१,४८० भरा आणि EMI मध्ये रूपांतरित करा',
       'or': 'ଦେୟ ₹ 1,480 ଏବଂ EMI କୁ କନଭର୍ଟ କରନ୍ତୁ |',
@@ -3238,6 +3622,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'qyj87e44': {
       'en': 'CANCEL',
       'bn': 'বাতিল করুন',
+      'de': 'ABBRECHEN',
       'hi': 'रद्द करना',
       'mr': 'रद्द करा',
       'or': 'ବାତିଲ୍',
@@ -3246,6 +3631,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'p1cnmvmm': {
       'en': 'IMPORTANT NOTES:',
       'bn': 'গুরুত্বপূর্ণ নোট:',
+      'de': 'WICHTIGE NOTIZEN:',
       'hi': 'महत्वपूर्ण लेख:',
       'mr': 'महत्त्वाच्या सूचना:',
       'or': 'ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଟିପ୍ପଣୀ:',
@@ -3254,6 +3640,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'c1m11jf5': {
       'en': '1.',
       'bn': '1.',
+      'de': '1.',
       'hi': '1.',
       'mr': '१.',
       'or': '୧।',
@@ -3264,6 +3651,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'EMI amount does not include processing fee. Processing fee will be charged only once at the time of EMI conversion and will relect in your current Credit Card statement.',
       'bn':
           'ইএমআই পরিমাণে প্রসেসিং ফি অন্তর্ভুক্ত নয়। প্রসেসিং ফি EMI রূপান্তরের সময় শুধুমাত্র একবার চার্জ করা হবে এবং আপনার বর্তমান ক্রেডিট কার্ড স্টেটমেন্টে রিলিক্ট করা হবে।',
+      'de':
+          'Der EMI-Betrag enthält keine Bearbeitungsgebühr. Die Bearbeitungsgebühr wird nur einmal zum Zeitpunkt der EMI-Konvertierung erhoben und spiegelt sich in Ihrer aktuellen Kreditkartenabrechnung wider.',
       'hi':
           'ईएमआई राशि में प्रोसेसिंग शुल्क शामिल नहीं है। प्रसंस्करण शुल्क ईएमआई रूपांतरण के समय केवल एक बार लिया जाएगा और आपके वर्तमान क्रेडिट कार्ड स्टेटमेंट में दिखाई देगा।',
       'mr':
@@ -3276,6 +3665,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4e9qwatz': {
       'en': '2.',
       'bn': '2.',
+      'de': '2.',
       'hi': '2.',
       'mr': '2.',
       'or': '୨।',
@@ -3286,6 +3676,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Foreclosure fee will be charged at 3% on the outstanding pricipal along with next month interest at the time of foreclosure.',
       'bn':
           'ফোরক্লোজার ফি ফোরক্লোজারের সময় পরবর্তী মাসের সুদের সাথে বকেয়া মূলের উপর 3% চার্জ করা হবে।',
+      'de':
+          'Die Zwangsvollstreckungsgebühr wird mit 3 % auf den ausstehenden Kapitalbetrag zusammen mit den Zinsen für den nächsten Monat zum Zeitpunkt der Zwangsvollstreckung berechnet.',
       'hi':
           'पुरोबंध के समय अगले महीने के ब्याज के साथ बकाया मूलधन पर 3% पुरोबंध शुल्क लिया जाएगा।',
       'mr':
@@ -3298,6 +3690,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'a5hs26q6': {
       'en': '3.',
       'bn': '3.',
+      'de': '3.',
       'hi': '3.',
       'mr': '3.',
       'or': '3',
@@ -3307,6 +3700,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'EMI amount shown above consists of pricncipal and interest compnents only.',
       'bn': 'উপরে দেখানো EMI পরিমাণ শুধুমাত্র মূল এবং সুদের উপাদান নিয়ে গঠিত।',
+      'de':
+          'Der oben gezeigte EMI-Betrag besteht nur aus Kapital- und Zinskomponenten.',
       'hi': 'ऊपर दिखाई गई ईएमआई राशि में केवल मूलधन और ब्याज घटक शामिल हैं।',
       'mr': 'वर दर्शविलेल्या EMI रकमेमध्ये फक्त मुद्दल आणि व्याज घटक असतात.',
       'or': 'ଉପରୋକ୍ତ EMI ପରିମାଣ କେବଳ pricncipal ଏବଂ ସୁଧ କମ୍ପେଣ୍ଟସ୍ ଧାରଣ କରେ |',
@@ -3316,6 +3711,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jbinf1fl': {
       'en': '4.',
       'bn': '4.',
+      'de': '4.',
       'hi': '4.',
       'mr': '4.',
       'or': '4',
@@ -3326,6 +3722,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Goods and service Tax (GST) will be levied at 18% on fees, interest and other charges.',
       'bn':
           'পণ্য ও পরিষেবা কর (GST) ফি, সুদ এবং অন্যান্য চার্জের উপর 18% ধার্য করা হবে।',
+      'de':
+          'Auf Gebühren, Zinsen und sonstige Abgaben wird eine Waren- und Dienstleistungssteuer (GST) in Höhe von 18 % erhoben.',
       'hi':
           'शुल्क, ब्याज और अन्य शुल्कों पर 18% की दर से वस्तु एवं सेवा कर (जीएसटी) लगाया जाएगा।',
       'mr':
@@ -3338,6 +3736,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'w5ca4x3v': {
       'en': 'Home',
       'bn': 'বাড়ি',
+      'de': 'Heim',
       'hi': 'घर',
       'mr': 'मुख्यपृष्ठ',
       'or': 'ଘର',
@@ -3349,6 +3748,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'htzxivs5': {
       'en': 'Converting transactions to EMI',
       'bn': 'লেনদেনকে EMI-এ রূপান্তর করা হচ্ছে',
+      'de': 'Umwandlung von Transaktionen in EMI',
       'hi': 'लेनदेन को ईएमआई में बदलना',
       'mr': 'व्यवहार EMI मध्ये रूपांतरित करणे',
       'or': 'କାରବାରକୁ EMI ରେ ରୂପାନ୍ତର କରିବା |',
@@ -3357,6 +3757,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'un0ruzje': {
       'en': 'Processing fee of ₹ 1,480 will be added to your Credit Card bill',
       'bn': 'আপনার ক্রেডিট কার্ড বিলে ₹ 1,480 এর প্রসেসিং ফি যোগ করা হবে',
+      'de':
+          'Eine Bearbeitungsgebühr von ₹ 1.480 wird Ihrer Kreditkartenabrechnung hinzugefügt',
       'hi':
           'आपके क्रेडिट कार्ड बिल में ₹ 1,480 का प्रोसेसिंग शुल्क जोड़ा जाएगा',
       'mr':
@@ -3368,6 +3770,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kg3hsdsd': {
       'en': 'ICICI Makemytrip platinum',
       'bn': 'আইসিআইসিআই মেকমিট্রিপ প্ল্যাটিনাম',
+      'de': 'ICICI Makemytrip Platin',
       'hi': 'आईसीआईसीआई मेकमाइट्रिप प्लैटिनम',
       'mr': 'ICICI Makemytrip प्लॅटिनम',
       'or': 'ଆଇସିଆଇସିଆଇ ମାକେମାଇଟ୍ରିପ୍ ପ୍ଲାଟିନମ୍ |',
@@ -3376,6 +3779,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '332627r1': {
       'en': '1234 5678 1234 1234',
       'bn': '1234 5678 1234 1234',
+      'de': '1234 5678 1234 1234',
       'hi': '1234 5678 1234 1234',
       'mr': '१२३४ ५६७८ १२३४ १२३४',
       'or': '1234 5678 1234 1234',
@@ -3384,6 +3788,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rxtbf2sz': {
       'en': 'TRANSACTIONS TO BE CONVERTED TO EMI',
       'bn': 'লেনদেনগুলি EMI-তে রূপান্তরিত হবে৷',
+      'de': 'TRANSAKTIONEN, DIE IN EMI UMGEWANDELT WERDEN SOLLTEN',
       'hi': 'लेन-देन को ईएमआई में बदला जाएगा',
       'mr': 'व्यवहार EMI मध्ये रूपांतरित केले जातील',
       'or': 'EMI କୁ ରୂପାନ୍ତରିତ ହେବାକୁ ଥିବା ପରିବର୍ତ୍ତନଗୁଡିକ |',
@@ -3392,6 +3797,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1zyh5d7c': {
       'en': 'Laskshmi Mart',
       'bn': 'লক্ষ্মী মার্ট',
+      'de': 'Laskshmi-Markt',
       'hi': 'लक्ष्मी मार्ट',
       'mr': 'लक्ष्मी मार्ट',
       'or': 'ଲସ୍କମି ମାର୍ଟ |',
@@ -3400,6 +3806,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'eameoydl': {
       'en': '₹ 165',
       'bn': '165 টাকা',
+      'de': '€ 165',
       'hi': '₹ 165',
       'mr': '₹ १६५',
       'or': '₹ 165',
@@ -3408,6 +3815,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vpr2cfsm': {
       'en': 'BSES',
       'bn': 'বিএসইএস',
+      'de': 'BSES',
       'hi': 'बीएसईएस',
       'mr': 'BSES',
       'or': 'BSES',
@@ -3416,6 +3824,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jjvkguso': {
       'en': '₹ 600',
       'bn': '₹ 600',
+      'de': '600 €',
       'hi': '₹ 600',
       'mr': '₹ ६००',
       'or': '₹ 600',
@@ -3424,6 +3833,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vk99p6fw': {
       'en': 'Flipkart',
       'bn': 'ফ্লিপকার্ট',
+      'de': 'Flipkart',
       'hi': 'Flipkart',
       'mr': 'फ्लिपकार्ट',
       'or': 'ଫ୍ଲିପକାର୍ଟ |',
@@ -3432,6 +3842,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1xvuh0a2': {
       'en': '₹ 1,275',
       'bn': '₹ 1,275',
+      'de': '₹ 1.275',
       'hi': '₹ 1,275',
       'mr': '₹ १,२७५',
       'or': '₹ 1,275',
@@ -3440,6 +3851,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5nmgrhbl': {
       'en': 'Apple',
       'bn': 'আপেল',
+      'de': 'Apfel',
       'hi': 'सेब',
       'mr': 'सफरचंद',
       'or': 'ଆପଲ୍ |',
@@ -3448,6 +3860,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '30rqps0b': {
       'en': '₹ 2,400',
       'bn': '₹ 2,400',
+      'de': '₹ 2.400',
       'hi': '₹ 2,400',
       'mr': '₹ 2,400',
       'or': '₹ 2,400',
@@ -3456,6 +3869,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'k693zup2': {
       'en': 'Vodafone Postpaid',
       'bn': 'ভোডাফোন পোস্টপেইড',
+      'de': 'Vodafone Postpaid',
       'hi': 'वोडाफोन पोस्टपेड',
       'mr': 'व्होडाफोन पोस्टपेड',
       'or': 'ଭୋଡାଫୋନ୍ ପୋଷ୍ଟପେଡ୍ |',
@@ -3464,6 +3878,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'd10jxc1l': {
       'en': '₹ 170',
       'bn': '₹ 170',
+      'de': '€ 170',
       'hi': '₹ 170',
       'mr': '₹ १७०',
       'or': '₹ 170',
@@ -3472,6 +3887,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'qg1w0o1w': {
       'en': 'Initiating transfer of  ',
       'bn': 'স্থানান্তর শুরু করা হচ্ছে',
+      'de': 'Übertragung von einleiten',
       'hi': 'का स्थानांतरण प्रारंभ किया जा रहा है',
       'mr': 'चे हस्तांतरण सुरू करत आहे',
       'or': 'ସ୍ଥାନାନ୍ତର ଆରମ୍ଭ',
@@ -3479,7 +3895,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'thahx714': {
       'en': '₹ 24,000',
-      'bn': '₹ 24,000',
+      'bn': '24,000 টাকা',
+      'de': '₹ 24.000',
       'hi': '₹ 24,000',
       'mr': '₹ 24,000',
       'or': '₹ 24,000',
@@ -3488,6 +3905,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fomvgrzz': {
       'en': 'Available balance after this transfer will be ',
       'bn': 'এই স্থানান্তরের পরে উপলব্ধ ব্যালেন্স হবে',
+      'de': 'Das verfügbare Guthaben nach dieser Übertragung wird sein',
       'hi': 'इस हस्तांतरण के बाद उपलब्ध शेष राशि होगी',
       'mr': 'या हस्तांतरणानंतर उपलब्ध शिल्लक असेल',
       'or': 'ଏହି ସ୍ଥାନାନ୍ତର ପରେ ଉପଲବ୍ଧ ବାଲାନ୍ସ ହେବ |',
@@ -3496,6 +3914,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2vzcqtmo': {
       'en': '₹ 99,99,32,875',
       'bn': '₹ 99,99,32,875',
+      'de': '€ 99.99.32.875',
       'hi': '₹ 99,99,32,875',
       'mr': '₹ ९९,९९,३२,८७५',
       'or': '₹ 99,99,32,875',
@@ -3504,6 +3923,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'f96o950u': {
       'en': 'From',
       'bn': 'থেকে',
+      'de': 'Von',
       'hi': 'से',
       'mr': 'पासून',
       'or': 'ଠାରୁ',
@@ -3512,6 +3932,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ly4xl31w': {
       'en': 'Swaminathan Reddy',
       'bn': 'স্বামীনাথন রেড্ডি',
+      'de': 'Swaminathan Reddy',
       'hi': 'स्वामीनाथन रेड्डी',
       'mr': 'स्वामिनाथन रेड्डी',
       'or': 'ସ୍ amin ାମୀନାଥନ୍ ରେଡ୍ଡୀ |',
@@ -3520,6 +3941,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ny0bv09b': {
       'en': '539289301235',
       'bn': '539289301235',
+      'de': '539289301235',
       'hi': '539289301235',
       'mr': '५३९२८९३०१२३५',
       'or': '539289301235',
@@ -3528,22 +3950,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7frojny3': {
       'en': 'To',
       'bn': 'প্রতি',
-      'hi': 'प्रति',
+      'de': 'Zu',
+      'hi': 'सेवा',
       'mr': 'ला',
       'or': 'କୁ',
       'ta': 'செய்ய',
     },
     'pt81oe4i': {
       'en': 'ICICI Bank Make My Trip Platinum',
-      'bn': 'আইসিআইসিআই ব্যাঙ্ক মেক মাই ট্রিপ প্ল্যাটফিনাম',
-      'hi': 'आईसीआईसीआई बैंक मेक माय ट्रिप प्लेटफिनम',
-      'mr': 'आयसीआयसीआय बँक मेक माय ट्रिप प्लॅटफिनम',
-      'or': 'ଆଇସିଆଇସିଆଇ ବ୍ୟାଙ୍କ ମୋର ଟ୍ରିପ୍ ପ୍ଲାଟଫର୍ମ ପ୍ରସ୍ତୁତ କର |',
-      'ta': 'ஐசிஐசிஐ வங்கி எனது பயணத்தை பிளாட்ஃபினமாக உருவாக்குகிறது',
+      'bn': 'আইসিআইসিআই ব্যাঙ্ক মেক মাই ট্রিপ প্লাটিনাম',
+      'de': 'ICICI Bank Machen Sie meine Reise Platin',
+      'hi': 'आईसीआईसीआई बैंक मेक माय ट्रिप प्लैटिनम',
+      'mr': 'आयसीआयसीआय बँक मेक माय ट्रिप प्लॅटिनम',
+      'or': 'ଆଇସିଆଇସିଆଇ ବ୍ୟାଙ୍କ ମୋର ଟ୍ରିପ୍ ପ୍ଲାଟିନମ୍ ତିଆରି କରନ୍ତୁ |',
+      'ta': 'ஐசிஐசிஐ வங்கி மேக் மை ட்ரிப் பிளாட்டினம்',
     },
     'wbosmabd': {
       'en': '6294 4922 2194 4092',
       'bn': '6294 4922 2194 4092',
+      'de': '6294 4922 2194 4092',
       'hi': '6294 4922 2194 4092',
       'mr': '6294 4922 2194 4092',
       'or': '6294 4922 2194 4092',
@@ -3552,6 +3977,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ih1xo0ht': {
       'en': 'OTP VERIFICATION',
       'bn': 'ওটিপি যাচাইকরণ',
+      'de': 'OTP-VERIFIZIERUNG',
       'hi': 'ओटीपी सत्यापन',
       'mr': 'ओटीपी पडताळणी',
       'or': 'OTP ଭେରିଫିକେସନ୍ |',
@@ -3560,6 +3986,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'v52r21cl': {
       'en': 'Enter OTP',
       'bn': 'OTP লিখুন',
+      'de': 'OTP eingeben',
       'hi': 'ओटीपी दर्ज करें',
       'mr': 'OTP टाका',
       'or': 'OTP ପ୍ରବେଶ କରନ୍ତୁ |',
@@ -3568,7 +3995,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7h22mgoq': {
       'en': 'Field is required',
       'bn': 'আপনি উত্তর দিবেন না',
-      'hi': 'क्षेत्र की आवश्यकता है',
+      'de': 'Feld ist erforderlich',
+      'hi': 'ये स्थान भरा जाना है',
       'mr': 'फील्ड आवश्यक आहे',
       'or': 'କ୍ଷେତ୍ର ଆବଶ୍ୟକ |',
       'ta': 'இந்த பகுதி அவசியமானது',
@@ -3576,6 +4004,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zelrgjlx': {
       'en': 'OTP entered is incorrect. \nPlease enter correct OTP.',
       'bn': 'প্রবেশ করানো OTP ভুল।\nঅনুগ্রহ করে সঠিক ওটিপি লিখুন।',
+      'de':
+          'Das eingegebene OTP ist falsch.\nBitte geben Sie das korrekte OTP ein.',
       'hi': 'दर्ज किया गया ओटीपी गलत है।\nकृपया सही ओटीपी दर्ज करें।',
       'mr': 'प्रविष्ट केलेला OTP चुकीचा आहे.\nकृपया योग्य OTP टाका.',
       'or': 'ପ୍ରବେଶ କରିଥିବା OTP ଭୁଲ ଅଟେ |\nଦୟାକରି ସଠିକ୍ OTP ପ୍ରବେଶ କରନ୍ତୁ |',
@@ -3584,6 +4014,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'akz712zs': {
       'en': 'OTP entered is incorrect. \nPlease enter correct OTP.',
       'bn': 'প্রবেশ করানো OTP ভুল।\nঅনুগ্রহ করে সঠিক ওটিপি লিখুন।',
+      'de':
+          'Das eingegebene OTP ist falsch.\nBitte geben Sie das korrekte OTP ein.',
       'hi': 'दर्ज किया गया ओटीपी गलत है।\nकृपया सही ओटीपी दर्ज करें।',
       'mr': 'प्रविष्ट केलेला OTP चुकीचा आहे.\nकृपया योग्य OTP टाका.',
       'or': 'ପ୍ରବେଶ କରିଥିବା OTP ଭୁଲ ଅଟେ |\nଦୟାକରି ସଠିକ୍ OTP ପ୍ରବେଶ କରନ୍ତୁ |',
@@ -3592,6 +4024,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jflkunu3': {
       'en': 'Please choose an option from the dropdown',
       'bn': 'ড্রপডাউন থেকে একটি বিকল্প চয়ন করুন',
+      'de': 'Bitte wählen Sie eine Option aus der Dropdown-Liste',
       'hi': 'कृपया ड्रॉपडाउन से एक विकल्प चुनें',
       'mr': 'कृपया ड्रॉपडाउनमधून एक पर्याय निवडा',
       'or': 'ଦୟାକରି ଡ୍ରପଡାଉନରୁ ଏକ ବିକଳ୍ପ ବାଛନ୍ତୁ |',
@@ -3602,6 +4035,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'OTP will be sent to your ICICI registered mobile number, Please do not share OTP with anyone,\neven if a person claims to be an ICICI Bank official. Please contact customer care for support.',
       'bn':
           'আপনার আইসিআইসিআই নিবন্ধিত মোবাইল নম্বরে ওটিপি পাঠানো হবে, দয়া করে কারও সাথে ওটিপি শেয়ার করবেন না,\nএমনকি যদি একজন ব্যক্তি নিজেকে ICICI ব্যাঙ্কের আধিকারিক বলে দাবি করেন। সমর্থনের জন্য কাস্টমার কেয়ারের সাথে যোগাযোগ করুন।',
+      'de':
+          'OTP wird an Ihre bei ICICI registrierte Handynummer gesendet. Bitte teilen Sie OTP mit niemandem.\nselbst wenn eine Person behauptet, ein Mitarbeiter der ICICI Bank zu sein. Bitte wenden Sie sich an den Kundendienst, um Unterstützung zu erhalten.',
       'hi':
           'ओटीपी आपके आईसीआईसीआई पंजीकृत मोबाइल नंबर पर भेजा जाएगा, कृपया ओटीपी किसी के साथ साझा न करें,\nभले ही कोई व्यक्ति आईसीआईसीआई बैंक का अधिकारी होने का दावा करता हो। कृपया समर्थन के लिए ग्राहक सेवा से संपर्क करें।',
       'mr':
@@ -3614,6 +4049,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'r8xsl9ur': {
       'en': 'Didn\'t get OTP? Resend OTP in ',
       'bn': 'OTP পাননি? OTP আবার পাঠান',
+      'de': 'Kein OTP erhalten? OTP erneut einsenden',
       'hi': 'ओटीपी नहीं मिला? में ओटीपी फिर से भेजें',
       'mr': 'OTP मिळाला नाही? मध्ये OTP पुन्हा पाठवा',
       'or': 'OTP ପାଇ ନାହାଁନ୍ତି କି? OTP ରେ ପଠାନ୍ତୁ |',
@@ -3622,6 +4058,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'k7smgyql': {
       'en': 'SMS',
       'bn': 'খুদেবার্তা',
+      'de': 'SMS',
       'hi': 'एसएमएस',
       'mr': 'एसएमएस',
       'or': 'ଏସଏମଏସ',
@@ -3630,7 +4067,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zv26dipi': {
       'en': 'CALL',
       'bn': 'কল করুন',
-      'hi': 'पुकारना',
+      'de': 'ANRUF',
+      'hi': 'बुलाना',
       'mr': 'कॉल करा',
       'or': 'କଲ୍',
       'ta': 'அழைப்பு',
@@ -3638,6 +4076,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7udsu91a': {
       'en': 'EMAIL',
       'bn': 'ইমেইল',
+      'de': 'EMAIL',
       'hi': 'ईमेल',
       'mr': 'ईमेल',
       'or': 'EMAIL |',
@@ -3646,6 +4085,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'of7voq1u': {
       'en': 'The validity for the OTP has expired.',
       'bn': 'OTP-এর বৈধতার মেয়াদ শেষ হয়ে গেছে।',
+      'de': 'Die Gültigkeit für das OTP ist abgelaufen.',
       'hi': 'ओटीपी की वैधता समाप्त हो गई है।',
       'mr': 'OTP ची वैधता कालबाह्य झाली आहे.',
       'or': 'OTP ପାଇଁ ବ valid ଧତା ମିଆଦ ପୂର୍ଣ୍ଣ ହୋଇଛି |',
@@ -3654,6 +4094,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mb2mprgb': {
       'en': 'Resend new OTP',
       'bn': 'নতুন OTP আবার পাঠান',
+      'de': 'Neues OTP erneut senden',
       'hi': 'नया ओटीपी फिर से भेजें',
       'mr': 'नवीन OTP पुन्हा पाठवा',
       'or': 'ନୂତନ OTP ପଠାନ୍ତୁ |',
@@ -3662,6 +4103,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'u18j6c2d': {
       'en': 'In case you haven\'t received the SMS ',
       'bn': 'আপনি যদি এসএমএস না পেয়ে থাকেন',
+      'de': 'Falls Sie die SMS nicht erhalten haben',
       'hi': 'यदि आपको एसएमएस प्राप्त नहीं हुआ है',
       'mr': 'जर तुम्हाला एसएमएस प्राप्त झाला नसेल',
       'or': 'ଯଦି ଆପଣ SMS ଗ୍ରହଣ କରିନାହାଁନ୍ତି |',
@@ -3670,6 +4112,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'k9wgx42n': {
       'en': 'Get OTP on call',
       'bn': 'কলে OTP পান',
+      'de': 'Holen Sie sich OTP auf Abruf',
       'hi': 'कॉल पर ओटीपी प्राप्त करें',
       'mr': 'कॉलवर OTP मिळवा',
       'or': 'କଲ୍ ରେ OTP ପାଆନ୍ତୁ |',
@@ -3678,6 +4121,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '852x3fo7': {
       'en': 'VERIFY OTP',
       'bn': 'OTP যাচাই করুন',
+      'de': 'OTP ÜBERPRÜFEN',
       'hi': 'ओटीपी सत्यापित करें',
       'mr': 'OTP सत्यापित करा',
       'or': 'ଯାଞ୍ଚ OTP',
@@ -3686,6 +4130,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xph39mss': {
       'en': 'CANCEL',
       'bn': 'বাতিল করুন',
+      'de': 'ABBRECHEN',
       'hi': 'रद्द करना',
       'mr': 'रद्द करा',
       'or': 'ବାତିଲ୍',
@@ -3694,6 +4139,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hbsy6qvz': {
       'en': '•',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -3705,6 +4151,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'v14n4hlg': {
       'en': 'Initiating transfer of  ',
       'bn': 'স্থানান্তর শুরু করা হচ্ছে',
+      'de': 'Übertragung von einleiten',
       'hi': 'का स्थानांतरण प्रारंभ किया जा रहा है',
       'mr': 'चे हस्तांतरण सुरू करत आहे',
       'or': 'ସ୍ଥାନାନ୍ତର ଆରମ୍ଭ',
@@ -3713,6 +4160,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mli654kr': {
       'en': '₹ 24,000',
       'bn': '₹ 24,000',
+      'de': '₹ 24.000',
       'hi': '₹ 24,000',
       'mr': '₹ 24,000',
       'or': '₹ 24,000',
@@ -3721,6 +4169,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9muylli1': {
       'en': 'Available balance after this transfer will be ',
       'bn': 'এই স্থানান্তরের পরে উপলব্ধ ব্যালেন্স হবে',
+      'de': 'Das verfügbare Guthaben nach dieser Übertragung wird sein',
       'hi': 'इस हस्तांतरण के बाद उपलब्ध शेष राशि होगी',
       'mr': 'या हस्तांतरणानंतर उपलब्ध शिल्लक असेल',
       'or': 'ଏହି ସ୍ଥାନାନ୍ତର ପରେ ଉପଲବ୍ଧ ବାଲାନ୍ସ ହେବ |',
@@ -3729,6 +4178,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6c20q1nw': {
       'en': '₹ 99,99,32,873',
       'bn': '₹ 99,99,32,873',
+      'de': '€ 99.99.32.873',
       'hi': '₹ 99,99,32,873',
       'mr': '₹ ९९,९९,३२,८७३',
       'or': '₹ 99,99,32,873',
@@ -3737,6 +4187,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'lcnukh7o': {
       'en': 'From',
       'bn': 'থেকে',
+      'de': 'Von',
       'hi': 'से',
       'mr': 'पासून',
       'or': 'ଠାରୁ',
@@ -3745,6 +4196,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'r7cypqud': {
       'en': 'Swaminathan Reddy',
       'bn': 'স্বামীনাথন রেড্ডি',
+      'de': 'Swaminathan Reddy',
       'hi': 'स्वामीनाथन रेड्डी',
       'mr': 'स्वामिनाथन रेड्डी',
       'or': 'ସ୍ amin ାମୀନାଥନ୍ ରେଡ୍ଡୀ |',
@@ -3753,6 +4205,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'g1pic0qy': {
       'en': '539289301235',
       'bn': '539289301235',
+      'de': '539289301235',
       'hi': '539289301235',
       'mr': '५३९२८९३०१२३५',
       'or': '539289301235',
@@ -3761,7 +4214,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'drvtuufo': {
       'en': 'To',
       'bn': 'প্রতি',
-      'hi': 'प्रति',
+      'de': 'Zu',
+      'hi': 'सेवा',
       'mr': 'ला',
       'or': 'କୁ',
       'ta': 'செய்ய',
@@ -3769,6 +4223,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zussw1qi': {
       'en': 'ICICI Bank Make My Trip Platfinum',
       'bn': 'আইসিআইসিআই ব্যাঙ্ক মেক মাই ট্রিপ প্ল্যাটফিনাম',
+      'de': 'ICICI Bank Make My Trip Platfinum',
       'hi': 'आईसीआईसीआई बैंक मेक माय ट्रिप प्लेटफिनम',
       'mr': 'आयसीआयसीआय बँक मेक माय ट्रिप प्लॅटफिनम',
       'or': 'ଆଇସିଆଇସିଆଇ ବ୍ୟାଙ୍କ ମୋର ଟ୍ରିପ୍ ପ୍ଲାଟଫର୍ମ ପ୍ରସ୍ତୁତ କର |',
@@ -3777,6 +4232,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wv832xqo': {
       'en': '6294 4922 2194 4092',
       'bn': '6294 4922 2194 4092',
+      'de': '6294 4922 2194 4092',
       'hi': '6294 4922 2194 4092',
       'mr': '6294 4922 2194 4092',
       'or': '6294 4922 2194 4092',
@@ -3785,6 +4241,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '99yznmlp': {
       'en': 'GRID VERIFICATION',
       'bn': 'গ্রিড যাচাইকরণ',
+      'de': 'NETZVERIFIZIERUNG',
       'hi': 'ग्रिड सत्यापन',
       'mr': 'ग्रिड पडताळणी',
       'or': 'GRID ଯାଞ୍ଚ |',
@@ -3795,6 +4252,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Please enter  numbers below from the grid printed against the following alphabets',
       'bn':
           'অনুগ্রহ করে নিচের বর্ণমালার বিপরীতে প্রিন্ট করা গ্রিড থেকে নিচের নম্বরগুলি লিখুন',
+      'de':
+          'Bitte geben Sie unten Zahlen aus dem Raster ein, das neben den folgenden Alphabeten gedruckt wird',
       'hi':
           'कृपया निम्नलिखित अक्षरों के सामने मुद्रित ग्रिड से नीचे दी गई संख्याएँ दर्ज करें',
       'mr':
@@ -3807,6 +4266,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5jhn9rg0': {
       'en': 'B',
       'bn': 'খ',
+      'de': 'B',
       'hi': 'बी',
       'mr': 'बी',
       'or': 'ବି',
@@ -3815,6 +4275,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'gbtzl86t': {
       'en': '••',
       'bn': '••',
+      'de': '••',
       'hi': '••',
       'mr': '••',
       'or': '••',
@@ -3823,6 +4284,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'i4wcgleg': {
       'en': 'C',
       'bn': 'গ',
+      'de': 'C',
       'hi': 'सी',
       'mr': 'सी',
       'or': 'C',
@@ -3831,6 +4293,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '3xeyhu3b': {
       'en': '••',
       'bn': '••',
+      'de': '••',
       'hi': '••',
       'mr': '••',
       'or': '••',
@@ -3839,6 +4302,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     't5bm9h3x': {
       'en': 'M',
       'bn': 'এম',
+      'de': 'M',
       'hi': 'एम',
       'mr': 'एम',
       'or': 'ମି',
@@ -3847,6 +4311,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '3ympvwss': {
       'en': '••',
       'bn': '••',
+      'de': '••',
       'hi': '••',
       'mr': '••',
       'or': '••',
@@ -3855,7 +4320,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9thw0c44': {
       'en': 'Field is required',
       'bn': 'আপনি উত্তর দিবেন না',
-      'hi': 'क्षेत्र की आवश्यकता है',
+      'de': 'Feld ist erforderlich',
+      'hi': 'ये स्थान भरा जाना है',
       'mr': 'फील्ड आवश्यक आहे',
       'or': 'କ୍ଷେତ୍ର ଆବଶ୍ୟକ |',
       'ta': 'இந்த பகுதி அவசியமானது',
@@ -3863,6 +4329,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ez3rx1n0': {
       'en': 'Please choose an option from the dropdown',
       'bn': 'ড্রপডাউন থেকে একটি বিকল্প চয়ন করুন',
+      'de': 'Bitte wählen Sie eine Option aus der Dropdown-Liste',
       'hi': 'कृपया ड्रॉपडाउन से एक विकल्प चुनें',
       'mr': 'कृपया ड्रॉपडाउनमधून एक पर्याय निवडा',
       'or': 'ଦୟାକରି ଡ୍ରପଡାଉନରୁ ଏକ ବିକଳ୍ପ ବାଛନ୍ତୁ |',
@@ -3871,7 +4338,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '0o10b7uc': {
       'en': 'Field is required',
       'bn': 'আপনি উত্তর দিবেন না',
-      'hi': 'क्षेत्र की आवश्यकता है',
+      'de': 'Feld ist erforderlich',
+      'hi': 'ये स्थान भरा जाना है',
       'mr': 'फील्ड आवश्यक आहे',
       'or': 'କ୍ଷେତ୍ର ଆବଶ୍ୟକ |',
       'ta': 'இந்த பகுதி அவசியமானது',
@@ -3879,6 +4347,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'oq7komk0': {
       'en': 'Please choose an option from the dropdown',
       'bn': 'ড্রপডাউন থেকে একটি বিকল্প চয়ন করুন',
+      'de': 'Bitte wählen Sie eine Option aus der Dropdown-Liste',
       'hi': 'कृपया ड्रॉपडाउन से एक विकल्प चुनें',
       'mr': 'कृपया ड्रॉपडाउनमधून एक पर्याय निवडा',
       'or': 'ଦୟାକରି ଡ୍ରପଡାଉନରୁ ଏକ ବିକଳ୍ପ ବାଛନ୍ତୁ |',
@@ -3887,7 +4356,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4myowpez': {
       'en': 'Field is required',
       'bn': 'আপনি উত্তর দিবেন না',
-      'hi': 'क्षेत्र की आवश्यकता है',
+      'de': 'Feld ist erforderlich',
+      'hi': 'ये स्थान भरा जाना है',
       'mr': 'फील्ड आवश्यक आहे',
       'or': 'କ୍ଷେତ୍ର ଆବଶ୍ୟକ |',
       'ta': 'இந்த பகுதி அவசியமானது',
@@ -3895,6 +4365,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mo3a89wl': {
       'en': 'Please choose an option from the dropdown',
       'bn': 'ড্রপডাউন থেকে একটি বিকল্প চয়ন করুন',
+      'de': 'Bitte wählen Sie eine Option aus der Dropdown-Liste',
       'hi': 'कृपया ड्रॉपडाउन से एक विकल्प चुनें',
       'mr': 'कृपया ड्रॉपडाउनमधून एक पर्याय निवडा',
       'or': 'ଦୟାକରି ଡ୍ରପଡାଉନରୁ ଏକ ବିକଳ୍ପ ବାଛନ୍ତୁ |',
@@ -3903,6 +4374,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4364xr9v': {
       'en': 'CONFIRM',
       'bn': 'নিশ্চিত করুন',
+      'de': 'BESTÄTIGEN',
       'hi': 'पुष्टि करें',
       'mr': 'पुष्टी',
       'or': 'କନଫିରମ୍ |',
@@ -3911,6 +4383,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8qfef5zi': {
       'en': 'CANCEL',
       'bn': 'বাতিল করুন',
+      'de': 'ABBRECHEN',
       'hi': 'रद्द करना',
       'mr': 'रद्द करा',
       'or': 'ବାତିଲ୍',
@@ -3919,6 +4392,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kadgvlvh': {
       'en': 'This is back of your **31 Rubyx Debit Card',
       'bn': 'এটি আপনার **31 রুবিক্স ডেবিট কার্ডের পিছনে',
+      'de': 'Dies ist die Rückseite Ihrer **31 Rubyx-Debitkarte',
       'hi': 'यह आपके **31 Rubyx डेबिट कार्ड के पीछे है',
       'mr': 'हे तुमच्या **31 Rubyx डेबिट कार्डचे परत आहे',
       'or': 'ଏହା ଆପଣଙ୍କର ** 31 ରୁବିକ୍ସ ଡେବିଟ୍ କାର୍ଡର ଫେରି ଆସିଛି |',
@@ -3927,6 +4401,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5luq86ru': {
       'en': '•',
       'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -3938,6 +4413,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'orlzujw8': {
       'en': '3 out of 5 transactions ',
       'bn': '5টির মধ্যে 3টি লেনদেন',
+      'de': '3 von 5 Transaktionen',
       'hi': '5 में से 3 लेनदेन',
       'mr': '5 पैकी 3 व्यवहार',
       'or': '5 ଟି କାରବାର ମଧ୍ୟରୁ 3 |',
@@ -3946,6 +4422,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '449pkkmm': {
       'en': 'have been successfully converted to EMI',
       'bn': 'সফলভাবে EMI তে রূপান্তর করা হয়েছে',
+      'de': 'wurden erfolgreich auf EMI umgestellt',
       'hi': 'सफलतापूर्वक ईएमआई में परिवर्तित कर दिया गया है',
       'mr': 'यशस्वीरित्या EMI मध्ये रूपांतरित केले आहे',
       'or': 'ସଫଳତାର ସହିତ EMI ରେ ରୂପାନ୍ତରିତ ହୋଇଛି |',
@@ -3954,6 +4431,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rvyltt2u': {
       'en': 'Processing fee of ₹ 13,480 will be added to your Credit Card bill',
       'bn': 'আপনার ক্রেডিট কার্ড বিলে ₹ 13,480 এর প্রসেসিং ফি যোগ করা হবে',
+      'de':
+          'Eine Bearbeitungsgebühr von ₹ 13.480 wird Ihrer Kreditkartenabrechnung hinzugefügt',
       'hi':
           'आपके क्रेडिट कार्ड बिल में ₹ 13,480 का प्रोसेसिंग शुल्क जोड़ा जाएगा',
       'mr':
@@ -3966,6 +4445,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'cowzwdmf': {
       'en': 'ICICI Makemytrip platinum',
       'bn': 'আইসিআইসিআই মেকমিট্রিপ প্ল্যাটিনাম',
+      'de': 'ICICI Makemytrip Platin',
       'hi': 'आईसीआईसीआई मेकमाइट्रिप प्लैटिनम',
       'mr': 'ICICI Makemytrip प्लॅटिनम',
       'or': 'ଆଇସିଆଇସିଆଇ ମାକେମାଇଟ୍ରିପ୍ ପ୍ଲାଟିନମ୍ |',
@@ -3974,6 +4454,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '0dbkzh9k': {
       'en': '1234 5678 1234 1234',
       'bn': '1234 5678 1234 1234',
+      'de': '1234 5678 1234 1234',
       'hi': '1234 5678 1234 1234',
       'mr': '१२३४ ५६७८ १२३४ १२३४',
       'or': '1234 5678 1234 1234',
@@ -3982,6 +4463,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8yf6g51i': {
       'en': 'MONTHLY EMI AMOUNT',
       'bn': 'মাসিক ইএমআই পরিমাণ',
+      'de': 'MONATLICHER EMI-BETRAG',
       'hi': 'मासिक ईएमआई राशि',
       'mr': 'मासिक EMI रक्कम',
       'or': 'ମାସିକ EMI AMOUNT |',
@@ -3990,6 +4472,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'h1i7a9cf': {
       'en': '₹ 2,045',
       'bn': '₹ 2,045',
+      'de': '₹ 2.045',
       'hi': '₹ 2,045',
       'mr': '₹ 2,045',
       'or': '₹ 2,045',
@@ -3998,6 +4481,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9r4gzttz': {
       'en': 'DUE DATE',
       'bn': 'নির্দিষ্ট তারিখ',
+      'de': 'GEBURTSTERMIN',
       'hi': 'नियत तारीख',
       'mr': 'देय तारीख',
       'or': 'ଧାର୍ଯ୍ୟ ତାରିଖ',
@@ -4006,6 +4490,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xhw2ywf6': {
       'en': '8 Dec, 2022',
       'bn': '৮ ডিসেম্বর, ২০২২',
+      'de': '8. Dezember 2022',
       'hi': '8 दिसंबर, 2022',
       'mr': '८ डिसेंबर २०२२',
       'or': '8 ଡିସେମ୍ବର, 2022',
@@ -4014,6 +4499,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'f2eq7ako': {
       'en': 'RATE OF INTEREST',
       'bn': 'সুদের হার',
+      'de': 'ZINSSATZ',
       'hi': 'ब्याज की दर',
       'mr': 'व्याज दर',
       'or': 'ଆଗ୍ରହର ହାର',
@@ -4022,6 +4508,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'q5c5wuqw': {
       'en': '16%  p.a.',
       'bn': '16% p.a',
+      'de': '16% p.a.',
       'hi': '16% प्रति वर्ष',
       'mr': '16% p.a.',
       'or': '16% p.a.',
@@ -4030,6 +4517,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mjzguq36': {
       'en': 'EMI TENURE',
       'bn': 'EMI মেয়াদ',
+      'de': 'EMI-AUFENTHALT',
       'hi': 'ईएमआई कार्यकाल',
       'mr': 'EMI कार्यकाळ',
       'or': 'EMI TENURE |',
@@ -4038,14 +4526,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ym3y1hr4': {
       'en': '2 years',
       'bn': '২ বছর',
+      'de': 'zwei Jahre',
       'hi': '2 साल',
       'mr': '2 वर्ष',
       'or': '2 ବର୍ଷ',
-      'ta': '2 வருடங்கள்',
+      'ta': '2 ஆண்டுகள்',
     },
     'jtobtkxx': {
       'en': 'STATUS OF EMI CONVERSION',
       'bn': 'ইএমআই রূপান্তরের স্থিতি',
+      'de': 'STATUS DER EMI-KONVERTIERUNG',
       'hi': 'ईएमआई रूपांतरण की स्थिति',
       'mr': 'ईएमआय रूपांतरणाची स्थिती',
       'or': 'ଇମି କନଭର୍ସନର ସ୍ଥିତି |',
@@ -4054,6 +4544,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pcna01hv': {
       'en': 'TRANSACTIONS',
       'bn': 'লেনদেন',
+      'de': 'TRANSAKTIONEN',
       'hi': 'लेनदेन',
       'mr': 'व्यवहार',
       'or': 'ସ୍ଥାନାନ୍ତରଣ',
@@ -4062,6 +4553,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'owfm131f': {
       'en': 'MONTHLY EMI',
       'bn': 'মাসিক ইএমআই',
+      'de': 'MONATLICHE EMI',
       'hi': 'मासिक ईएमआई',
       'mr': 'मासिक EMI',
       'or': 'ମାସିକ EMI |',
@@ -4070,6 +4562,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'tkcke8ey': {
       'en': 'Laskshmi Mart',
       'bn': 'লক্ষ্মী মার্ট',
+      'de': 'Laskshmi-Mart',
       'hi': 'लक्ष्मी मार्ट',
       'mr': 'लक्ष्मी मार्ट',
       'or': 'ଲସ୍କମି ମାର୍ଟ |',
@@ -4078,6 +4571,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rrjnowzj': {
       'en': 'Converted successfully',
       'bn': 'সফলভাবে রূপান্তরিত হয়েছে৷',
+      'de': 'Erfolgreich konvertiert',
       'hi': 'सफलतापूर्वक रूपांतरित किया गया',
       'mr': 'यशस्वीरित्या रूपांतरित केले',
       'or': 'ସଫଳତାର ସହିତ ରୂପାନ୍ତରିତ |',
@@ -4086,6 +4580,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zep1ggs3': {
       'en': '₹ 165',
       'bn': '165 টাকা',
+      'de': '€ 165',
       'hi': '₹ 165',
       'mr': '₹ १६५',
       'or': '₹ 165',
@@ -4094,6 +4589,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6gbj8v2k': {
       'en': 'BSES',
       'bn': 'বিএসইএস',
+      'de': 'BSES',
       'hi': 'बीएसईएस',
       'mr': 'BSES',
       'or': 'BSES',
@@ -4102,6 +4598,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9gf9lo9f': {
       'en': 'Converted successfully',
       'bn': 'সফলভাবে রূপান্তরিত হয়েছে৷',
+      'de': 'Erfolgreich konvertiert',
       'hi': 'सफलतापूर्वक रूपांतरित किया गया',
       'mr': 'यशस्वीरित्या रूपांतरित केले',
       'or': 'ସଫଳତାର ସହିତ ରୂପାନ୍ତରିତ |',
@@ -4110,6 +4607,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'angya6v9': {
       'en': '₹ 600',
       'bn': '₹ 600',
+      'de': '600 €',
       'hi': '₹ 600',
       'mr': '₹ ६००',
       'or': '₹ 600',
@@ -4118,6 +4616,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '0xugtmue': {
       'en': 'Flipkart',
       'bn': 'ফ্লিপকার্ট',
+      'de': 'Flipkart',
       'hi': 'Flipkart',
       'mr': 'फ्लिपकार्ट',
       'or': 'ଫ୍ଲିପକାର୍ଟ |',
@@ -4126,6 +4625,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bcypm6z4': {
       'en': 'Converted successfully',
       'bn': 'সফলভাবে রূপান্তরিত হয়েছে৷',
+      'de': 'Erfolgreich konvertiert',
       'hi': 'सफलतापूर्वक रूपांतरित किया गया',
       'mr': 'यशस्वीरित्या रूपांतरित केले',
       'or': 'ସଫଳତାର ସହିତ ରୂପାନ୍ତରିତ |',
@@ -4134,6 +4634,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '24sugjje': {
       'en': '₹ 1,275',
       'bn': '₹ 1,275',
+      'de': '₹ 1.275',
       'hi': '₹ 1,275',
       'mr': '₹ १,२७५',
       'or': '₹ 1,275',
@@ -4142,6 +4643,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bg62v7t5': {
       'en': 'Apple',
       'bn': 'আপেল',
+      'de': 'Apfel',
       'hi': 'सेब',
       'mr': 'सफरचंद',
       'or': 'ଆପଲ୍ |',
@@ -4150,6 +4652,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ccuk12l6': {
       'en': 'Conversion failed',
       'bn': 'রূপান্তর ব্যর্থ হয়েছে',
+      'de': 'Konvertierung fehlgeschlagen',
       'hi': 'रूपांतरण असफल',
       'mr': 'रूपांतरण अयशस्वी',
       'or': 'ରୂପାନ୍ତର ବିଫଳ ହେଲା |',
@@ -4158,6 +4661,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vfzdept1': {
       'en': '₹ 2,400',
       'bn': '₹ 2,400',
+      'de': '₹ 2.400',
       'hi': '₹ 2,400',
       'mr': '₹ 2,400',
       'or': '₹ 2,400',
@@ -4166,6 +4670,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7yn228cv': {
       'en': 'Vodafone Postpaid',
       'bn': 'ভোডাফোন পোস্টপেইড',
+      'de': 'Vodafone Postpaid',
       'hi': 'वोडाफोन पोस्टपेड',
       'mr': 'व्होडाफोन पोस्टपेड',
       'or': 'ଭୋଡାଫୋନ୍ ପୋଷ୍ଟପେଡ୍ |',
@@ -4173,7 +4678,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'frtfszct': {
       'en': 'Conversion failed',
-      'bn': 'রূপান্তর ব্যর্থ হয়েছে',
+      'bn': 'রূপান্তর ব্যর্থ হয়েছে৷',
+      'de': 'Konvertierung fehlgeschlagen',
       'hi': 'रूपांतरण असफल',
       'mr': 'रूपांतरण अयशस्वी',
       'or': 'ରୂପାନ୍ତର ବିଫଳ ହେଲା |',
@@ -4182,6 +4688,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'naalpcn6': {
       'en': '₹ 170',
       'bn': '₹ 170',
+      'de': '€ 170',
       'hi': '₹ 170',
       'mr': '₹ १७०',
       'or': '₹ 170',
@@ -4190,7 +4697,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '0ek3e7cs': {
       'en': 'RETRY CONVERTING FAILED TRANSACTION',
       'bn': 'ব্যর্থ লেনদেন রূপান্তর পুনরায় চেষ্টা করুন',
-      'hi': 'विफल लेनदेन को परिवर्तित करने के लिए पुनः प्रयास करें',
+      'de': 'KONVERTIERUNG FEHLGESCHLAGENER TRANSAKTION ERNEUT VERSUCHEN',
+      'hi': 'विफल लेनदेन को परिवर्तित करने का पुनः प्रयास करें',
       'mr': 'अयशस्वी व्यवहार रूपांतरित करण्याचा पुन्हा प्रयत्न करा',
       'or': 'ବିଫଳ ସ୍ଥାନାନ୍ତରଣକୁ ପୁନ ET ଚେଷ୍ଟା କରନ୍ତୁ |',
       'ta': 'தோல்வியுற்ற பரிவர்த்தனையை மாற்ற மீண்டும் முயற்சிக்கவும்',
@@ -4198,14 +4706,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kkvt6ocd': {
       'en': 'CONTINUE BROWSING CREDIT CARDS',
       'bn': 'ক্রেডিট কার্ড ব্রাউজিং চালিয়ে যান',
+      'de': 'DURCHSUCHEN SIE WEITER KREDITKARTEN',
       'hi': 'क्रेडिट कार्ड ब्राउज़ करना जारी रखें',
       'mr': 'क्रेडिट कार्ड ब्राउझ करणे सुरू ठेवा',
-      'or': 'ବ୍ରାଉଜିଂ କ୍ରେଡିଟ୍ କାର୍ଡଗୁଡିକ ଜାରି ରଖନ୍ତୁ |',
+      'or': 'ବ୍ରାଉଜିଂ କ୍ରେଡିଟ୍ କାର୍ଡଗୁଡିକ ଜାରି ରଖ |',
       'ta': 'கிரெடிட் கார்டுகளை உலாவுவதைத் தொடரவும்',
     },
     'q2wox7of': {
       'en': '₹ 50,000',
       'bn': '₹ 50,000',
+      'de': '50.000 €',
       'hi': '₹ 50,000',
       'mr': '₹ ५०,०००',
       'or': '₹ 50,000',
@@ -4214,6 +4724,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'nav74laj': {
       'en': ' successfully paid',
       'bn': 'সফলভাবে অর্থ প্রদান করা হয়েছে',
+      'de': 'erfolgreich bezahlt',
       'hi': 'सफलतापूर्वक भुगतान किया',
       'mr': 'यशस्वीरित्या पैसे दिले',
       'or': 'ସଫଳତାର ସହିତ ଦେୟ |',
@@ -4222,6 +4733,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '908y94pz': {
       'en': 'From',
       'bn': 'থেকে',
+      'de': 'Von',
       'hi': 'से',
       'mr': 'पासून',
       'or': 'ଠାରୁ',
@@ -4230,6 +4742,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '63yco761': {
       'en': 'Swaminathan Reddy',
       'bn': 'স্বামীনাথন রেড্ডি',
+      'de': 'Swaminathan Reddy',
       'hi': 'स्वामीनाथन रेड्डी',
       'mr': 'स्वामिनाथन रेड्डी',
       'or': 'ସ୍ amin ାମୀନାଥନ୍ ରେଡ୍ଡୀ |',
@@ -4238,6 +4751,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xudjyiqh': {
       'en': '539289301235',
       'bn': '539289301235',
+      'de': '539289301235',
       'hi': '539289301235',
       'mr': '५३९२८९३०१२३५',
       'or': '539289301235',
@@ -4246,7 +4760,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '244pb3l6': {
       'en': 'To',
       'bn': 'প্রতি',
-      'hi': 'प्रति',
+      'de': 'Zu',
+      'hi': 'सेवा',
       'mr': 'ला',
       'or': 'କୁ',
       'ta': 'செய்ய',
@@ -4254,14 +4769,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sl0vsmio': {
       'en': 'ICICI Bank Make My Trip Platfinum',
       'bn': 'আইসিআইসিআই ব্যাঙ্ক মেক মাই ট্রিপ প্ল্যাটফিনাম',
+      'de': 'ICICI Bank Make My Trip Platfinum',
       'hi': 'आईसीआईसीआई बैंक मेक माय ट्रिप प्लेटफिनम',
-      'mr': 'ICICI बँक मेक माय ट्रिप प्लॅटफिनम',
+      'mr': 'आयसीआयसीआय बँक मेक माय ट्रिप प्लॅटफिनम',
       'or': 'ଆଇସିଆଇସିଆଇ ବ୍ୟାଙ୍କ ମୋର ଟ୍ରିପ୍ ପ୍ଲାଟଫର୍ମ ପ୍ରସ୍ତୁତ କର |',
       'ta': 'ஐசிஐசிஐ வங்கி எனது பயணத்தை பிளாட்ஃபினமாக உருவாக்குகிறது',
     },
     '48v7tyt1': {
       'en': '6294 4922 2194 4092',
       'bn': '6294 4922 2194 4092',
+      'de': '6294 4922 2194 4092',
       'hi': '6294 4922 2194 4092',
       'mr': '6294 4922 2194 4092',
       'or': '6294 4922 2194 4092',
@@ -4270,6 +4787,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'e3wmq9uj': {
       'en': 'Name on Card',
       'bn': 'কার্ডের ওপর নাম',
+      'de': 'Name auf der Karte',
       'hi': 'कार्ड पर नाम',
       'mr': 'कार्डवरील नाव',
       'or': 'ପତ୍ର ଉପରେ ଲିଖିତ ନାମ',
@@ -4278,6 +4796,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'lucna042': {
       'en': 'Rabbi Shergill',
       'bn': 'রাব্বি শেরগিল',
+      'de': 'Rabbi Shergill',
       'hi': 'रब्बी शेरगिल',
       'mr': 'रब्बी शेरगिल',
       'or': 'ରେବୀ ଶେର୍ଗିଲ୍ |',
@@ -4286,6 +4805,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'm5a4k3u4': {
       'en': 'Paid On',
       'bn': 'পরিশোধিত',
+      'de': 'Bezahlt am',
       'hi': 'भुगतान करना',
       'mr': 'पेड ऑन',
       'or': 'ଦେୟ ଅନ୍',
@@ -4294,38 +4814,30 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'czwvolrc': {
       'en': '8 Apr, 2021',
       'bn': '8 এপ্রিল, 2021',
+      'de': '8. April 2021',
       'hi': '8 अप्रैल, 2021',
       'mr': '८ एप्रिल २०२१',
       'or': '8 ଏପ୍ରିଲ, 2021',
       'ta': '8 ஏப்ரல், 2021',
     },
     'enxx2z8i': {
-      'en': 'The Auto-Pay',
-      'bn': 'অটো-পে',
-      'hi': 'ऑटो-पे',
-      'mr': 'ऑटो-पे',
-      'or': 'ଅଟୋ-ପେ |',
-      'ta': 'ஆட்டோ-பே',
-    },
-    'rwltva1u': {
-      'en': 'could not be turned on.',
-      'bn': 'চালু করা যায়নি।',
-      'hi': 'चालू नहीं हो सका।',
-      'mr': 'चालू करता आले नाही.',
-      'or': 'ଟର୍ନ୍ ଅନ୍ ହୋଇପାରିବ ନାହିଁ |',
-      'ta': 'இயக்க முடியவில்லை.',
-    },
-    'c614cgh7': {
-      'en': 'Please try again after some time.',
-      'bn': 'কিছু সময় পরে আবার চেষ্টা করুন.',
-      'hi': 'कृपया कुछ समय बाद पुन: प्रयास करें।',
-      'mr': 'कृपया काही वेळानंतर पुन्हा प्रयत्न करा.',
-      'or': 'ଦୟାକରି କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |',
-      'ta': 'சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.',
+      'en':
+          'The Auto-Pay could not be turned on. Please try again after some time.',
+      'bn': 'অটো-পে চালু করা যায়নি। কিছু সময় পরে আবার চেষ্টা করুন.',
+      'de':
+          'Die Auto-Pay-Funktion konnte nicht aktiviert werden. Bitte versuchen Sie es nach einiger Zeit erneut.',
+      'hi': 'ऑटो-पे चालू नहीं किया जा सका। कृपया कुछ समय बाद पुन: प्रयास करें।',
+      'mr':
+          'ऑटो-पे चालू करता आले नाही. कृपया काही वेळानंतर पुन्हा प्रयत्न करा.',
+      'or':
+          'ଅଟୋ-ପେ ଅନ୍ ହୋଇପାରିବ ନାହିଁ | ଦୟାକରି କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |',
+      'ta':
+          'ஆட்டோ-பேயை இயக்க முடியவில்லை. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.',
     },
     'xyzpty3w': {
       'en': 'DOWNLOAD E-RECIEPT',
       'bn': 'ই-রিসিপ্ট ডাউনলোড করুন',
+      'de': 'ELEKTRONISCHEN EMPFANG HERUNTERLADEN',
       'hi': 'ई-रसीद डाउनलोड करें',
       'mr': 'ई-रिसीप्ट डाउनलोड करा',
       'or': 'ଇ-ରିସିପ୍ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |',
@@ -4334,6 +4846,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'w38pqsut': {
       'en': 'SHARE E-RECIEPT',
       'bn': 'শেয়ার ই-রিসিপ্ট',
+      'de': 'ELEKTRONISCHEN EMPFANG TEILEN',
       'hi': 'शेयर ई-रसीद',
       'mr': 'ई-पावती सामायिक करा',
       'or': 'ଇ-ରିସିପ୍ ଅଂଶୀଦାର କରନ୍ତୁ |',
@@ -4342,6 +4855,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zo5h8so5': {
       'en': 'CONTINUE BROWSING',
       'bn': 'ব্রাউজিং অবিরত',
+      'de': 'WEITER DURCHSUCHEN',
       'hi': 'ब्राउज़िंग जारी रखें',
       'mr': 'ब्राउझिंग सुरू ठेवा',
       'or': 'ବ୍ରାଉଜିଂ ଜାରି ରଖନ୍ତୁ |',
@@ -4350,6 +4864,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'a63vxjw6': {
       'en': 'CONTINUE PAYING OTHER BILLS',
       'bn': 'অন্যান্য বিল পরিশোধ করা চালিয়ে যান',
+      'de': 'ANDERE RECHNUNGEN WEITER ZAHLEN',
       'hi': 'अन्य बिलों का भुगतान जारी रखें',
       'mr': 'इतर बिले भरणे सुरू ठेवा',
       'or': 'ଅନ୍ୟାନ୍ୟ ବିଲ୍ ଦେୟ ଜାରି ରଖନ୍ତୁ |',
@@ -4358,156 +4873,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'giiuy95z': {
       'en': '•',
       'bn': '•',
-      'hi': '•',
-      'mr': '•',
-      'or': '•',
-      'ta': '•',
-    },
-  },
-  // PayNowDemo
-  {
-    'rfq7we5b': {
-      'en': 'Home',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-  },
-  // payNowCopy
-  {
-    '4e68ii1n': {
-      'en': 'PAY YOUR ICICI BANK CREDIT CARD BILL',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'x8wc539o': {
-      'en': 'Credit Card Number',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'qfhm8ln0': {
-      'en': 'EDIT',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    '8hutmswp': {
-      'en': '1234 5678 7890 1234',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'kw60agle': {
-      'en': 'Credit Card Variant',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'jfn8o6ck': {
-      'en': 'ICICI Bank MakeMyTrip Platinum',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    '0kqqqy7z': {
-      'en': 'Name on this card',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'uiba4pzz': {
-      'en': 'Rabbi Shergill',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'm5hj66hd': {
-      'en': 'How much do you want to pay?',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'kx07ymo8': {
-      'en': 'TOTAL AMOUNT DUE',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'tu490vr5': {
-      'en': '₹ 17,500',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    '6u2q2tef': {
-      'en': 'MINIMUM AMONT DUE',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'j7d1abhn': {
-      'en': '₹ 17,500',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'txnaiqe0': {
-      'en': 'CURRENT OUTSTANDING',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    '6o9rbmte': {
-      'en': '₹ 17,500',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'uhh008tb': {
-      'en': 'PAY CUSTOM AMOUNT',
-      'bn': '',
-      'hi': '',
-      'mr': '',
-      'or': '',
-      'ta': '',
-    },
-    'vapsplu0': {
-      'en': '•',
-      'bn': '•',
+      'de': '•',
       'hi': '•',
       'mr': '•',
       'or': '•',
@@ -4519,6 +4885,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6i43zhw4': {
       'en': 'user@domainname.com',
       'bn': 'user@domainname.com',
+      'de': 'benutzer@domainname.com',
       'hi': 'user@domainname.com',
       'mr': 'user@domainname.com',
       'or': 'user@domainname.com',
@@ -4527,6 +4894,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '46kc2ens': {
       'en': '₹',
       'bn': '₹',
+      'de': '€',
       'hi': '₹',
       'mr': '₹',
       'or': '₹',
@@ -4538,6 +4906,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1p7547t1': {
       'en': 'DEMO\nVIDEOS',
       'bn': 'ডেমো\nভিডিও',
+      'de': 'DEMO\nVIDEOS',
       'hi': 'डेमो\nवीडियो',
       'mr': 'डेमो\nव्हिडिओ',
       'or': 'DEMO\nଭିଡିଓଗୁଡିକ',
@@ -4546,6 +4915,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5e1x58xl': {
       'en': 'Namastey,',
       'bn': 'নমস্তে,',
+      'de': 'Namastey,',
       'hi': 'नमस्ते,',
       'mr': 'नमस्ते,',
       'or': 'ନମସ୍ତେ,',
@@ -4554,6 +4924,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'gfjnf7rx': {
       'en': 'Swaminathan',
       'bn': 'স্বামীনাথন',
+      'de': 'Swaminathan',
       'hi': 'स्वामीनाथन',
       'mr': 'स्वामिनाथन',
       'or': 'ସ୍ amin ାମୀନାଥନ୍',
@@ -4562,6 +4933,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'a3an9u8b': {
       'en': '7',
       'bn': '7',
+      'de': '7',
       'hi': '7',
       'mr': '७',
       'or': '7',
@@ -4570,6 +4942,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ud09wzpp': {
       'en': 'Last Logged In',
       'bn': 'শেষ লগ ইন',
+      'de': 'Zuletzt eingeloggt',
       'hi': 'अंतिम लॉग इन',
       'mr': 'शेवटचे लॉग इन केले',
       'or': 'ଶେଷ ଲଗ୍ ଇନ୍ |',
@@ -4578,6 +4951,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xmrqf127': {
       'en': 'LOGOUT',
       'bn': 'প্রস্থান',
+      'de': 'AUSLOGGEN',
       'hi': 'लॉग आउट',
       'mr': 'बाहेर पडणे',
       'or': 'ପ୍ରସ୍ଥାନ କର',
@@ -4589,6 +4963,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'smoo4toi': {
       'en': 'Search users...',
       'bn': 'ব্যবহারকারীদের অনুসন্ধান করুন...',
+      'de': 'Benutzer suchen...',
       'hi': 'उपयोगकर्ता खोजें...',
       'mr': 'वापरकर्ते शोधा...',
       'or': 'ବ୍ୟବହାରକାରୀଙ୍କୁ ଖୋଜ ...',
@@ -4597,6 +4972,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4bogapec': {
       'en': 'Search',
       'bn': 'অনুসন্ধান করুন',
+      'de': 'Suche',
       'hi': 'खोज',
       'mr': 'शोधा',
       'or': 'ସନ୍ଧାନ କର |',
@@ -4605,6 +4981,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'st9zohyd': {
       'en': 'Recent Transfers',
       'bn': 'সাম্প্রতিক স্থানান্তর',
+      'de': 'Letzte Übertragungen',
       'hi': 'हाल के स्थानान्तरण',
       'mr': 'अलीकडील बदल्या',
       'or': 'ସମ୍ପ୍ରତି ସ୍ଥାନାନ୍ତର |',
@@ -4613,6 +4990,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'gt8saget': {
       'en': 'Lola Negamu',
       'bn': 'লোলা নেগামু',
+      'de': 'Lola Negama',
       'hi': 'लोला नेगामू',
       'mr': 'लोला नेगामू',
       'or': 'ଲୋଲା ନେଗାମୁ |',
@@ -4621,6 +4999,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7hr5wo8r': {
       'en': 'name@domain.com',
       'bn': 'name@domain.com',
+      'de': 'name@domain.com',
       'hi': 'नाम@डोमेन.com',
       'mr': 'name@domain.com',
       'or': 'name@domain.com',
@@ -4629,6 +5008,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '51v25xc2': {
       'en': 'Emily Wong',
       'bn': 'এমিলি ওং',
+      'de': 'Emily Wang',
       'hi': 'एमिली वोंग',
       'mr': 'एमिली वोंग',
       'or': 'ଏମିଲି ୱଙ୍ଗ |',
@@ -4637,6 +5017,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'f02biqwq': {
       'en': 'name@domain.com',
       'bn': 'name@domain.com',
+      'de': 'name@domain.com',
       'hi': 'नाम@डोमेन.com',
       'mr': 'name@domain.com',
       'or': 'name@domain.com',
@@ -4645,6 +5026,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9375976g': {
       'en': 'Jeremiah Juding',
       'bn': 'Jeremiah Juding',
+      'de': 'Jeremia Juding',
       'hi': 'यिर्मयाह न्याय',
       'mr': 'यिर्मया जडिंग',
       'or': 'ଯିରିମିୟ ବିଚାର',
@@ -4653,6 +5035,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5q3rutb5': {
       'en': 'name@domain.com',
       'bn': 'name@domain.com',
+      'de': 'name@domain.com',
       'hi': 'नाम@डोमेन.com',
       'mr': 'name@domain.com',
       'or': 'name@domain.com',
@@ -4661,6 +5044,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'q2k54rd9': {
       'en': 'Oran Rimjitsu',
       'bn': 'ওরান রিমজিৎসু',
+      'de': 'Oran Rimjitsu',
       'hi': 'ओरान रिमजित्सु',
       'mr': 'ओरन रिमजित्सू',
       'or': 'ଓରାନ୍ ରିମଜିତୁ |',
@@ -4669,6 +5053,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8ujs8j4z': {
       'en': 'name@domain.com',
       'bn': 'name@domain.com',
+      'de': 'name@domain.com',
       'hi': 'नाम@डोमेन.com',
       'mr': 'name@domain.com',
       'or': 'name@domain.com',
@@ -4677,6 +5062,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'da5rpzor': {
       'en': 'All Users',
       'bn': 'সকল ব্যবহারকারী',
+      'de': 'Alle Nutzer',
       'hi': 'सभी उपयोगकर्ताओं',
       'mr': 'सर्व वापरकर्ते',
       'or': 'ସମସ୍ତ ଉପଯୋଗକର୍ତ୍ତା |',
@@ -4685,6 +5071,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2rihxhcf': {
       'en': 'Hari Hemuloly',
       'bn': 'হরি হেমুললি',
+      'de': 'Hari Hemuloly',
       'hi': 'हरि हेमुलोली',
       'mr': 'हरि हेमुलोली',
       'or': 'ହରି ହେମୁଲୋଲି |',
@@ -4693,6 +5080,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'q42mwj08': {
       'en': 'name@domain.com',
       'bn': 'name@domain.com',
+      'de': 'name@domain.com',
       'hi': 'नाम@डोमेन.com',
       'mr': 'name@domain.com',
       'or': 'name@domain.com',
@@ -4701,6 +5089,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'j4w143j6': {
       'en': 'Omid Armin',
       'bn': 'ওমিদ আরমিন',
+      'de': 'Omid Armin',
       'hi': 'ओमिड आर्मिन',
       'mr': 'ओमिड आर्मिन',
       'or': 'ଓମିଡ୍ ଅରମିନ |',
@@ -4709,6 +5098,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'x2minhpi': {
       'en': 'name@domain.com',
       'bn': 'name@domain.com',
+      'de': 'name@domain.com',
       'hi': 'नाम@डोमेन.com',
       'mr': 'name@domain.com',
       'or': 'name@domain.com',
@@ -4717,14 +5107,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5r2onddm': {
       'en': 'Pritesh Mingly',
       'bn': 'প্রীতেশ মিংলি',
+      'de': 'Pritesh Mining',
       'hi': 'प्रीतेश मिंगली',
-      'mr': 'प्रितेश मिंगळे',
+      'mr': 'प्रितेश मिंगळी',
       'or': 'ପ୍ରୀତେଶ ମେଲିଙ୍ଗ୍ |',
       'ta': 'பிரித்தேஷ் மிங்லி',
     },
     'bdmvdhw9': {
       'en': 'name@domain.com',
       'bn': 'name@domain.com',
+      'de': 'name@domain.com',
       'hi': 'नाम@डोमेन.com',
       'mr': 'name@domain.com',
       'or': 'name@domain.com',
@@ -4733,6 +5125,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ghvnq7y0': {
       'en': 'Eric Himarolu',
       'bn': 'এরিক হিমারোলু',
+      'de': 'Eric Himarolu',
       'hi': 'एरिक हिमारोलू',
       'mr': 'एरिक हिमरोलु',
       'or': 'ଏରିକ୍ ହିମାରୋଲୁ |',
@@ -4741,6 +5134,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '70uo4hsk': {
       'en': 'name@domain.com',
       'bn': 'name@domain.com',
+      'de': 'name@domain.com',
       'hi': 'नाम@डोमेन.com',
       'mr': 'name@domain.com',
       'or': 'name@domain.com',
@@ -4752,6 +5146,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mwumvlot': {
       'en': 'Custom Name',
       'bn': 'কাস্টম নাম',
+      'de': 'Benutzerdefinierter Name',
       'hi': 'अनुकूल नाम',
       'mr': 'सानुकूल नाव',
       'or': 'କଷ୍ଟମ୍ ନାମ',
@@ -4760,6 +5155,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'arfy2kyo': {
       'en': 'user@domainname.com',
       'bn': 'user@domainname.com',
+      'de': 'benutzer@domainname.com',
       'hi': 'user@domainname.com',
       'mr': 'user@domainname.com',
       'or': 'user@domainname.com',
@@ -4768,6 +5164,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fj8etjxj': {
       'en': 'user@domainname.com',
       'bn': 'user@domainname.com',
+      'de': 'benutzer@domainname.com',
       'hi': 'user@domainname.com',
       'mr': 'user@domainname.com',
       'or': 'user@domainname.com',
@@ -4776,6 +5173,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'uxos2biz': {
       'en': 'Active',
       'bn': 'সক্রিয়',
+      'de': 'Aktiv',
       'hi': 'सक्रिय',
       'mr': 'सक्रिय',
       'or': 'ସକ୍ରିୟ |',
@@ -4787,6 +5185,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'p1t48y22': {
       'en': 'JAN',
       'bn': 'JAN',
+      'de': 'Jan',
       'hi': 'जनवरी',
       'mr': 'JAN',
       'or': 'JAN',
@@ -4795,6 +5194,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1wc4ly5o': {
       'en': 'Recurring Deposit',
       'bn': 'রেকারিং ডিপোজিট',
+      'de': 'Wiederkehrende Einzahlung',
       'hi': 'आवर्ती जमा',
       'mr': 'आवर्ती ठेव',
       'or': 'ବାରମ୍ବାର ଜମା',
@@ -4803,6 +5203,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9cyrhcjn': {
       'en': '2024022100224242',
       'bn': '2024022100224242',
+      'de': '2024022100224242',
       'hi': '2024022100224242',
       'mr': '2024022100224242',
       'or': '2024022100224242',
@@ -4811,6 +5212,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ffhor3do': {
       'en': '4.52%',
       'bn': '4.52%',
+      'de': '4,52 %',
       'hi': '4.52%',
       'mr': '४.५२%',
       'or': '4.52%',
@@ -4819,6 +5221,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'oznxjuzw': {
       'en': 'INR',
       'bn': 'INR',
+      'de': 'INR',
       'hi': 'आईएनआर',
       'mr': 'INR',
       'or': 'INR',
@@ -4827,6 +5230,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'yw38otwx': {
       'en': 'Active',
       'bn': 'সক্রিয়',
+      'de': 'Aktiv',
       'hi': 'सक्रिय',
       'mr': 'सक्रिय',
       'or': 'ସକ୍ରିୟ |',
@@ -4838,6 +5242,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ms5rjcey': {
       'en': 'JAN',
       'bn': 'JAN',
+      'de': 'Jan',
       'hi': 'जनवरी',
       'mr': 'JAN',
       'or': 'JAN',
@@ -4846,6 +5251,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'c00kdye8': {
       'en': '15',
       'bn': '15',
+      'de': 'fünfzehn',
       'hi': '15',
       'mr': '१५',
       'or': '15',
@@ -4854,6 +5260,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     't2qj0s7o': {
       'en': 'Recurring Deposit',
       'bn': 'রেকারিং ডিপোজিট',
+      'de': 'Wiederkehrende Einzahlung',
       'hi': 'आवर्ती जमा',
       'mr': 'आवर्ती ठेव',
       'or': 'ବାରମ୍ବାର ଜମା',
@@ -4862,6 +5269,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'f7txq32g': {
       'en': '2024022100224242',
       'bn': '2024022100224242',
+      'de': '2024022100224242',
       'hi': '2024022100224242',
       'mr': '2024022100224242',
       'or': '2024022100224242',
@@ -4870,6 +5278,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'b98w8it9': {
       'en': '4.52%',
       'bn': '4.52%',
+      'de': '4,52 %',
       'hi': '4.52%',
       'mr': '४.५२%',
       'or': '4.52%',
@@ -4878,6 +5287,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'e2glaktt': {
       'en': 'INR',
       'bn': 'INR',
+      'de': 'INR',
       'hi': 'आईएनआर',
       'mr': 'INR',
       'or': 'INR',
@@ -4886,6 +5296,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wraafjl8': {
       'en': '60,000',
       'bn': '60,000',
+      'de': '60.000',
       'hi': '60,000',
       'mr': '60,000',
       'or': '60,000',
@@ -4894,6 +5305,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'blhhimt6': {
       'en': '25,200',
       'bn': '25,200',
+      'de': '25.200',
       'hi': '25,200',
       'mr': '२५,२००',
       'or': '25,200',
@@ -4902,6 +5314,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'g3jlh7nq': {
       'en': 'Active',
       'bn': 'সক্রিয়',
+      'de': 'Aktiv',
       'hi': 'सक्रिय',
       'mr': 'सक्रिय',
       'or': 'ସକ୍ରିୟ |',
@@ -4913,6 +5326,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'afo502v2': {
       'en': 'Manage Accounts',
       'bn': 'অ্যাকাউন্ট পরিচালনা করুন',
+      'de': 'Konten verwalten',
       'hi': 'खातों का प्रबंधन',
       'mr': 'खाती व्यवस्थापित करा',
       'or': 'ଖାତା ପରିଚାଳନା କରନ୍ତୁ |',
@@ -4921,6 +5335,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'el0gb2n0': {
       'en': '(Service Requests)',
       'bn': '(পরিষেবার অনুরোধ)',
+      'de': '(Serviceanfragen)',
       'hi': '(सेवा अनुरोध)',
       'mr': '(सेवा विनंत्या)',
       'or': '(ସେବା ଅନୁରୋଧ)',
@@ -4929,6 +5344,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ged2sk12': {
       'en': 'VIEW ALL',
       'bn': 'সব দেখ',
+      'de': 'ALLE ANSEHEN',
       'hi': 'सभी देखें',
       'mr': 'सर्व पहा',
       'or': 'ସମସ୍ତଙ୍କୁ ଦେଖନ୍ତୁ |',
@@ -4937,6 +5353,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ata71vur': {
       'en': 'Block Card',
       'bn': 'ব্লক কার্ড',
+      'de': 'Karte sperren',
       'hi': 'ब्लॉक कार्ड',
       'mr': 'ब्लॉक कार्ड',
       'or': 'ବ୍ଲକ କାର୍ଡ |',
@@ -4945,6 +5362,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'j6q7uml5': {
       'en': 'Alert Subscription',
       'bn': 'সতর্কতা সদস্যতা',
+      'de': 'Alert-Abonnement',
       'hi': 'अलर्ट सदस्यता',
       'mr': 'अलर्ट सदस्यता',
       'or': 'ଆଲର୍ଟ ସଦସ୍ୟତା |',
@@ -4953,6 +5371,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8i52xnsh': {
       'en': 'Update address',
       'bn': 'ঠিকানা আপডেট করুন',
+      'de': 'Adresse aktualisieren',
       'hi': 'पता अपडेट करें',
       'mr': 'पत्ता अद्ययावत करा',
       'or': 'ଠିକଣା ଅଦ୍ୟତନ କରନ୍ତୁ |',
@@ -4961,7 +5380,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'butgbd2b': {
       'en': 'Change PIN',
       'bn': 'পিন পরিবর্তন করুন',
-      'hi': 'पिन बदलें',
+      'de': 'PIN ändern',
+      'hi': 'पिन बदलिए',
       'mr': 'पिन बदला',
       'or': 'PIN ପରିବର୍ତ୍ତନ କରନ୍ତୁ |',
       'ta': 'பின்னை மாற்றவும்',
@@ -4969,6 +5389,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8ql23cv7': {
       'en': 'Manage billing cycle',
       'bn': 'বিলিং চক্র পরিচালনা করুন',
+      'de': 'Rechnungszyklus verwalten',
       'hi': 'बिलिंग चक्र प्रबंधित करें',
       'mr': 'बिलिंग सायकल व्यवस्थापित करा',
       'or': 'ବିଲିଂ ଚକ୍ର ପରିଚାଳନା କରନ୍ତୁ |',
@@ -4977,6 +5398,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'h3k4wa76': {
       'en': 'Generate PIN',
       'bn': 'পিন তৈরি করুন',
+      'de': 'PIN generieren',
       'hi': 'पिन जनरेट करें',
       'mr': 'पिन व्युत्पन्न करा',
       'or': 'PIN ସୃଷ୍ଟି କରନ୍ତୁ |',
@@ -4988,6 +5410,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'u0jy5ubf': {
       'en': 'YOUR CREDIT CARDS',
       'bn': 'আপনার ক্রেডিট কার্ড',
+      'de': 'IHRE KREDITKARTEN',
       'hi': 'आपका क्रेडिट कार्ड',
       'mr': 'तुमची क्रेडिट कार्ड',
       'or': 'ଆପଣଙ୍କର କ୍ରେଡିଟ୍ କାର୍ଡଗୁଡିକ',
@@ -4996,6 +5419,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2o5x3whh': {
       'en': '4545',
       'bn': '4545',
+      'de': '4545',
       'hi': '4545',
       'mr': '४५४५',
       'or': '4545',
@@ -5004,6 +5428,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'e2d9cyx6': {
       'en': '5921',
       'bn': '5921',
+      'de': '5921',
       'hi': '5921',
       'mr': '५९२१',
       'or': '5921',
@@ -5012,6 +5437,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vpgsz1id': {
       'en': '4545',
       'bn': '4545',
+      'de': '4545',
       'hi': '4545',
       'mr': '४५४५',
       'or': '4545',
@@ -5020,6 +5446,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     's0yt6fuw': {
       'en': '4212',
       'bn': '4212',
+      'de': '4212',
       'hi': '4212',
       'mr': '४२१२',
       'or': '4212',
@@ -5028,6 +5455,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '3nd9ebag': {
       'en': 'ADD MY CREDIT CARD',
       'bn': 'আমার ক্রেডিট কার্ড যোগ করুন',
+      'de': 'MEINE KREDITKARTE HINZUFÜGEN',
       'hi': 'मेरा क्रेडिट कार्ड जोड़ें',
       'mr': 'माझे क्रेडिट कार्ड जोडा',
       'or': 'ମୋର କ୍ରେଡିଟ୍ କାର୍ଡ ଯୋଡନ୍ତୁ |',
@@ -5036,6 +5464,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'czmsush6': {
       'en': 'Expiry date',
       'bn': 'মেয়াদ শেষ হওয়ার তারিখ',
+      'de': 'Verfallsdatum',
       'hi': 'समाप्ति तिथि',
       'mr': 'कालबाह्यता तारीख',
       'or': 'ସମାପ୍ତି ତାରିଖ',
@@ -5044,6 +5473,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2r9o5i5l': {
       'en': '...',
       'bn': '...',
+      'de': '...',
       'hi': '...',
       'mr': '...',
       'or': '...',
@@ -5052,6 +5482,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vkg90g4z': {
       'en': 'CVV',
       'bn': 'সিভিভি',
+      'de': 'CVV',
       'hi': 'सीवीवी',
       'mr': 'CVV',
       'or': 'CVV',
@@ -5060,6 +5491,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'u6blhjjo': {
       'en': '...',
       'bn': '...',
+      'de': '...',
       'hi': '...',
       'mr': '...',
       'or': '...',
@@ -5068,7 +5500,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6w682shj': {
       'en': 'Show',
       'bn': 'দেখান',
-      'hi': 'दिखाना',
+      'de': 'Zeigen',
+      'hi': 'प्रदर्शन',
       'mr': 'दाखवा',
       'or': 'ଦେଖାନ୍ତୁ |',
       'ta': 'காட்டு',
@@ -5076,6 +5509,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'eyk1wr7w': {
       'en': 'UPGRADE CARD',
       'bn': 'আপগ্রেড কার্ড',
+      'de': 'UPGRADE-KARTE',
       'hi': 'अपग्रेड कार्ड',
       'mr': 'अपग्रेड कार्ड',
       'or': 'UPGRADE କାର୍ଡ |',
@@ -5084,6 +5518,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jo7gmxer': {
       'en': 'GET NEW CREDIT CARD',
       'bn': 'নতুন ক্রেডিট কার্ড পান',
+      'de': 'NEUE KREDITKARTE ERHALTEN',
       'hi': 'नया क्रेडिट कार्ड प्राप्त करें',
       'mr': 'नवीन क्रेडिट कार्ड मिळवा',
       'or': 'ନୂତନ କ୍ରେଡିଟ୍ କାର୍ଡ ପାଆନ୍ତୁ |',
@@ -5092,6 +5527,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2zovcmtu': {
       'en': 'ADD A ADD-ON CARD',
       'bn': 'একটি অ্যাড-অন কার্ড যোগ করুন',
+      'de': 'ZUSATZKARTE HINZUFÜGEN',
       'hi': 'ऐड-ऑन कार्ड जोड़ें',
       'mr': 'अॅड-ऑन कार्ड जोडा',
       'or': 'ଏକ ADD-ON କାର୍ଡ ଯୋଡନ୍ତୁ |',
@@ -5103,6 +5539,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5ilfwdyl': {
       'en': 'Personal loan on Credit Card',
       'bn': 'ক্রেডিট কার্ডে ব্যক্তিগত ঋণ',
+      'de': 'Privatkredit auf Kreditkarte',
       'hi': 'क्रेडिट कार्ड पर पर्सनल लोन',
       'mr': 'क्रेडिट कार्डवर वैयक्तिक कर्ज',
       'or': 'କ୍ରେଡିଟ୍ କାର୍ଡରେ ବ୍ୟକ୍ତିଗତ loan ଣ |',
@@ -5113,6 +5550,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Personal Loan on Credit Card is a service through which ICICI Bank providesLoan to selected iCICI Bank Credit Card customers based on their spends, transaction pattern and payment history. ',
       'bn':
           'ক্রেডিট কার্ডে ব্যক্তিগত ঋণ হল এমন একটি পরিষেবা যার মাধ্যমে ICICI ব্যাঙ্ক নির্বাচিত iCICI ব্যাঙ্ক ক্রেডিট কার্ড গ্রাহকদের তাদের খরচ, লেনদেনের ধরণ এবং অর্থপ্রদানের ইতিহাসের ভিত্তিতে ঋণ প্রদান করে।',
+      'de':
+          'Persönliches Darlehen auf Kreditkarte ist ein Service, über den die ICICI Bank ausgewählten Kunden der iCICI Bank-Kreditkarte Darlehen auf der Grundlage ihrer Ausgaben, ihres Transaktionsmusters und ihrer Zahlungshistorie anbietet.',
       'hi':
           'क्रेडिट कार्ड पर व्यक्तिगत ऋण एक ऐसी सेवा है जिसके माध्यम से आईसीआईसीआई बैंक चयनित आईसीआईसीआई बैंक क्रेडिट कार्ड ग्राहकों को उनके खर्च, लेनदेन पैटर्न और भुगतान इतिहास के आधार पर ऋण प्रदान करता है।',
       'mr':
@@ -5125,6 +5564,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bk7w8c3f': {
       'en': 'APPLY FOR PERSONAL LOAN',
       'bn': 'ব্যক্তিগত ঋণের জন্য আবেদন করুন',
+      'de': 'PERSÖNLICHES DARLEHEN BEANTRAGEN',
       'hi': 'व्यक्तिगत ऋण के लिए आवेदन करें',
       'mr': 'वैयक्तिक कर्जासाठी अर्ज करा',
       'or': 'ବ୍ୟକ୍ତିଗତ an ଣ ପାଇଁ ଆବେଦନ କରନ୍ତୁ |',
@@ -5136,6 +5576,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8odzxwpv': {
       'en': 'Apply for ICICI Bank Credit Card in 3 simple steps!',
       'bn': '3টি সহজ ধাপে ICICI ব্যাঙ্ক ক্রেডিট কার্ডের জন্য আবেদন করুন!',
+      'de':
+          'Beantragen Sie die ICICI Bank Kreditkarte in 3 einfachen Schritten!',
       'hi': 'आईसीआईसीआई बैंक क्रेडिट कार्ड के लिए 3 सरल चरणों में आवेदन करें!',
       'mr': 'ICICI बँक क्रेडिट कार्डसाठी 3 सोप्या चरणांमध्ये अर्ज करा!',
       'or':
@@ -5148,6 +5590,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Apply for ICICI Bank Credit Cards to avail attractive offers and hand-picked privalages. The credit card benefits include exclusive aiport lounges and privalages at leading hotels and airlines.',
       'bn':
           'আইসিআইসিআই ব্যাঙ্কের ক্রেডিট কার্ডের জন্য আবেদন করুন আকর্ষণীয় অফার এবং হাতে বাছাই করা ব্যক্তিগত সুবিধাগুলি পেতে। ক্রেডিট কার্ডের সুবিধাগুলির মধ্যে রয়েছে একচেটিয়া এয়ারপোর্ট লাউঞ্জ এবং নেতৃস্থানীয় হোটেল এবং এয়ারলাইনগুলিতে প্রাইভালেজ।',
+      'de':
+          'Beantragen Sie ICICI Bank Kreditkarten, um von attraktiven Angeboten und handverlesenen Vergünstigungen zu profitieren. Zu den Kreditkartenvorteilen gehören exklusive Flughafenlounges und Vergünstigungen bei führenden Hotels und Fluggesellschaften.',
       'hi':
           'आकर्षक ऑफ़र और चुने हुए विशेषाधिकारों का लाभ उठाने के लिए आईसीआईसीआई बैंक क्रेडिट कार्ड के लिए आवेदन करें। क्रेडिट कार्ड के लाभों में प्रमुख होटलों और एयरलाइनों में विशेष हवाई अड्डे के लाउंज और विशेषाधिकार शामिल हैं।',
       'mr':
@@ -5155,11 +5599,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'or':
           'ଆକର୍ଷଣୀୟ ଅଫର ଏବଂ ହସ୍ତତନ୍ତ ପ୍ରାଇଭେଲେଜ୍ ପାଇବା ପାଇଁ ଆଇସିଆଇସିଆଇ ବ୍ୟାଙ୍କ କ୍ରେଡିଟ୍ କାର୍ଡ ପାଇଁ ଆବେଦନ କରନ୍ତୁ | କ୍ରେଡିଟ କାର୍ଡ ସୁବିଧାଗୁଡ଼ିକରେ ଅଗ୍ରଣୀ ହୋଟେଲ ଏବଂ ଏୟାରଲାଇନ୍ସରେ ସ୍ୱତନ୍ତ୍ର ଆଇପୋର୍ଟ ଲାଉଞ୍ଜ ଏବଂ ପ୍ରାଇଭେଲାଜ୍ ଅନ୍ତର୍ଭୁକ୍ତ |',
       'ta':
-          'கவர்ச்சிகரமான சலுகைகள் மற்றும் கையால் தேர்ந்தெடுக்கப்பட்ட சலுகைகளைப் பெற ஐசிஐசிஐ வங்கி கிரெடிட் கார்டுகளுக்கு விண்ணப்பிக்கவும். கிரெடிட் கார்டு நன்மைகளில் பிரத்தியேக விமான நிலைய ஓய்வறைகள் மற்றும் முன்னணி ஹோட்டல்கள் மற்றும் விமான நிறுவனங்களின் தனியுரிமைகளும் அடங்கும்.',
+          'கவர்ச்சிகரமான சலுகைகள் மற்றும் கையால் தேர்ந்தெடுக்கப்பட்ட சலுகைகளைப் பெற ஐசிஐசிஐ வங்கி கிரெடிட் கார்டுகளுக்கு விண்ணப்பிக்கவும். கிரெடிட் கார்டு நன்மைகளில் பிரத்தியேக விமான நிலைய ஓய்வறைகள் மற்றும் முன்னணி ஹோட்டல்கள் மற்றும் விமான நிறுவனங்களின் தனியுரிமைகள் ஆகியவை அடங்கும்.',
     },
     'kvk7agxa': {
-      'en': 'APPLY FOR CREDIT CARD',
+      'en': 'APPLY FOR CREDIT CARD ',
       'bn': 'ক্রেডিট কার্ডের জন্য আবেদন করুন',
+      'de': 'KREDITKARTE BEWERBEN',
       'hi': 'क्रेडिट कार्ड के लिए आवेदन करें',
       'mr': 'क्रेडिट कार्डसाठी अर्ज करा',
       'or': 'କ୍ରେଡିଟ୍ କାର୍ଡ ପାଇଁ ଆବେଦନ କରନ୍ତୁ |',
@@ -5171,14 +5616,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'f3bdnqmm': {
       'en': 'OFF',
       'bn': 'বন্ধ',
+      'de': 'AUS',
       'hi': 'बंद',
       'mr': 'बंद',
       'or': 'ବନ୍ଦ',
-      'ta': 'முடக்கப்பட்டுள்ளது',
+      'ta': 'ஆஃப்',
     },
     'b3byshg3': {
       'en': 'ON',
       'bn': 'চালু',
+      'de': 'AN',
       'hi': 'पर',
       'mr': 'चालू',
       'or': 'ଅନ୍',
@@ -5190,6 +5637,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bonk07wj': {
       'en': '7',
       'bn': '7',
+      'de': '7',
       'hi': '7',
       'mr': '७',
       'or': '7',
@@ -5201,6 +5649,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2777v24h': {
       'en': 'OVERVIEW',
       'bn': 'ওভারভিউ',
+      'de': 'ÜBERBLICK',
       'hi': 'अवलोकन',
       'mr': 'आढावा',
       'or': 'ପୂର୍ବାବଲୋକନ',
@@ -5209,6 +5658,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '52p3bgkw': {
       'en': 'ACCOUNTS',
       'bn': 'অ্যাকাউন্ট',
+      'de': 'KONTEN',
       'hi': 'हिसाब किताब',
       'mr': 'खाते',
       'or': 'ଆକାଉଣ୍ଟ୍',
@@ -5217,6 +5667,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'buwqiimt': {
       'en': 'PAYMENTS & \nTRANSFERS',
       'bn': 'পেমেন্ট এবং\nস্থানান্তর',
+      'de': 'ZAHLUNGEN &\nÜBERTRAGUNGEN',
       'hi': 'भुगतान और\nतबादलों',
       'mr': 'देयके आणि\nहस्तांतरण',
       'or': 'ଦେୟ &\nଟ୍ରାନ୍ସଫର୍ସ',
@@ -5225,6 +5676,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zvfusuus': {
       'en': 'BILL PAYMENT',
       'bn': 'বিল পরিশোধ করা',
+      'de': 'RECHNUNGSZAHLUNG',
       'hi': 'बिल भुगतान',
       'mr': 'देयक प्रदान',
       'or': 'ବିଲ୍ ଦେୟ',
@@ -5233,6 +5685,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7uwtbg1m': {
       'en': 'DEPOSITS',
       'bn': 'ডিপোজিট',
+      'de': 'EINZAHLUNGEN',
       'hi': 'जमा',
       'mr': 'ठेवी',
       'or': 'ଡିପୋଜିଟ୍',
@@ -5241,6 +5694,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'l7ohj3ke': {
       'en': 'CREDIT CARDS',
       'bn': 'ক্রেডিট কার্ড',
+      'de': 'KREDITKARTEN',
       'hi': 'क्रेडिट कार्ड',
       'mr': 'क्रेडिट कार्ड',
       'or': 'କ୍ରେଡିଟ୍ କାର୍ଡଗୁଡିକ',
@@ -5252,6 +5706,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jmpzx3ot': {
       'en': 'Request confirmation for Autopay',
       'bn': 'স্বয়ংক্রিয় অর্থপ্রদানের জন্য নিশ্চিতকরণের অনুরোধ করুন',
+      'de': 'Fordern Sie eine Bestätigung für Autopay an',
       'hi': 'ऑटोपे के लिए अनुरोध की पुष्टि',
       'mr': 'ऑटोपेसाठी पुष्टीकरणाची विनंती करा',
       'or': 'ଅଟୋପେ ପାଇଁ ନିଶ୍ଚିତକରଣ ପାଇଁ ଅନୁରୋଧ |',
@@ -5260,6 +5715,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ha4q2qpd': {
       'en': 'Credit Card Number',
       'bn': 'ক্রেডিট কার্ড নম্বর',
+      'de': 'Kreditkartennummer',
       'hi': 'क्रेडिट कार्ड नंबर',
       'mr': 'पत पत्र क्रमांक',
       'or': 'କ୍ରେଡିଟ କାର୍ଡ ସଂଖ୍ୟା',
@@ -5268,6 +5724,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2tih0g9u': {
       'en': '1234 5678 1234 1234',
       'bn': '1234 5678 1234 1234',
+      'de': '1234 5678 1234 1234',
       'hi': '1234 5678 1234 1234',
       'mr': '१२३४ ५६७८ १२३४ १२३४',
       'or': '1234 5678 1234 1234',
@@ -5276,6 +5733,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'diostv0y': {
       'en': 'Bill due in',
       'bn': 'বিল বকেয়া',
+      'de': 'Rechnung fällig',
       'hi': 'बिल बकाया है',
       'mr': 'बिल देय आहे',
       'or': 'ବିଲ୍ ଦେବାର ଅଛି |',
@@ -5284,6 +5742,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wjidgoyu': {
       'en': '6 days (18 Dec, 2022)',
       'bn': '6 দিন (18 ডিসেম্বর, 2022)',
+      'de': '6 Tage (18. Dez. 2022)',
       'hi': '6 दिन (18 दिसंबर, 2022)',
       'mr': '६ दिवस (१८ डिसेंबर २०२२)',
       'or': '6 ଦିନ (18 ଡିସେମ୍ବର, 2022)',
@@ -5292,6 +5751,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4s9ark20': {
       'en': 'AUTO PAY',
       'bn': 'অটো পে',
+      'de': 'AUTOMATISCHE BEZAHLUNG',
       'hi': 'ऑटो भुगतान',
       'mr': 'ऑटो पे',
       'or': 'AUTO ଦେୟ |',
@@ -5300,6 +5760,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xzhiooe9': {
       'en': 'ON',
       'bn': 'চালু',
+      'de': 'AN',
       'hi': 'पर',
       'mr': 'चालू',
       'or': 'ଅନ୍',
@@ -5310,6 +5771,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Your total amount due wil be paid automatically on due date of every month',
       'bn':
           'আপনার মোট বকেয়া পরিমাণ প্রতি মাসের নির্ধারিত তারিখে স্বয়ংক্রিয়ভাবে পরিশোধ করা হবে',
+      'de':
+          'Ihr fälliger Gesamtbetrag wird automatisch am Fälligkeitsdatum eines jeden Monats bezahlt',
       'hi':
           'आपकी कुल देय राशि का भुगतान हर महीने की देय तिथि पर स्वचालित रूप से किया जाएगा',
       'mr':
@@ -5322,6 +5785,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '3zf2iv0y': {
       'en': 'TOTAL AMOUNT DUE',
       'bn': 'সর্বমোট বাকির পরিমাণ',
+      'de': 'FÄLLIGER GESAMTBETRAG',
       'hi': 'कुल शेष राशि',
       'mr': 'एकूण देय रक्कम',
       'or': 'ସମୁଦାୟ ଦେୟ |',
@@ -5330,6 +5794,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jqynakda': {
       'en': 'MINIMUM AMOUNT DUE',
       'bn': 'ন্যূনতম রাশি বকেয়া',
+      'de': 'FÄLLIGER MINDESTBETRAG',
       'hi': 'न्यूनतम देय राशि',
       'mr': 'किमान देय रक्कम',
       'or': 'MINIMUM AMOUNT DUE |',
@@ -5338,6 +5803,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '26naf2kq': {
       'en': 'Select account to pay',
       'bn': 'অর্থ প্রদানের জন্য অ্যাকাউন্ট নির্বাচন করুন',
+      'de': 'Konto zum Bezahlen auswählen',
       'hi': 'भुगतान करने के लिए खाते का चयन करें',
       'mr': 'पैसे देण्यासाठी खाते निवडा',
       'or': 'ଦେୟ ଦେବାକୁ ଖାତା ଚୟନ କରନ୍ତୁ |',
@@ -5346,6 +5812,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'flgysmsi': {
       'en': 'AVAILABLE BALANCE',
       'bn': 'পর্যাপ্ত টাকা',
+      'de': 'VERFÜGBARES GUTHABEN',
       'hi': 'उपलब्ध शेष राशि',
       'mr': 'उपलब्ध शिल्लक',
       'or': 'ଉପଲବ୍ଧ ବାଲାନ୍ସ |',
@@ -5354,6 +5821,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'uuej44u1': {
       'en': '₹ 90,000',
       'bn': '₹90,000',
+      'de': '90.000 €',
       'hi': '₹ 90,000',
       'mr': '₹ ९०,०००',
       'or': '₹ 90,000',
@@ -5362,6 +5830,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4j7a41p9': {
       'en': 'ENABLE AUTOPAY',
       'bn': 'অটোপে সক্ষম করুন৷',
+      'de': 'AUTOPAY AKTIVIEREN',
       'hi': 'ऑटोपे सक्षम करें',
       'mr': 'ऑटोपे सक्षम करा',
       'or': 'AUTOPAY ସକ୍ଷମ କରନ୍ତୁ |',
@@ -5370,6 +5839,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7o39f5os': {
       'en': 'CANCEL',
       'bn': 'বাতিল করুন',
+      'de': 'ABBRECHEN',
       'hi': 'रद्द करना',
       'mr': 'रद्द करा',
       'or': 'ବାତିଲ୍',
@@ -5381,6 +5851,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'qs5v2904': {
       'en': 'Request confirmation for Autopay',
       'bn': 'স্বয়ংক্রিয় অর্থপ্রদানের জন্য নিশ্চিতকরণের অনুরোধ করুন',
+      'de': 'Fordern Sie eine Bestätigung für Autopay an',
       'hi': 'ऑटोपे के लिए अनुरोध की पुष्टि',
       'mr': 'ऑटोपेसाठी पुष्टीकरणाची विनंती करा',
       'or': 'ଅଟୋପେ ପାଇଁ ନିଶ୍ଚିତକରଣ ପାଇଁ ଅନୁରୋଧ |',
@@ -5389,6 +5860,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ule7fcfp': {
       'en': 'Credit Card Number',
       'bn': 'ক্রেডিট কার্ড নম্বর',
+      'de': 'Kreditkartennummer',
       'hi': 'क्रेडिट कार्ड नंबर',
       'mr': 'पत पत्र क्रमांक',
       'or': 'କ୍ରେଡିଟ କାର୍ଡ ସଂଖ୍ୟା',
@@ -5397,6 +5869,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'c3rdk323': {
       'en': '1234 5678 1234 1234',
       'bn': '1234 5678 1234 1234',
+      'de': '1234 5678 1234 1234',
       'hi': '1234 5678 1234 1234',
       'mr': '१२३४ ५६७८ १२३४ १२३४',
       'or': '1234 5678 1234 1234',
@@ -5405,6 +5878,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6710hie1': {
       'en': 'Bill due in',
       'bn': 'বিল বকেয়া',
+      'de': 'Rechnung fällig',
       'hi': 'बिल बकाया है',
       'mr': 'बिल देय आहे',
       'or': 'ବିଲ୍ ଦେବାର ଅଛି |',
@@ -5413,6 +5887,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1pwj2frl': {
       'en': '6 days (18 Dec, 2022)',
       'bn': '6 দিন (18 ডিসেম্বর, 2022)',
+      'de': '6 Tage (18. Dez. 2022)',
       'hi': '6 दिन (18 दिसंबर, 2022)',
       'mr': '६ दिवस (१८ डिसेंबर २०२२)',
       'or': '6 ଦିନ (18 ଡିସେମ୍ବର, 2022)',
@@ -5421,6 +5896,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bjfg7xjz': {
       'en': 'AUTO PAY',
       'bn': 'অটো পে',
+      'de': 'AUTOMATISCHE BEZAHLUNG',
       'hi': 'ऑटो भुगतान',
       'mr': 'ऑटो पे',
       'or': 'AUTO ଦେୟ |',
@@ -5429,6 +5905,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'diqhpu85': {
       'en': 'OFF',
       'bn': 'বন্ধ',
+      'de': 'AUS',
       'hi': 'बंद',
       'mr': 'बंद',
       'or': 'ବନ୍ଦ',
@@ -5438,6 +5915,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'You can now pay Credit Card bills as per your convenience',
       'bn':
           'আপনি এখন আপনার সুবিধা অনুযায়ী ক্রেডিট কার্ড বিল পরিশোধ করতে পারেন',
+      'de': 'Sie können jetzt Kreditkartenrechnungen nach Belieben bezahlen',
       'hi':
           'अब आप अपनी सुविधा के अनुसार क्रेडिट कार्ड बिलों का भुगतान कर सकते हैं',
       'mr': 'तुम्ही आता तुमच्या सोयीनुसार क्रेडिट कार्डची बिले भरू शकता',
@@ -5449,6 +5927,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'u0o78ti6': {
       'en': 'TOTAL AMOUNT DUE',
       'bn': 'সর্বমোট বাকির পরিমাণ',
+      'de': 'FÄLLIGER GESAMTBETRAG',
       'hi': 'कुल शेष राशि',
       'mr': 'एकूण देय रक्कम',
       'or': 'ସମୁଦାୟ ଦେୟ |',
@@ -5457,6 +5936,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     's8ak42r3': {
       'en': 'MINIMUM AMOUNT DUE',
       'bn': 'ন্যূনতম রাশি বকেয়া',
+      'de': 'FÄLLIGER MINDESTBETRAG',
       'hi': 'न्यूनतम देय राशि',
       'mr': 'किमान देय रक्कम',
       'or': 'MINIMUM AMOUNT DUE |',
@@ -5465,6 +5945,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'gtmjn3tv': {
       'en': 'Select account to pay',
       'bn': 'অর্থ প্রদানের জন্য অ্যাকাউন্ট নির্বাচন করুন',
+      'de': 'Konto zum Bezahlen auswählen',
       'hi': 'भुगतान करने के लिए खाते का चयन करें',
       'mr': 'पैसे देण्यासाठी खाते निवडा',
       'or': 'ଦେୟ ଦେବାକୁ ଖାତା ଚୟନ କରନ୍ତୁ |',
@@ -5473,6 +5954,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'eqeodlp4': {
       'en': 'AVAILABLE BALANCE',
       'bn': 'পর্যাপ্ত টাকা',
+      'de': 'VERFÜGBARES GUTHABEN',
       'hi': 'उपलब्ध शेष राशि',
       'mr': 'उपलब्ध शिल्लक',
       'or': 'ଉପଲବ୍ଧ ବାଲାନ୍ସ |',
@@ -5481,6 +5963,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'f1oyez10': {
       'en': '₹ 90,000',
       'bn': '₹90,000',
+      'de': '90.000 €',
       'hi': '₹ 90,000',
       'mr': '₹ ९०,०००',
       'or': '₹ 90,000',
@@ -5489,6 +5972,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hfp9lber': {
       'en': 'DISABLE AUTOPAY',
       'bn': 'অটোপে অক্ষম করুন',
+      'de': 'AUTOPAY DEAKTIVIEREN',
       'hi': 'ऑटोपे अक्षम करें',
       'mr': 'ऑटोपे अक्षम करा',
       'or': 'ଅକ୍ଷମତା',
@@ -5497,6 +5981,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ctka8n0p': {
       'en': 'CANCEL',
       'bn': 'বাতিল করুন',
+      'de': 'ABBRECHEN',
       'hi': 'रद्द करना',
       'mr': 'रद्द करा',
       'or': 'ବାତିଲ୍',
@@ -5508,6 +5993,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jlvyk1bv': {
       'en': 'Autopay has been successfully disabled',
       'bn': 'অটোপে সফলভাবে অক্ষম করা হয়েছে৷',
+      'de': 'Autopay wurde erfolgreich deaktiviert',
       'hi': 'स्वतः भुगतान सफलतापूर्वक अक्षम कर दिया गया है',
       'mr': 'ऑटोपे यशस्वीरित्या अक्षम केले गेले आहे',
       'or': 'ଅଟୋପେ ସଫଳତାର ସହିତ ଅକ୍ଷମ ହୋଇଛି |',
@@ -5516,6 +6002,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'eexeah5o': {
       'en': 'Credit Card Number',
       'bn': 'ক্রেডিট কার্ড নম্বর',
+      'de': 'Kreditkartennummer',
       'hi': 'क्रेडिट कार्ड नंबर',
       'mr': 'पत पत्र क्रमांक',
       'or': 'କ୍ରେଡିଟ କାର୍ଡ ସଂଖ୍ୟା',
@@ -5524,6 +6011,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wnmqyxuc': {
       'en': '1234 5678 1234 1234',
       'bn': '1234 5678 1234 1234',
+      'de': '1234 5678 1234 1234',
       'hi': '1234 5678 1234 1234',
       'mr': '१२३४ ५६७८ १२३४ १२३४',
       'or': '1234 5678 1234 1234',
@@ -5532,6 +6020,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'q9x0qxim': {
       'en': 'VIEW MY CREDIT CARDS',
       'bn': 'আমার ক্রেডিট কার্ড দেখুন',
+      'de': 'MEINE KREDITKARTEN ANZEIGEN',
       'hi': 'मेरे क्रेडिट कार्ड देखें',
       'mr': 'माझे क्रेडिट कार्ड पहा',
       'or': 'ମୋର କ୍ରେଡିଟ୍ କାର୍ଡଗୁଡିକ ଦେଖନ୍ତୁ |',
@@ -5543,6 +6032,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '033ps7ly': {
       'en': 'Autopay has been successfully enabled',
       'bn': 'অটোপে সফলভাবে সক্ষম করা হয়েছে৷',
+      'de': 'Autopay wurde erfolgreich aktiviert',
       'hi': 'स्वतः भुगतान सफलतापूर्वक सक्षम कर दिया गया है',
       'mr': 'ऑटोपे यशस्वीरित्या सक्षम केले गेले आहे',
       'or': 'ଅଟୋପେ ସଫଳତାର ସହିତ ସକ୍ଷମ ହୋଇଛି |',
@@ -5551,6 +6041,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '0pxjqj1o': {
       'en': 'CREDIT CARD NUMBER',
       'bn': 'ক্রেডিট কার্ড নম্বর',
+      'de': 'KREDITKARTENNUMMER',
       'hi': 'क्रेडिट कार्ड नंबर',
       'mr': 'पत पत्र क्रमांक',
       'or': 'କ୍ରେଡିଟ କାର୍ଡ ସଂଖ୍ୟା',
@@ -5559,6 +6050,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kunbe1cf': {
       'en': '1234 5678 1234 1234',
       'bn': '1234 5678 1234 1234',
+      'de': '1234 5678 1234 1234',
       'hi': '1234 5678 1234 1234',
       'mr': '१२३४ ५६७८ १२३४ १२३४',
       'or': '1234 5678 1234 1234',
@@ -5567,6 +6059,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'h053e64w': {
       'en': 'AMOUNT TO BE PAID',
       'bn': 'পরিমাণ অর্থ প্রদান করা হবে',
+      'de': 'ZU ZAHLENDER BETRAG',
       'hi': 'जितनी राशि अदा की जानी है',
       'mr': 'देय रक्कम',
       'or': 'ଦେୟ ଦେବାକୁ ପଡିବ',
@@ -5575,6 +6068,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'o0i47xfi': {
       'en': '₹ 24,000 (total amount due)',
       'bn': '₹ 24,000 (মোট বকেয়া পরিমাণ)',
+      'de': '₹ 24.000 (fälliger Gesamtbetrag)',
       'hi': '₹ 24,000 (कुल देय राशि)',
       'mr': '₹ 24,000 (एकूण देय रक्कम)',
       'or': '₹ 24,000 (ସମୁଦାୟ ରାଶି)',
@@ -5583,6 +6077,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'nf1l67ek': {
       'en': 'NEXT PAYMENT DAYE',
       'bn': 'পরবর্তী পেমেন্টের দিন',
+      'de': 'NÄCHSTER ZAHLUNGSTAG',
       'hi': 'अगला भुगतान दिवस',
       'mr': 'पुढील पेमेंट दिवस',
       'or': 'ପରବର୍ତ୍ତୀ ଦେୟ ଦିନ',
@@ -5591,6 +6086,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kmq7peyu': {
       'en': '18 Dec, 2022',
       'bn': '১৮ ডিসেম্বর, ২০২২',
+      'de': '18. Dezember 2022',
       'hi': '18 दिसम्बर, 2022',
       'mr': '१८ डिसेंबर २०२२',
       'or': '18 ଡିସେମ୍ବର, 2022',
@@ -5599,6 +6095,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ibgxauiv': {
       'en': 'VIEW MY CREDIT CARDS',
       'bn': 'আমার ক্রেডিট কার্ড দেখুন',
+      'de': 'MEINE KREDITKARTEN ANZEIGEN',
       'hi': 'मेरे क्रेडिट कार्ड देखें',
       'mr': 'माझे क्रेडिट कार्ड पहा',
       'or': 'ମୋର କ୍ରେଡିଟ୍ କାର୍ଡଗୁଡିକ ଦେଖନ୍ତୁ |',
@@ -5610,6 +6107,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wvs5vb1g': {
       'en': ' ',
       'bn': 'চালু',
+      'de': '',
       'hi': 'पर',
       'mr': 'चालू',
       'or': '',
@@ -5618,6 +6116,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bmdqjc0m': {
       'en': ' ',
       'bn': 'চালু',
+      'de': '',
       'hi': 'पर',
       'mr': 'चालू',
       'or': '',
@@ -5629,6 +6128,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4002lon5': {
       'en': 'RECENT NOTIFICATIONS',
       'bn': 'সাম্প্রতিক বিজ্ঞপ্তি',
+      'de': 'NEUESTE BENACHRICHTIGUNGEN',
       'hi': 'हाल की सूचनाएं',
       'mr': 'अलीकडील सूचना',
       'or': 'ବର୍ତ୍ତମାନର ବିଜ୍ଞପ୍ତିଗୁଡିକ |',
@@ -5637,6 +6137,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rj3pbv2b': {
       'en': '7',
       'bn': '7',
+      'de': '7',
       'hi': '7',
       'mr': '७',
       'or': '7',
@@ -5645,6 +6146,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vd4rttk9': {
       'en': 'HEALTH INSURANCE',
       'bn': 'স্বাস্থ্য বীমা',
+      'de': 'KRANKENVERSICHERUNG',
       'hi': 'स्वास्थ्य बीमा',
       'mr': 'आरोग्य विमा',
       'or': 'ସ୍ଵାସ୍ଥ୍ୟ ବିମା',
@@ -5655,6 +6157,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'ICICI Lombard Group Health Insurance Starting at ₹ 12 per day T&C appl',
       'bn':
           'ICICI Lombard Group Health Insurance শুরু হচ্ছে ₹ 12 থেকে প্রতিদিন T&C appl',
+      'de': 'ICICI Lombard Group Health Insurance Ab 12 ₹ pro Tag T&C appl',
       'hi':
           'आईसीआईसीआई लोम्बार्ड ग्रुप हेल्थ इंश्योरेंस ₹12 प्रति दिन से शुरू नियम एवं शर्ते लागू',
       'mr':
@@ -5667,15 +6170,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4d8khm11': {
       'en': 'An hour ago',
       'bn': 'এক ঘন্টা আগে',
-      'hi': 'एक घंटे पहले',
+      'de': 'Vor einer Stunde',
+      'hi': 'एक घंटा पहले',
       'mr': 'तासभरा पूर्वी',
       'or': 'ଏକ ଘଣ୍ଟା ପୂର୍ବରୁ |',
       'ta': 'ஒரு மணி நேரம் முன்பு',
     },
     'lph13lzk': {
       'en': 'ENROLL NOW ',
-      'bn': 'এখন তালিকাভুক্ত',
-      'hi': 'अभी दाखिला लें',
+      'bn': 'রথ ভবন হ',
+      'de': 'JETZT ANMELDEN',
+      'hi': 'अब दाखिला ले',
       'mr': 'आत्ता नोंदणी करा',
       'or': 'ବର୍ତ୍ତମାନ ENROLL',
       'ta': 'இப்பொழுதே பதிவு செய்',
@@ -5683,6 +6188,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '3ekx6p0p': {
       'en': 'HEALTH INSURANCE',
       'bn': 'স্বাস্থ্য বীমা',
+      'de': 'KRANKENVERSICHERUNG',
       'hi': 'स्वास्थ्य बीमा',
       'mr': 'आरोग्य विमा',
       'or': 'ସ୍ଵାସ୍ଥ୍ୟ ବିମା',
@@ -5693,6 +6199,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'ICICI Lombard Group Health Insurance Starting at ₹ 12 per day T&C appl',
       'bn':
           'ICICI Lombard Group Health Insurance শুরু হচ্ছে ₹ 12 থেকে প্রতিদিন T&C appl',
+      'de': 'ICICI Lombard Group Health Insurance Ab 12 ₹ pro Tag T&C appl',
       'hi':
           'आईसीआईसीआई लोम्बार्ड ग्रुप हेल्थ इंश्योरेंस ₹12 प्रति दिन से शुरू नियम एवं शर्ते लागू',
       'mr':
@@ -5705,15 +6212,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7kiet5r1': {
       'en': 'An hour ago',
       'bn': 'এক ঘন্টা আগে',
-      'hi': 'एक घंटे पहले',
+      'de': 'Vor einer Stunde',
+      'hi': 'एक घंटा पहले',
       'mr': 'तासभरा पूर्वी',
       'or': 'ଏକ ଘଣ୍ଟା ପୂର୍ବରୁ |',
       'ta': 'ஒரு மணி நேரம் முன்பு',
     },
     'qei3om9y': {
       'en': 'ENROLL NOW ',
-      'bn': 'এখন তালিকাভুক্ত',
-      'hi': 'अभी दाखिला लें',
+      'bn': 'রথ ভবন হ',
+      'de': 'JETZT ANMELDEN',
+      'hi': 'अब दाखिला ले',
       'mr': 'आत्ता नोंदणी करा',
       'or': 'ବର୍ତ୍ତମାନ ENROLL',
       'ta': 'இப்பொழுதே பதிவு செய்',
@@ -5721,6 +6230,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'q9ava0yj': {
       'en': 'Earlier',
       'bn': 'এর আগে',
+      'de': 'Vorhin',
       'hi': 'पहले',
       'mr': 'तत्पूर्वी',
       'or': 'ପୂର୍ବରୁ',
@@ -5729,6 +6239,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'u10vrm0f': {
       'en': '1',
       'bn': '1',
+      'de': '1',
       'hi': '1',
       'mr': '१',
       'or': '୧',
@@ -5737,6 +6248,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5ndh2s6w': {
       'en': 'HEALTH INSURANCE',
       'bn': 'স্বাস্থ্য বীমা',
+      'de': 'KRANKENVERSICHERUNG',
       'hi': 'स्वास्थ्य बीमा',
       'mr': 'आरोग्य विमा',
       'or': 'ସ୍ଵାସ୍ଥ୍ୟ ବିମା',
@@ -5747,6 +6259,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'ICICI Lombard Group Health Insurance Starting at ₹ 12 per day T&C appl',
       'bn':
           'ICICI Lombard Group Health Insurance শুরু হচ্ছে ₹ 12 থেকে প্রতিদিন T&C appl',
+      'de': 'ICICI Lombard Group Health Insurance Ab 12 ₹ pro Tag T&C appl',
       'hi':
           'आईसीआईसीआई लोम्बार्ड ग्रुप हेल्थ इंश्योरेंस ₹12 प्रति दिन से शुरू नियम एवं शर्ते लागू',
       'mr':
@@ -5759,15 +6272,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '47ay5yuj': {
       'en': 'An hour ago',
       'bn': 'এক ঘন্টা আগে',
-      'hi': 'एक घंटे पहले',
+      'de': 'Vor einer Stunde',
+      'hi': 'एक घंटा पहले',
       'mr': 'तासभरा पूर्वी',
       'or': 'ଏକ ଘଣ୍ଟା ପୂର୍ବରୁ |',
       'ta': 'ஒரு மணி நேரம் முன்பு',
     },
     'jxck50ko': {
       'en': 'ENROLL NOW ',
-      'bn': 'এখন তালিকাভুক্ত',
-      'hi': 'अभी दाखिला लें',
+      'bn': 'রথ ভবন হ',
+      'de': 'JETZT ANMELDEN',
+      'hi': 'अब दाखिला ले',
       'mr': 'आत्ता नोंदणी करा',
       'or': 'ବର୍ତ୍ତମାନ ENROLL',
       'ta': 'இப்பொழுதே பதிவு செய்',
@@ -5778,6 +6293,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'gqu1im96': {
       'en': 'Convert Payments to EMI',
       'bn': 'অর্থপ্রদানকে ইএমআইতে রূপান্তর করুন',
+      'de': 'Konvertieren Sie Zahlungen in EMI',
       'hi': 'भुगतान को ईएमआई में बदलें',
       'mr': 'पेमेंट्सचे EMI मध्ये रूपांतर करा',
       'or': 'ଦେୟକୁ EMI ରେ ରୂପାନ୍ତର କରନ୍ତୁ |',
@@ -5788,6 +6304,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Enjoy flexible tenures and hassle free EMI conversion with ICICI Bank Instant EMI.',
       'bn':
           'ICICI ব্যাঙ্ক তাত্ক্ষণিক EMI-এর সাথে নমনীয় মেয়াদ এবং ঝামেলা মুক্ত EMI রূপান্তর উপভোগ করুন।',
+      'de':
+          'Profitieren Sie von flexiblen Laufzeiten und problemloser EMI-Konvertierung mit ICICI Bank Instant EMI.',
       'hi':
           'आईसीआईसीआई बैंक इंस्टेंट ईएमआई के साथ लचीली अवधि और परेशानी मुक्त ईएमआई रूपांतरण का आनंद लें।',
       'mr':
@@ -5800,6 +6318,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bgtvc720': {
       'en': 'CONVERT TO EMI',
       'bn': 'EMI তে কনভার্ট করুন',
+      'de': 'AUF EMI KONVERTIEREN',
       'hi': 'ईएमआई में बदलें',
       'mr': 'EMI मध्ये रूपांतरित करा',
       'or': 'EMI କୁ କନଭର୍ଟ କରନ୍ତୁ |',
@@ -5811,6 +6330,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '420s2bz1': {
       'en': 'Convert Payments to EMI',
       'bn': 'অর্থপ্রদানকে ইএমআইতে রূপান্তর করুন',
+      'de': 'Konvertieren Sie Zahlungen in EMI',
       'hi': 'भुगतान को ईएमआई में बदलें',
       'mr': 'पेमेंट्सचे EMI मध्ये रूपांतर करा',
       'or': 'ଦେୟକୁ EMI ରେ ରୂପାନ୍ତର କରନ୍ତୁ |',
@@ -5821,6 +6341,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Enjoy flexible tenures and hassle free EMI conversion with ICICI Bank Instant EMI.',
       'bn':
           'ICICI ব্যাঙ্ক তাত্ক্ষণিক EMI-এর সাথে নমনীয় মেয়াদ এবং ঝামেলা মুক্ত EMI রূপান্তর উপভোগ করুন।',
+      'de':
+          'Profitieren Sie von flexiblen Laufzeiten und problemloser EMI-Konvertierung mit ICICI Bank Instant EMI.',
       'hi':
           'आईसीआईसीआई बैंक इंस्टेंट ईएमआई के साथ लचीली अवधि और परेशानी मुक्त ईएमआई रूपांतरण का आनंद लें।',
       'mr':
@@ -5833,6 +6355,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'muj9uelk': {
       'en': 'CONVERT TO EMI',
       'bn': 'EMI তে কনভার্ট করুন',
+      'de': 'AUF EMI KONVERTIEREN',
       'hi': 'ईएमआई में बदलें',
       'mr': 'EMI मध्ये रूपांतरित करा',
       'or': 'EMI କୁ କନଭର୍ଟ କରନ୍ତୁ |',
@@ -5844,6 +6367,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'p7m60rx0': {
       'en': 'REWARDS POINTS',
       'bn': 'পুরষ্কার পয়েন্ট',
+      'de': 'BELOHNUNGSPUNKTE',
       'hi': 'पुरस्कार अंक',
       'mr': 'रिवॉर्ड पॉइंट्स',
       'or': 'ପୁରସ୍କାରଗୁଡିକ',
@@ -5852,6 +6376,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'o5au7q7e': {
       'en': 'Earn Rewards points\nalmost every time you\nspend',
       'bn': 'পুরষ্কার পয়েন্ট অর্জন করুন\nপ্রায় প্রতিবার আপনি\nব্যয় করা',
+      'de': 'Prämienpunkte sammeln\nfast jedes Mal, wenn Sie\nausgeben',
       'hi': 'पुरस्कार अंक अर्जित करें\nलगभग हर बार आप\nखर्च करना',
       'mr': 'रिवॉर्ड पॉइंट मिळवा\nजवळजवळ प्रत्येक वेळी आपण\nखर्च',
       'or':
@@ -5862,6 +6387,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ipfyqkwu': {
       'en': 'EXPLORE MORE',
       'bn': 'আরো এক্সপ্লোর করুন',
+      'de': 'ERKUNDE MEHR',
       'hi': 'और ज्यादा खोजें',
       'mr': 'अधिक एक्सप्लोर करा',
       'or': 'ଅଧିକ ଏକ୍ସପ୍ଲୋର୍ କରନ୍ତୁ |',
@@ -5870,6 +6396,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5u616dal': {
       'en': 'HAND PICKED REWARDS\nPOINTS',
       'bn': 'হাতে বাছাই পুরস্কার\nপয়েন্ট',
+      'de': 'HANDAUSGEWÄHLTE BELOHNUNGEN\nPUNKTE',
       'hi': 'हाथ से चुने गए पुरस्कार\nअंक',
       'mr': 'हाताने निवडलेली बक्षिसे\nपॉइंट्स',
       'or': 'ହାତ ପିକେଡ୍ ପୁରସ୍କାର |\nମତାମତ |',
@@ -5879,6 +6406,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Earn Hand-picked Rewards \npoints from a range of fine \nbrands',
       'bn':
           'হাতে বাছাই করা পুরস্কার অর্জন করুন\nজরিমানা একটি পরিসীমা থেকে পয়েন্ট\nব্র্যান্ড',
+      'de':
+          'Verdienen Sie handverlesene Belohnungen\nPunkte aus einer Reihe von feinen\nMarken',
       'hi':
           'हाथ से चुने हुए पुरस्कार अर्जित करें\nठीक की एक सीमा से अंक\nब्रांडों',
       'mr': 'हाताने निवडलेली बक्षिसे मिळवा\nदंड श्रेणीतून गुण\nब्रँड',
@@ -5890,6 +6419,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4a61reii': {
       'en': 'EXPLORE MORE',
       'bn': 'আরো এক্সপ্লোর করুন',
+      'de': 'ERKUNDE MEHR',
       'hi': 'और ज्यादा खोजें',
       'mr': 'अधिक एक्सप्लोर करा',
       'or': 'ଅଧିକ ଏକ୍ସପ୍ଲୋର୍ କରନ୍ତୁ |',
@@ -5901,6 +6431,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'r6e4utns': {
       'en': 'Loan on Credit Card',
       'bn': 'ক্রেডিট কার্ডে ঋণ',
+      'de': 'Kredit auf Kreditkarte',
       'hi': 'क्रेडिट कार्ड पर ऋण',
       'mr': 'क्रेडिट कार्डवर कर्ज',
       'or': 'କ୍ରେଡିଟ୍ କାର୍ଡ ଉପରେ an ଣ',
@@ -5911,6 +6442,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Get instant loan within our Credit Card limit with minimum documentation',
       'bn':
           'ন্যূনতম ডকুমেন্টেশন সহ আমাদের ক্রেডিট কার্ড সীমার মধ্যে তাত্ক্ষণিক ঋণ পান',
+      'de':
+          'Erhalten Sie Sofortdarlehen innerhalb unseres Kreditkartenlimits mit minimaler Dokumentation',
       'hi':
           'न्यूनतम दस्तावेज़ीकरण के साथ हमारी क्रेडिट कार्ड सीमा के भीतर तत्काल ऋण प्राप्त करें',
       'mr': 'आमच्या क्रेडिट कार्ड मर्यादेत किमान कागदपत्रांसह झटपट कर्ज मिळवा',
@@ -5922,6 +6455,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'tz925ngq': {
       'en': 'APPLY FOR LOAN ON CREDIT CARD',
       'bn': 'ক্রেডিট কার্ডে ঋণের জন্য আবেদন করুন',
+      'de': 'DARLEHEN AUF KREDITKARTE BEWERBEN',
       'hi': 'क्रेडिट कार्ड पर ऋण के लिए आवेदन करें',
       'mr': 'क्रेडिट कार्डवर कर्जासाठी अर्ज करा',
       'or': 'କ୍ରେଡିଟ୍ କାର୍ଡରେ an ଣ ପାଇଁ ଆବେଦନ କରନ୍ତୁ |',
@@ -5933,6 +6467,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1932ik5m': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -5941,6 +6476,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'uwzij7nb': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -5949,6 +6485,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'chh9c319': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -5957,6 +6494,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '3sthkxnd': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -5965,6 +6503,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'u642knpb': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -5973,6 +6512,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'q8dnlmlu': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -5981,6 +6521,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ra8f08hn': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -5989,6 +6530,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7l0g785l': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -5997,6 +6539,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rlyhu64c': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6005,6 +6548,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '13f45vas': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6013,6 +6557,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2vizntlj': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6021,6 +6566,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '50cg9m49': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6029,6 +6575,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5fwpee3a': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6037,6 +6584,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7qbddd17': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6045,6 +6593,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kx8ez793': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6053,6 +6602,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fw7x4zbh': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6061,6 +6611,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pj0zdlcf': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6069,6 +6620,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'y5kn24rj': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6077,6 +6629,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hraszm5d': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6085,6 +6638,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2l9oujqx': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6093,6 +6647,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'az1cdypk': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',
@@ -6101,6 +6656,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zv2zrvhw': {
       'en': '',
       'bn': '',
+      'de': '',
       'hi': '',
       'mr': '',
       'or': '',

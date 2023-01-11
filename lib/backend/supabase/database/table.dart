@@ -30,7 +30,7 @@ abstract class SupabaseTable<T extends SupabaseDataRow> {
 
   Future<T> insert(Map<String, dynamic> data) => SupaFlow.client
       .from(tableName)
-      .insert(supaSerialize(data))
+      .insert(data)
       .select<PostgrestMap>()
       .limit(1)
       .single()
@@ -42,7 +42,6 @@ abstract class SupabaseTable<T extends SupabaseDataRow> {
         matchingRows,
     bool returnRows = false,
   }) async {
-    data = supaSerialize(data);
     final update = matchingRows(SupaFlow.client.from(tableName).update(data));
     if (!returnRows) {
       await update;

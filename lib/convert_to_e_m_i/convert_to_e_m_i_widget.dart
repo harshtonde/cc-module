@@ -57,7 +57,6 @@ class _ConvertToEMIWidgetState extends State<ConvertToEMIWidget> {
                 context: context,
                 phone: false,
                 tablet: false,
-                tabletLandscape: false,
               ))
                 TopHeaderWidget(
                   title: 'Dashboard',
@@ -65,7 +64,6 @@ class _ConvertToEMIWidgetState extends State<ConvertToEMIWidget> {
                 ),
               if (responsiveVisibility(
                 context: context,
-                tablet: false,
                 tabletLandscape: false,
                 desktop: false,
               ))
@@ -83,7 +81,7 @@ class _ConvertToEMIWidgetState extends State<ConvertToEMIWidget> {
                         ))
                           Container(
                             width: 80,
-                            height: 100,
+                            height: double.infinity,
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -1689,6 +1687,7 @@ For 2 years... */
                       phone: false,
                       tablet: false,
                       tabletLandscape: false,
+                      desktop: false,
                     ))
                       SideBarUpdateWidget(),
                     Align(

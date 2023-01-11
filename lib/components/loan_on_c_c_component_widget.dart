@@ -119,6 +119,9 @@ class _LoanOnCCComponentWidgetState extends State<LoanOnCCComponentWidget> {
                             ),
                             Icon(
                               Icons.chevron_right,
+                              color: !mouseRegionHovered!
+                                  ? Color(0xFF0D2923)
+                                  : Color(0xFFDEDEF9),
                               size: 18,
                             ),
                           ],

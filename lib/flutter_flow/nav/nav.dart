@@ -87,16 +87,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'paymentSent',
               path: 'paymentSent',
               builder: (context, params) => PaymentSentWidget(),
-            ),
-            FFRoute(
-              name: 'PayNowDemo',
-              path: 'payNowDemo',
-              builder: (context, params) => PayNowDemoWidget(),
-            ),
-            FFRoute(
-              name: 'payNowCopy',
-              path: 'payNowCopy',
-              builder: (context, params) => PayNowCopyWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),

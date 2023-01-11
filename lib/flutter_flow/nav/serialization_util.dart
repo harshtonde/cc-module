@@ -7,6 +7,7 @@ import '../../backend/backend.dart';
 import '../../backend/supabase/supabase.dart';
 import '../../flutter_flow/lat_lng.dart';
 import '../../flutter_flow/place.dart';
+import '../../flutter_flow/local_file.dart';
 
 /// SERIALIZATION HELPERS
 
@@ -25,6 +26,8 @@ String placeToString(FFPlace place) => jsonEncode({
       'country': place.country,
       'zipCode': place.zipCode,
     });
+
+String localFileToString(FFLocalFile localFile) => localFile.serialize();
 
 const _kDocIdDelimeter = '|';
 String _serializeDocumentReference(DocumentReference ref) {
@@ -75,6 +78,8 @@ String? serializeParam(
         return (param as Color).toCssString();
       case ParamType.FFPlace:
         return placeToString(param as FFPlace);
+      case ParamType.FFLocalFile:
+        return localFileToString(param as FFLocalFile);
       case ParamType.JSON:
         return json.encode(param);
       case ParamType.DocumentReference:
@@ -145,6 +150,9 @@ FFPlace placeFromString(String placeStr) {
   );
 }
 
+FFLocalFile localFileFromString(String localFileStr) =>
+    FFLocalFile.deserialize(localFileStr);
+
 DocumentReference _deserializeDocumentReference(
   String refStr,
   List<String> collectionNamePath,
@@ -167,6 +175,7 @@ enum ParamType {
   LatLng,
   Color,
   FFPlace,
+  FFLocalFile,
   JSON,
   Document,
   DocumentReference,
@@ -219,6 +228,8 @@ dynamic deserializeParam<T>(
         return fromCssColor(param);
       case ParamType.FFPlace:
         return placeFromString(param);
+      case ParamType.FFLocalFile:
+        return localFileFromString(param);
       case ParamType.JSON:
         return json.decode(param);
       case ParamType.DocumentReference:
