@@ -61,6 +61,15 @@ class _TopHeaderMobileWidgetState extends State<TopHeaderMobileWidget> {
                       fit: BoxFit.fitWidth,
                     ),
                   ),
+                if (Theme.of(context).brightness == Brightness.dark)
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+                    child: Image.asset(
+                      'assets/images/icici_Bank_onDark@1x.png',
+                      height: 30,
+                      fit: BoxFit.fitWidth,
+                    ),
+                  ),
               ],
             ),
             Row(
@@ -142,7 +151,7 @@ class _TopHeaderMobileWidgetState extends State<TopHeaderMobileWidget> {
                     icon: Icon(
                       Icons.menu,
                       color: FlutterFlowTheme.of(context).primaryText,
-                      size: 30,
+                      size: 24,
                     ),
                     onPressed: () {
                       print('IconButton pressed ...');

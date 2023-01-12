@@ -68,18 +68,19 @@ class _EnableAutopaySuccessWidgetState extends State<EnableAutopaySuccessWidget>
           sigmaX: 4,
           sigmaY: 4,
         ),
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(
+        child: Align(
+          alignment: AlignmentDirectional(0, 0),
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
+            child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  width: 900,
-                  height: 400,
+                  constraints: BoxConstraints(
+                    maxWidth: 800,
+                  ),
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                     borderRadius: BorderRadius.circular(12),
@@ -115,7 +116,8 @@ class _EnableAutopaySuccessWidgetState extends State<EnableAutopaySuccessWidget>
                           ],
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(24, 0, 24, 24),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -141,12 +143,13 @@ class _EnableAutopaySuccessWidgetState extends State<EnableAutopaySuccessWidget>
                               ).animateOnPageLoad(animationsMap[
                                   'containerOnPageLoadAnimation']!),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    30, 12, 0, 0),
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
                                     '033ps7ly' /* Autopay has been successfully ... */,
                                   ),
+                                  textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText2
                                       .override(
@@ -165,7 +168,6 @@ class _EnableAutopaySuccessWidgetState extends State<EnableAutopaySuccessWidget>
                                     EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                                 child: Container(
                                   width: 734.7,
-                                  height: 100,
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
@@ -183,12 +185,16 @@ class _EnableAutopaySuccessWidgetState extends State<EnableAutopaySuccessWidget>
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         24, 24, 24, 0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                    child: Wrap(
+                                      spacing: 24,
+                                      runSpacing: 12,
+                                      alignment: WrapAlignment.center,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                          WrapCrossAlignment.start,
+                                      direction: Axis.horizontal,
+                                      runAlignment: WrapAlignment.start,
+                                      verticalDirection: VerticalDirection.down,
+                                      clipBehavior: Clip.none,
                                       children: [
                                         Row(
                                           mainAxisSize: MainAxisSize.min,
@@ -521,7 +527,7 @@ class _EnableAutopaySuccessWidgetState extends State<EnableAutopaySuccessWidget>
                 ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );
