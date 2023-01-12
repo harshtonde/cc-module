@@ -6465,7 +6465,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // preferences
   {
     '536u2pi1': {
-      'en': 'Preferences',
+      'en': 'Personalization',
       'bn': 'পছন্দসমূহ',
       'de': 'Einstellungen',
       'hi': 'पसंद',
@@ -6509,6 +6509,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'or': 'ନକାରାତ୍ମକ ମୂଲ୍ୟ ରଙ୍ଗ |',
       'ta': 'எதிர்மறை மதிப்பு நிறம்',
     },
+    'evrex0de': {
+      'en': 'Show Statements',
+      'bn': 'নেতিবাচক মান রঙ',
+      'de': 'Farbe mit negativem Wert',
+      'hi': 'नकारात्मक मान रंग',
+      'mr': 'नकारात्मक मूल्य रंग',
+      'or': 'ନକାରାତ୍ମକ ମୂଲ୍ୟ ରଙ୍ଗ |',
+      'ta': 'எதிர்மறை மதிப்பு நிறம்',
+    },
     '6mkqixqx': {
       'en': 'Confirm',
       'bn': 'নিশ্চিত করুন',
@@ -6517,6 +6526,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'mr': 'पुष्टी',
       'or': 'ନିଶ୍ଚିତ କରନ୍ତୁ |',
       'ta': 'உறுதிப்படுத்தவும்',
+    },
+  },
+  // toggleSwtich
+  {
+    '05dus0ma': {
+      'en': 'OFF',
+      'bn': 'বন্ধ',
+      'de': 'AUS',
+      'hi': 'बंद',
+      'mr': 'बंद',
+      'or': 'ବନ୍ଦ',
+      'ta': 'முடக்கப்பட்டுள்ளது',
+    },
+    'pfyo9mkt': {
+      'en': 'ON',
+      'bn': 'চালু',
+      'de': 'AN',
+      'hi': 'पर',
+      'mr': 'चालू',
+      'or': 'ଅନ୍',
+      'ta': 'ஆன்',
     },
   },
   // Miscellaneous

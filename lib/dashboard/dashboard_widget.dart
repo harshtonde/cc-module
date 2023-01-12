@@ -1582,11 +1582,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         mainAxisSize:
                                                             MainAxisSize.max,
                                                         children: [
-                                                          if (responsiveVisibility(
-                                                            context: context,
-                                                            phone: false,
-                                                            tablet: false,
-                                                          ))
+                                                          if (FFAppState()
+                                                                  .statementsView &&
+                                                              responsiveVisibility(
+                                                                context:
+                                                                    context,
+                                                                phone: false,
+                                                                tablet: false,
+                                                              ))
                                                             Padding(
                                                               padding:
                                                                   EdgeInsetsDirectional

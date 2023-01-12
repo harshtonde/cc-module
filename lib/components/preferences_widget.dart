@@ -1,3 +1,4 @@
+import '../components/toggle_swtich_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_language_selector.dart';
@@ -134,7 +135,7 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                                     30, 12, 0, 0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    '536u2pi1' /* Preferences */,
+                                    '536u2pi1' /* Personalization */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText2
@@ -610,6 +611,68 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                                               ),
                                             ),
                                           ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        24, 12, 24, 12),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          FFLocalizations.of(context).getText(
+                                            'evrex0de' /* Show Statements */,
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.normal,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyText1Family),
+                                              ),
+                                        ),
+                                        InkWell(
+                                          onTap: () async {
+                                            if (FFAppState().statementsView) {
+                                              FFAppState().update(() {
+                                                FFAppState().statementsView =
+                                                    false;
+                                              });
+                                              return;
+                                            } else {
+                                              FFAppState().update(() {
+                                                FFAppState().statementsView =
+                                                    true;
+                                              });
+                                              return;
+                                            }
+                                          },
+                                          child: ToggleSwtichWidget(),
                                         ),
                                       ],
                                     ),

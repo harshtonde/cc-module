@@ -263,6 +263,12 @@ class FFAppState extends ChangeNotifier {
   set negativeColor(Color _value) {
     _negativeColor = _value;
   }
+
+  bool _statementsView = false;
+  bool get statementsView => _statementsView;
+  set statementsView(bool _value) {
+    _statementsView = _value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {
