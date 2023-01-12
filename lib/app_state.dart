@@ -264,7 +264,7 @@ class FFAppState extends ChangeNotifier {
     _negativeColor = _value;
   }
 
-  bool _statementsView = false;
+  bool _statementsView = true;
   bool get statementsView => _statementsView;
   set statementsView(bool _value) {
     _statementsView = _value;

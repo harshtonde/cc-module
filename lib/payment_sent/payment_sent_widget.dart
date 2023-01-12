@@ -1807,6 +1807,7 @@ TRANSFERS */
                                                                             textStyle: FlutterFlowTheme.of(context).subtitle2.override(
                                                                                   fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
                                                                                   color: Colors.white,
+                                                                                  fontSize: 14,
                                                                                   fontWeight: FontWeight.bold,
                                                                                   useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).subtitle2Family),
                                                                                 ),
@@ -1848,6 +1849,7 @@ TRANSFERS */
                                                                             textStyle: FlutterFlowTheme.of(context).subtitle2.override(
                                                                                   fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
                                                                                   color: FlutterFlowTheme.of(context).primaryColor,
+                                                                                  fontSize: 14,
                                                                                   fontWeight: FontWeight.bold,
                                                                                   useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).subtitle2Family),
                                                                                 ),
