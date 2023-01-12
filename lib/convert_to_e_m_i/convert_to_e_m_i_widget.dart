@@ -1207,7 +1207,7 @@ TRANSFERS */
                                                                                 children: [
                                                                                   Text(
                                                                                     FFLocalizations.of(context).getText(
-                                                                                      'kz4ukf46' /* SELECT TRANSACTIONS FOR EMI CO... */,
+                                                                                      'vhmo030i' /* SELECT TRANSACTIONS FOR EMI CO... */,
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                           fontFamily: FlutterFlowTheme.of(context).bodyText1Family,

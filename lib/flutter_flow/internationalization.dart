@@ -3970,7 +3970,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '08 டிச',
       'ur': '08 دسمبر',
     },
-    'kz4ukf46': {
+    'vhmo030i': {
       'en': 'SELECT TRANSACTIONS FOR EMI CONVERSION',
       'bn': '',
       'de': '',
