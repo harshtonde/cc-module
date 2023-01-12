@@ -76,16 +76,17 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
           sigmaX: 4,
           sigmaY: 4,
         ),
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(
+        child: Align(
+          alignment: AlignmentDirectional(0, 0),
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
+            child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
+                  width: MediaQuery.of(context).size.width * 0.9,
                   constraints: BoxConstraints(
                     maxWidth: 540,
                   ),
@@ -155,8 +156,11 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    if (Theme.of(context).brightness ==
-                                        Brightness.light)
+                                    if (valueOrDefault<bool>(
+                                      Theme.of(context).brightness ==
+                                          Brightness.light,
+                                      true,
+                                    ))
                                       InkWell(
                                         onTap: () async {
                                           setDarkModeSetting(
@@ -461,7 +465,7 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                                               ),
                                         ),
                                         FlutterFlowLanguageSelector(
-                                          width: 200,
+                                          width: 100,
                                           height: 48,
                                           backgroundColor:
                                               FlutterFlowTheme.of(context)
@@ -568,7 +572,7 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                                             }
                                           },
                                           child: Container(
-                                            width: 120,
+                                            width: 70,
                                             height: 40,
                                             decoration: BoxDecoration(
                                               color:
@@ -603,6 +607,7 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .lineColor,
+                                                        width: 1,
                                                       ),
                                                     ),
                                                   ),
@@ -733,7 +738,7 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                 ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );

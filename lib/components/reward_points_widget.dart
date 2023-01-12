@@ -33,7 +33,7 @@ class _RewardPointsWidgetState extends State<RewardPointsWidget> {
         maxHeight: 240,
       ),
       decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).secondaryBackground,
+        color: FlutterFlowTheme.of(context).primaryBackground,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
           color: FlutterFlowTheme.of(context).lineColor,

@@ -1,14 +1,19 @@
 import '../backend/api_requests/api_calls.dart';
 import '../components/emi_item_widget.dart';
+import '../components/notifications_widget.dart';
+import '../components/preferences_widget.dart';
 import '../components/side_bar_update_widget.dart';
-import '../components/top_header_mobile_widget.dart';
 import '../components/top_header_widget.dart';
+import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../custom_code/widgets/index.dart' as custom_widgets;
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -19,7 +24,88 @@ class ConvertToEMIWidget extends StatefulWidget {
   _ConvertToEMIWidgetState createState() => _ConvertToEMIWidgetState();
 }
 
-class _ConvertToEMIWidgetState extends State<ConvertToEMIWidget> {
+class _ConvertToEMIWidgetState extends State<ConvertToEMIWidget>
+    with TickerProviderStateMixin {
+  final animationsMap = {
+    'containerOnPageLoadAnimation1': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 200.ms,
+          begin: 0,
+          end: 1,
+        ),
+      ],
+    ),
+    'containerOnPageLoadAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 200.ms,
+          begin: 0,
+          end: 1,
+        ),
+      ],
+    ),
+    'containerOnPageLoadAnimation3': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 200.ms,
+          begin: 0,
+          end: 1,
+        ),
+      ],
+    ),
+    'containerOnPageLoadAnimation4': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 200.ms,
+          begin: 0,
+          end: 1,
+        ),
+      ],
+    ),
+    'containerOnPageLoadAnimation5': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 200.ms,
+          begin: 0,
+          end: 1,
+        ),
+      ],
+    ),
+    'containerOnPageLoadAnimation6': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 200.ms,
+          begin: 0,
+          end: 1,
+        ),
+      ],
+    ),
+  };
+  bool navItem1Hovered1 = false;
+  bool navItem1Hovered2 = false;
+  bool navItem1Hovered3 = false;
+  bool navItem1Hovered4 = false;
+  bool navItem1Hovered5 = false;
+  bool navItem1Hovered6 = false;
   bool? checkboxValue;
   final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -44,6 +130,264 @@ class _ConvertToEMIWidgetState extends State<ConvertToEMIWidget> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      endDrawer: Drawer(
+        elevation: 16,
+        child: Container(
+          width: 230,
+          height: double.infinity,
+          decoration: BoxDecoration(
+            color: FlutterFlowTheme.of(context).overlay,
+          ),
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(12, 40, 0, 0),
+            child: Wrap(
+              spacing: 0,
+              runSpacing: 6,
+              alignment: WrapAlignment.start,
+              crossAxisAlignment: WrapCrossAlignment.start,
+              direction: Axis.horizontal,
+              runAlignment: WrapAlignment.start,
+              verticalDirection: VerticalDirection.down,
+              clipBehavior: Clip.none,
+              children: [
+                MouseRegion(
+                  opaque: false,
+                  cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  child: Container(
+                    width: double.infinity,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: navItem1Hovered1!
+                          ? FlutterFlowTheme.of(context).primary40
+                          : FlutterFlowTheme.of(context).overlay0,
+                    ),
+                    alignment: AlignmentDirectional(-1, 0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'viqmtxlm' /* OVERVIEW */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyText1Family,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              letterSpacing: 1,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context).bodyText1Family),
+                            ),
+                      ),
+                    ),
+                  ).animateOnPageLoad(
+                      animationsMap['containerOnPageLoadAnimation1']!),
+                  onEnter: ((event) async {
+                    setState(() => navItem1Hovered1 = true);
+                  }),
+                  onExit: ((event) async {
+                    setState(() => navItem1Hovered1 = false);
+                  }),
+                ),
+                MouseRegion(
+                  opaque: false,
+                  cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  child: Container(
+                    width: double.infinity,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: navItem1Hovered2!
+                          ? FlutterFlowTheme.of(context).primary40
+                          : FlutterFlowTheme.of(context).overlay0,
+                    ),
+                    alignment: AlignmentDirectional(-1, 0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          '9ypr272j' /* ACCOUNTS */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyText1Family,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              letterSpacing: 1,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context).bodyText1Family),
+                            ),
+                      ),
+                    ),
+                  ).animateOnPageLoad(
+                      animationsMap['containerOnPageLoadAnimation2']!),
+                  onEnter: ((event) async {
+                    setState(() => navItem1Hovered2 = true);
+                  }),
+                  onExit: ((event) async {
+                    setState(() => navItem1Hovered2 = false);
+                  }),
+                ),
+                MouseRegion(
+                  opaque: false,
+                  cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  child: Container(
+                    width: double.infinity,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: navItem1Hovered3!
+                          ? FlutterFlowTheme.of(context).primary40
+                          : FlutterFlowTheme.of(context).overlay0,
+                    ),
+                    alignment: AlignmentDirectional(-1, 0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          '0h11x9d4' /* PAYMENTS & 
+TRANSFERS */
+                          ,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyText1Family,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              letterSpacing: 1,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context).bodyText1Family),
+                            ),
+                      ),
+                    ),
+                  ).animateOnPageLoad(
+                      animationsMap['containerOnPageLoadAnimation3']!),
+                  onEnter: ((event) async {
+                    setState(() => navItem1Hovered3 = true);
+                  }),
+                  onExit: ((event) async {
+                    setState(() => navItem1Hovered3 = false);
+                  }),
+                ),
+                MouseRegion(
+                  opaque: false,
+                  cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  child: Container(
+                    width: double.infinity,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: navItem1Hovered4!
+                          ? FlutterFlowTheme.of(context).primary40
+                          : FlutterFlowTheme.of(context).overlay0,
+                    ),
+                    alignment: AlignmentDirectional(-1, 0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'f5j8ld8l' /* BILL PAYMENT */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyText1Family,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              letterSpacing: 1,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context).bodyText1Family),
+                            ),
+                      ),
+                    ),
+                  ).animateOnPageLoad(
+                      animationsMap['containerOnPageLoadAnimation4']!),
+                  onEnter: ((event) async {
+                    setState(() => navItem1Hovered4 = true);
+                  }),
+                  onExit: ((event) async {
+                    setState(() => navItem1Hovered4 = false);
+                  }),
+                ),
+                MouseRegion(
+                  opaque: false,
+                  cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  child: Container(
+                    width: double.infinity,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: navItem1Hovered5!
+                          ? FlutterFlowTheme.of(context).primary40
+                          : FlutterFlowTheme.of(context).overlay0,
+                    ),
+                    alignment: AlignmentDirectional(-1, 0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          '2dp3x1v1' /* DEPOSITS */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyText1Family,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              letterSpacing: 1,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context).bodyText1Family),
+                            ),
+                      ),
+                    ),
+                  ).animateOnPageLoad(
+                      animationsMap['containerOnPageLoadAnimation5']!),
+                  onEnter: ((event) async {
+                    setState(() => navItem1Hovered5 = true);
+                  }),
+                  onExit: ((event) async {
+                    setState(() => navItem1Hovered5 = false);
+                  }),
+                ),
+                MouseRegion(
+                  opaque: false,
+                  cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  child: InkWell(
+                    onTap: () async {
+                      context.pushNamed('dashboard');
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: navItem1Hovered6!
+                            ? FlutterFlowTheme.of(context).primary40
+                            : FlutterFlowTheme.of(context).overlay0,
+                      ),
+                      alignment: AlignmentDirectional(-1, 0),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'q7go1a8a' /* CREDIT CARDS */,
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodyText1
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodyText1Family,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                letterSpacing: 1,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyText1Family),
+                              ),
+                        ),
+                      ),
+                    ),
+                  ).animateOnPageLoad(
+                      animationsMap['containerOnPageLoadAnimation6']!),
+                  onEnter: ((event) async {
+                    setState(() => navItem1Hovered6 = true);
+                  }),
+                  onExit: ((event) async {
+                    setState(() => navItem1Hovered6 = false);
+                  }),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
@@ -63,10 +407,213 @@ class _ConvertToEMIWidgetState extends State<ConvertToEMIWidget> {
                 ),
               if (responsiveVisibility(
                 context: context,
-                tabletLandscape: false,
                 desktop: false,
               ))
-                TopHeaderMobileWidget(),
+                Container(
+                  width: double.infinity,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                  ),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Container(
+                              width: 40,
+                              height: 40,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.network(
+                                'https://image.shutterstock.com/mosaic_250/2780032/1194497251/stock-photo-portrait-of-smiling-red-haired-millennial-man-looking-at-camera-sitting-in-caf-or-coffeeshop-1194497251.jpg',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            if (Theme.of(context).brightness ==
+                                Brightness.light)
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+                                child: Image.asset(
+                                  'assets/images/icici_Bank_onLight@1x.png',
+                                  height: 30,
+                                  fit: BoxFit.fitWidth,
+                                ),
+                              ),
+                            if (Theme.of(context).brightness == Brightness.dark)
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+                                child: Image.asset(
+                                  'assets/images/icici_Bank_onDark@1x.png',
+                                  height: 30,
+                                  fit: BoxFit.fitWidth,
+                                ),
+                              ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
+                              child: FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30,
+                                borderWidth: 1,
+                                buttonSize: 40,
+                                fillColor:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                icon: Icon(
+                                  Icons.settings_outlined,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryColor,
+                                  size: 18,
+                                ),
+                                onPressed: () async {
+                                  await showModalBottomSheet(
+                                    isScrollControlled: true,
+                                    backgroundColor: Colors.transparent,
+                                    enableDrag: false,
+                                    context: context,
+                                    builder: (context) {
+                                      return Padding(
+                                        padding:
+                                            MediaQuery.of(context).viewInsets,
+                                        child: PreferencesWidget(),
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
+                                },
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 0,
+                                shape: const CircleBorder(),
+                                child: Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .tertiaryColor,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: Container(
+                                    width: 34,
+                                    height: 34,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/iplay-logo.png',
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            InkWell(
+                              onTap: () async {
+                                await showModalBottomSheet(
+                                  isScrollControlled: true,
+                                  backgroundColor: Colors.transparent,
+                                  enableDrag: false,
+                                  context: context,
+                                  builder: (context) {
+                                    return Padding(
+                                      padding:
+                                          MediaQuery.of(context).viewInsets,
+                                      child: NotificationsWidget(),
+                                    );
+                                  },
+                                ).then((value) => setState(() {}));
+                              },
+                              child: Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                  color: FlutterFlowTheme.of(context)
+                                      .tertiaryColor,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Badge(
+                                  badgeContent: Text(
+                                    FFLocalizations.of(context).getText(
+                                      '20wignq2' /* 7 */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText1Family,
+                                          color: Colors.white,
+                                          fontSize: 10,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1Family),
+                                        ),
+                                  ),
+                                  showBadge: true,
+                                  shape: BadgeShape.circle,
+                                  badgeColor: FlutterFlowTheme.of(context)
+                                      .secondaryColor,
+                                  elevation: 4,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      8, 8, 8, 8),
+                                  position: BadgePosition.topEnd(),
+                                  animationType: BadgeAnimationType.scale,
+                                  toAnimate: true,
+                                  child: Icon(
+                                    Icons.notifications_rounded,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryColor,
+                                    size: 18,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 4),
+                              child: FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30,
+                                borderWidth: 1,
+                                buttonSize: 40,
+                                icon: Icon(
+                                  Icons.menu,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 24,
+                                ),
+                                onPressed: () async {
+                                  scaffoldKey.currentState!.openEndDrawer();
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               Expanded(
                 child: Stack(
                   children: [

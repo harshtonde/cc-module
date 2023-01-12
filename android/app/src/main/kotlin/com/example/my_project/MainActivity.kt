@@ -1,4 +1,4 @@
-package com.mycompany.dashboard
+package com.icici.ccmodule
 
 import io.flutter.embedding.android.FlutterActivity
 
