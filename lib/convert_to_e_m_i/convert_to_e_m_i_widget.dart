@@ -400,6 +400,7 @@ TRANSFERS */
                 context: context,
                 phone: false,
                 tablet: false,
+                tabletLandscape: false,
               ))
                 TopHeaderWidget(
                   title: 'Dashboard',
@@ -624,6 +625,7 @@ TRANSFERS */
                           context: context,
                           phone: false,
                           tablet: false,
+                          tabletLandscape: false,
                         ))
                           Container(
                             width: 80,
