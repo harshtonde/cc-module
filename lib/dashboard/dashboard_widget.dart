@@ -5851,8 +5851,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             16),
                                                                 child: Wrap(
                                                                   spacing: 24,
-                                                                  runSpacing:
-                                                                      12,
+                                                                  runSpacing: 0,
                                                                   alignment:
                                                                       WrapAlignment
                                                                           .start,

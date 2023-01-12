@@ -9,7 +9,6 @@ import 'lat_lng.dart';
 import 'place.dart';
 import '../backend/backend.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../backend/supabase/supabase.dart';
 
 bool? getOtpLength(String? otp) {
   if (otp!.length == 6) return true;
