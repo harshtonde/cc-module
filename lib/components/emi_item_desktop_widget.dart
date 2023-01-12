@@ -31,7 +31,7 @@ class EmiItemDesktopWidget extends StatefulWidget {
 }
 
 class _EmiItemDesktopWidgetState extends State<EmiItemDesktopWidget> {
-  bool? checkboxValue;
+  bool? checkboxValue = false;
   //
 
   @override

@@ -31,7 +31,7 @@ class EmiItemMobileWidget extends StatefulWidget {
 }
 
 class _EmiItemMobileWidgetState extends State<EmiItemMobileWidget> {
-  bool? checkboxValue;
+  bool? checkboxValue = false;
 
   @override
   void initState() {
