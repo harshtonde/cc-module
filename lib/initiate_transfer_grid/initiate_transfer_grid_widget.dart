@@ -36,8 +36,6 @@ class _InitiateTransferGridWidgetState
   @override
   void initState() {
     super.initState();
-    logFirebaseEvent('screen_view',
-        parameters: {'screen_name': 'initiateTransferGrid'});
     textController1 = TextEditingController();
     textController2 = TextEditingController();
     textController3 = TextEditingController();
@@ -936,13 +934,10 @@ class _InitiateTransferGridWidgetState
                                                                                 'textController3',
                                                                                 Duration(milliseconds: 2000),
                                                                                 () async {
-                                                                                  logFirebaseEvent('INITIATE_TRANSFER_GRID_TextField_ilp3que');
-                                                                                  logFirebaseEvent('TextField_validate_form');
                                                                                   if (formKey.currentState == null || !formKey.currentState!.validate()) {
                                                                                     return;
                                                                                   }
 
-                                                                                  logFirebaseEvent('TextField_update_local_state');
                                                                                   FFAppState().update(() {
                                                                                     FFAppState().gridValidated = true;
                                                                                   });
@@ -1011,11 +1006,6 @@ class _InitiateTransferGridWidgetState
                                                                 FFButtonWidget(
                                                                   onPressed:
                                                                       () async {
-                                                                    logFirebaseEvent(
-                                                                        'INITIATE_TRANSFER_GRID_CONFIRM_BTN_ON_TA');
-                                                                    logFirebaseEvent(
-                                                                        'Button_navigate_to');
-
                                                                     context.pushNamed(
                                                                         'paymentSent');
                                                                   },
@@ -1072,11 +1062,6 @@ class _InitiateTransferGridWidgetState
                                                                       FFButtonWidget(
                                                                     onPressed:
                                                                         () async {
-                                                                      logFirebaseEvent(
-                                                                          'INITIATE_TRANSFER_GRID_CANCEL_BTN_ON_TAP');
-                                                                      logFirebaseEvent(
-                                                                          'Button_navigate_to');
-
                                                                       context.goNamed(
                                                                           'dashboard');
                                                                     },
@@ -1228,7 +1213,6 @@ class _InitiateTransferGridWidgetState
                         if (responsiveVisibility(
                           context: context,
                           phone: false,
-                          desktop: false,
                         ))
                           SideBarUpdateWidget(),
                         Align(

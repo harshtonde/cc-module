@@ -77,9 +77,6 @@ class _DisableAutopayBottomSheetWidgetState
                                 size: 12,
                               ),
                               onPressed: () async {
-                                logFirebaseEvent(
-                                    'DISABLE_AUTOPAY_BOTTOM_SHEET_close_ICN_O');
-                                logFirebaseEvent('IconButton_bottom_sheet');
                                 Navigator.pop(context);
                               },
                             ),
@@ -473,17 +470,11 @@ class _DisableAutopayBottomSheetWidgetState
                                     children: [
                                       InkWell(
                                         onTap: () async {
-                                          logFirebaseEvent(
-                                              'DISABLE_AUTOPAY_BOTTOM_SHEET_Container_l');
-                                          logFirebaseEvent(
-                                              'Container_update_local_state');
                                           FFAppState().update(() {
                                             FFAppState().totalAmountDue = true;
                                             FFAppState().minimumAmountDue =
                                                 false;
                                           });
-                                          logFirebaseEvent(
-                                              'Container_update_local_state');
                                           FFAppState().update(() {
                                             FFAppState().currentOutstanding =
                                                 false;
@@ -591,17 +582,11 @@ class _DisableAutopayBottomSheetWidgetState
                                       ),
                                       InkWell(
                                         onTap: () async {
-                                          logFirebaseEvent(
-                                              'DISABLE_AUTOPAY_BOTTOM_SHEET_Container_f');
-                                          logFirebaseEvent(
-                                              'Container_update_local_state');
                                           FFAppState().update(() {
                                             FFAppState().totalAmountDue = false;
                                             FFAppState().minimumAmountDue =
                                                 true;
                                           });
-                                          logFirebaseEvent(
-                                              'Container_update_local_state');
                                           FFAppState().update(() {
                                             FFAppState().currentOutstanding =
                                                 false;
@@ -826,11 +811,7 @@ class _DisableAutopayBottomSheetWidgetState
                                   children: [
                                     FFButtonWidget(
                                       onPressed: () async {
-                                        logFirebaseEvent(
-                                            'DISABLE_AUTOPAY_BOTTOM_SHEET_DISABLE_AUT');
-                                        logFirebaseEvent('Button_bottom_sheet');
                                         Navigator.pop(context);
-                                        logFirebaseEvent('Button_bottom_sheet');
                                         await showModalBottomSheet(
                                           isScrollControlled: true,
                                           backgroundColor: Colors.transparent,
@@ -882,10 +863,6 @@ class _DisableAutopayBottomSheetWidgetState
                                           24, 0, 0, 0),
                                       child: FFButtonWidget(
                                         onPressed: () async {
-                                          logFirebaseEvent(
-                                              'DISABLE_AUTOPAY_BOTTOM_SHEET_CANCEL_BTN_');
-                                          logFirebaseEvent(
-                                              'Button_bottom_sheet');
                                           Navigator.pop(context);
                                         },
                                         text:

@@ -9,6 +9,7 @@ import '../flutter_flow/flutter_flow_toggle_icon.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../custom_code/widgets/index.dart' as custom_widgets;
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,7 +33,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
   @override
   void initState() {
     super.initState();
-    logFirebaseEvent('screen_view', parameters: {'screen_name': 'payNow'});
     textController = TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -334,7 +334,7 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
-                                                                        Text(
+                                                                        AutoSizeText(
                                                                           FFLocalizations.of(context)
                                                                               .getText(
                                                                             'nyvhynlf' /* 1234 5678 1234 1234 */,
@@ -623,10 +623,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                         children: [
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_p0snbfj2_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -636,8 +632,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                         .minimumAmountDue =
                                                                     false;
                                                               });
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -773,10 +767,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_zo4esedr_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -786,8 +776,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                         .minimumAmountDue =
                                                                     true;
                                                               });
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -923,10 +911,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_urx3lbs3_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -936,8 +920,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                         .minimumAmountDue =
                                                                     false;
                                                               });
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -1073,10 +1055,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_fwe350ti_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -1086,8 +1064,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                         .minimumAmountDue =
                                                                     false;
                                                               });
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -1642,10 +1618,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                         children: [
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_ew5y23u8_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -1808,10 +1780,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_5zlxka8e_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -2064,10 +2032,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                   ),
                                                                   onPressed:
                                                                       () async {
-                                                                    logFirebaseEvent(
-                                                                        'PAY_NOW_PAGE_date_range_ICN_ON_TAP');
-                                                                    logFirebaseEvent(
-                                                                        'IconButton_date_time_picker');
                                                                     final _datePickedDate =
                                                                         await showDatePicker(
                                                                       context:
@@ -2190,13 +2154,8 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           FFButtonWidget(
                                                             onPressed:
                                                                 () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_CONFIRM_&_PAY_BTN_ON_TAP');
                                                               if (FFAppState()
                                                                   .termsAndConditions) {
-                                                                logFirebaseEvent(
-                                                                    'Button_navigate_to');
-
                                                                 context.pushNamed(
                                                                     'initiateTransferOTP');
                                                               }
@@ -2262,10 +2221,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                 FFButtonWidget(
                                                               onPressed:
                                                                   () async {
-                                                                logFirebaseEvent(
-                                                                    'PAY_NOW_PAGE_CANCEL_BTN_ON_TAP');
-                                                                logFirebaseEvent(
-                                                                    'Button_navigate_back');
                                                                 context.pop();
                                                               },
                                                               text: FFLocalizations
@@ -2374,7 +2329,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                           phone: false,
                           tablet: false,
                           tabletLandscape: false,
-                          desktop: false,
                         ))
                           SideBarUpdateWidget(),
                         Align(

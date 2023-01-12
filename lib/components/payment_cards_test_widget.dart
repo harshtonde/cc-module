@@ -461,9 +461,6 @@ class _PaymentCardsTestWidgetState extends State<PaymentCardsTestWidget> {
                         cursor: MouseCursor.defer ?? MouseCursor.defer,
                         child: FFButtonWidget(
                           onPressed: () async {
-                            logFirebaseEvent(
-                                'PAYMENT_CARDS_TEST_UPGRADE_CARD_BTN_ON_T');
-                            logFirebaseEvent('Button_alert_dialog');
                             await showDialog(
                               context: context,
                               builder: (alertDialogContext) {

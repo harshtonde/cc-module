@@ -109,7 +109,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
       this,
     );
 
-    logFirebaseEvent('screen_view', parameters: {'screen_name': 'dashboard'});
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -491,12 +490,9 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                       cursor: MouseCursor.defer ?? MouseCursor.defer,
                                                                                       child: FFButtonWidget(
                                                                                         onPressed: () async {
-                                                                                          logFirebaseEvent('DASHBOARD_PAGE_PAY_NOW_BTN_ON_TAP');
-                                                                                          logFirebaseEvent('Button_update_local_state');
                                                                                           FFAppState().update(() {
                                                                                             FFAppState().convertToEmiInitiated = false;
                                                                                           });
-                                                                                          logFirebaseEvent('Button_navigate_to');
 
                                                                                           context.pushNamed('payNow');
                                                                                         },
@@ -548,9 +544,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                             padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
                                                                                             child: InkWell(
                                                                                               onTap: () async {
-                                                                                                logFirebaseEvent('DASHBOARD_PAGE_Container_i9alclts_ON_TAP');
                                                                                                 if (FFAppState().autopay) {
-                                                                                                  logFirebaseEvent('autopaySwtich_bottom_sheet');
                                                                                                   await showModalBottomSheet(
                                                                                                     isScrollControlled: true,
                                                                                                     backgroundColor: Colors.transparent,
@@ -564,7 +558,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                                     },
                                                                                                   ).then((value) => setState(() {}));
                                                                                                 } else {
-                                                                                                  logFirebaseEvent('autopaySwtich_bottom_sheet');
                                                                                                   await showModalBottomSheet(
                                                                                                     isScrollControlled: true,
                                                                                                     backgroundColor: Colors.transparent,
@@ -686,8 +679,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
                                                                                   child: FFButtonWidget(
                                                                                     onPressed: () async {
-                                                                                      logFirebaseEvent('DASHBOARD_MANAGE_CREDIT_LIMIT_BTN_ON_TAP');
-                                                                                      logFirebaseEvent('Button_alert_dialog');
                                                                                       await showDialog(
                                                                                         context: context,
                                                                                         builder: (alertDialogContext) {
@@ -1513,10 +1504,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                       FFButtonWidget(
                                                                         onPressed:
                                                                             () async {
-                                                                          logFirebaseEvent(
-                                                                              'DASHBOARD_VIEW_ALL_OFFERS_BTN_ON_TAP');
-                                                                          logFirebaseEvent(
-                                                                              'Button_alert_dialog');
                                                                           await showDialog(
                                                                             context:
                                                                                 context,
@@ -1950,12 +1937,9 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
                                                                                     child: FFButtonWidget(
                                                                                       onPressed: () async {
-                                                                                        logFirebaseEvent('DASHBOARD_PAGE_CONVERT_TO_EMI_BTN_ON_TAP');
-                                                                                        logFirebaseEvent('Button_update_local_state');
                                                                                         FFAppState().update(() {
                                                                                           FFAppState().convertToEmiInitiated = true;
                                                                                         });
-                                                                                        logFirebaseEvent('Button_navigate_to');
 
                                                                                         context.pushNamed('convertToEMI');
                                                                                       },
@@ -2716,8 +2700,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                         padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                                                                                         child: FFButtonWidget(
                                                                                           onPressed: () async {
-                                                                                            logFirebaseEvent('DASHBOARD_PAGE_DOWNLOAD_BTN_ON_TAP');
-                                                                                            logFirebaseEvent('Button_alert_dialog');
                                                                                             await showDialog(
                                                                                               context: context,
                                                                                               builder: (alertDialogContext) {
@@ -2970,8 +2952,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                   ),
                                                                                   FFButtonWidget(
                                                                                     onPressed: () async {
-                                                                                      logFirebaseEvent('DASHBOARD_DOWNLOAD_PREVIOUS_STATEMENTS_B');
-                                                                                      logFirebaseEvent('Button_alert_dialog');
                                                                                       await showDialog(
                                                                                         context: context,
                                                                                         builder: (alertDialogContext) {
@@ -3921,8 +3901,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                         padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                                                                                         child: FFButtonWidget(
                                                                                           onPressed: () async {
-                                                                                            logFirebaseEvent('DASHBOARD_PAGE_DOWNLOAD_BTN_ON_TAP');
-                                                                                            logFirebaseEvent('Button_alert_dialog');
                                                                                             await showDialog(
                                                                                               context: context,
                                                                                               builder: (alertDialogContext) {
@@ -4386,16 +4364,12 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                       ),
                                                                                       onEnter: ((event) async {
                                                                                         setState(() => mouseRegionHovered4 = true);
-                                                                                        logFirebaseEvent('DASHBOARD_MouseRegion_9hwi2vv3_ON_TOGGLE');
-                                                                                        logFirebaseEvent('MouseRegion_widget_animation');
                                                                                         if (animationsMap['columnOnActionTriggerAnimation1'] != null) {
                                                                                           await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0);
                                                                                         }
                                                                                       }),
                                                                                       onExit: ((event) async {
                                                                                         setState(() => mouseRegionHovered4 = false);
-                                                                                        logFirebaseEvent('DASHBOARD_MouseRegion_9hwi2vv3_ON_TOGGLE');
-                                                                                        logFirebaseEvent('MouseRegion_widget_animation');
                                                                                         if (animationsMap['columnOnActionTriggerAnimation1'] != null) {
                                                                                           await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0).whenComplete(animationsMap['columnOnActionTriggerAnimation1']!.controller.reverse);
                                                                                         }
@@ -6011,12 +5985,9 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             child:
                                                                                 FFButtonWidget(
                                                                               onPressed: () async {
-                                                                                logFirebaseEvent('DASHBOARD_PAGE_PAY_NOW_BTN_ON_TAP');
-                                                                                logFirebaseEvent('Button_update_local_state');
                                                                                 FFAppState().update(() {
                                                                                   FFAppState().convertToEmiInitiated = false;
                                                                                 });
-                                                                                logFirebaseEvent('Button_navigate_to');
 
                                                                                 context.pushNamed('payNow');
                                                                               },
@@ -6056,9 +6027,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                 padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
                                                                                 child: InkWell(
                                                                                   onTap: () async {
-                                                                                    logFirebaseEvent('DASHBOARD_PAGE_Container_yshcetuk_ON_TAP');
                                                                                     if (FFAppState().autopay) {
-                                                                                      logFirebaseEvent('autopaySwtich_bottom_sheet');
                                                                                       await showModalBottomSheet(
                                                                                         isScrollControlled: true,
                                                                                         backgroundColor: Colors.transparent,
@@ -6072,7 +6041,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                         },
                                                                                       ).then((value) => setState(() {}));
                                                                                     } else {
-                                                                                      logFirebaseEvent('autopaySwtich_bottom_sheet');
                                                                                       await showModalBottomSheet(
                                                                                         isScrollControlled: true,
                                                                                         backgroundColor: Colors.transparent,
@@ -6196,8 +6164,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               ),
                                                                               FFButtonWidget(
                                                                                 onPressed: () async {
-                                                                                  logFirebaseEvent('DASHBOARD_MANAGE_CREDIT_LIMIT_BTN_ON_TAP');
-                                                                                  logFirebaseEvent('Button_alert_dialog');
                                                                                   await showDialog(
                                                                                     context: context,
                                                                                     builder: (alertDialogContext) {
@@ -6983,10 +6949,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         ),
                                                         FFButtonWidget(
                                                           onPressed: () async {
-                                                            logFirebaseEvent(
-                                                                'DASHBOARD_VIEW_ALL_OFFERS_BTN_ON_TAP');
-                                                            logFirebaseEvent(
-                                                                'Button_alert_dialog');
                                                             await showDialog(
                                                               context: context,
                                                               builder:
@@ -7539,17 +7501,11 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           FFButtonWidget(
                                                                         onPressed:
                                                                             () async {
-                                                                          logFirebaseEvent(
-                                                                              'DASHBOARD_PAGE_CONVERT_TO_EMI_BTN_ON_TAP');
-                                                                          logFirebaseEvent(
-                                                                              'Button_update_local_state');
                                                                           FFAppState()
                                                                               .update(() {
                                                                             FFAppState().convertToEmiInitiated =
                                                                                 true;
                                                                           });
-                                                                          logFirebaseEvent(
-                                                                              'Button_navigate_to');
 
                                                                           context
                                                                               .pushNamed('convertToEMI');
@@ -8456,8 +8412,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               FFButtonWidget(
                                                                             onPressed:
                                                                                 () async {
-                                                                              logFirebaseEvent('DASHBOARD_PAGE_DOWNLOAD_BTN_ON_TAP');
-                                                                              logFirebaseEvent('Button_alert_dialog');
                                                                               await showDialog(
                                                                                 context: context,
                                                                                 builder: (alertDialogContext) {
@@ -8635,10 +8589,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           FFButtonWidget(
                                                                         onPressed:
                                                                             () async {
-                                                                          logFirebaseEvent(
-                                                                              'DASHBOARD_DOWNLOAD_PREVIOUS_STATEMENTS_B');
-                                                                          logFirebaseEvent(
-                                                                              'Button_alert_dialog');
                                                                           await showDialog(
                                                                             context:
                                                                                 context,
@@ -9913,8 +9863,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               FFButtonWidget(
                                                                             onPressed:
                                                                                 () async {
-                                                                              logFirebaseEvent('DASHBOARD_PAGE_DOWNLOAD_BTN_ON_TAP');
-                                                                              logFirebaseEvent('Button_alert_dialog');
                                                                               await showDialog(
                                                                                 context: context,
                                                                                 builder: (alertDialogContext) {
@@ -10287,10 +10235,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             ((event) async {
                                                                           setState(() =>
                                                                               mouseRegionHovered5 = true);
-                                                                          logFirebaseEvent(
-                                                                              'DASHBOARD_MouseRegion_6nefr85u_ON_TOGGLE');
-                                                                          logFirebaseEvent(
-                                                                              'MouseRegion_widget_animation');
                                                                           if (animationsMap['columnOnActionTriggerAnimation1'] !=
                                                                               null) {
                                                                             await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0);
@@ -10300,10 +10244,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             ((event) async {
                                                                           setState(() =>
                                                                               mouseRegionHovered5 = false);
-                                                                          logFirebaseEvent(
-                                                                              'DASHBOARD_MouseRegion_6nefr85u_ON_TOGGLE');
-                                                                          logFirebaseEvent(
-                                                                              'MouseRegion_widget_animation');
                                                                           if (animationsMap['columnOnActionTriggerAnimation1'] !=
                                                                               null) {
                                                                             await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0).whenComplete(animationsMap['columnOnActionTriggerAnimation1']!.controller.reverse);

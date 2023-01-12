@@ -34,10 +34,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       errorBuilder: (context, _) => appStateNotifier.showSplashImage
           ? Builder(
               builder: (context) => Container(
-                color: FlutterFlowTheme.of(context).secondaryBackground,
+                color: FlutterFlowTheme.of(context).primaryBtnText,
                 child: Image.asset(
-                  'assets/images/app_projectsColor@2x.png',
-                  fit: BoxFit.scaleDown,
+                  'assets/images/logo_Bank_aloneBG@1x.png',
+                  fit: BoxFit.contain,
                 ),
               ),
             )
@@ -49,10 +49,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, _) => appStateNotifier.showSplashImage
               ? Builder(
                   builder: (context) => Container(
-                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                    color: FlutterFlowTheme.of(context).primaryBtnText,
                     child: Image.asset(
-                      'assets/images/app_projectsColor@2x.png',
-                      fit: BoxFit.scaleDown,
+                      'assets/images/logo_Bank_aloneBG@1x.png',
+                      fit: BoxFit.contain,
                     ),
                   ),
                 )
