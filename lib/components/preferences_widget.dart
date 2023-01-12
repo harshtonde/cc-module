@@ -86,7 +86,6 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  height: 440,
                   constraints: BoxConstraints(
                     maxWidth: 540,
                   ),
@@ -683,17 +682,17 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 24),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               FFButtonWidget(
                                 onPressed: () async {
+                                  Navigator.pop(context);
                                   FFAppState().update(() {
                                     FFAppState().negativeColor = colorPicked!;
                                   });
-                                  Navigator.pop(context);
                                 },
                                 text: FFLocalizations.of(context).getText(
                                   '6mkqixqx' /* Confirm */,
