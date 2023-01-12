@@ -77,9 +77,6 @@ class _EnableAutopayBottomSheetWidgetState
                                 size: 12,
                               ),
                               onPressed: () async {
-                                logFirebaseEvent(
-                                    'ENABLE_AUTOPAY_BOTTOM_SHEET_close_ICN_ON');
-                                logFirebaseEvent('IconButton_bottom_sheet');
                                 Navigator.pop(context);
                               },
                             ),
@@ -473,17 +470,11 @@ class _EnableAutopayBottomSheetWidgetState
                                     children: [
                                       InkWell(
                                         onTap: () async {
-                                          logFirebaseEvent(
-                                              'ENABLE_AUTOPAY_BOTTOM_SHEET_Container_y7');
-                                          logFirebaseEvent(
-                                              'Container_update_local_state');
                                           FFAppState().update(() {
                                             FFAppState().totalAmountDue = true;
                                             FFAppState().minimumAmountDue =
                                                 false;
                                           });
-                                          logFirebaseEvent(
-                                              'Container_update_local_state');
                                           FFAppState().update(() {
                                             FFAppState().currentOutstanding =
                                                 false;
@@ -591,17 +582,11 @@ class _EnableAutopayBottomSheetWidgetState
                                       ),
                                       InkWell(
                                         onTap: () async {
-                                          logFirebaseEvent(
-                                              'ENABLE_AUTOPAY_BOTTOM_SHEET_Container_d7');
-                                          logFirebaseEvent(
-                                              'Container_update_local_state');
                                           FFAppState().update(() {
                                             FFAppState().totalAmountDue = false;
                                             FFAppState().minimumAmountDue =
                                                 true;
                                           });
-                                          logFirebaseEvent(
-                                              'Container_update_local_state');
                                           FFAppState().update(() {
                                             FFAppState().currentOutstanding =
                                                 false;
@@ -826,11 +811,7 @@ class _EnableAutopayBottomSheetWidgetState
                                   children: [
                                     FFButtonWidget(
                                       onPressed: () async {
-                                        logFirebaseEvent(
-                                            'ENABLE_AUTOPAY_BOTTOM_SHEET_ENABLE_AUTOP');
-                                        logFirebaseEvent('Button_bottom_sheet');
                                         Navigator.pop(context);
-                                        logFirebaseEvent('Button_bottom_sheet');
                                         await showModalBottomSheet(
                                           isScrollControlled: true,
                                           backgroundColor: Colors.transparent,
@@ -882,10 +863,6 @@ class _EnableAutopayBottomSheetWidgetState
                                           24, 0, 0, 0),
                                       child: FFButtonWidget(
                                         onPressed: () async {
-                                          logFirebaseEvent(
-                                              'ENABLE_AUTOPAY_BOTTOM_SHEET_CANCEL_BTN_O');
-                                          logFirebaseEvent(
-                                              'Button_bottom_sheet');
                                           Navigator.pop(context);
                                         },
                                         text:

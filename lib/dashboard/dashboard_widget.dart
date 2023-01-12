@@ -109,7 +109,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
       this,
     );
 
-    logFirebaseEvent('screen_view', parameters: {'screen_name': 'dashboard'});
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -491,12 +490,9 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                       cursor: MouseCursor.defer ?? MouseCursor.defer,
                                                                                       child: FFButtonWidget(
                                                                                         onPressed: () async {
-                                                                                          logFirebaseEvent('DASHBOARD_PAGE_PAY_NOW_BTN_ON_TAP');
-                                                                                          logFirebaseEvent('Button_update_local_state');
                                                                                           FFAppState().update(() {
                                                                                             FFAppState().convertToEmiInitiated = false;
                                                                                           });
-                                                                                          logFirebaseEvent('Button_navigate_to');
 
                                                                                           context.pushNamed('payNow');
                                                                                         },
@@ -548,9 +544,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                             padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
                                                                                             child: InkWell(
                                                                                               onTap: () async {
-                                                                                                logFirebaseEvent('DASHBOARD_PAGE_Container_i9alclts_ON_TAP');
                                                                                                 if (FFAppState().autopay) {
-                                                                                                  logFirebaseEvent('autopaySwtich_bottom_sheet');
                                                                                                   await showModalBottomSheet(
                                                                                                     isScrollControlled: true,
                                                                                                     backgroundColor: Colors.transparent,
@@ -564,7 +558,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                                     },
                                                                                                   ).then((value) => setState(() {}));
                                                                                                 } else {
-                                                                                                  logFirebaseEvent('autopaySwtich_bottom_sheet');
                                                                                                   await showModalBottomSheet(
                                                                                                     isScrollControlled: true,
                                                                                                     backgroundColor: Colors.transparent,
@@ -686,8 +679,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
                                                                                   child: FFButtonWidget(
                                                                                     onPressed: () async {
-                                                                                      logFirebaseEvent('DASHBOARD_MANAGE_CREDIT_LIMIT_BTN_ON_TAP');
-                                                                                      logFirebaseEvent('Button_alert_dialog');
                                                                                       await showDialog(
                                                                                         context: context,
                                                                                         builder: (alertDialogContext) {
@@ -1513,10 +1504,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                       FFButtonWidget(
                                                                         onPressed:
                                                                             () async {
-                                                                          logFirebaseEvent(
-                                                                              'DASHBOARD_VIEW_ALL_OFFERS_BTN_ON_TAP');
-                                                                          logFirebaseEvent(
-                                                                              'Button_alert_dialog');
                                                                           await showDialog(
                                                                             context:
                                                                                 context,
@@ -1950,12 +1937,9 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
                                                                                     child: FFButtonWidget(
                                                                                       onPressed: () async {
-                                                                                        logFirebaseEvent('DASHBOARD_PAGE_CONVERT_TO_EMI_BTN_ON_TAP');
-                                                                                        logFirebaseEvent('Button_update_local_state');
                                                                                         FFAppState().update(() {
                                                                                           FFAppState().convertToEmiInitiated = true;
                                                                                         });
-                                                                                        logFirebaseEvent('Button_navigate_to');
 
                                                                                         context.pushNamed('convertToEMI');
                                                                                       },
@@ -2716,8 +2700,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                         padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                                                                                         child: FFButtonWidget(
                                                                                           onPressed: () async {
-                                                                                            logFirebaseEvent('DASHBOARD_PAGE_DOWNLOAD_BTN_ON_TAP');
-                                                                                            logFirebaseEvent('Button_alert_dialog');
                                                                                             await showDialog(
                                                                                               context: context,
                                                                                               builder: (alertDialogContext) {
@@ -2970,8 +2952,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                   ),
                                                                                   FFButtonWidget(
                                                                                     onPressed: () async {
-                                                                                      logFirebaseEvent('DASHBOARD_DOWNLOAD_PREVIOUS_STATEMENTS_B');
-                                                                                      logFirebaseEvent('Button_alert_dialog');
                                                                                       await showDialog(
                                                                                         context: context,
                                                                                         builder: (alertDialogContext) {
@@ -3921,8 +3901,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                         padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                                                                                         child: FFButtonWidget(
                                                                                           onPressed: () async {
-                                                                                            logFirebaseEvent('DASHBOARD_PAGE_DOWNLOAD_BTN_ON_TAP');
-                                                                                            logFirebaseEvent('Button_alert_dialog');
                                                                                             await showDialog(
                                                                                               context: context,
                                                                                               builder: (alertDialogContext) {
@@ -4386,16 +4364,12 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                       ),
                                                                                       onEnter: ((event) async {
                                                                                         setState(() => mouseRegionHovered4 = true);
-                                                                                        logFirebaseEvent('DASHBOARD_MouseRegion_9hwi2vv3_ON_TOGGLE');
-                                                                                        logFirebaseEvent('MouseRegion_widget_animation');
                                                                                         if (animationsMap['columnOnActionTriggerAnimation1'] != null) {
                                                                                           await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0);
                                                                                         }
                                                                                       }),
                                                                                       onExit: ((event) async {
                                                                                         setState(() => mouseRegionHovered4 = false);
-                                                                                        logFirebaseEvent('DASHBOARD_MouseRegion_9hwi2vv3_ON_TOGGLE');
-                                                                                        logFirebaseEvent('MouseRegion_widget_animation');
                                                                                         if (animationsMap['columnOnActionTriggerAnimation1'] != null) {
                                                                                           await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0).whenComplete(animationsMap['columnOnActionTriggerAnimation1']!.controller.reverse);
                                                                                         }
@@ -5875,10 +5849,26 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             16,
                                                                             12,
                                                                             16),
-                                                                child: Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
+                                                                child: Wrap(
+                                                                  spacing: 24,
+                                                                  runSpacing:
+                                                                      12,
+                                                                  alignment:
+                                                                      WrapAlignment
+                                                                          .start,
+                                                                  crossAxisAlignment:
+                                                                      WrapCrossAlignment
+                                                                          .start,
+                                                                  direction: Axis
+                                                                      .horizontal,
+                                                                  runAlignment:
+                                                                      WrapAlignment
+                                                                          .start,
+                                                                  verticalDirection:
+                                                                      VerticalDirection
+                                                                          .down,
+                                                                  clipBehavior:
+                                                                      Clip.none,
                                                                   children: [
                                                                     Padding(
                                                                       padding: EdgeInsetsDirectional
@@ -5994,105 +5984,101 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                         ],
                                                                       ),
                                                                     ),
-                                                                    Expanded(
-                                                                      child:
-                                                                          Column(
-                                                                        mainAxisSize:
-                                                                            MainAxisSize.max,
-                                                                        crossAxisAlignment:
-                                                                            CrossAxisAlignment.end,
-                                                                        children: [
-                                                                          Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                0,
-                                                                                0,
-                                                                                0,
-                                                                                12),
-                                                                            child:
-                                                                                FFButtonWidget(
-                                                                              onPressed: () async {
-                                                                                logFirebaseEvent('DASHBOARD_PAGE_PAY_NOW_BTN_ON_TAP');
-                                                                                logFirebaseEvent('Button_update_local_state');
-                                                                                FFAppState().update(() {
-                                                                                  FFAppState().convertToEmiInitiated = false;
-                                                                                });
-                                                                                logFirebaseEvent('Button_navigate_to');
+                                                                    Column(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .min,
+                                                                      crossAxisAlignment:
+                                                                          CrossAxisAlignment
+                                                                              .end,
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                              0,
+                                                                              0,
+                                                                              0,
+                                                                              12),
+                                                                          child:
+                                                                              FFButtonWidget(
+                                                                            onPressed:
+                                                                                () async {
+                                                                              FFAppState().update(() {
+                                                                                FFAppState().convertToEmiInitiated = false;
+                                                                              });
 
-                                                                                context.pushNamed('payNow');
-                                                                              },
-                                                                              text: FFLocalizations.of(context).getText(
-                                                                                'q0g7zihx' /* Pay Now */,
+                                                                              context.pushNamed('payNow');
+                                                                            },
+                                                                            text:
+                                                                                FFLocalizations.of(context).getText(
+                                                                              'q0g7zihx' /* Pay Now */,
+                                                                            ),
+                                                                            options:
+                                                                                FFButtonOptions(
+                                                                              height: 36,
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                                                                              color: FlutterFlowTheme.of(context).primaryColor,
+                                                                              textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                                                                                    fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
+                                                                                    color: Colors.white,
+                                                                                    useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).subtitle2Family),
+                                                                                  ),
+                                                                              borderSide: BorderSide(
+                                                                                color: Colors.transparent,
+                                                                                width: 1,
                                                                               ),
-                                                                              options: FFButtonOptions(
-                                                                                height: 36,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                                                                                color: FlutterFlowTheme.of(context).primaryColor,
-                                                                                textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                                                                                      fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
-                                                                                      color: Colors.white,
-                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).subtitle2Family),
-                                                                                    ),
-                                                                                borderSide: BorderSide(
-                                                                                  color: Colors.transparent,
-                                                                                  width: 1,
-                                                                                ),
-                                                                                borderRadius: BorderRadius.circular(40),
-                                                                              ),
+                                                                              borderRadius: BorderRadius.circular(40),
                                                                             ),
                                                                           ),
-                                                                          Row(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            mainAxisAlignment:
-                                                                                MainAxisAlignment.end,
-                                                                            children: [
-                                                                              Text(
-                                                                                FFLocalizations.of(context).getText(
-                                                                                  '3frj6v6c' /* Auto Pay */,
-                                                                                ),
-                                                                                style: FlutterFlowTheme.of(context).bodyText1,
+                                                                        ),
+                                                                        Row(
+                                                                          mainAxisSize:
+                                                                              MainAxisSize.min,
+                                                                          mainAxisAlignment:
+                                                                              MainAxisAlignment.end,
+                                                                          children: [
+                                                                            Text(
+                                                                              FFLocalizations.of(context).getText(
+                                                                                '3frj6v6c' /* Auto Pay */,
                                                                               ),
-                                                                              Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
-                                                                                child: InkWell(
-                                                                                  onTap: () async {
-                                                                                    logFirebaseEvent('DASHBOARD_PAGE_Container_yshcetuk_ON_TAP');
-                                                                                    if (FFAppState().autopay) {
-                                                                                      logFirebaseEvent('autopaySwtich_bottom_sheet');
-                                                                                      await showModalBottomSheet(
-                                                                                        isScrollControlled: true,
-                                                                                        backgroundColor: Colors.transparent,
-                                                                                        enableDrag: false,
-                                                                                        context: context,
-                                                                                        builder: (context) {
-                                                                                          return Padding(
-                                                                                            padding: MediaQuery.of(context).viewInsets,
-                                                                                            child: DisableAutopayBottomSheetWidget(),
-                                                                                          );
-                                                                                        },
-                                                                                      ).then((value) => setState(() {}));
-                                                                                    } else {
-                                                                                      logFirebaseEvent('autopaySwtich_bottom_sheet');
-                                                                                      await showModalBottomSheet(
-                                                                                        isScrollControlled: true,
-                                                                                        backgroundColor: Colors.transparent,
-                                                                                        context: context,
-                                                                                        builder: (context) {
-                                                                                          return Padding(
-                                                                                            padding: MediaQuery.of(context).viewInsets,
-                                                                                            child: EnableAutopayBottomSheetWidget(),
-                                                                                          );
-                                                                                        },
-                                                                                      ).then((value) => setState(() {}));
-                                                                                    }
-                                                                                  },
-                                                                                  child: AutopaySwtichWidget(),
-                                                                                ),
+                                                                              style: FlutterFlowTheme.of(context).bodyText1,
+                                                                            ),
+                                                                            Padding(
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
+                                                                              child: InkWell(
+                                                                                onTap: () async {
+                                                                                  if (FFAppState().autopay) {
+                                                                                    await showModalBottomSheet(
+                                                                                      isScrollControlled: true,
+                                                                                      backgroundColor: Colors.transparent,
+                                                                                      enableDrag: false,
+                                                                                      context: context,
+                                                                                      builder: (context) {
+                                                                                        return Padding(
+                                                                                          padding: MediaQuery.of(context).viewInsets,
+                                                                                          child: DisableAutopayBottomSheetWidget(),
+                                                                                        );
+                                                                                      },
+                                                                                    ).then((value) => setState(() {}));
+                                                                                  } else {
+                                                                                    await showModalBottomSheet(
+                                                                                      isScrollControlled: true,
+                                                                                      backgroundColor: Colors.transparent,
+                                                                                      context: context,
+                                                                                      builder: (context) {
+                                                                                        return Padding(
+                                                                                          padding: MediaQuery.of(context).viewInsets,
+                                                                                          child: EnableAutopayBottomSheetWidget(),
+                                                                                        );
+                                                                                      },
+                                                                                    ).then((value) => setState(() {}));
+                                                                                  }
+                                                                                },
+                                                                                child: AutopaySwtichWidget(),
                                                                               ),
-                                                                            ],
-                                                                          ),
-                                                                        ],
-                                                                      ),
+                                                                            ),
+                                                                          ],
+                                                                        ),
+                                                                      ],
                                                                     ),
                                                                   ],
                                                                 ),
@@ -6168,9 +6154,23 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               0,
                                                                               16),
                                                                           child:
-                                                                              Row(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
+                                                                              Wrap(
+                                                                            spacing:
+                                                                                12,
+                                                                            runSpacing:
+                                                                                12,
+                                                                            alignment:
+                                                                                WrapAlignment.start,
+                                                                            crossAxisAlignment:
+                                                                                WrapCrossAlignment.center,
+                                                                            direction:
+                                                                                Axis.horizontal,
+                                                                            runAlignment:
+                                                                                WrapAlignment.start,
+                                                                            verticalDirection:
+                                                                                VerticalDirection.down,
+                                                                            clipBehavior:
+                                                                                Clip.none,
                                                                             children: [
                                                                               Text(
                                                                                 FFLocalizations.of(context).getText(
@@ -6178,26 +6178,22 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyText1,
                                                                               ),
-                                                                              Expanded(
-                                                                                child: Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
-                                                                                  child: Text(
-                                                                                    FFLocalizations.of(context).getText(
-                                                                                      'gwd21dk5' /* ₹ 17,250 */,
-                                                                                    ),
-                                                                                    style: FlutterFlowTheme.of(context).title3.override(
-                                                                                          fontFamily: FlutterFlowTheme.of(context).title3Family,
-                                                                                          color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                          fontWeight: FontWeight.normal,
-                                                                                          useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).title3Family),
-                                                                                        ),
+                                                                              Padding(
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                                                                                child: Text(
+                                                                                  FFLocalizations.of(context).getText(
+                                                                                    'gwd21dk5' /* ₹ 17,250 */,
                                                                                   ),
+                                                                                  style: FlutterFlowTheme.of(context).title3.override(
+                                                                                        fontFamily: FlutterFlowTheme.of(context).title3Family,
+                                                                                        color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                        fontWeight: FontWeight.normal,
+                                                                                        useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).title3Family),
+                                                                                      ),
                                                                                 ),
                                                                               ),
                                                                               FFButtonWidget(
                                                                                 onPressed: () async {
-                                                                                  logFirebaseEvent('DASHBOARD_MANAGE_CREDIT_LIMIT_BTN_ON_TAP');
-                                                                                  logFirebaseEvent('Button_alert_dialog');
                                                                                   await showDialog(
                                                                                     context: context,
                                                                                     builder: (alertDialogContext) {
@@ -6983,10 +6979,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         ),
                                                         FFButtonWidget(
                                                           onPressed: () async {
-                                                            logFirebaseEvent(
-                                                                'DASHBOARD_VIEW_ALL_OFFERS_BTN_ON_TAP');
-                                                            logFirebaseEvent(
-                                                                'Button_alert_dialog');
                                                             await showDialog(
                                                               context: context,
                                                               builder:
@@ -7539,17 +7531,11 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           FFButtonWidget(
                                                                         onPressed:
                                                                             () async {
-                                                                          logFirebaseEvent(
-                                                                              'DASHBOARD_PAGE_CONVERT_TO_EMI_BTN_ON_TAP');
-                                                                          logFirebaseEvent(
-                                                                              'Button_update_local_state');
                                                                           FFAppState()
                                                                               .update(() {
                                                                             FFAppState().convertToEmiInitiated =
                                                                                 true;
                                                                           });
-                                                                          logFirebaseEvent(
-                                                                              'Button_navigate_to');
 
                                                                           context
                                                                               .pushNamed('convertToEMI');
@@ -8456,8 +8442,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               FFButtonWidget(
                                                                             onPressed:
                                                                                 () async {
-                                                                              logFirebaseEvent('DASHBOARD_PAGE_DOWNLOAD_BTN_ON_TAP');
-                                                                              logFirebaseEvent('Button_alert_dialog');
                                                                               await showDialog(
                                                                                 context: context,
                                                                                 builder: (alertDialogContext) {
@@ -8635,10 +8619,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           FFButtonWidget(
                                                                         onPressed:
                                                                             () async {
-                                                                          logFirebaseEvent(
-                                                                              'DASHBOARD_DOWNLOAD_PREVIOUS_STATEMENTS_B');
-                                                                          logFirebaseEvent(
-                                                                              'Button_alert_dialog');
                                                                           await showDialog(
                                                                             context:
                                                                                 context,
@@ -9913,8 +9893,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               FFButtonWidget(
                                                                             onPressed:
                                                                                 () async {
-                                                                              logFirebaseEvent('DASHBOARD_PAGE_DOWNLOAD_BTN_ON_TAP');
-                                                                              logFirebaseEvent('Button_alert_dialog');
                                                                               await showDialog(
                                                                                 context: context,
                                                                                 builder: (alertDialogContext) {
@@ -10287,10 +10265,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             ((event) async {
                                                                           setState(() =>
                                                                               mouseRegionHovered5 = true);
-                                                                          logFirebaseEvent(
-                                                                              'DASHBOARD_MouseRegion_6nefr85u_ON_TOGGLE');
-                                                                          logFirebaseEvent(
-                                                                              'MouseRegion_widget_animation');
                                                                           if (animationsMap['columnOnActionTriggerAnimation1'] !=
                                                                               null) {
                                                                             await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0);
@@ -10300,10 +10274,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             ((event) async {
                                                                           setState(() =>
                                                                               mouseRegionHovered5 = false);
-                                                                          logFirebaseEvent(
-                                                                              'DASHBOARD_MouseRegion_6nefr85u_ON_TOGGLE');
-                                                                          logFirebaseEvent(
-                                                                              'MouseRegion_widget_animation');
                                                                           if (animationsMap['columnOnActionTriggerAnimation1'] !=
                                                                               null) {
                                                                             await animationsMap['columnOnActionTriggerAnimation1']!.controller.forward(from: 0.0).whenComplete(animationsMap['columnOnActionTriggerAnimation1']!.controller.reverse);

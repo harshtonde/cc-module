@@ -109,9 +109,6 @@ class _EnableAutopaySuccessWidgetState extends State<EnableAutopaySuccessWidget>
                                 size: 12,
                               ),
                               onPressed: () async {
-                                logFirebaseEvent(
-                                    'ENABLE_AUTOPAY_SUCCESS_close_ICN_ON_TAP');
-                                logFirebaseEvent('IconButton_bottom_sheet');
                                 Navigator.pop(context);
                               },
                             ),
@@ -473,12 +470,7 @@ class _EnableAutopaySuccessWidgetState extends State<EnableAutopaySuccessWidget>
                                   children: [
                                     FFButtonWidget(
                                       onPressed: () async {
-                                        logFirebaseEvent(
-                                            'ENABLE_AUTOPAY_SUCCESS_VIEW_MY_CREDIT_CA');
-                                        logFirebaseEvent('Button_bottom_sheet');
                                         Navigator.pop(context);
-                                        logFirebaseEvent(
-                                            'Button_update_local_state');
                                         FFAppState().update(() {
                                           FFAppState().autopay = true;
                                         });

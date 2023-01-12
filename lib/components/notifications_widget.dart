@@ -133,9 +133,6 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                   size: 12,
                                 ),
                                 onPressed: () async {
-                                  logFirebaseEvent(
-                                      'NOTIFICATIONS_COMP_close_ICN_ON_TAP');
-                                  logFirebaseEvent('IconButton_bottom_sheet');
                                   Navigator.pop(context);
                                 },
                               ),

@@ -9,6 +9,7 @@ import '../flutter_flow/flutter_flow_toggle_icon.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../custom_code/widgets/index.dart' as custom_widgets;
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,7 +33,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
   @override
   void initState() {
     super.initState();
-    logFirebaseEvent('screen_view', parameters: {'screen_name': 'payNow'});
     textController = TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -240,118 +240,123 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                 fit: BoxFit
                                                                     .fitWidth,
                                                               ),
-                                                              Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            12,
+                                                              Expanded(
+                                                                child: Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          12,
+                                                                          0,
+                                                                          0,
+                                                                          0),
+                                                                  child: Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .start,
+                                                                    children: [
+                                                                      Wrap(
+                                                                        spacing:
                                                                             0,
+                                                                        runSpacing:
                                                                             0,
-                                                                            0),
-                                                                child: Column(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  crossAxisAlignment:
-                                                                      CrossAxisAlignment
-                                                                          .start,
-                                                                  children: [
-                                                                    Row(
-                                                                      mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .max,
-                                                                      children: [
-                                                                        Text(
-                                                                          FFLocalizations.of(context)
-                                                                              .getText(
-                                                                            'tszvwxgl' /* Credit Card Number */,
-                                                                          ),
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyText1
-                                                                              .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
-                                                                                color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                fontSize: 12,
-                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
-                                                                              ),
-                                                                        ),
-                                                                        Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              8,
-                                                                              0,
-                                                                              0,
-                                                                              0),
-                                                                          child:
-                                                                              Image.asset(
-                                                                            'assets/images/visa-logo.png',
-                                                                            height:
-                                                                                15,
-                                                                            fit:
-                                                                                BoxFit.fitHeight,
-                                                                          ),
-                                                                        ),
-                                                                        Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              8,
-                                                                              0,
-                                                                              0,
-                                                                              0),
-                                                                          child:
-                                                                              FFButtonWidget(
-                                                                            onPressed:
-                                                                                () {
-                                                                              print('Button pressed ...');
-                                                                            },
-                                                                            text:
-                                                                                FFLocalizations.of(context).getText(
-                                                                              'sl9d0du0' /* EDIT */,
+                                                                        alignment:
+                                                                            WrapAlignment.center,
+                                                                        crossAxisAlignment:
+                                                                            WrapCrossAlignment.center,
+                                                                        direction:
+                                                                            Axis.horizontal,
+                                                                        runAlignment:
+                                                                            WrapAlignment.center,
+                                                                        verticalDirection:
+                                                                            VerticalDirection.down,
+                                                                        clipBehavior:
+                                                                            Clip.none,
+                                                                        children: [
+                                                                          Text(
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'tszvwxgl' /* Credit Card Number */,
                                                                             ),
-                                                                            options:
-                                                                                FFButtonOptions(
-                                                                              width: 50,
-                                                                              height: 22,
-                                                                              color: FlutterFlowTheme.of(context).tertiaryColor,
-                                                                              textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                                                                                    fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
-                                                                                    color: FlutterFlowTheme.of(context).secondaryColor,
-                                                                                    fontSize: 12,
-                                                                                    fontWeight: FontWeight.bold,
-                                                                                    useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).subtitle2Family),
+                                                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                                                  fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
+                                                                                  color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                  fontSize: 12,
+                                                                                  useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
+                                                                                ),
+                                                                          ),
+                                                                          Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                8,
+                                                                                0,
+                                                                                0,
+                                                                                0),
+                                                                            child:
+                                                                                Image.asset(
+                                                                              'assets/images/visa-logo.png',
+                                                                              height: 15,
+                                                                              fit: BoxFit.fitHeight,
+                                                                            ),
+                                                                          ),
+                                                                          Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                8,
+                                                                                0,
+                                                                                0,
+                                                                                0),
+                                                                            child:
+                                                                                FFButtonWidget(
+                                                                              onPressed: () {
+                                                                                print('Button pressed ...');
+                                                                              },
+                                                                              text: FFLocalizations.of(context).getText(
+                                                                                'sl9d0du0' /* EDIT */,
+                                                                              ),
+                                                                              options: FFButtonOptions(
+                                                                                width: 50,
+                                                                                height: 22,
+                                                                                color: FlutterFlowTheme.of(context).tertiaryColor,
+                                                                                textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                                                                                      fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
+                                                                                      color: FlutterFlowTheme.of(context).secondaryColor,
+                                                                                      fontSize: 12,
+                                                                                      fontWeight: FontWeight.bold,
+                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).subtitle2Family),
+                                                                                    ),
+                                                                                elevation: 0,
+                                                                                borderSide: BorderSide(
+                                                                                  color: Colors.transparent,
+                                                                                  width: 1,
+                                                                                ),
+                                                                                borderRadius: BorderRadius.circular(40),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                      Row(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        children: [
+                                                                          Expanded(
+                                                                            child:
+                                                                                AutoSizeText(
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'nyvhynlf' /* 1234 5678 1234 1234 */,
+                                                                              ),
+                                                                              style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                                                    fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
+                                                                                    color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                    fontSize: 22,
+                                                                                    fontWeight: FontWeight.w300,
+                                                                                    useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
                                                                                   ),
-                                                                              elevation: 0,
-                                                                              borderSide: BorderSide(
-                                                                                color: Colors.transparent,
-                                                                                width: 1,
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(40),
                                                                             ),
                                                                           ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                    Row(
-                                                                      mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .max,
-                                                                      children: [
-                                                                        Text(
-                                                                          FFLocalizations.of(context)
-                                                                              .getText(
-                                                                            'nyvhynlf' /* 1234 5678 1234 1234 */,
-                                                                          ),
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyText1
-                                                                              .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
-                                                                                color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                fontSize: 22,
-                                                                                fontWeight: FontWeight.w300,
-                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
-                                                                              ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                  ],
+                                                                        ],
+                                                                      ),
+                                                                    ],
+                                                                  ),
                                                                 ),
                                                               ),
                                                             ],
@@ -364,74 +369,76 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                 MainAxisAlignment
                                                                     .center,
                                                             children: [
-                                                              Column(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                crossAxisAlignment:
-                                                                    CrossAxisAlignment
-                                                                        .start,
-                                                                children: [
-                                                                  Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Text(
-                                                                        FFLocalizations.of(context)
-                                                                            .getText(
-                                                                          'je156vee' /* Credit Card variant */,
-                                                                        ),
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyText1
-                                                                            .override(
-                                                                              fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
-                                                                              color: FlutterFlowTheme.of(context).secondaryText,
-                                                                              fontSize: 12,
-                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
-                                                                            ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                  Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Image
-                                                                          .asset(
-                                                                        'assets/images/logo_Bank_aloneBG@1x.png',
-                                                                        height:
-                                                                            30,
-                                                                        fit: BoxFit
-                                                                            .fitWidth,
-                                                                      ),
-                                                                      Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            4,
-                                                                            0,
-                                                                            0,
-                                                                            0),
-                                                                        child:
-                                                                            Text(
+                                                              Expanded(
+                                                                child: Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .min,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Row(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .max,
+                                                                      children: [
+                                                                        Text(
                                                                           FFLocalizations.of(context)
                                                                               .getText(
-                                                                            'y2kdt15y' /* ICICI Bank MakeMyTrip platinum */,
+                                                                            'je156vee' /* Credit Card variant */,
                                                                           ),
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyText1
                                                                               .override(
                                                                                 fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
                                                                                 color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                fontSize: 22,
-                                                                                fontWeight: FontWeight.w300,
+                                                                                fontSize: 12,
                                                                                 useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
                                                                               ),
                                                                         ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ],
+                                                                      ],
+                                                                    ),
+                                                                    Row(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .max,
+                                                                      children: [
+                                                                        Image
+                                                                            .asset(
+                                                                          'assets/images/logo_Bank_aloneBG@1x.png',
+                                                                          height:
+                                                                              30,
+                                                                          fit: BoxFit
+                                                                              .fitWidth,
+                                                                        ),
+                                                                        Expanded(
+                                                                          child:
+                                                                              Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                4,
+                                                                                0,
+                                                                                0,
+                                                                                0),
+                                                                            child:
+                                                                                Text(
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'y2kdt15y' /* ICICI Bank MakeMyTrip platinum */,
+                                                                              ),
+                                                                              style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                                                    fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
+                                                                                    color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                    fontSize: 22,
+                                                                                    fontWeight: FontWeight.w300,
+                                                                                    useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                  ],
+                                                                ),
                                                               ),
                                                             ],
                                                           ),
@@ -623,10 +630,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                         children: [
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_p0snbfj2_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -636,8 +639,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                         .minimumAmountDue =
                                                                     false;
                                                               });
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -773,10 +774,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_zo4esedr_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -786,8 +783,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                         .minimumAmountDue =
                                                                     true;
                                                               });
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -923,10 +918,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_urx3lbs3_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -936,8 +927,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                         .minimumAmountDue =
                                                                     false;
                                                               });
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -1073,10 +1062,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_fwe350ti_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -1086,8 +1071,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                         .minimumAmountDue =
                                                                     false;
                                                               });
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -1642,10 +1625,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                         children: [
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_ew5y23u8_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -1808,10 +1787,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           ),
                                                           InkWell(
                                                             onTap: () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_Container_5zlxka8e_ON_TAP');
-                                                              logFirebaseEvent(
-                                                                  'Container_update_local_state');
                                                               FFAppState()
                                                                   .update(() {
                                                                 FFAppState()
@@ -2064,10 +2039,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                   ),
                                                                   onPressed:
                                                                       () async {
-                                                                    logFirebaseEvent(
-                                                                        'PAY_NOW_PAGE_date_range_ICN_ON_TAP');
-                                                                    logFirebaseEvent(
-                                                                        'IconButton_date_time_picker');
                                                                     final _datePickedDate =
                                                                         await showDatePicker(
                                                                       context:
@@ -2190,13 +2161,8 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                           FFButtonWidget(
                                                             onPressed:
                                                                 () async {
-                                                              logFirebaseEvent(
-                                                                  'PAY_NOW_PAGE_CONFIRM_&_PAY_BTN_ON_TAP');
                                                               if (FFAppState()
                                                                   .termsAndConditions) {
-                                                                logFirebaseEvent(
-                                                                    'Button_navigate_to');
-
                                                                 context.pushNamed(
                                                                     'initiateTransferOTP');
                                                               }
@@ -2262,10 +2228,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                                                                 FFButtonWidget(
                                                               onPressed:
                                                                   () async {
-                                                                logFirebaseEvent(
-                                                                    'PAY_NOW_PAGE_CANCEL_BTN_ON_TAP');
-                                                                logFirebaseEvent(
-                                                                    'Button_navigate_back');
                                                                 context.pop();
                                                               },
                                                               text: FFLocalizations
@@ -2374,7 +2336,6 @@ class _PayNowWidgetState extends State<PayNowWidget> {
                           phone: false,
                           tablet: false,
                           tabletLandscape: false,
-                          desktop: false,
                         ))
                           SideBarUpdateWidget(),
                         Align(

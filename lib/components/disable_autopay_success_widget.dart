@@ -109,9 +109,6 @@ class _DisableAutopaySuccessWidgetState
                                 size: 12,
                               ),
                               onPressed: () async {
-                                logFirebaseEvent(
-                                    'DISABLE_AUTOPAY_SUCCESS_close_ICN_ON_TAP');
-                                logFirebaseEvent('IconButton_bottom_sheet');
                                 Navigator.pop(context);
                               },
                             ),
@@ -326,12 +323,7 @@ class _DisableAutopaySuccessWidgetState
                                   children: [
                                     FFButtonWidget(
                                       onPressed: () async {
-                                        logFirebaseEvent(
-                                            'DISABLE_AUTOPAY_SUCCESS_VIEW_MY_CREDIT_C');
-                                        logFirebaseEvent('Button_bottom_sheet');
                                         Navigator.pop(context);
-                                        logFirebaseEvent(
-                                            'Button_update_local_state');
                                         FFAppState().update(() {
                                           FFAppState().autopay = false;
                                         });

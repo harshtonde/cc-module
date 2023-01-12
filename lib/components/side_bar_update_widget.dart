@@ -396,10 +396,6 @@ TRANSFERS */
                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
                                 child: InkWell(
                                   onTap: () async {
-                                    logFirebaseEvent(
-                                        'SIDE_BAR_UPDATE_Container_ig37o88t_ON_TA');
-                                    logFirebaseEvent('Container_navigate_to');
-
                                     context.pushNamed('dashboard');
                                   },
                                   child: Container(
@@ -551,10 +547,6 @@ TRANSFERS */
                         padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 8),
                         child: InkWell(
                           onTap: () async {
-                            logFirebaseEvent(
-                                'SIDE_BAR_UPDATE_CircleImage_0k45xyp7_ON_');
-                            logFirebaseEvent('CircleImage_navigate_to');
-
                             context.pushNamed('dashboard');
                           },
                           child: Container(

@@ -79,9 +79,6 @@ class _LoanOnCCComponentWidgetState extends State<LoanOnCCComponentWidget> {
                     cursor: MouseCursor.defer ?? MouseCursor.defer,
                     child: InkWell(
                       onTap: () async {
-                        logFirebaseEvent(
-                            'LOAN_ON_C_C_COMPONENT_Container_90oafai0');
-                        logFirebaseEvent('Container_launch_u_r_l');
                         await launchURL(
                             'https://icici-ucj-pl-test.flutterflow.app');
                       },
