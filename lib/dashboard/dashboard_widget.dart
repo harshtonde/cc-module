@@ -5849,10 +5849,26 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             16,
                                                                             12,
                                                                             16),
-                                                                child: Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
+                                                                child: Wrap(
+                                                                  spacing: 24,
+                                                                  runSpacing:
+                                                                      12,
+                                                                  alignment:
+                                                                      WrapAlignment
+                                                                          .start,
+                                                                  crossAxisAlignment:
+                                                                      WrapCrossAlignment
+                                                                          .start,
+                                                                  direction: Axis
+                                                                      .horizontal,
+                                                                  runAlignment:
+                                                                      WrapAlignment
+                                                                          .start,
+                                                                  verticalDirection:
+                                                                      VerticalDirection
+                                                                          .down,
+                                                                  clipBehavior:
+                                                                      Clip.none,
                                                                   children: [
                                                                     Padding(
                                                                       padding: EdgeInsetsDirectional
@@ -5968,99 +5984,101 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                         ],
                                                                       ),
                                                                     ),
-                                                                    Expanded(
-                                                                      child:
-                                                                          Column(
-                                                                        mainAxisSize:
-                                                                            MainAxisSize.max,
-                                                                        crossAxisAlignment:
-                                                                            CrossAxisAlignment.end,
-                                                                        children: [
-                                                                          Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                0,
-                                                                                0,
-                                                                                0,
-                                                                                12),
-                                                                            child:
-                                                                                FFButtonWidget(
-                                                                              onPressed: () async {
-                                                                                FFAppState().update(() {
-                                                                                  FFAppState().convertToEmiInitiated = false;
-                                                                                });
+                                                                    Column(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .min,
+                                                                      crossAxisAlignment:
+                                                                          CrossAxisAlignment
+                                                                              .end,
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                              0,
+                                                                              0,
+                                                                              0,
+                                                                              12),
+                                                                          child:
+                                                                              FFButtonWidget(
+                                                                            onPressed:
+                                                                                () async {
+                                                                              FFAppState().update(() {
+                                                                                FFAppState().convertToEmiInitiated = false;
+                                                                              });
 
-                                                                                context.pushNamed('payNow');
-                                                                              },
-                                                                              text: FFLocalizations.of(context).getText(
-                                                                                'q0g7zihx' /* Pay Now */,
+                                                                              context.pushNamed('payNow');
+                                                                            },
+                                                                            text:
+                                                                                FFLocalizations.of(context).getText(
+                                                                              'q0g7zihx' /* Pay Now */,
+                                                                            ),
+                                                                            options:
+                                                                                FFButtonOptions(
+                                                                              height: 36,
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                                                                              color: FlutterFlowTheme.of(context).primaryColor,
+                                                                              textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                                                                                    fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
+                                                                                    color: Colors.white,
+                                                                                    useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).subtitle2Family),
+                                                                                  ),
+                                                                              borderSide: BorderSide(
+                                                                                color: Colors.transparent,
+                                                                                width: 1,
                                                                               ),
-                                                                              options: FFButtonOptions(
-                                                                                height: 36,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                                                                                color: FlutterFlowTheme.of(context).primaryColor,
-                                                                                textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                                                                                      fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
-                                                                                      color: Colors.white,
-                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).subtitle2Family),
-                                                                                    ),
-                                                                                borderSide: BorderSide(
-                                                                                  color: Colors.transparent,
-                                                                                  width: 1,
-                                                                                ),
-                                                                                borderRadius: BorderRadius.circular(40),
-                                                                              ),
+                                                                              borderRadius: BorderRadius.circular(40),
                                                                             ),
                                                                           ),
-                                                                          Row(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            mainAxisAlignment:
-                                                                                MainAxisAlignment.end,
-                                                                            children: [
-                                                                              Text(
-                                                                                FFLocalizations.of(context).getText(
-                                                                                  '3frj6v6c' /* Auto Pay */,
-                                                                                ),
-                                                                                style: FlutterFlowTheme.of(context).bodyText1,
+                                                                        ),
+                                                                        Row(
+                                                                          mainAxisSize:
+                                                                              MainAxisSize.min,
+                                                                          mainAxisAlignment:
+                                                                              MainAxisAlignment.end,
+                                                                          children: [
+                                                                            Text(
+                                                                              FFLocalizations.of(context).getText(
+                                                                                '3frj6v6c' /* Auto Pay */,
                                                                               ),
-                                                                              Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
-                                                                                child: InkWell(
-                                                                                  onTap: () async {
-                                                                                    if (FFAppState().autopay) {
-                                                                                      await showModalBottomSheet(
-                                                                                        isScrollControlled: true,
-                                                                                        backgroundColor: Colors.transparent,
-                                                                                        enableDrag: false,
-                                                                                        context: context,
-                                                                                        builder: (context) {
-                                                                                          return Padding(
-                                                                                            padding: MediaQuery.of(context).viewInsets,
-                                                                                            child: DisableAutopayBottomSheetWidget(),
-                                                                                          );
-                                                                                        },
-                                                                                      ).then((value) => setState(() {}));
-                                                                                    } else {
-                                                                                      await showModalBottomSheet(
-                                                                                        isScrollControlled: true,
-                                                                                        backgroundColor: Colors.transparent,
-                                                                                        context: context,
-                                                                                        builder: (context) {
-                                                                                          return Padding(
-                                                                                            padding: MediaQuery.of(context).viewInsets,
-                                                                                            child: EnableAutopayBottomSheetWidget(),
-                                                                                          );
-                                                                                        },
-                                                                                      ).then((value) => setState(() {}));
-                                                                                    }
-                                                                                  },
-                                                                                  child: AutopaySwtichWidget(),
-                                                                                ),
+                                                                              style: FlutterFlowTheme.of(context).bodyText1,
+                                                                            ),
+                                                                            Padding(
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
+                                                                              child: InkWell(
+                                                                                onTap: () async {
+                                                                                  if (FFAppState().autopay) {
+                                                                                    await showModalBottomSheet(
+                                                                                      isScrollControlled: true,
+                                                                                      backgroundColor: Colors.transparent,
+                                                                                      enableDrag: false,
+                                                                                      context: context,
+                                                                                      builder: (context) {
+                                                                                        return Padding(
+                                                                                          padding: MediaQuery.of(context).viewInsets,
+                                                                                          child: DisableAutopayBottomSheetWidget(),
+                                                                                        );
+                                                                                      },
+                                                                                    ).then((value) => setState(() {}));
+                                                                                  } else {
+                                                                                    await showModalBottomSheet(
+                                                                                      isScrollControlled: true,
+                                                                                      backgroundColor: Colors.transparent,
+                                                                                      context: context,
+                                                                                      builder: (context) {
+                                                                                        return Padding(
+                                                                                          padding: MediaQuery.of(context).viewInsets,
+                                                                                          child: EnableAutopayBottomSheetWidget(),
+                                                                                        );
+                                                                                      },
+                                                                                    ).then((value) => setState(() {}));
+                                                                                  }
+                                                                                },
+                                                                                child: AutopaySwtichWidget(),
                                                                               ),
-                                                                            ],
-                                                                          ),
-                                                                        ],
-                                                                      ),
+                                                                            ),
+                                                                          ],
+                                                                        ),
+                                                                      ],
                                                                     ),
                                                                   ],
                                                                 ),
@@ -6136,9 +6154,23 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               0,
                                                                               16),
                                                                           child:
-                                                                              Row(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
+                                                                              Wrap(
+                                                                            spacing:
+                                                                                12,
+                                                                            runSpacing:
+                                                                                12,
+                                                                            alignment:
+                                                                                WrapAlignment.start,
+                                                                            crossAxisAlignment:
+                                                                                WrapCrossAlignment.center,
+                                                                            direction:
+                                                                                Axis.horizontal,
+                                                                            runAlignment:
+                                                                                WrapAlignment.start,
+                                                                            verticalDirection:
+                                                                                VerticalDirection.down,
+                                                                            clipBehavior:
+                                                                                Clip.none,
                                                                             children: [
                                                                               Text(
                                                                                 FFLocalizations.of(context).getText(
@@ -6146,20 +6178,18 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyText1,
                                                                               ),
-                                                                              Expanded(
-                                                                                child: Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
-                                                                                  child: Text(
-                                                                                    FFLocalizations.of(context).getText(
-                                                                                      'gwd21dk5' /* ₹ 17,250 */,
-                                                                                    ),
-                                                                                    style: FlutterFlowTheme.of(context).title3.override(
-                                                                                          fontFamily: FlutterFlowTheme.of(context).title3Family,
-                                                                                          color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                          fontWeight: FontWeight.normal,
-                                                                                          useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).title3Family),
-                                                                                        ),
+                                                                              Padding(
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                                                                                child: Text(
+                                                                                  FFLocalizations.of(context).getText(
+                                                                                    'gwd21dk5' /* ₹ 17,250 */,
                                                                                   ),
+                                                                                  style: FlutterFlowTheme.of(context).title3.override(
+                                                                                        fontFamily: FlutterFlowTheme.of(context).title3Family,
+                                                                                        color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                        fontWeight: FontWeight.normal,
+                                                                                        useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).title3Family),
+                                                                                      ),
                                                                                 ),
                                                                               ),
                                                                               FFButtonWidget(
