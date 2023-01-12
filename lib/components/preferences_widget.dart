@@ -590,6 +590,13 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                                                     width: 20,
                                                     height: 20,
                                                     decoration: BoxDecoration(
+                                                      color:
+                                                          valueOrDefault<Color>(
+                                                        colorPicked,
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .negative,
+                                                      ),
                                                       shape: BoxShape.circle,
                                                       border: Border.all(
                                                         color:
