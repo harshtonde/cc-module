@@ -2081,7 +2081,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                                             ),
                                                                                                             style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                                                   fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
-                                                                                                                  color: FlutterFlowTheme.of(context).negative,
+                                                                                                                  color: valueOrDefault<Color>(
+                                                                                                                    FFAppState().negativeColor,
+                                                                                                                    FlutterFlowTheme.of(context).negative,
+                                                                                                                  ),
                                                                                                                   fontSize: 16,
                                                                                                                   fontWeight: FontWeight.bold,
                                                                                                                   useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
@@ -2209,7 +2212,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                                             ),
                                                                                                             style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                                                   fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
-                                                                                                                  color: FlutterFlowTheme.of(context).negative,
+                                                                                                                  color: valueOrDefault<Color>(
+                                                                                                                    FFAppState().negativeColor,
+                                                                                                                    FlutterFlowTheme.of(context).negative,
+                                                                                                                  ),
                                                                                                                   fontSize: 16,
                                                                                                                   fontWeight: FontWeight.bold,
                                                                                                                   useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
@@ -2337,7 +2343,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                                             ),
                                                                                                             style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                                                   fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
-                                                                                                                  color: FlutterFlowTheme.of(context).negative,
+                                                                                                                  color: valueOrDefault<Color>(
+                                                                                                                    FFAppState().negativeColor,
+                                                                                                                    FlutterFlowTheme.of(context).negative,
+                                                                                                                  ),
                                                                                                                   fontSize: 16,
                                                                                                                   fontWeight: FontWeight.bold,
                                                                                                                   useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
@@ -2465,7 +2474,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                                             ),
                                                                                                             style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                                                   fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
-                                                                                                                  color: FlutterFlowTheme.of(context).negative,
+                                                                                                                  color: valueOrDefault<Color>(
+                                                                                                                    FFAppState().negativeColor,
+                                                                                                                    FlutterFlowTheme.of(context).negative,
+                                                                                                                  ),
                                                                                                                   fontSize: 16,
                                                                                                                   fontWeight: FontWeight.bold,
                                                                                                                   useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
@@ -2593,7 +2605,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                                                             ),
                                                                                                             style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                                                   fontFamily: FlutterFlowTheme.of(context).bodyText1Family,
-                                                                                                                  color: FlutterFlowTheme.of(context).negative,
+                                                                                                                  color: valueOrDefault<Color>(
+                                                                                                                    FFAppState().negativeColor,
+                                                                                                                    FlutterFlowTheme.of(context).negative,
+                                                                                                                  ),
                                                                                                                   fontSize: 16,
                                                                                                                   fontWeight: FontWeight.bold,
                                                                                                                   useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText1Family),
