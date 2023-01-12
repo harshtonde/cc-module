@@ -6473,7 +6473,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'or': 'ଅଟୋପେ ସଫଳତାର ସହିତ ଅକ୍ଷମ ହୋଇଛି |',
       'ta': 'தானாகச் செலுத்துதல் வெற்றிகரமாக முடக்கப்பட்டது',
     },
-    '5m4sd8pv': {
+    'm5vchfwg': {
       'en': 'Switch to Dark Mode',
       'bn': '',
       'de': '',
@@ -6482,7 +6482,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'or': '',
       'ta': '',
     },
-    'btbdpdbw': {
+    'ol26qr1p': {
       'en': 'Switch to Light Mode',
       'bn': '',
       'de': '',
@@ -6491,7 +6491,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'or': '',
       'ta': '',
     },
-    'dj2wm0fi': {
+    '4ge4gzs7': {
       'en': 'Language',
       'bn': '',
       'de': '',
@@ -6500,7 +6500,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'or': '',
       'ta': '',
     },
-    'wxo7v2le': {
+    'r5fsn446': {
       'en': 'Negative Value Color',
       'bn': '',
       'de': '',
