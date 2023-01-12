@@ -257,6 +257,12 @@ class FFAppState extends ChangeNotifier {
   void removeFromAccountNumbers(String _value) {
     _accountNumbers.remove(_value);
   }
+
+  Color _negativeColor = Color(4289478206);
+  Color get negativeColor => _negativeColor;
+  set negativeColor(Color _value) {
+    _negativeColor = _value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {
@@ -267,4 +273,11 @@ LatLng? _latLngFromString(String? val) {
   final lat = double.parse(split.first);
   final lng = double.parse(split.last);
   return LatLng(lat, lng);
+}
+
+Color? _colorFromIntValue(int? val) {
+  if (val == null) {
+    return null;
+  }
+  return Color(val);
 }

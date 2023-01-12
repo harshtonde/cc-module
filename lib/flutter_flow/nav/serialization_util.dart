@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 
 import '../../backend/backend.dart';
-import '../../backend/supabase/supabase.dart';
+
 import '../../flutter_flow/lat_lng.dart';
 import '../../flutter_flow/place.dart';
 import '../../flutter_flow/local_file.dart';
@@ -87,9 +87,6 @@ String? serializeParam(
       case ParamType.Document:
         final reference = (param as dynamic).reference as DocumentReference;
         return _serializeDocumentReference(reference);
-
-      case ParamType.SupabaseRow:
-        return json.encode((param as SupabaseDataRow).data);
 
       default:
         return null;
@@ -179,7 +176,6 @@ enum ParamType {
   JSON,
   Document,
   DocumentReference,
-  SupabaseRow,
 }
 
 dynamic deserializeParam<T>(
@@ -234,15 +230,6 @@ dynamic deserializeParam<T>(
         return json.decode(param);
       case ParamType.DocumentReference:
         return _deserializeDocumentReference(param, collectionNamePath ?? []);
-
-      case ParamType.SupabaseRow:
-        final data = json.decode(param) as Map<String, dynamic>;
-        switch (T) {
-          case EmiItemsRow:
-            return EmiItemsRow(data);
-          default:
-            return null;
-        }
 
       default:
         return null;

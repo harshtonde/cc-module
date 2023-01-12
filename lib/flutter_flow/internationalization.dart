@@ -6462,6 +6462,63 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'கிரெடிட் கார்டில் கடனுக்கு விண்ணப்பிக்கவும்',
     },
   },
+  // preferences
+  {
+    '536u2pi1': {
+      'en': 'Preferences',
+      'bn': 'অটোপে সফলভাবে অক্ষম করা হয়েছে৷',
+      'de': 'Autopay wurde erfolgreich deaktiviert',
+      'hi': 'स्वतः भुगतान सफलतापूर्वक अक्षम कर दिया गया है',
+      'mr': 'ऑटोपे यशस्वीरित्या अक्षम केले गेले आहे',
+      'or': 'ଅଟୋପେ ସଫଳତାର ସହିତ ଅକ୍ଷମ ହୋଇଛି |',
+      'ta': 'தானாகச் செலுத்துதல் வெற்றிகரமாக முடக்கப்பட்டது',
+    },
+    '5m4sd8pv': {
+      'en': 'Switch to Dark Mode',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+    },
+    'btbdpdbw': {
+      'en': 'Switch to Light Mode',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+    },
+    'dj2wm0fi': {
+      'en': 'Language',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+    },
+    'wxo7v2le': {
+      'en': 'Negative Value Color',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+    },
+    '6mkqixqx': {
+      'en': 'Confirm',
+      'bn': 'আমার ক্রেডিট কার্ড দেখুন',
+      'de': 'MEINE KREDITKARTEN ANZEIGEN',
+      'hi': 'मेरे क्रेडिट कार्ड देखें',
+      'mr': 'माझे क्रेडिट कार्ड पहा',
+      'or': 'ମୋର କ୍ରେଡିଟ୍ କାର୍ଡଗୁଡିକ ଦେଖନ୍ତୁ |',
+      'ta': 'எனது கிரெடிட் கார்டுகளைப் பார்க்கவும்',
+    },
+  },
   // Miscellaneous
   {
     '1932ik5m': {
