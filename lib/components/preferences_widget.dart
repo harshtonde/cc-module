@@ -192,7 +192,7 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'm5vchfwg' /* Switch to Dark Mode */,
+                                                    'u4xv7fei' /* Switch to Dark Mode */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -321,7 +321,7 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'ol26qr1p' /* Switch to Light Mode */,
+                                                    'rig1s0b4' /* Switch to Light Mode */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -441,7 +441,7 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                                       children: [
                                         Text(
                                           FFLocalizations.of(context).getText(
-                                            '4ge4gzs7' /* Language */,
+                                            'gst0s98x' /* Language */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
@@ -513,7 +513,7 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                                       children: [
                                         Text(
                                           FFLocalizations.of(context).getText(
-                                            'r5fsn446' /* Negative Value Color */,
+                                            '8ckg04ig' /* Negative Value Color */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
