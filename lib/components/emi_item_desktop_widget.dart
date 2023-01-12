@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class EmiItemWidget extends StatefulWidget {
-  const EmiItemWidget({
+class EmiItemDesktopWidget extends StatefulWidget {
+  const EmiItemDesktopWidget({
     Key? key,
     this.date,
     this.month,
@@ -27,10 +27,10 @@ class EmiItemWidget extends StatefulWidget {
   final bool? isChecked;
 
   @override
-  _EmiItemWidgetState createState() => _EmiItemWidgetState();
+  _EmiItemDesktopWidgetState createState() => _EmiItemDesktopWidgetState();
 }
 
-class _EmiItemWidgetState extends State<EmiItemWidget> {
+class _EmiItemDesktopWidgetState extends State<EmiItemDesktopWidget> {
   bool? checkboxValue;
   //
 
