@@ -1,5 +1,6 @@
 import '../components/notifications_widget.dart';
 import '../components/preferences_widget.dart';
+import '../components/protection_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -90,6 +91,35 @@ class _TopHeaderWidgetState extends State<TopHeaderWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
+                      child: FlutterFlowIconButton(
+                        borderColor: Colors.transparent,
+                        borderRadius: 30,
+                        borderWidth: 1,
+                        buttonSize: 50,
+                        fillColor: FlutterFlowTheme.of(context).tertiaryColor,
+                        icon: Icon(
+                          Icons.security_outlined,
+                          color: FlutterFlowTheme.of(context).secondaryColor,
+                          size: 24,
+                        ),
+                        onPressed: () async {
+                          await showModalBottomSheet(
+                            isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
+                            enableDrag: false,
+                            context: context,
+                            builder: (context) {
+                              return Padding(
+                                padding: MediaQuery.of(context).viewInsets,
+                                child: ProtectionWidget(),
+                              );
+                            },
+                          ).then((value) => setState(() {}));
+                        },
+                      ),
+                    ),
                     FlutterFlowIconButton(
                       borderColor: Colors.transparent,
                       borderRadius: 30,

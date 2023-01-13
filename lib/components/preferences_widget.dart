@@ -134,7 +134,7 @@ class _PreferencesWidgetState extends State<PreferencesWidget>
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      30, 12, 0, 0),
+                                      0, 12, 0, 0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       '536u2pi1' /* Personalization */,

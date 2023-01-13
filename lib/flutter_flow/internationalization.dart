@@ -3460,7 +3460,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // payNow
   {
-    'lek5r4jh': {
+    'ybctrglv': {
       'en': '7',
       'bn': '7',
       'de': '7',
@@ -3850,7 +3850,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // convertToEMI
   {
-    '20wignq2': {
+    'zjtuf9wa': {
       'en': '7',
       'bn': '7',
       'de': '7',
@@ -3970,7 +3970,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '08 டிச',
       'ur': '08 دسمبر',
     },
-    'vhmo030i': {
+    'w90nnknm': {
       'en': 'SELECT TRANSACTIONS FOR EMI CONVERSION',
       'bn': '',
       'de': '',
@@ -4388,7 +4388,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // initiateTransferOTP
   {
-    'smnz5w80': {
+    'kbvdgrwq': {
       'en': '7',
       'bn': '7',
       'de': '7',
@@ -4906,7 +4906,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // initiateTransferGrid
   {
-    '3uhpi001': {
+    'h4t9nxyd': {
       'en': '7',
       'bn': '7',
       'de': '7',
@@ -5267,7 +5267,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // paymentSent
   {
-    'zfeoj1dt': {
+    'oczsc8el': {
       'en': '7',
       'bn': '7',
       'de': '7',
@@ -7703,6 +7703,189 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'or': 'ଅନ୍',
       'ta': 'ஆன்',
       'ur': 'آن',
+    },
+  },
+  // protection
+  {
+    '8fsx61g6': {
+      'en': 'freeRASP SDK is only \navailable for Android and iOS',
+      'bn': 'ব্যক্তিগতকরণ',
+      'de': 'Personalisierung',
+      'hi': 'निजीकरण',
+      'mr': 'वैयक्तिकरण',
+      'or': 'ବ୍ୟକ୍ତିଗତକରଣ',
+      'ta': 'தனிப்பயனாக்கம்',
+      'ur': 'پرسنلائزیشن',
+    },
+    'wue079gr': {
+      'en': 'freeRASP SDK',
+      'bn': 'ব্যক্তিগতকরণ',
+      'de': 'Personalisierung',
+      'hi': 'निजीकरण',
+      'mr': 'वैयक्तिकरण',
+      'or': 'ବ୍ୟକ୍ତିଗତକରଣ',
+      'ta': 'தனிப்பயனாக்கம்',
+      'ur': 'پرسنلائزیشن',
+    },
+    'bxamog8e': {
+      'en': 'Rooted Device',
+      'bn': 'বিবৃতি দেখান',
+      'de': 'Aussagen anzeigen',
+      'hi': 'बयान दिखाएं',
+      'mr': 'विधाने दाखवा',
+      'or': 'ଷ୍ଟେଟମେଣ୍ଟଗୁଡିକ ଦେଖାନ୍ତୁ |',
+      'ta': 'அறிக்கைகளைக் காட்டு',
+      'ur': 'بیانات دکھائیں۔',
+    },
+    '4h2p72ih': {
+      'en': 'YES',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+      'ur': '',
+    },
+    'yostqa6t': {
+      'en': 'NO',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+      'ur': '',
+    },
+    'p3haw94v': {
+      'en': 'Emulator Detected',
+      'bn': 'বিবৃতি দেখান',
+      'de': 'Aussagen anzeigen',
+      'hi': 'बयान दिखाएं',
+      'mr': 'विधाने दाखवा',
+      'or': 'ଷ୍ଟେଟମେଣ୍ଟଗୁଡିକ ଦେଖାନ୍ତୁ |',
+      'ta': 'அறிக்கைகளைக் காட்டு',
+      'ur': 'بیانات دکھائیں۔',
+    },
+    'jy21rypp': {
+      'en': 'YES',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+      'ur': '',
+    },
+    '2fv5e23a': {
+      'en': 'NO',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+      'ur': '',
+    },
+    'rgoljqcu': {
+      'en': 'Hook Detected',
+      'bn': 'বিবৃতি দেখান',
+      'de': 'Aussagen anzeigen',
+      'hi': 'बयान दिखाएं',
+      'mr': 'विधाने दाखवा',
+      'or': 'ଷ୍ଟେଟମେଣ୍ଟଗୁଡିକ ଦେଖାନ୍ତୁ |',
+      'ta': 'அறிக்கைகளைக் காட்டு',
+      'ur': 'بیانات دکھائیں۔',
+    },
+    'xv52qltn': {
+      'en': 'YES',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+      'ur': '',
+    },
+    'vakt65x0': {
+      'en': 'NO',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+      'ur': '',
+    },
+    'gtdi8oa7': {
+      'en': 'Tamper Detected',
+      'bn': 'বিবৃতি দেখান',
+      'de': 'Aussagen anzeigen',
+      'hi': 'बयान दिखाएं',
+      'mr': 'विधाने दाखवा',
+      'or': 'ଷ୍ଟେଟମେଣ୍ଟଗୁଡିକ ଦେଖାନ୍ତୁ |',
+      'ta': 'அறிக்கைகளைக் காட்டு',
+      'ur': 'بیانات دکھائیں۔',
+    },
+    'tabidxb6': {
+      'en': 'YES',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+      'ur': '',
+    },
+    'zt4gsubu': {
+      'en': 'NO',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+      'ur': '',
+    },
+    '570hqx3d': {
+      'en': 'Untrusted Installation Detected',
+      'bn': 'বিবৃতি দেখান',
+      'de': 'Aussagen anzeigen',
+      'hi': 'बयान दिखाएं',
+      'mr': 'विधाने दाखवा',
+      'or': 'ଷ୍ଟେଟମେଣ୍ଟଗୁଡିକ ଦେଖାନ୍ତୁ |',
+      'ta': 'அறிக்கைகளைக் காட்டு',
+      'ur': 'بیانات دکھائیں۔',
+    },
+    'ue12c37v': {
+      'en': 'YES',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+      'ur': '',
+    },
+    'rkefiqbg': {
+      'en': 'NO',
+      'bn': '',
+      'de': '',
+      'hi': '',
+      'mr': '',
+      'or': '',
+      'ta': '',
+      'ur': '',
+    },
+    '7no2k5ac': {
+      'en': 'Confirm',
+      'bn': 'নিশ্চিত করুন',
+      'de': 'Bestätigen',
+      'hi': 'पुष्टि करें',
+      'mr': 'पुष्टी',
+      'or': 'ନିଶ୍ଚିତ କରନ୍ତୁ |',
+      'ta': 'உறுதிப்படுத்தவும்',
+      'ur': 'تصدیق کریں۔',
     },
   },
   // Miscellaneous
