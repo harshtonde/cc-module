@@ -82,117 +82,201 @@ class _ProtectionWidgetState extends State<ProtectionWidget> {
                               ),
                             ],
                           ),
-                          if (!(isAndroid || isiOS))
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 12, 0, 0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '8fsx61g6' /* freeRASP SDK is only 
-availabl... */
-                                        ,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText2
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
-                                            fontSize: 20,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 12, 0, 0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'wue079gr' /* Mobile Security Controls */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText2
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText2Family,
+                                          fontSize: 20,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText2Family),
+                                        ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 24, 0, 0),
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24, 12, 24, 12),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              'bxamog8e' /* Rooted Device Detecte */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1Family),
+                                                ),
                                           ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 24, 0, 0),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          if (isAndroid || isiOS)
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 12, 0, 0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'wue079gr' /* freeRASP SDK */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText2
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
-                                            fontSize: 20,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              if (FFAppState().rootDetected)
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'zbragl3f' /* YES */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1Family,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .negative,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1Family),
+                                                      ),
+                                                ),
+                                              if (!FFAppState().rootDetected)
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '5kv5a7tn' /* NO */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1Family,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .positive,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1Family),
+                                                      ),
+                                                ),
+                                            ],
                                           ),
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 24, 0, 0),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            24, 12, 24, 12),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'bxamog8e' /* Rooted Device */,
-                                              ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 24, 0, 0),
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24, 12, 24, 12),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              'p3haw94v' /* Emulator Detected */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1Family),
+                                                ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              if (FFAppState().emulatorDetected)
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'xr6sd08f' /* YES */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Outfit',
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1Family,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primaryText,
-                                                        fontSize: 14,
+                                                                .negative,
                                                         fontWeight:
-                                                            FontWeight.normal,
+                                                            FontWeight.bold,
                                                         useGoogleFonts: GoogleFonts
                                                                 .asMap()
                                                             .containsKey(
@@ -200,106 +284,28 @@ availabl... */
                                                                         context)
                                                                     .bodyText1Family),
                                                       ),
-                                            ),
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                if (FFAppState().rootDetected)
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '4h2p72ih' /* YES */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyText1Family,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .negative,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyText1Family),
-                                                        ),
+                                                ),
+                                              if (!FFAppState()
+                                                  .emulatorDetected)
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'd0oquqt6' /* NO */,
                                                   ),
-                                                if (!FFAppState().rootDetected)
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'yostqa6t' /* NO */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyText1Family,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .positive,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyText1Family),
-                                                        ),
-                                                  ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 24, 0, 0),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            24, 12, 24, 12),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'p3haw94v' /* Emulator Detected */,
-                                              ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Outfit',
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1Family,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primaryText,
-                                                        fontSize: 14,
+                                                                .positive,
                                                         fontWeight:
-                                                            FontWeight.normal,
+                                                            FontWeight.bold,
                                                         useGoogleFonts: GoogleFonts
                                                                 .asMap()
                                                             .containsKey(
@@ -307,108 +313,76 @@ availabl... */
                                                                         context)
                                                                     .bodyText1Family),
                                                       ),
-                                            ),
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                if (FFAppState()
-                                                    .emulatorDetected)
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'jy21rypp' /* YES */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyText1Family,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .negative,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyText1Family),
-                                                        ),
-                                                  ),
-                                                if (!FFAppState()
-                                                    .emulatorDetected)
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '2fv5e23a' /* NO */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyText1Family,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .positive,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyText1Family),
-                                                        ),
-                                                  ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
+                                                ),
+                                            ],
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 24, 0, 0),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            24, 12, 24, 12),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'rgoljqcu' /* Hook Detected */,
-                                              ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 24, 0, 0),
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24, 12, 24, 12),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              'rgoljqcu' /* Hook Detected */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1Family),
+                                                ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              if (FFAppState().hookDetected)
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'mh8rsjjk' /* YES */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Outfit',
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1Family,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primaryText,
-                                                        fontSize: 14,
+                                                                .negative,
                                                         fontWeight:
-                                                            FontWeight.normal,
+                                                            FontWeight.bold,
                                                         useGoogleFonts: GoogleFonts
                                                                 .asMap()
                                                             .containsKey(
@@ -416,106 +390,27 @@ availabl... */
                                                                         context)
                                                                     .bodyText1Family),
                                                       ),
-                                            ),
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                if (FFAppState().hookDetected)
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'xv52qltn' /* YES */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyText1Family,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .negative,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyText1Family),
-                                                        ),
+                                                ),
+                                              if (!FFAppState().hookDetected)
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'owr6fp2r' /* NO */,
                                                   ),
-                                                if (!FFAppState().hookDetected)
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'vakt65x0' /* NO */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyText1Family,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .positive,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyText1Family),
-                                                        ),
-                                                  ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 24, 0, 0),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            24, 12, 24, 12),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'gtdi8oa7' /* Tamper Detected */,
-                                              ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Outfit',
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1Family,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primaryText,
-                                                        fontSize: 14,
+                                                                .positive,
                                                         fontWeight:
-                                                            FontWeight.normal,
+                                                            FontWeight.bold,
                                                         useGoogleFonts: GoogleFonts
                                                                 .asMap()
                                                             .containsKey(
@@ -523,107 +418,76 @@ availabl... */
                                                                         context)
                                                                     .bodyText1Family),
                                                       ),
-                                            ),
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                if (FFAppState().tamperDetected)
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'tabidxb6' /* YES */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyText1Family,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .negative,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyText1Family),
-                                                        ),
-                                                  ),
-                                                if (!FFAppState()
-                                                    .tamperDetected)
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'zt4gsubu' /* NO */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyText1Family,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .positive,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyText1Family),
-                                                        ),
-                                                  ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
+                                                ),
+                                            ],
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 24, 0, 0),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            24, 12, 24, 12),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '570hqx3d' /* Untrusted Installation Detecte... */,
-                                              ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 24, 0, 0),
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24, 12, 24, 12),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              'gtdi8oa7' /* Tamper Detected */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1Family),
+                                                ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              if (FFAppState().tamperDetected)
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'bwz1uqix' /* YES */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Outfit',
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1Family,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primaryText,
-                                                        fontSize: 14,
+                                                                .negative,
                                                         fontWeight:
-                                                            FontWeight.normal,
+                                                            FontWeight.bold,
                                                         useGoogleFonts: GoogleFonts
                                                                 .asMap()
                                                             .containsKey(
@@ -631,76 +495,152 @@ availabl... */
                                                                         context)
                                                                     .bodyText1Family),
                                                       ),
-                                            ),
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                if (FFAppState()
-                                                    .untrustedInstallationDetected)
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'ue12c37v' /* YES */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyText1Family,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .negative,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyText1Family),
-                                                        ),
+                                                ),
+                                              if (!FFAppState().tamperDetected)
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'jatj0fam' /* NO */,
                                                   ),
-                                                if (!FFAppState()
-                                                    .untrustedInstallationDetected)
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'rkefiqbg' /* NO */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyText1Family,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .positive,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyText1Family),
-                                                        ),
-                                                  ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1Family,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .positive,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1Family),
+                                                      ),
+                                                ),
+                                            ],
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 24, 0, 0),
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24, 12, 24, 12),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              '570hqx3d' /* Untrusted Installation Detecte... */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1Family),
+                                                ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              if (FFAppState()
+                                                  .untrustedInstallationDetected)
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'yp3qwo56' /* YES */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1Family,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .negative,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1Family),
+                                                      ),
+                                                ),
+                                              if (!FFAppState()
+                                                  .untrustedInstallationDetected)
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '2scxijm2' /* NO */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1Family,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .positive,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1Family),
+                                                      ),
+                                                ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
+                          ),
                           Padding(
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(0, 24, 0, 24),

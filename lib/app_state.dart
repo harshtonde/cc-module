@@ -305,6 +305,12 @@ class FFAppState extends ChangeNotifier {
   set untrustedInstallationDetected(bool _value) {
     _untrustedInstallationDetected = _value;
   }
+
+  String _bannerValue = '';
+  String get bannerValue => _bannerValue;
+  set bannerValue(String _value) {
+    _bannerValue = _value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {
