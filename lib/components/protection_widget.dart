@@ -130,7 +130,7 @@ class _ProtectionWidgetState extends State<ProtectionWidget> {
                                         children: [
                                           Text(
                                             FFLocalizations.of(context).getText(
-                                              'bxamog8e' /* Rooted Device Detecte */,
+                                              'bxamog8e' /* Rooted Device Detected */,
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
