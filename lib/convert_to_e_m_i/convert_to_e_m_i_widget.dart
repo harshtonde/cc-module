@@ -3,6 +3,7 @@ import '../components/emi_item_desktop_widget.dart';
 import '../components/emi_item_mobile_widget.dart';
 import '../components/notifications_widget.dart';
 import '../components/preferences_widget.dart';
+import '../components/protection_widget.dart';
 import '../components/side_bar_update_widget.dart';
 import '../components/top_header_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
@@ -501,32 +502,34 @@ TRANSFERS */
                             Padding(
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
-                              child: Material(
-                                color: Colors.transparent,
-                                elevation: 0,
-                                shape: const CircleBorder(),
-                                child: Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .tertiaryColor,
-                                    shape: BoxShape.circle,
-                                  ),
-                                  alignment: AlignmentDirectional(0, 0),
-                                  child: Container(
-                                    width: 34,
-                                    height: 34,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.asset(
-                                      'assets/images/iplay-logo.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
+                              child: FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30,
+                                borderWidth: 1,
+                                buttonSize: 40,
+                                fillColor:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                icon: Icon(
+                                  Icons.security_outlined,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryColor,
+                                  size: 18,
                                 ),
+                                onPressed: () async {
+                                  await showModalBottomSheet(
+                                    isScrollControlled: true,
+                                    backgroundColor: Colors.transparent,
+                                    enableDrag: false,
+                                    context: context,
+                                    builder: (context) {
+                                      return Padding(
+                                        padding:
+                                            MediaQuery.of(context).viewInsets,
+                                        child: ProtectionWidget(),
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
+                                },
                               ),
                             ),
                             InkWell(
@@ -556,7 +559,7 @@ TRANSFERS */
                                 child: Badge(
                                   badgeContent: Text(
                                     FFLocalizations.of(context).getText(
-                                      '20wignq2' /* 7 */,
+                                      'zjtuf9wa' /* 7 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
@@ -1207,7 +1210,7 @@ TRANSFERS */
                                                                                 children: [
                                                                                   Text(
                                                                                     FFLocalizations.of(context).getText(
-                                                                                      'vhmo030i' /* SELECT TRANSACTIONS FOR EMI CO... */,
+                                                                                      'w90nnknm' /* SELECT TRANSACTIONS FOR EMI CO... */,
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                           fontFamily: FlutterFlowTheme.of(context).bodyText1Family,

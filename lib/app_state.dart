@@ -269,6 +269,42 @@ class FFAppState extends ChangeNotifier {
   set statementsView(bool _value) {
     _statementsView = _value;
   }
+
+  bool _rootDetected = false;
+  bool get rootDetected => _rootDetected;
+  set rootDetected(bool _value) {
+    _rootDetected = _value;
+  }
+
+  bool _emulatorDetected = false;
+  bool get emulatorDetected => _emulatorDetected;
+  set emulatorDetected(bool _value) {
+    _emulatorDetected = _value;
+  }
+
+  bool _hookDetected = false;
+  bool get hookDetected => _hookDetected;
+  set hookDetected(bool _value) {
+    _hookDetected = _value;
+  }
+
+  bool _tamperDetected = false;
+  bool get tamperDetected => _tamperDetected;
+  set tamperDetected(bool _value) {
+    _tamperDetected = _value;
+  }
+
+  bool _devicebindingDetected = false;
+  bool get devicebindingDetected => _devicebindingDetected;
+  set devicebindingDetected(bool _value) {
+    _devicebindingDetected = _value;
+  }
+
+  bool _untrustedInstallationDetected = false;
+  bool get untrustedInstallationDetected => _untrustedInstallationDetected;
+  set untrustedInstallationDetected(bool _value) {
+    _untrustedInstallationDetected = _value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {
