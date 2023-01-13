@@ -82,53 +82,6 @@ class _ProtectionWidgetState extends State<ProtectionWidget> {
                               ),
                             ],
                           ),
-                          if (!(isAndroid || isiOS))
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 12, 0, 0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '8fsx61g6' /* freeRASP SDK is only 
-availabl... */
-                                        ,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText2
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
-                                            fontSize: 20,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
-                                          ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 24, 0, 0),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
                           if (isAndroid || isiOS)
                             Padding(
                               padding:
@@ -142,7 +95,7 @@ availabl... */
                                         0, 12, 0, 0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        'wue079gr' /* freeRASP SDK */,
+                                        'wue079gr' /* Mobile Security Controls */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText2
@@ -179,7 +132,7 @@ availabl... */
                                             Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'bxamog8e' /* Rooted Device */,
+                                                'bxamog8e' /* Rooted Device Detected */,
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -208,7 +161,7 @@ availabl... */
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      '4h2p72ih' /* YES */,
+                                                      'zbragl3f' /* YES */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -235,7 +188,7 @@ availabl... */
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'yostqa6t' /* NO */,
+                                                      '5kv5a7tn' /* NO */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -316,7 +269,7 @@ availabl... */
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'jy21rypp' /* YES */,
+                                                      'xr6sd08f' /* YES */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -344,7 +297,7 @@ availabl... */
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      '2fv5e23a' /* NO */,
+                                                      'd0oquqt6' /* NO */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -424,7 +377,7 @@ availabl... */
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'xv52qltn' /* YES */,
+                                                      'mh8rsjjk' /* YES */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -451,7 +404,7 @@ availabl... */
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'vakt65x0' /* NO */,
+                                                      'owr6fp2r' /* NO */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -531,7 +484,7 @@ availabl... */
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'tabidxb6' /* YES */,
+                                                      'bwz1uqix' /* YES */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -559,7 +512,7 @@ availabl... */
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'zt4gsubu' /* NO */,
+                                                      'jatj0fam' /* NO */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -640,7 +593,7 @@ availabl... */
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'ue12c37v' /* YES */,
+                                                      'yp3qwo56' /* YES */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -668,7 +621,7 @@ availabl... */
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'rkefiqbg' /* NO */,
+                                                      '2scxijm2' /* NO */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)

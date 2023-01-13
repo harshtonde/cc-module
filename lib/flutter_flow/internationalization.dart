@@ -7707,18 +7707,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // protection
   {
-    '8fsx61g6': {
-      'en': 'freeRASP SDK is only \navailable for Android and iOS',
-      'bn': 'ব্যক্তিগতকরণ',
-      'de': 'Personalisierung',
-      'hi': 'निजीकरण',
-      'mr': 'वैयक्तिकरण',
-      'or': 'ବ୍ୟକ୍ତିଗତକରଣ',
-      'ta': 'தனிப்பயனாக்கம்',
-      'ur': 'پرسنلائزیشن',
-    },
     'wue079gr': {
-      'en': 'freeRASP SDK',
+      'en': 'Mobile Security Controls',
       'bn': 'ব্যক্তিগতকরণ',
       'de': 'Personalisierung',
       'hi': 'निजीकरण',
@@ -7728,7 +7718,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'پرسنلائزیشن',
     },
     'bxamog8e': {
-      'en': 'Rooted Device',
+      'en': 'Rooted Device Detected',
       'bn': 'বিবৃতি দেখান',
       'de': 'Aussagen anzeigen',
       'hi': 'बयान दिखाएं',
@@ -7737,7 +7727,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'அறிக்கைகளைக் காட்டு',
       'ur': 'بیانات دکھائیں۔',
     },
-    '4h2p72ih': {
+    'zbragl3f': {
       'en': 'YES',
       'bn': '',
       'de': '',
@@ -7747,7 +7737,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'yostqa6t': {
+    '5kv5a7tn': {
       'en': 'NO',
       'bn': '',
       'de': '',
@@ -7767,7 +7757,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'அறிக்கைகளைக் காட்டு',
       'ur': 'بیانات دکھائیں۔',
     },
-    'jy21rypp': {
+    'xr6sd08f': {
       'en': 'YES',
       'bn': '',
       'de': '',
@@ -7777,7 +7767,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    '2fv5e23a': {
+    'd0oquqt6': {
       'en': 'NO',
       'bn': '',
       'de': '',
@@ -7797,7 +7787,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'அறிக்கைகளைக் காட்டு',
       'ur': 'بیانات دکھائیں۔',
     },
-    'xv52qltn': {
+    'mh8rsjjk': {
       'en': 'YES',
       'bn': '',
       'de': '',
@@ -7807,7 +7797,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'vakt65x0': {
+    'owr6fp2r': {
       'en': 'NO',
       'bn': '',
       'de': '',
@@ -7827,7 +7817,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'அறிக்கைகளைக் காட்டு',
       'ur': 'بیانات دکھائیں۔',
     },
-    'tabidxb6': {
+    'bwz1uqix': {
       'en': 'YES',
       'bn': '',
       'de': '',
@@ -7837,7 +7827,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'zt4gsubu': {
+    'jatj0fam': {
       'en': 'NO',
       'bn': '',
       'de': '',
@@ -7857,7 +7847,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'அறிக்கைகளைக் காட்டு',
       'ur': 'بیانات دکھائیں۔',
     },
-    'ue12c37v': {
+    'yp3qwo56': {
       'en': 'YES',
       'bn': '',
       'de': '',
@@ -7867,7 +7857,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'rkefiqbg': {
+    '2scxijm2': {
       'en': 'NO',
       'bn': '',
       'de': '',
