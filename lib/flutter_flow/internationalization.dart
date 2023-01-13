@@ -7718,7 +7718,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'پرسنلائزیشن',
     },
     'bxamog8e': {
-      'en': 'Rooted Device Detected',
+      'en': 'Rooted Device Detecte',
       'bn': 'বিবৃতি দেখান',
       'de': 'Aussagen anzeigen',
       'hi': 'बयान दिखाएं',
