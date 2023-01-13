@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:freerasp/utils/hash_converter.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +8,7 @@ import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
 import 'flutter_flow/nav/nav.dart';
+import 'package:freerasp/talsec_app.dart';
 import 'index.dart';
 
 void main() async {
@@ -47,6 +50,48 @@ class _MyAppState extends State<MyApp> {
 
     Future.delayed(Duration(seconds: 1),
         () => setState(() => _appStateNotifier.stopShowingSplashImage()));
+
+    if (!kIsWeb) {
+      TalsecCallback callback = TalsecCallback(
+        // For Android
+        androidCallback: AndroidCallback(
+          onRootDetected: () => FFAppState().rootDetected = true,
+          onEmulatorDetected: () => FFAppState().emulatorDetected = true,
+          onHookDetected: () => FFAppState().hookDetected = true,
+          onTamperDetected: () => FFAppState().tamperDetected = true,
+          onDeviceBindingDetected: () => FFAppState().devicebindingDetected = true,
+          onUntrustedInstallationDetected: () => FFAppState().untrustedInstallationDetected = true,
+        ),
+        // For iOS
+        onDebuggerDetected: () => print('debugger'),
+      );
+      // Signing hash of your app
+      String base64Hash = hashConverter.fromSha256toBase64(
+          "DB:25:C0:6D:21:F8:3D:D8:46:2B:BF:EC:7A:EC:7D:8E:EF:DB:84:6E:97:0E:E8:C9:23:1B:58:17:66:3D:6E:57");
+      TalsecConfig config = TalsecConfig(
+        // For Android
+        androidConfig: AndroidConfig(
+          expectedPackageName: 'com.icici.ccmodule',
+          expectedSigningCertificateHash: base64Hash,
+          supportedAlternativeStores: ["com.sec.android.app.samsungapps"],
+        ),
+
+        // For iOS
+        // iosConfig: IOSconfig(
+        //   appBundleId: 'YOUR_APP_BUNDLE_ID',
+        //   appTeamId: 'YOUR_APP_TEAM_ID',
+        // ),
+
+        // Common email for Alerts and Reports
+        watcherMail: 'your_mail@example.com',
+      );
+      TalsecApp app = TalsecApp(
+        config: config,
+        callback: callback,
+      );
+
+      app.start();
+    }
   }
 
   void setLocale(String language) {
