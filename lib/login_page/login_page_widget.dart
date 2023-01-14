@@ -885,7 +885,7 @@ rewa... */
                                                                                     obscureText: false,
                                                                                     decoration: InputDecoration(
                                                                                       hintText: FFLocalizations.of(context).getText(
-                                                                                        'wffeoh5v' /* Enter User ID */,
+                                                                                        'wffeoh5v' /* Mobile Number */,
                                                                                       ),
                                                                                       enabledBorder: OutlineInputBorder(
                                                                                         borderSide: BorderSide(

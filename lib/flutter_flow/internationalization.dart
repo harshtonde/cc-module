@@ -6025,7 +6025,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': '',
     },
     'wffeoh5v': {
-      'en': 'Enter User ID',
+      'en': 'Mobile Number',
       'bn': '',
       'de': '',
       'hi': '',
