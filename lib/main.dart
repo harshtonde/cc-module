@@ -59,8 +59,10 @@ class _MyAppState extends State<MyApp> {
           onEmulatorDetected: () => FFAppState().emulatorDetected = true,
           onHookDetected: () => FFAppState().hookDetected = true,
           onTamperDetected: () => FFAppState().tamperDetected = true,
-          onDeviceBindingDetected: () => FFAppState().devicebindingDetected = true,
-          onUntrustedInstallationDetected: () => FFAppState().untrustedInstallationDetected = true,
+          onDeviceBindingDetected: () =>
+              FFAppState().devicebindingDetected = true,
+          onUntrustedInstallationDetected: () =>
+              FFAppState().untrustedInstallationDetected = true,
         ),
         // For iOS
         onDebuggerDetected: () => print('debugger'),
@@ -124,8 +126,12 @@ class _MyAppState extends State<MyApp> {
         Locale('de'),
         Locale('ur'),
       ],
-      theme: ThemeData(brightness: Brightness.light),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      theme: ThemeData(
+          brightness: Brightness.light,
+          colorScheme: ColorScheme.light(primary: Color(0xFFE77817))),
+      darkTheme: ThemeData(
+          brightness: Brightness.dark,
+          colorScheme: ColorScheme.dark(primary: Color(0xFFE77817))),
       themeMode: _themeMode,
       routeInformationParser: _router.routeInformationParser,
       routerDelegate: _router.routerDelegate,
