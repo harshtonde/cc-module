@@ -761,7 +761,7 @@ TRANSFERS */
                                                       .fromSTEB(20, 20, 20, 0),
                                                   child: Container(
                                                     width: double.infinity,
-                                                    height: 510,
+                                                    height: 550,
                                                     decoration: BoxDecoration(
                                                       color: FlutterFlowTheme
                                                               .of(context)
@@ -781,6 +781,9 @@ TRANSFERS */
                                                     child: Row(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .center,
                                                       children: [
                                                         Expanded(
                                                           flex: 5,
