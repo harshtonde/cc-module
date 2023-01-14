@@ -507,9 +507,9 @@ rewa... */
                                                                     padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12,
-                                                                            0,
-                                                                            0,
-                                                                            0),
+                                                                            2,
+                                                                            12,
+                                                                            2),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
