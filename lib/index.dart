@@ -7,3 +7,5 @@ export 'initiate_transfer_o_t_p/initiate_transfer_o_t_p_widget.dart'
 export 'initiate_transfer_grid/initiate_transfer_grid_widget.dart'
     show InitiateTransferGridWidget;
 export 'payment_sent/payment_sent_widget.dart' show PaymentSentWidget;
+export 'login_page/login_page_widget.dart' show LoginPageWidget;
+export 'test/test_widget.dart' show TestWidget;
