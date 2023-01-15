@@ -90,11 +90,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'LoginPage',
               path: 'loginPage',
               builder: (context, params) => LoginPageWidget(),
-            ),
-            FFRoute(
-              name: 'test',
-              path: 'test',
-              builder: (context, params) => TestWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
