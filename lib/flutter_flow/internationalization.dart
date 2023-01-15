@@ -6146,7 +6146,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'l2q7pgvg': {
+    's1wbkte5': {
       'en': 'Offers for you!!',
       'bn': '',
       'de': '',
@@ -6156,7 +6156,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'qv03wuyu': {
+    'vp92ihiu': {
       'en': 'Home Loan',
       'bn': '',
       'de': '',
@@ -6166,7 +6166,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    '9o5yj54j': {
+    'vfcihd56': {
       'en': 'A pre-approved offer of Rs 23,75,000 awaits you',
       'bn': '',
       'de': '',
@@ -6176,7 +6176,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    '3hpzjo2c': {
+    'i4cw2akl': {
       'en': 'INSTANT SACTION',
       'bn': '',
       'de': '',
@@ -6186,7 +6186,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'oydybcpy': {
+    '1xph7izw': {
       'en': 'Get Personal loan',
       'bn': '',
       'de': '',
@@ -6196,7 +6196,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'eth1jd42': {
+    'w1q80io8': {
       'en': 'For all your needs up to Rs 25 lakh',
       'bn': '',
       'de': '',
@@ -6206,7 +6206,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'irm8vu3g': {
+    'o3be8uuf': {
       'en': 'Avail personal loan now',
       'bn': '',
       'de': '',
@@ -6216,7 +6216,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    '7xdlhnsx': {
+    'nu72ddet': {
       'en': 'Auto Loan',
       'bn': '',
       'de': '',
@@ -6226,7 +6226,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'pyrbkp4x': {
+    'ivmnody2': {
       'en': 'Pre-approved offer of Rs. 11,98,000',
       'bn': '',
       'de': '',
@@ -6236,7 +6236,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'iexrkwk0': {
+    'iolwc12p': {
       'en': 'INSTANT SACTION',
       'bn': '',
       'de': '',
@@ -6246,7 +6246,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'fl2000g5': {
+    '6bca7xp4': {
       'en': 'Get Credit Card ',
       'bn': '',
       'de': '',
@@ -6256,7 +6256,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'ft1k5ul3': {
+    '6lsb416s': {
       'en': 'Cashback, savings on interest or travel rewards',
       'bn': '',
       'de': '',
@@ -6266,7 +6266,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'ruoxywci': {
+    'zmkpdx8i': {
       'en': 'Get Credit Card Instantly',
       'bn': '',
       'de': '',
@@ -6276,7 +6276,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'rtcfcs06': {
+    'c3pfla4i': {
       'en': 'Grow your investment',
       'bn': '',
       'de': '',
@@ -6286,7 +6286,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'gph6heal': {
+    'sny07wet': {
       'en': 'Fixed Deposit',
       'bn': '',
       'de': '',
@@ -6296,7 +6296,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    '0qo1gha1': {
+    '67hs734m': {
       'en': 'Invest in stock',
       'bn': '',
       'de': '',
@@ -6306,7 +6306,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    '1f2p65pl': {
+    'kzrub322': {
       'en': 'Mutual Fund',
       'bn': '',
       'de': '',
@@ -6316,7 +6316,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'b20ux51z': {
+    'yx7nlntq': {
       'en': 'Retirement Planning',
       'bn': '',
       'de': '',
@@ -6326,7 +6326,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    '11emz1o7': {
+    'o7fgtj8u': {
       'en': 'For any assistance please call our customer care number',
       'bn': '',
       'de': '',
@@ -6336,7 +6336,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    'jl3hvlfj': {
+    '6sx2ryy9': {
       'en': '1800 1080',
       'bn': '',
       'de': '',
@@ -6346,7 +6346,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
       'ur': '',
     },
-    '6o7iwrxz': {
+    'ik9uiid1': {
       'en': 'CONTACT US',
       'bn': '',
       'de': '',

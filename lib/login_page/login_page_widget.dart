@@ -1400,7 +1400,7 @@ rewa... */
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'l2q7pgvg' /* Offers for you!! */,
+                                                        's1wbkte5' /* Offers for you!! */,
                                                       ),
                                                       style:
                                                           FlutterFlowTheme.of(
@@ -1459,7 +1459,7 @@ rewa... */
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'qv03wuyu' /* Home Loan */,
+                                                                  'vp92ihiu' /* Home Loan */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1483,7 +1483,7 @@ rewa... */
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  '9o5yj54j' /* A pre-approved offer of Rs 23,... */,
+                                                                  'vfcihd56' /* A pre-approved offer of Rs 23,... */,
                                                                 ),
                                                                 maxLines: 3,
                                                                 style: FlutterFlowTheme.of(
@@ -1514,7 +1514,7 @@ rewa... */
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      '3hpzjo2c' /* INSTANT SACTION */,
+                                                                      'i4cw2akl' /* INSTANT SACTION */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1584,7 +1584,7 @@ rewa... */
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'oydybcpy' /* Get Personal loan */,
+                                                                  '1xph7izw' /* Get Personal loan */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1608,7 +1608,7 @@ rewa... */
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'eth1jd42' /* For all your needs up to Rs 25... */,
+                                                                  'w1q80io8' /* For all your needs up to Rs 25... */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1638,7 +1638,7 @@ rewa... */
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'irm8vu3g' /* Avail personal loan now */,
+                                                                      'o3be8uuf' /* Avail personal loan now */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1721,7 +1721,7 @@ rewa... */
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  '7xdlhnsx' /* Auto Loan */,
+                                                                  'nu72ddet' /* Auto Loan */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1745,7 +1745,7 @@ rewa... */
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'pyrbkp4x' /* Pre-approved offer of Rs. 11,9... */,
+                                                                  'ivmnody2' /* Pre-approved offer of Rs. 11,9... */,
                                                                 ),
                                                                 maxLines: 3,
                                                                 style: FlutterFlowTheme.of(
@@ -1776,7 +1776,7 @@ rewa... */
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'iexrkwk0' /* INSTANT SACTION */,
+                                                                      'iolwc12p' /* INSTANT SACTION */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1846,7 +1846,7 @@ rewa... */
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'fl2000g5' /* Get Credit Card  */,
+                                                                  '6bca7xp4' /* Get Credit Card  */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1870,7 +1870,7 @@ rewa... */
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'ft1k5ul3' /* Cashback, savings on interest ... */,
+                                                                  '6lsb416s' /* Cashback, savings on interest ... */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1900,7 +1900,7 @@ rewa... */
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'ruoxywci' /* Get Credit Card Instantly */,
+                                                                      'zmkpdx8i' /* Get Credit Card Instantly */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1966,7 +1966,7 @@ rewa... */
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'rtcfcs06' /* Grow your investment */,
+                                                    'c3pfla4i' /* Grow your investment */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -2029,7 +2029,7 @@ rewa... */
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'gph6heal' /* Fixed Deposit */,
+                                                                'sny07wet' /* Fixed Deposit */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -2063,7 +2063,7 @@ rewa... */
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                '0qo1gha1' /* Invest in stock */,
+                                                                '67hs734m' /* Invest in stock */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -2097,7 +2097,7 @@ rewa... */
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                '1f2p65pl' /* Mutual Fund */,
+                                                                'kzrub322' /* Mutual Fund */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -2131,7 +2131,7 @@ rewa... */
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'b20ux51z' /* Retirement Planning */,
+                                                                'yx7nlntq' /* Retirement Planning */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -2184,7 +2184,7 @@ rewa... */
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  '11emz1o7' /* For any assistance please call... */,
+                                                  'o7fgtj8u' /* For any assistance please call... */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -2225,7 +2225,7 @@ rewa... */
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'jl3hvlfj' /* 1800 1080 */,
+                                                      '6sx2ryy9' /* 1800 1080 */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -2266,7 +2266,7 @@ rewa... */
                                                   text: FFLocalizations.of(
                                                           context)
                                                       .getText(
-                                                    '6o7iwrxz' /* CONTACT US */,
+                                                    'ik9uiid1' /* CONTACT US */,
                                                   ),
                                                   options: FFButtonOptions(
                                                     width: 150,
